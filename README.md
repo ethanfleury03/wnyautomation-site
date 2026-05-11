@@ -4,10 +4,11 @@ Public website and blog publishing API for WNY Automation.
 
 ## Local Development
 
-Run from the monorepo root:
+Install dependencies and run the local Next.js server:
 
-```powershell
-npm run dev:marketing
+```bash
+npm ci
+npm run dev
 ```
 
 Then open:
@@ -88,9 +89,12 @@ Keep `BLOG_API_TOKEN` out of saved files.
 
 ## Tests
 
-From the monorepo root:
-
-```powershell
-npm run test --workspace @wnyautomation/marketing
-npm run build --workspace @wnyautomation/marketing
+```bash
+npm run test
+npm run build
 ```
+
+## Deployment
+
+This repository deploys to the existing Vercel project `wnyautomation` from
+the repository root.
