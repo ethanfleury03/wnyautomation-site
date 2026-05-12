@@ -30,9 +30,10 @@ function renderHeader({ currentPath = "/" } = {}) {
             <span class="cta-label-full">Get My Free Automation Ideas</span>
             <span class="cta-label-short">Ideas</span>
           </a>
-          <a class="button header-login button-secondary" href="${escapeAttribute(business.clientLoginPath)}">
+          <a class="button header-login button-secondary" href="${escapeAttribute(business.clientLoginPath)}" aria-label="Client Login: open the secure WNY Automation client portal" title="Client Login">
             ${icon("log-in")}
-            <span>Client Login</span>
+            <span class="client-login-label-full">Client Login</span>
+            <span class="client-login-label-short">Portal</span>
           </a>
         </div>
       </div>
