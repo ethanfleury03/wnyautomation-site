@@ -15,7 +15,7 @@ const server = spawn(process.execPath, [require.resolve("next/dist/bin/next"), "
     BLOG_API_TOKEN: TOKEN,
     ALLOW_DATA_URL_BLOG_IMAGES: "true",
     NEXT_PUBLIC_SITE_URL: BASE_URL,
-    NEXT_PUBLIC_CLIENT_PORTAL_URL: "https://app.wnyautomation.com/sign-in",
+    NEXT_PUBLIC_CLIENT_GATEWAY_SIGN_IN_URL: "https://app.wnyautomation.com/sign-in?redirect_url=/launch",
     N8N_LEAD_WEBHOOK_URL: "",
     NODE_NO_WARNINGS: "1",
   },
@@ -83,6 +83,14 @@ async function expectPage(pathname, expectedText) {
   }
 }
 
+async function expectNotFound(pathname) {
+  const { response } = await request(pathname);
+
+  if (response.status !== 404) {
+    throw new Error(`Expected ${pathname} to return 404, got ${response.status}`);
+  }
+}
+
 async function expectLeadFocusedHomepage() {
   const { response, text } = await request("/");
 
@@ -91,9 +99,9 @@ async function expectLeadFocusedHomepage() {
   }
 
   const checks = [
-    'href="/#workflow-form"',
+    'class="button header-cta button-primary" href="#workflow-form"',
     'class="button header-login button-secondary"',
-    'href="https://app.wnyautomation.com/sign-in"',
+    'href="https://app.wnyautomation.com/sign-in?redirect_url=/launch"',
     "Client Login",
     'href="#workflow-form"',
     'class="lead-form workflow-form lead-form-compact"',
@@ -123,25 +131,68 @@ async function expectLeadFocusedHomepage() {
   }
 }
 
+async function expectAboutPage() {
+  const { response, text } = await request("/about");
+
+  if (!response.ok) {
+    throw new Error(`Expected /about to return 200, got ${response.status}`);
+  }
+
+  for (const check of [
+    "Practical websites and automation for local businesses.",
+    "Ethan Fleury",
+    "Founder photo coming soon",
+    'href="#workflow-form"',
+    'data-source="About Page"',
+    'name="manualTask"',
+    '<a href="/about">About</a>',
+  ]) {
+    if (!text.includes(check)) {
+      throw new Error(`Expected /about to include ${check}`);
+    }
+  }
+
+  const aboutLinkCount = (text.match(/href="\/about"/g) || []).length;
+  if (aboutLinkCount < 2) {
+    throw new Error("Expected /about to be linked from header and footer.");
+  }
+
+  for (const forbidden of ["guaranteed ROI", "testimonials", "years of experience", "our team"]) {
+    if (text.toLowerCase().includes(forbidden.toLowerCase())) {
+      throw new Error(`Expected /about not to include unsupported proof claim: ${forbidden}`);
+    }
+  }
+
+  const h1Count = (text.match(/<h1[\s>]/g) || []).length;
+  if (h1Count !== 1) {
+    throw new Error(`Expected /about to have one h1, got ${h1Count}`);
+  }
+}
+
 async function main() {
   await waitForServer();
 
   await expectPage("/", "Practical automation for Buffalo");
   await expectLeadFocusedHomepage();
-  await expectPage("/services", "Workflow automation services built around real small-business work.");
-  await expectPage("/services/automated-lead-follow-up", "Automated Lead Follow-Up for Small Businesses");
+  await expectAboutPage();
+  await expectPage("/services", "Services built around real small-business work.");
+  await expectPage("/services/missed-lead-rescue-system", "Missed Lead Rescue System for Small Businesses");
   await expectPage("/industries", "Workflow automation ideas for local industries.");
   await expectPage("/industries/hvac-companies", "Workflow Automation for HVAC Companies");
-  await expectPage("/locations", "Practical workflow automation across Buffalo");
-  await expectPage("/locations/buffalo-ny", "Workflow Automation for Small Businesses in Buffalo");
-  await expectPage("/resources", "Tools and guides for finding automation opportunities.");
-  await expectPage("/tools/missed-lead-cost-calculator", "Missed Lead Cost Calculator");
+  await expectNotFound("/locations");
+  await expectNotFound("/locations/buffalo-ny");
+  await expectNotFound("/resources");
+  await expectNotFound("/tools/missed-lead-cost-calculator");
   await expectPage("/case-studies", "Workflow examples for future case studies.");
   await expectPage("/privacy-policy", "Privacy Policy");
+  const login = await fetch(`${BASE_URL}/client-login`, { redirect: "manual" });
+  if (login.status !== 302 || login.headers.get("location") !== "https://app.wnyautomation.com/sign-in?redirect_url=/launch") {
+    throw new Error("Expected /client-login to redirect to the gateway sign-in launch URL.");
+  }
 
   const portal = await fetch(`${BASE_URL}/client-portal`, { redirect: "manual" });
-  if (portal.status !== 302 || !portal.headers.get("location")?.includes("app.wnyautomation.com/sign-in")) {
-    throw new Error("Expected /client-portal to redirect to the WNY Automation Portal sign-in URL.");
+  if (portal.status !== 302 || portal.headers.get("location") !== "https://app.wnyautomation.com/sign-in?redirect_url=/launch") {
+    throw new Error("Expected /client-portal to redirect to the gateway sign-in launch URL.");
   }
 
   const lead = await request("/api/leads", {
@@ -319,8 +370,12 @@ async function main() {
   }
 
   const sitemap = await request("/sitemap.xml");
-  if (!sitemap.response.ok || !sitemap.text.includes("/services/automated-lead-follow-up") || !sitemap.text.includes("/locations/buffalo-ny")) {
+  if (!sitemap.response.ok || !sitemap.text.includes("/about") || !sitemap.text.includes("/services/missed-lead-rescue-system") || !sitemap.text.includes("/industries/hvac-companies")) {
     throw new Error("Expected sitemap to include important SEO routes.");
+  }
+
+  if (sitemap.text.includes("/locations") || sitemap.text.includes("/resources") || sitemap.text.includes("/tools/")) {
+    throw new Error("Expected sitemap not to include retired locations, resources, or tools routes.");
   }
 
   const robots = await request("/robots.txt");

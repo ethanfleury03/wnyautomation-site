@@ -2,12 +2,9 @@
 
 ## Pages Created
 
-- Main pages: `/`, `/free-workflow-audit`, `/services`, `/industries`, `/locations`, `/resources`, `/case-studies`, `/privacy-policy`, `/terms`, `/sitemap`
+- Main pages: `/`, `/about`, `/free-workflow-audit`, `/services`, `/industries`, `/case-studies`, `/privacy-policy`, `/terms`, `/sitemap`
 - Service pages: generated from `src/data/services.js`
 - Industry pages: generated from `src/data/industries.js`
-- Location pages: generated from `src/data/locations.js`
-- Tools: `/tools/missed-lead-cost-calculator`, `/tools/automation-roi-calculator`, `/tools/ai-automation-readiness-quiz`
-- Resource: `/resources/workflow-audit-checklist`
 - Blog: `/blog`, `/blog/:slug`, with `/blogs` kept as a redirect
 - Technical SEO: `/sitemap.xml`, `/robots.txt`
 
@@ -16,7 +13,6 @@
 - Business info and public placeholders: `src/config/business.js`
 - Services: `src/data/services.js`
 - Industries: `src/data/industries.js`
-- Locations: `src/data/locations.js`
 - FAQs: `src/data/faqs.js`
 - Sample workflow examples: `src/data/caseStudies.js`
 - Sample draft blog posts: `src/data/blogPosts.js`

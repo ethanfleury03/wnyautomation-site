@@ -7,25 +7,18 @@ const {
   caseStudyBySlug,
   getStaticRoutes,
   industryBySlug,
-  locationBySlug,
+  renderAboutPage,
   renderBlogIndexPage,
   renderBlogPostPage,
   renderCaseStudiesIndex,
   renderCaseStudyPage,
-  renderChecklistPage,
   renderHomePage,
   renderHtmlSitemapPage,
   renderIndustriesIndex,
   renderIndustryPage,
   renderLegalPage,
-  renderLocationsIndex,
-  renderLocationPage,
-  renderMissedLeadCalculatorPage,
   renderNotFoundPage,
-  renderReadinessQuizPage,
-  renderResourcesPage,
   renderRobotsTxt,
-  renderRoiCalculatorPage,
   renderServicePage,
   renderServicesIndex,
   renderSitemapXml,
@@ -75,19 +68,17 @@ export async function GET(request, context) {
   if (pathname === "/free-workflow-audit") return html(renderWorkflowAuditPage());
   if (pathname === "/services") return html(renderServicesIndex());
   if (pathname === "/industries") return html(renderIndustriesIndex());
-  if (pathname === "/locations") return html(renderLocationsIndex());
-  if (pathname === "/resources") return html(renderResourcesPage());
-  if (pathname === "/tools/missed-lead-cost-calculator") return html(renderMissedLeadCalculatorPage());
-  if (pathname === "/tools/automation-roi-calculator") return html(renderRoiCalculatorPage());
-  if (pathname === "/tools/ai-automation-readiness-quiz") return html(renderReadinessQuizPage());
-  if (pathname === "/resources/workflow-audit-checklist") return html(renderChecklistPage());
+  if (pathname === "/about") return html(renderAboutPage());
   if (pathname === "/case-studies") return html(renderCaseStudiesIndex());
   if (pathname === "/privacy-policy") return html(renderLegalPage("privacy"));
   if (pathname === "/terms") return html(renderLegalPage("terms"));
   if (pathname === "/blog") return html(renderBlogIndexPage(await getAllBlogPosts()));
   if (pathname === "/blogs") return NextResponse.redirect(new URL("/blog", request.url), 301);
+  if (pathname === "/client-login") {
+    return NextResponse.redirect(new URL(business.clientGatewaySignInUrl, request.url), 302);
+  }
   if (pathname === "/client-portal") {
-    return NextResponse.redirect(new URL(business.clientPortalUrl, request.url), 302);
+    return NextResponse.redirect(new URL(business.clientGatewaySignInUrl, request.url), 302);
   }
   if (pathname === "/sitemap") return html(renderHtmlSitemapPage(await getAllRoutes()));
   if (pathname === "/sitemap.xml") return text(renderSitemapXml(await getAllRoutes()), "application/xml; charset=utf-8");
@@ -104,11 +95,6 @@ export async function GET(request, context) {
   if (segments.length === 2 && section === "industries") {
     const industry = industryBySlug.get(slug);
     return industry ? html(renderIndustryPage(industry)) : html(renderNotFoundPage(), 404);
-  }
-
-  if (segments.length === 2 && section === "locations") {
-    const location = locationBySlug.get(slug);
-    return location ? html(renderLocationPage(location)) : html(renderNotFoundPage(), 404);
   }
 
   if (segments.length === 2 && section === "case-studies") {

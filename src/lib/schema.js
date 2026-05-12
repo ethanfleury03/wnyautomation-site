@@ -9,7 +9,7 @@ function organizationSchema() {
     alternateName: business.shortName,
     description: "Practical workflow automation for local businesses in Buffalo, Niagara, and Western New York.",
     url: business.siteUrl,
-    logo: absoluteUrl("/assets/wny-automation-icon.svg"),
+    logo: absoluteUrl("/assets/site-icon-512.png"),
     sameAs: Object.values(business.socialLinks).filter(Boolean),
   };
 }
@@ -30,7 +30,7 @@ function localBusinessSchema(path = "/") {
     name: business.businessName,
     description: "Practical workflow automation for local businesses in Buffalo, Niagara, and Western New York.",
     url: absoluteUrl(path),
-    image: absoluteUrl("/assets/wny-automation-icon.svg"),
+    image: absoluteUrl("/assets/site-icon-512.png"),
     email: business.email,
     areaServed: business.serviceArea.map((name) => ({
       "@type": name === "Western New York" ? "AdministrativeArea" : "City",
@@ -126,10 +126,10 @@ function articleSchema(post) {
       name: business.businessName,
       logo: {
         "@type": "ImageObject",
-        url: absoluteUrl("/assets/wny-automation-icon.svg"),
+        url: absoluteUrl("/assets/site-icon-512.png"),
       },
     },
-    image: absoluteUrl(post.image_url || post.featuredImage || "/assets/wny-automation-icon.svg"),
+    image: absoluteUrl(post.image_url || post.featuredImage || "/assets/site-icon-512.png"),
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
   };
 }

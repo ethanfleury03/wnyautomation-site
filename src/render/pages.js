@@ -1,7 +1,6 @@
 const business = require("../config/business");
 const services = require("../data/services");
 const industries = require("../data/industries");
-const locations = require("../data/locations");
 const caseStudies = require("../data/caseStudies");
 const blogPosts = require("../data/blogPosts");
 const { homepageFaqs, workflowAuditFaqs } = require("../data/faqs");
@@ -30,7 +29,6 @@ const {
   renderInternalLinksSection,
   renderPainPointSection,
   renderSEOPageHero,
-  renderToolShell,
   renderTrustSection,
   renderWorkflowAuditForm,
   section,
@@ -38,40 +36,44 @@ const {
 
 const serviceBySlug = new Map(services.map((item) => [item.slug, item]));
 const industryBySlug = new Map(industries.map((item) => [item.slug, item]));
-const locationBySlug = new Map(locations.map((item) => [item.slug, item]));
 const caseStudyBySlug = new Map(caseStudies.map((item) => [item.slug, item]));
 const sampleBlogBySlug = new Map(blogPosts.map((item) => [item.slug, item]));
 
 const defaultExamples = [
   {
     icon: "reply",
-    title: "Lead follow-up",
-    description: "Respond to inquiries faster and create follow-up tasks automatically.",
+    title: "Missed lead rescue",
+    description: "Catch forms, missed calls, and new inquiries with fast first-response alerts.",
   },
   {
-    icon: "message-circle-question",
-    title: "Customer FAQ workflows",
-    description: "Answer repeated questions with approved business information.",
-  },
-  {
-    icon: "calendar-clock",
-    title: "Appointment reminders",
-    description: "Reduce missed appointments with confirmations and reminders.",
+    icon: "file-clock",
+    title: "Quote follow-up",
+    description: "Follow up on open estimates before good opportunities go cold.",
   },
   {
     icon: "list-todo",
-    title: "Form-to-task routing",
-    description: "Turn forms into organized tasks, alerts, and next steps.",
+    title: "Intake-to-task routing",
+    description: "Turn forms, emails, and requests into tasks with owners and due dates.",
+  },
+  {
+    icon: "message-circle-question",
+    title: "Website FAQ + lead capture",
+    description: "Answer common questions and route real prospects to a person.",
   },
   {
     icon: "star",
-    title: "Review requests",
-    description: "Ask happy customers for reviews at the right time.",
+    title: "Appointment and review follow-up",
+    description: "Send reminders, review requests, and simple customer check-ins.",
   },
   {
-    icon: "book-open-check",
-    title: "Internal knowledge assistants",
-    description: "Help staff find SOPs and answers without interrupting managers.",
+    icon: "globe-2",
+    title: "Website creation",
+    description: "Build a clear local business website with strong lead capture paths.",
+  },
+  {
+    icon: "calendar-days",
+    title: "Blog schedules",
+    description: "Plan realistic topics, publish dates, and reminders for local SEO content.",
   },
 ];
 
@@ -83,7 +85,6 @@ function page(body, meta, schemas = [], bodyClass = "") {
     bodyClass,
     services,
     industries,
-    locations,
   });
 }
 
@@ -128,6 +129,92 @@ function renderHomePage(blogItems = []) {
   );
 }
 
+function renderAboutPage() {
+  const crumbs = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+  ];
+  const body = `
+    <main>
+      <div class="section-inner">${renderBreadcrumbs(crumbs)}</div>
+      ${renderSEOPageHero({
+        eyebrow: "About WNY Automation Co",
+        h1: "Practical websites and automation for local businesses.",
+        subheading:
+          "WNY Automation Co helps local businesses improve websites, follow-up, intake, reminders, and simple workflows without confusing tech jargon.",
+        primaryHref: "#workflow-form",
+        primaryLabel: "Share a Workflow or Website Problem",
+      })}
+      ${section(`
+        <div class="two-column-section">
+          <div>
+            <p class="section-kicker">Founder note</p>
+            <h2>I'm Ethan Fleury, and I built WNY Automation Co for practical small-business problems.</h2>
+            <p>I work across website creation, automation, AI tools, software development, and local business operations. The goal is simple: help owners fix the repeated work that slows them down without turning the project into a giant software build.</p>
+            <p>I am based in Western New York and focused on helping local businesses make their websites and workflows easier to use, easier to follow up on, and easier to maintain.</p>
+          </div>
+          <div class="audit-panel founder-photo-panel">
+            <div class="founder-photo-placeholder" aria-label="Founder photo placeholder">
+              <img src="/assets/wny-automation-icon.png" alt="" decoding="async" />
+            </div>
+            <h3>Founder photo coming soon</h3>
+            <p>No stock headshot here. This spot is reserved for a real photo when it is ready.</p>
+          </div>
+        </div>`)}
+      ${section(`
+        <div class="section-heading">
+          <p class="section-kicker">How I work</p>
+          <h2>Small, clear, and built around what is actually happening.</h2>
+        </div>
+        <div class="check-card-grid">
+          ${[
+            "Start with one real problem before expanding anything.",
+            "Use the tools you already have when they are the right fit.",
+            "Skip fake ROI promises and measure practical improvements.",
+            "Keep people in control of anything sensitive or important.",
+            "Explain the workflow in plain English so you know what is running.",
+            "Build websites and automations that support the way the business already works.",
+          ]
+            .map((item) => `<article class="check-card">${icon("check")}<p>${escapeHtml(item)}</p></article>`)
+            .join("")}
+        </div>`)}
+      ${section(`
+        <div class="two-column-section">
+          <div>
+            <p class="section-kicker">Good first conversations</p>
+            <h2>Bring one workflow or website problem.</h2>
+            <p>The best starting point is usually specific: leads are being missed, quotes are not followed up on, forms create messy handoffs, the website is unclear, or content ideas never make it onto a schedule.</p>
+            <p>If automation is not the right first move, I will say that. Sometimes the better answer is a cleaner page, a better form, or a simpler process before any AI tools get involved.</p>
+          </div>
+          <div class="audit-panel">
+            <h3>Good problems to send over</h3>
+            ${listItems([
+              "A website that is not turning visitors into leads",
+              "Follow-up that depends on memory or inbox checking",
+              "Quote or estimate conversations that go quiet",
+              "Forms, emails, or requests that need clearer ownership",
+              "Repeated customer questions that should have better answers",
+            ], "check-list")}
+          </div>
+        </div>`)}
+      ${section(renderWorkflowAuditForm({
+        source: "About Page",
+        title: "Tell me one workflow or website problem you want to clean up.",
+      }), "form-section")}
+    </main>`;
+
+  return page(
+    body,
+    {
+      title: "About WNY Automation Co | Websites and Automation for Local Businesses",
+      description:
+        "Meet Ethan Fleury, founder of WNY Automation Co. Practical website creation, automation, AI tools, and workflow support for Western New York businesses.",
+      path: "/about",
+    },
+    [breadcrumbSchema(crumbs), localBusinessSchema("/about")],
+  );
+}
+
 function renderBlogPreview(posts) {
   return section(`
     <div class="section-heading">
@@ -164,12 +251,12 @@ function renderWorkflowAuditPage() {
           <div class="audit-panel">
             <h3>Good tasks to submit</h3>
             ${listItems([
-              "Manual lead follow-up",
-              "Appointment reminders",
-              "Customer FAQs",
-              "Quote follow-up",
-              "Review requests",
-              "Copying form data into another tool",
+              "Missed lead follow-up",
+              "Open quote follow-up",
+              "Website FAQ and lead capture",
+              "Appointment and review reminders",
+              "Copying form or email details into another tool",
+              "Website or blog schedule planning",
             ], "check-list")}
           </div>
         </div>`)}
@@ -193,10 +280,10 @@ function renderWorkflowAuditPage() {
 function renderServicesIndex() {
   return indexPage({
     path: "/services",
-    title: "Workflow Automation Services for Buffalo Small Businesses | WNY Automation Co",
-    h1: "Workflow automation services built around real small-business work.",
+    title: "Automation and Website Services for Buffalo Small Businesses | WNY Automation Co",
+    h1: "Services built around real small-business work.",
     intro:
-      "Explore practical automation services for lead follow-up, customer questions, appointment reminders, CRM updates, admin workflows, and more.",
+      "Explore practical systems for missed leads, quote follow-up, intake tasks, website FAQs, customer reminders, website creation, and blog schedules.",
     items: services,
     basePath: "/services",
   });
@@ -211,18 +298,6 @@ function renderIndustriesIndex() {
       "Browse practical workflow ideas for home services, professional offices, restaurants, med spas, contractors, property managers, and other local businesses.",
     items: industries,
     basePath: "/industries",
-  });
-}
-
-function renderLocationsIndex() {
-  return indexPage({
-    path: "/locations",
-    title: "Workflow Automation Locations in Western New York | WNY Automation Co",
-    h1: "Practical workflow automation across Buffalo, Niagara, and WNY.",
-    intro:
-      "WNY Automation Co helps local businesses in Buffalo, Niagara Falls, Amherst, Williamsville, Cheektowaga, and nearby communities start with one practical workflow.",
-    items: locations,
-    basePath: "/locations",
   });
 }
 
@@ -328,195 +403,6 @@ function renderIndustryPage(industry) {
     },
     [breadcrumbSchema(crumbs), faqPageSchema(industry.faqs)],
   );
-}
-
-function renderLocationPage(location) {
-  const crumbs = [
-    { label: "Home", href: "/" },
-    { label: "Locations", href: "/locations" },
-    { label: `${location.city}, NY`, href: `/locations/${location.slug}` },
-  ];
-  const body = `
-    <main>
-      <div class="section-inner">${renderBreadcrumbs(crumbs)}</div>
-      ${renderSEOPageHero({ eyebrow: "Local automation service area", h1: location.h1, subheading: location.intro })}
-      ${section(`
-        <div class="two-column-section">
-          <div>
-            <p class="section-kicker">Local businesses we help</p>
-            <h2>Built for real small-business operations in ${escapeHtml(location.city)}.</h2>
-            ${listItems(location.localBusinessTypes, "check-list")}
-          </div>
-          <div class="audit-panel">
-            <h3>Common workflows to automate</h3>
-            ${listItems(location.commonPainPoints, "check-list")}
-          </div>
-        </div>`)}
-      ${renderInternalLinksSection("Recommended services", serviceLinks(location.recommendedServices))}
-      ${renderFAQSection(location.faqs, `${location.city} automation questions`)}
-      ${renderInternalLinksSection("Nearby locations", locationLinks(location.nearbyLocations))}
-      ${renderCTASection({ withForm: true, source: location.title })}
-    </main>`;
-
-  return page(
-    body,
-    {
-      title: location.metaTitle,
-      description: location.metaDescription,
-      path: `/locations/${location.slug}`,
-    },
-    [breadcrumbSchema(crumbs), localBusinessSchema(`/locations/${location.slug}`), faqPageSchema(location.faqs)],
-  );
-}
-
-function renderResourcesPage() {
-  const resources = [
-    {
-      slug: "missed-lead-cost-calculator",
-      title: "Missed Lead Cost Calculator",
-      intro: "Estimate what slow lead response could be costing.",
-      path: "/tools/missed-lead-cost-calculator",
-    },
-    {
-      slug: "automation-roi-calculator",
-      title: "Automation ROI Calculator",
-      intro: "Estimate the time cost of one manual workflow.",
-      path: "/tools/automation-roi-calculator",
-    },
-    {
-      slug: "ai-automation-readiness-quiz",
-      title: "Workflow Automation Readiness Quiz",
-      intro: "Find out whether your workflows are ready for a small pilot.",
-      path: "/tools/ai-automation-readiness-quiz",
-    },
-    {
-      slug: "workflow-audit-checklist",
-      title: "Small Business Workflow Audit Checklist",
-      intro: "Review the places where manual work usually hides.",
-      path: "/resources/workflow-audit-checklist",
-    },
-  ];
-  const cards = resources
-    .map(
-      (item) => `<article class="index-card"><h2><a href="${escapeAttribute(item.path)}">${escapeHtml(item.title)}</a></h2><p>${escapeHtml(item.intro)}</p><a class="blog-read-link" href="${escapeAttribute(item.path)}">Open resource${icon("arrow-up-right")}</a></article>`,
-    )
-    .join("");
-  const body = `<main>${renderSEOPageHero({ eyebrow: "Resources", h1: "Tools and guides for finding automation opportunities.", subheading: "Use these simple resources to spot repetitive work, estimate lost time, and prepare for a free workflow audit." })}${section(`<div class="index-card-grid">${cards}</div>`)}${renderCTASection({ withForm: false })}</main>`;
-  return page(body, {
-    title: "Workflow Automation Resources for Small Businesses | WNY Automation Co",
-    description: "Calculators, checklists, guides, and blog resources for practical small business automation.",
-    path: "/resources",
-  });
-}
-
-function renderMissedLeadCalculatorPage() {
-  return toolPage({
-    path: "/tools/missed-lead-cost-calculator",
-    title: "Missed Lead Cost Calculator | WNY Automation Co",
-    h1: "Missed Lead Cost Calculator",
-    intro: "Estimate how much missed lead follow-up could be costing your business.",
-    toolHtml: renderToolShell({
-      slug: "missed-lead",
-      title: "Estimate missed lead opportunity",
-      description: "Enter rough monthly numbers. The output is only a planning estimate.",
-      resultId: "missed-lead-result",
-      fields: [
-        { name: "monthlyWebsiteLeads", label: "Monthly website leads", value: "20" },
-        { name: "monthlyMissedCalls", label: "Monthly missed calls", value: "10" },
-        { name: "averageJobValue", label: "Average job value", value: "750" },
-        { name: "estimatedCloseRate", label: "Estimated close rate %", value: "25" },
-        { name: "currentResponseTime", label: "Current response time in hours", value: "12" },
-        { name: "missedOpportunityPercent", label: "Estimated missed opportunity %", value: "20" },
-      ],
-    }),
-  });
-}
-
-function renderRoiCalculatorPage() {
-  return toolPage({
-    path: "/tools/automation-roi-calculator",
-    title: "Automation ROI Calculator | WNY Automation Co",
-    h1: "Automation ROI Calculator",
-    intro: "Estimate the time cost of one manual workflow and what a small automation might help reduce.",
-    toolHtml: renderToolShell({
-      slug: "automation-roi",
-      title: "Estimate manual workflow cost",
-      description: "Use this to frame a workflow audit conversation. It is not a guaranteed ROI forecast.",
-      resultId: "automation-roi-result",
-      fields: [
-        { name: "weeklyHours", label: "Hours spent weekly on task", value: "5" },
-        { name: "hourlyCost", label: "Staff hourly cost", value: "25" },
-        { name: "peopleInvolved", label: "Number of people involved", value: "2" },
-        { name: "automationCost", label: "Estimated automation cost placeholder", value: "500" },
-        { name: "monthlyVolume", label: "Monthly volume of task", value: "80" },
-      ],
-    }),
-  });
-}
-
-function renderReadinessQuizPage() {
-  const questions = [
-    "Do you manually follow up with leads?",
-    "Do customers ask the same questions repeatedly?",
-    "Do you use spreadsheets to track important work?",
-    "Do you manually send reminders?",
-    "Do you manually request reviews?",
-    "Do you copy and paste data between tools?",
-    "Do you have a CRM?",
-    "Do you have documented workflows?",
-  ];
-  const toolHtml = `
-    <article class="calculator-card" data-calculator="readiness-quiz">
-      <div><p class="section-kicker">Interactive quiz</p><h2>Workflow automation readiness quiz</h2><p>Check the items that are true for your business.</p></div>
-      <div class="quiz-list">
-        ${questions.map((question, index) => `<label><input type="checkbox" name="q${index}" /> <span>${escapeHtml(question)}</span></label>`).join("")}
-      </div>
-      <button class="button button-primary" type="button" data-calculate="readiness-quiz">${icon("list-check")}See readiness</button>
-      <div class="calculator-result" id="readiness-quiz-result" aria-live="polite"></div>
-    </article>`;
-
-  return toolPage({
-    path: "/tools/ai-automation-readiness-quiz",
-    title: "Workflow Automation Readiness Quiz | WNY Automation Co",
-    h1: "Workflow Automation Readiness Quiz",
-    intro: "Find out whether your business has a strong first workflow for automation.",
-    toolHtml,
-  });
-}
-
-function toolPage({ path, title, h1, intro, toolHtml }) {
-  const body = `<main>${renderSEOPageHero({ eyebrow: "Automation tool", h1, subheading: intro })}${section(toolHtml)}${renderCTASection({ withForm: true, source: h1 })}</main>`;
-  return page(body, { title, description: intro, path });
-}
-
-function renderChecklistPage() {
-  const sections = [
-    "Lead capture",
-    "Lead follow-up",
-    "Scheduling",
-    "Customer questions",
-    "Quotes and estimates",
-    "Invoices and payments",
-    "Reviews",
-    "Internal admin",
-    "Reporting",
-    "Staff questions",
-  ];
-  const body = `
-    <main>
-      ${renderSEOPageHero({
-        eyebrow: "Checklist",
-        h1: "Small Business Workflow Audit Checklist",
-        subheading: "Use this checklist to find repetitive tasks that might be worth simplifying or automating.",
-      })}
-      ${section(`<div class="check-card-grid">${sections.map((item) => `<article class="check-card">${icon("square-check")}<p>${escapeHtml(item)}</p></article>`).join("")}</div>`)}
-      ${renderCTASection({ withForm: true, source: "Workflow Audit Checklist" })}
-    </main>`;
-  return page(body, {
-    title: "Small Business Workflow Audit Checklist | WNY Automation Co",
-    description: "A practical checklist for finding lead, scheduling, FAQ, quote, review, and admin workflows to improve.",
-    path: "/resources/workflow-audit-checklist",
-  });
 }
 
 function renderCaseStudiesIndex() {
@@ -625,7 +511,7 @@ function renderBlogPostPage(post) {
       description: post.meta_description || post.metaDescription || post.excerpt || "",
       path: `/blog/${post.slug}`,
       type: "article",
-      image: post.image_url || post.featuredImage || "/assets/wny-automation-icon.svg",
+      image: post.image_url || post.featuredImage || "/assets/site-icon-512.png",
     },
     [breadcrumbSchema(crumbs), articleSchema(post)],
   );
@@ -674,6 +560,47 @@ function renderHtmlSitemapPage(staticRoutes, blogRoutes = []) {
   });
 }
 
+function renderClientLoginPage() {
+  const body = `
+    <main>
+      ${renderSEOPageHero({
+        eyebrow: "Client login",
+        h1: "Secure client login for WNY Automation portals.",
+        subheading:
+          "Start here and WNY Automation will route you to the right client workspace after sign-in.",
+        primaryHref: business.clientGatewaySignInUrl,
+        primaryLabel: "Continue to Client Login",
+        secondaryHref: "/",
+        secondaryLabel: "Back to WNY Automation",
+      })}
+      ${section(`
+        <div class="two-column-section">
+          <div>
+            <p class="section-kicker">How routing works</p>
+            <h2>One doorway, the right portal after sign-in.</h2>
+            <p>Client portals can live in separate apps or repos. This page keeps the login entry point on WNY Automation, then sends clients to the secure gateway that checks their account and opens the correct portal.</p>
+          </div>
+          <div class="audit-panel">
+            <h3>After you sign in:</h3>
+            ${listItems([
+              "Your email is checked against active client assignments",
+              "Assigned users are routed to their client portal",
+              "Users with multiple portals can choose a workspace",
+              "New users wait for WNY Automation to assign access",
+            ], "check-list")}
+            <a class="button button-primary client-login-continue" href="${escapeAttribute(business.clientGatewaySignInUrl)}">${icon("log-in")}Continue to Client Login</a>
+          </div>
+        </div>`)}
+    </main>`;
+
+  return page(body, {
+    title: "Client Login | WNY Automation Co",
+    description: "Secure client login gateway for WNY Automation Co portal workspaces.",
+    path: "/client-login",
+    noindex: true,
+  });
+}
+
 function renderClientPortalPage() {
   const body = `
     <main>
@@ -681,7 +608,7 @@ function renderClientPortalPage() {
         eyebrow: "Client portal",
         h1: "Client dashboards are coming soon.",
         subheading:
-          "This portal will eventually give WNY Automation Co clients one place to view their custom automations, workflow status, and useful account resources.",
+          "This portal will eventually give WNY Automation Co clients one place to view their custom automations, workflow status, and useful account links.",
         primaryHref: "/#workflow-form",
         primaryLabel: "Request Automation Ideas",
         secondaryHref: `mailto:${business.email}`,
@@ -699,7 +626,7 @@ function renderClientPortalPage() {
             ${listItems([
               "Active automation status",
               "Workflow notes and support links",
-              "Client-specific resources",
+              "Client-specific links",
               "Simple visibility into what is running",
             ], "check-list")}
           </div>
@@ -754,11 +681,11 @@ Sitemap: ${absoluteUrl("/sitemap.xml")}
 }
 
 function getStaticRoutes() {
-  return buildStaticRoutes({ services, industries, locations, caseStudies, blogPosts });
+  return buildStaticRoutes({ services, industries, caseStudies, blogPosts });
 }
 
 function serviceLinks(slugs = []) {
-  return (slugs || [])
+  return [...new Set(slugs || [])]
     .map((slug) => serviceBySlug.get(slug))
     .filter(Boolean)
     .map((item) => ({ label: item.title, href: `/services/${item.slug}`, description: item.shortDescription }));
@@ -771,37 +698,24 @@ function industryLinks(slugs = []) {
     .map((item) => ({ label: item.title, href: `/industries/${item.slug}`, description: item.intro }));
 }
 
-function locationLinks(slugs = []) {
-  return (slugs || [])
-    .map((slug) => locationBySlug.get(slug))
-    .filter(Boolean)
-    .map((item) => ({ label: `${item.city}, NY`, href: `/locations/${item.slug}`, description: item.intro }));
-}
-
 module.exports = {
   caseStudyBySlug,
   getStaticRoutes,
   industryBySlug,
-  locationBySlug,
+  renderAboutPage,
   renderBlogIndexPage,
   renderBlogPostPage,
   renderCaseStudiesIndex,
   renderCaseStudyPage,
-  renderChecklistPage,
+  renderClientLoginPage,
   renderClientPortalPage,
   renderHomePage,
   renderHtmlSitemapPage,
   renderIndustriesIndex,
   renderIndustryPage,
   renderLegalPage,
-  renderLocationsIndex,
-  renderLocationPage,
-  renderMissedLeadCalculatorPage,
   renderNotFoundPage,
-  renderReadinessQuizPage,
-  renderResourcesPage,
   renderRobotsTxt,
-  renderRoiCalculatorPage,
   renderServicePage,
   renderServicesIndex,
   renderSitemapXml,

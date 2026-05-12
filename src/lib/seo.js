@@ -14,7 +14,7 @@ function metadata(options = {}) {
   const title = options.title || business.defaultSeoTitle;
   const description = options.description || business.defaultSeoDescription;
   const path = options.path || "/";
-  const image = options.image || "/assets/wny-automation-icon.svg";
+  const image = options.image || "/assets/site-icon-512.png";
 
   return {
     title,
@@ -85,7 +85,7 @@ function routeEntry(path, priority = "0.7", changefreq = "weekly") {
   return { path, priority, changefreq };
 }
 
-function buildStaticRoutes({ services, industries, locations, caseStudies, blogPosts }) {
+function buildStaticRoutes({ services, industries, caseStudies, blogPosts }) {
   return [
     routeEntry("/", "1.0", "weekly"),
     routeEntry("/free-workflow-audit", "0.95", "monthly"),
@@ -93,13 +93,7 @@ function buildStaticRoutes({ services, industries, locations, caseStudies, blogP
     ...services.map((item) => routeEntry(`/services/${item.slug}`, "0.82", "monthly")),
     routeEntry("/industries", "0.85", "weekly"),
     ...industries.map((item) => routeEntry(`/industries/${item.slug}`, "0.78", "monthly")),
-    routeEntry("/locations", "0.8", "weekly"),
-    ...locations.map((item) => routeEntry(`/locations/${item.slug}`, "0.72", "monthly")),
-    routeEntry("/resources", "0.76", "monthly"),
-    routeEntry("/tools/missed-lead-cost-calculator", "0.76", "monthly"),
-    routeEntry("/tools/automation-roi-calculator", "0.76", "monthly"),
-    routeEntry("/tools/ai-automation-readiness-quiz", "0.74", "monthly"),
-    routeEntry("/resources/workflow-audit-checklist", "0.74", "monthly"),
+    routeEntry("/about", "0.78", "monthly"),
     routeEntry("/case-studies", "0.65", "monthly"),
     ...caseStudies.map((item) => routeEntry(`/case-studies/${item.slug}`, "0.58", "monthly")),
     routeEntry("/blog", "0.8", "weekly"),

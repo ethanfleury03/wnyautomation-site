@@ -2,8 +2,8 @@ const business = require("../config/business");
 const { escapeAttribute, escapeHtml, icon, listItems } = require("./html");
 const { formatDisplayDate } = require("../lib/slugs");
 
-function renderHeader() {
-  const clientPortalIsExternal = /^https?:\/\//i.test(business.clientPortalUrl);
+function renderHeader({ currentPath = "/" } = {}) {
+  const leadCaptureHref = pageHasWorkflowForm(currentPath) ? "#workflow-form" : "/free-workflow-audit#workflow-form";
 
   return `
     <header class="site-header" aria-label="Primary navigation">
@@ -20,18 +20,17 @@ function renderHeader() {
         <nav class="nav-links" aria-label="Primary links">
           <a href="/services">Services</a>
           <a href="/industries">Industries</a>
-          <a href="/locations">Locations</a>
-          <a href="/resources">Resources</a>
+          <a href="/about">About</a>
           <a href="/blog">Blog</a>
           <a href="/free-workflow-audit">Free Audit</a>
         </nav>
         <div class="header-actions">
-          <a class="button header-cta button-primary" href="/#workflow-form">
+          <a class="button header-cta button-primary" href="${escapeAttribute(leadCaptureHref)}">
             ${icon("sparkles")}
             <span class="cta-label-full">Get My Free Automation Ideas</span>
             <span class="cta-label-short">Ideas</span>
           </a>
-          <a class="button header-login button-secondary" href="${escapeAttribute(business.clientPortalUrl)}"${clientPortalIsExternal ? ' target="_blank" rel="noopener"' : ""}>
+          <a class="button header-login button-secondary" href="${escapeAttribute(business.clientLoginPath)}">
             ${icon("log-in")}
             <span>Client Login</span>
           </a>
@@ -40,7 +39,17 @@ function renderHeader() {
     </header>`;
 }
 
-function renderFooter({ services = [], industries = [], locations = [] } = {}) {
+function pageHasWorkflowForm(path) {
+  if (!path) return false;
+  if (path === "/" || path === "/free-workflow-audit") return true;
+  return [
+    /^\/services\//,
+    /^\/industries\//,
+    /^\/about$/,
+  ].some((pattern) => pattern.test(path));
+}
+
+function renderFooter({ services = [], industries = [] } = {}) {
   const contactLinks = [
     `<a href="mailto:${escapeAttribute(business.email)}">${escapeHtml(business.email)}</a>`,
     business.phone ? `<a href="tel:${escapeAttribute(business.phone)}">${escapeHtml(business.phone)}</a>` : "",
@@ -59,13 +68,11 @@ function renderFooter({ services = [], industries = [], locations = [] } = {}) {
         </div>
         ${footerColumn("Services", services.slice(0, 6).map((item) => [item.title, `/services/${item.slug}`]))}
         ${footerColumn("Industries", industries.slice(0, 6).map((item) => [item.title.replace("Workflow Automation for ", ""), `/industries/${item.slug}`]))}
-        ${footerColumn("Locations", locations.slice(0, 6).map((item) => [item.city, `/locations/${item.slug}`]))}
-        ${footerColumn("Resources", [
+        ${footerColumn("Company", [
+          ["About", "/about"],
           ["Free Workflow Audit", "/free-workflow-audit"],
-          ["Missed Lead Calculator", "/tools/missed-lead-cost-calculator"],
-          ["Automation ROI Calculator", "/tools/automation-roi-calculator"],
-          ["Readiness Quiz", "/tools/ai-automation-readiness-quiz"],
           ["Blog", "/blog"],
+          ["Case Studies", "/case-studies"],
           ["Sitemap", "/sitemap"],
           ["Privacy Policy", "/privacy-policy"],
           ["Terms", "/terms"],
@@ -76,7 +83,9 @@ function renderFooter({ services = [], industries = [], locations = [] } = {}) {
 
 function renderBrandLockup() {
   return `
-    <span class="brand-mark" aria-hidden="true">${icon("workflow")}</span>
+    <span class="brand-mark" aria-hidden="true">
+      <img src="/assets/wny-automation-icon.png" alt="" decoding="async" />
+    </span>
     <span class="brand-copy">
       <strong>${escapeHtml(business.businessName)}</strong>
       <small>${escapeHtml(business.tagline)}</small>
@@ -396,31 +405,6 @@ function renderBlogCard(post, basePath = "/blog") {
     </article>`;
 }
 
-function renderToolShell({ slug, title, description, fields, resultId }) {
-  return `
-    <article class="calculator-card" data-calculator="${escapeAttribute(slug)}">
-      <div>
-        <p class="section-kicker">Interactive tool</p>
-        <h2>${escapeHtml(title)}</h2>
-        <p>${escapeHtml(description)}</p>
-      </div>
-      <div class="calculator-grid">
-        ${fields
-          .map(
-            (fieldItem) => `
-              <label class="field" for="${escapeAttribute(fieldItem.name)}">
-                <span>${escapeHtml(fieldItem.label)}</span>
-                <input id="${escapeAttribute(fieldItem.name)}" name="${escapeAttribute(fieldItem.name)}" type="${escapeAttribute(fieldItem.type || "number")}" min="${escapeAttribute(fieldItem.min || "0")}" step="${escapeAttribute(fieldItem.step || "1")}" value="${escapeAttribute(fieldItem.value || "")}" />
-              </label>`,
-          )
-          .join("")}
-      </div>
-      <button class="button button-primary" type="button" data-calculate="${escapeAttribute(slug)}">${icon("calculator")}Calculate</button>
-      <div class="calculator-result" id="${escapeAttribute(resultId)}" aria-live="polite"></div>
-      <p class="calculator-disclaimer">This is an estimate, not a guarantee.</p>
-    </article>`;
-}
-
 function section(content, className = "") {
   return `<section class="section${className ? ` ${escapeAttribute(className)}` : ""}"><div class="section-inner">${content}</div></section>`;
 }
@@ -438,7 +422,6 @@ module.exports = {
   renderInternalLinksSection,
   renderPainPointSection,
   renderSEOPageHero,
-  renderToolShell,
   renderTrustSection,
   renderWorkflowAuditForm,
   section,

@@ -4,8 +4,10 @@ const CONFIG = {
   leadEndpoint: window.WNY_AUTOMATION_CONFIG?.leadEndpoint || "/api/leads",
 };
 
-document.querySelectorAll("[data-calendly-link]").forEach((link) => {
-  link.href = CONFIG.bookingLink;
+document.querySelectorAll('[data-calendly-link], a[href*="calendly.com"]').forEach((link) => {
+  if (link.matches("[data-calendly-link]")) {
+    link.href = CONFIG.bookingLink;
+  }
   link.target = "_blank";
   link.rel = "noopener";
 });
@@ -200,7 +202,12 @@ document.addEventListener("click", (event) => {
     });
   }
 
-  if (link.classList.contains("header-login") || href.includes("client-portal")) {
+  if (
+    link.classList.contains("header-login") ||
+    link.classList.contains("client-login-continue") ||
+    href.includes("client-login") ||
+    href.includes("client-portal")
+  ) {
     trackEvent("client_login_click", {
       conversion_path: "client_portal",
       cta_label: label,
@@ -263,94 +270,4 @@ workflowForms.forEach((form) => {
       submitButton.disabled = false;
     }
   });
-});
-
-function formatCurrency(value) {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 0,
-  }).format(Number.isFinite(value) ? value : 0);
-}
-
-function numberValue(container, name) {
-  return Number.parseFloat(container.querySelector(`[name="${name}"]`)?.value || "0") || 0;
-}
-
-function resultHtml(title, lines) {
-  return `<strong>${title}</strong>${lines.map((line) => `<span>${line}</span>`).join("")}<a class="button button-primary button-small" href="/free-workflow-audit#workflow-form">Get My Free Automation Ideas</a>`;
-}
-
-function calculateMissedLead(container) {
-  const totalLeads = numberValue(container, "monthlyWebsiteLeads") + numberValue(container, "monthlyMissedCalls");
-  const averageJobValue = numberValue(container, "averageJobValue");
-  const closeRate = numberValue(container, "estimatedCloseRate") / 100;
-  const missedPercent = numberValue(container, "missedOpportunityPercent") / 100;
-  const responseTime = numberValue(container, "currentResponseTime");
-  const responsePenalty = responseTime > 8 ? 1.15 : responseTime > 2 ? 1.05 : 1;
-  const estimatedMissedRevenue = totalLeads * averageJobValue * closeRate * missedPercent * responsePenalty;
-  const result = container.querySelector("#missed-lead-result");
-
-  result.innerHTML = resultHtml("Estimated missed opportunity", [
-    `${formatCurrency(estimatedMissedRevenue)} per month may be worth reviewing.`,
-    "Recommended automation: missed call and website lead follow-up.",
-    "This is an estimate, not a guarantee.",
-  ]);
-}
-
-function calculateAutomationRoi(container) {
-  const weeklyHours = numberValue(container, "weeklyHours");
-  const hourlyCost = numberValue(container, "hourlyCost");
-  const people = Math.max(1, numberValue(container, "peopleInvolved"));
-  const automationCost = numberValue(container, "automationCost");
-  const monthlyVolume = numberValue(container, "monthlyVolume");
-  const monthlyTimeCost = weeklyHours * hourlyCost * people * 4.33;
-  const annualTimeCost = monthlyTimeCost * 12;
-  const estimatedHoursSaved = weeklyHours * people * 0.35;
-  const result = container.querySelector("#automation-roi-result");
-
-  result.innerHTML = resultHtml("Estimated manual task cost", [
-    `${formatCurrency(monthlyTimeCost)} per month in time cost.`,
-    `${formatCurrency(annualTimeCost)} per year in time cost.`,
-    `A first automation might target about ${estimatedHoursSaved.toFixed(1)} hours saved per week across ${monthlyVolume || "your"} monthly tasks.`,
-    automationCost ? `Use the ${formatCurrency(automationCost)} placeholder as a planning input, not a quote.` : "Recommended next step: workflow audit.",
-  ]);
-}
-
-function calculateReadiness(container) {
-  const checked = [...container.querySelectorAll('input[type="checkbox"]')].filter((input) => input.checked).length;
-  const result = container.querySelector("#readiness-quiz-result");
-  let level = "Low";
-  let recommendation = "Start by documenting one manual workflow before adding automation.";
-
-  if (checked >= 6) {
-    level = "High";
-    recommendation = "You likely have a strong first workflow for a small automation pilot.";
-  } else if (checked >= 3) {
-    level = "Medium";
-    recommendation = "You may have one or two useful workflows to review in a free audit.";
-  }
-
-  result.innerHTML = resultHtml(`${level} automation readiness`, [
-    `${checked} signals matched.`,
-    recommendation,
-    "Recommended next step: submit the most repetitive task for review.",
-  ]);
-}
-
-document.querySelectorAll("[data-calculate]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const calculator = button.dataset.calculate;
-    const container = button.closest("[data-calculator]");
-    if (!container) return;
-
-    if (calculator === "missed-lead") calculateMissedLead(container);
-    if (calculator === "automation-roi") calculateAutomationRoi(container);
-    if (calculator === "readiness-quiz") calculateReadiness(container);
-  });
-});
-
-document.querySelectorAll("[data-calculator]").forEach((calculator) => {
-  const button = calculator.querySelector("[data-calculate]");
-  if (button) button.click();
 });

@@ -10,7 +10,6 @@ function renderPage({
   bodyClass = "",
   services = [],
   industries = [],
-  locations = [],
 }) {
   const schemaScripts = schemas
     .filter(Boolean)
@@ -29,7 +28,8 @@ function renderPage({
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     ${renderMeta(meta)}
-    <link rel="icon" type="image/svg+xml" href="/assets/wny-automation-icon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <link rel="stylesheet" href="/styles.css" />
     ${schemaScripts}
     ${renderTrackingScripts()}
@@ -38,9 +38,9 @@ function renderPage({
     <script src="/script.js" defer></script>
   </head>
   <body${bodyClass ? ` class="${bodyClass}"` : ""}>
-    ${renderHeader()}
+    ${renderHeader({ currentPath: meta?.path })}
     ${body}
-    ${renderFooter({ services, industries, locations })}
+    ${renderFooter({ services, industries })}
   </body>
 </html>`;
 }

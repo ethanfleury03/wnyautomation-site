@@ -26,9 +26,9 @@ const industries = [
     exampleWorkflow:
       "A no-heat request comes through the website after hours, gets an immediate response, and is routed to the service team with the customer's details summarized.",
     recommendedServices: [
-      "automated-lead-follow-up",
-      "missed-call-website-lead-automation",
-      "appointment-reminder-automation",
+      "missed-lead-rescue-system",
+      "quote-follow-up-system",
+      "appointment-review-reminder-follow-up",
     ],
   }),
   industry({
@@ -49,7 +49,7 @@ const industries = [
     automationIdeas: ["Emergency inquiry routing", "Appointment reminders", "Quote follow-up", "Review request automation"],
     exampleWorkflow:
       "A plumbing request is categorized as urgent or routine, then routed to the right person with a summary and customer contact details.",
-    recommendedServices: ["missed-call-website-lead-automation", "form-to-task-automation", "review-request-automation"],
+    recommendedServices: ["missed-lead-rescue-system", "intake-to-task-automation", "appointment-review-reminder-follow-up"],
   }),
   industry({
     slug: "roofing-companies",
@@ -69,7 +69,7 @@ const industries = [
     automationIdeas: ["Storm inquiry triage", "Estimate intake workflow", "Quote follow-up", "Project update summaries"],
     exampleWorkflow:
       "A storm damage lead submits a form, AI summarizes the issue, a follow-up task is created, and the prospect receives a clear next step.",
-    recommendedServices: ["automated-lead-follow-up", "quote-follow-up-automation", "crm-automation-small-business"],
+    recommendedServices: ["missed-lead-rescue-system", "quote-follow-up-system", "intake-to-task-automation"],
   }),
   industry({
     slug: "home-service-businesses",
@@ -89,7 +89,7 @@ const industries = [
     automationIdeas: ["Lead response workflow", "Job intake forms", "Calendar reminders", "Review request automation"],
     exampleWorkflow:
       "A service request becomes a structured task with customer details, job type, urgency, and a suggested next step for the office.",
-    recommendedServices: ["automated-lead-follow-up", "appointment-reminder-automation", "review-request-automation"],
+    recommendedServices: ["missed-lead-rescue-system", "intake-to-task-automation", "appointment-review-reminder-follow-up"],
   }),
   industry({
     slug: "med-spas",
@@ -109,7 +109,7 @@ const industries = [
     automationIdeas: ["Consultation lead follow-up", "Treatment FAQ assistant", "Appointment reminders", "Review requests"],
     exampleWorkflow:
       "A consultation inquiry gets a quick response, basic service questions are answered, and the team receives a structured booking request.",
-    recommendedServices: ["ai-chatbots-small-business", "appointment-reminder-automation", "review-request-automation"],
+    recommendedServices: ["website-faq-lead-capture-assistant", "appointment-review-reminder-follow-up", "website-creation"],
   }),
   industry({
     slug: "dental-offices",
@@ -129,7 +129,7 @@ const industries = [
     automationIdeas: ["Appointment reminders", "New patient intake routing", "FAQ automation", "Missed call follow-up"],
     exampleWorkflow:
       "A new patient request is summarized, routed to the front desk, and followed by a clear next-step message.",
-    recommendedServices: ["appointment-reminder-automation", "customer-faq-automation", "missed-call-website-lead-automation"],
+    recommendedServices: ["appointment-review-reminder-follow-up", "website-faq-lead-capture-assistant", "missed-lead-rescue-system"],
   }),
   industry({
     slug: "property-managers",
@@ -149,7 +149,7 @@ const industries = [
     automationIdeas: ["Maintenance request intake", "Tenant FAQ automation", "Vendor follow-up", "Inspection reminders"],
     exampleWorkflow:
       "A tenant maintenance request is summarized, categorized by urgency, routed to the right vendor list, and tracked for follow-up.",
-    recommendedServices: ["form-to-task-automation", "customer-faq-automation", "admin-workflow-automation"],
+    recommendedServices: ["intake-to-task-automation", "website-faq-lead-capture-assistant", "appointment-review-reminder-follow-up"],
   }),
   industry({
     slug: "real-estate-agents",
@@ -169,7 +169,7 @@ const industries = [
     automationIdeas: ["Lead capture follow-up", "Open house intake", "CRM task creation", "FAQ response drafts"],
     exampleWorkflow:
       "A new buyer lead is captured, tagged by intent, sent a quick response, and added to a follow-up list for the agent.",
-    recommendedServices: ["automated-lead-follow-up", "crm-automation-small-business", "customer-faq-automation"],
+    recommendedServices: ["missed-lead-rescue-system", "intake-to-task-automation", "website-faq-lead-capture-assistant"],
   }),
   industry({
     slug: "restaurants",
@@ -189,7 +189,7 @@ const industries = [
     automationIdeas: ["FAQ assistant", "Catering inquiry intake", "Event request routing", "Review request workflow"],
     exampleWorkflow:
       "A catering inquiry gets a fast confirmation, missing details are requested, and the manager receives a summarized task.",
-    recommendedServices: ["ai-chatbots-small-business", "customer-faq-automation", "review-request-automation"],
+    recommendedServices: ["website-faq-lead-capture-assistant", "intake-to-task-automation", "appointment-review-reminder-follow-up"],
   }),
   industry({
     slug: "law-firms",
@@ -197,7 +197,7 @@ const industries = [
     h1: "Workflow Automation for Law Firms",
     primaryKeyword: "workflow automation for law firms",
     intro:
-      "Law firms can use careful automation for intake organization, appointment reminders, internal knowledge, and admin routing while keeping legal judgment with attorneys.",
+      "Law firms can use careful automation for intake organization, appointment reminders, document requests, and admin routing while keeping legal judgment with attorneys.",
     commonPainPoints: [
       "New inquiries need structured intake",
       "Consultation reminders are manual",
@@ -206,10 +206,10 @@ const industries = [
       "Follow-up tasks are scattered",
       "Sensitive matters need human review",
     ],
-    automationIdeas: ["Intake summaries", "Consultation reminders", "Internal knowledge assistant", "Admin task routing"],
+    automationIdeas: ["Intake summaries", "Consultation reminders", "Document request checklists", "Admin task routing"],
     exampleWorkflow:
       "A potential client form is summarized for staff review, categorized by matter type, and routed without giving legal advice.",
-    recommendedServices: ["form-to-task-automation", "appointment-reminder-automation", "internal-knowledge-base-ai-assistant"],
+    recommendedServices: ["intake-to-task-automation", "appointment-review-reminder-follow-up", "website-creation"],
   }),
   industry({
     slug: "accountants",
@@ -229,7 +229,7 @@ const industries = [
     automationIdeas: ["Document request reminders", "Client FAQ workflow", "Deadline follow-up", "Internal checklist assistant"],
     exampleWorkflow:
       "A client reminder sequence requests missing documents and flags the account for staff review if nothing is received.",
-    recommendedServices: ["admin-workflow-automation", "customer-faq-automation", "internal-knowledge-base-ai-assistant"],
+    recommendedServices: ["intake-to-task-automation", "website-faq-lead-capture-assistant", "blog-schedules"],
   }),
   industry({
     slug: "insurance-agencies",
@@ -249,7 +249,7 @@ const industries = [
     automationIdeas: ["Quote follow-up", "Renewal reminders", "Client FAQ automation", "CRM task creation"],
     exampleWorkflow:
       "A quote request is summarized, entered into a CRM workflow, and assigned a follow-up reminder for the producer.",
-    recommendedServices: ["quote-follow-up-automation", "crm-automation-small-business", "customer-faq-automation"],
+    recommendedServices: ["quote-follow-up-system", "intake-to-task-automation", "website-faq-lead-capture-assistant"],
   }),
   industry({
     slug: "contractors",
@@ -269,7 +269,7 @@ const industries = [
     automationIdeas: ["Estimate intake", "Quote follow-up", "Project update summaries", "Review request automation"],
     exampleWorkflow:
       "A project inquiry becomes a structured estimate request with details, photos, and a next-step task for the owner.",
-    recommendedServices: ["form-to-task-automation", "quote-follow-up-automation", "review-request-automation"],
+    recommendedServices: ["intake-to-task-automation", "quote-follow-up-system", "appointment-review-reminder-follow-up"],
   }),
   industry({
     slug: "local-retail-businesses",
@@ -289,7 +289,7 @@ const industries = [
     automationIdeas: ["Customer FAQ workflow", "Special order follow-up", "Review requests", "Admin summaries"],
     exampleWorkflow:
       "A product inquiry is captured, routed to staff, and followed up with a clear next step if the customer wants availability or ordering help.",
-    recommendedServices: ["customer-faq-automation", "review-request-automation", "admin-workflow-automation"],
+    recommendedServices: ["website-faq-lead-capture-assistant", "appointment-review-reminder-follow-up", "intake-to-task-automation"],
   }),
   industry({
     slug: "auto-repair-shops",
@@ -309,7 +309,7 @@ const industries = [
     automationIdeas: ["Appointment intake", "Status update routing", "Estimate follow-up", "Review requests"],
     exampleWorkflow:
       "A repair request is captured with vehicle details, summarized for the shop, and followed by a confirmation or next-step message.",
-    recommendedServices: ["appointment-reminder-automation", "customer-faq-automation", "quote-follow-up-automation"],
+    recommendedServices: ["appointment-review-reminder-follow-up", "website-faq-lead-capture-assistant", "quote-follow-up-system"],
   }),
 ];
 
@@ -326,7 +326,6 @@ function industry(overrides) {
     ],
     faqs: overrides.faqs || defaultIndustryFaqs(overrides.title),
     relatedIndustries: overrides.relatedIndustries || ["home-service-businesses", "contractors", "local-retail-businesses"],
-    relatedLocations: overrides.relatedLocations || ["buffalo-ny", "amherst-ny", "niagara-falls-ny"],
     ctaLabel: overrides.ctaLabel || "Get My Free Automation Ideas",
     ...overrides,
   };

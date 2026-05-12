@@ -20,7 +20,7 @@ const caseStudies = [
     result: "Sample result placeholder. Add real client-approved outcomes only after launch.",
     disclaimer: "Sample Workflow - Not a Client Case Study",
     status: "sample",
-    relatedServices: ["automated-lead-follow-up", "missed-call-website-lead-automation"],
+    relatedServices: ["missed-lead-rescue-system", "intake-to-task-automation"],
   },
   {
     slug: "property-manager-maintenance-request-automation",
@@ -40,11 +40,11 @@ const caseStudies = [
     result: "Sample result placeholder. Add real client-approved outcomes only after launch.",
     disclaimer: "Sample Workflow - Not a Client Case Study",
     status: "sample",
-    relatedServices: ["form-to-task-automation", "admin-workflow-automation"],
+    relatedServices: ["intake-to-task-automation", "appointment-review-reminder-follow-up"],
   },
   {
-    slug: "med-spa-appointment-reminder-automation",
-    title: "Med Spa Appointment Reminder Automation",
+    slug: "med-spa-appointment-review-reminder-follow-up",
+    title: "Med Spa Appointment and Review Follow-Up",
     businessType: "Med spa",
     location: "Amherst, NY",
     problem: "The front desk manually answers repeat questions, confirms appointments, and follows up after visits.",
@@ -60,7 +60,7 @@ const caseStudies = [
     result: "Sample result placeholder. Add real client-approved outcomes only after launch.",
     disclaimer: "Sample Workflow - Not a Client Case Study",
     status: "sample",
-    relatedServices: ["appointment-reminder-automation", "review-request-automation"],
+    relatedServices: ["appointment-review-reminder-follow-up", "website-faq-lead-capture-assistant"],
   },
 ];
 

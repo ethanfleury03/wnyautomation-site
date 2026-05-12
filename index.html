@@ -8,7 +8,8 @@
       content="WNY Automation Co helps Buffalo, Niagara, and Western New York small businesses automate repetitive tasks, follow up faster, and reduce manual admin work."
     />
     <title>WNY Automation Co | Practical Automation for Local Businesses</title>
-    <link rel="icon" type="image/svg+xml" href="assets/wny-automation-icon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
@@ -31,7 +32,13 @@
 
       <div class="header-main">
         <a class="brand" href="#top" aria-label="WNY Automation Co home">
-          <img class="brand-logo" src="assets/wny-automation-logo.svg" alt="WNY Automation Co" />
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/wny-automation-icon.png" alt="" decoding="async" />
+          </span>
+          <span class="brand-copy">
+            <strong>WNY Automation Co</strong>
+            <small>Practical workflow automation for local businesses.</small>
+          </span>
         </a>
         <nav class="nav-links" aria-label="Page sections">
           <a href="#automate">What We Automate</a>
@@ -58,8 +65,8 @@
             <span>We will show you how to automate it.</span>
           </h1>
           <p class="hero-copy">
-            WNY Automation Co helps local businesses automate lead follow-up, customer support, scheduling, admin work, reporting,
-            forms, and other repetitive workflows without confusing tech jargon.
+            WNY Automation Co helps local businesses build clearer websites, plan blog schedules, and set up practical systems for
+            missed leads, quote follow-up, intake, FAQs, and customer reminders without confusing tech jargon.
           </p>
           <div class="hero-actions" aria-label="Main calls to action">
             <a class="button button-primary hero-primary-cta" data-calendly-link href="#">
@@ -151,8 +158,8 @@
             <h2>Small businesses do not need more software. They need fewer manual bottlenecks.</h2>
           </div>
           <p>
-            WNY Automation Co starts with one workflow that already costs time: missed follow-ups, repeated customer questions,
-            messy intake forms, manual reporting, or admin tasks that should not eat up the week.
+            WNY Automation Co starts with one problem that already costs time: missed leads, open quotes, repeated website
+            questions, messy intake requests, weak lead capture, or blog ideas that never make it onto a schedule.
           </p>
         </div>
       </section>
@@ -167,43 +174,38 @@
           <div class="card-grid automate-grid">
             <article class="info-card">
               <i data-lucide="mail-check" aria-hidden="true"></i>
-              <h3>Missed lead follow-up</h3>
-              <p>Respond to new inquiries faster with text or email follow-ups that keep prospects warm.</p>
+              <h3>Missed Lead Rescue System</h3>
+              <p>Catch website forms, missed calls, and new inquiries with quick first-response alerts.</p>
             </article>
             <article class="info-card">
-              <i data-lucide="messages-square" aria-hidden="true"></i>
-              <h3>Customer questions and FAQs</h3>
-              <p>Answer common questions clearly so your team can focus on the conversations that need a person.</p>
+              <i data-lucide="file-clock" aria-hidden="true"></i>
+              <h3>Quote Follow-Up System</h3>
+              <p>Follow up on open estimates so good opportunities do not die quietly in the inbox.</p>
+            </article>
+            <article class="info-card">
+              <i data-lucide="list-todo" aria-hidden="true"></i>
+              <h3>Intake-to-Task Automation</h3>
+              <p>Turn forms, emails, and requests into organized tasks with owners and due dates.</p>
+            </article>
+            <article class="info-card">
+              <i data-lucide="message-circle-question" aria-hidden="true"></i>
+              <h3>Website FAQ + Lead Capture Assistant</h3>
+              <p>Answer common questions and route real prospects to you with clean contact details.</p>
             </article>
             <article class="info-card">
               <i data-lucide="calendar-clock" aria-hidden="true"></i>
-              <h3>Appointment booking and reminders</h3>
-              <p>Reduce no-shows and back-and-forth scheduling with simple reminders and booking flows.</p>
+              <h3>Appointment, Review, and Reminder Follow-Up</h3>
+              <p>Send reminders, review requests, and simple customer check-ins at the right time.</p>
             </article>
             <article class="info-card">
-              <i data-lucide="file-input" aria-hidden="true"></i>
-              <h3>Quote, invoice, and form workflows</h3>
-              <p>Turn form submissions into organized tasks, quote requests, or invoice steps without copying data.</p>
+              <i data-lucide="globe-2" aria-hidden="true"></i>
+              <h3>Website Creation</h3>
+              <p>Build a clear local business website with useful service pages and lead capture paths.</p>
             </article>
             <article class="info-card">
-              <i data-lucide="table-2" aria-hidden="true"></i>
-              <h3>Spreadsheet and reporting tasks</h3>
-              <p>Pull the numbers that matter into clean weekly updates instead of rebuilding reports by hand.</p>
-            </article>
-            <article class="info-card">
-              <i data-lucide="star" aria-hidden="true"></i>
-              <h3>Review requests and reputation</h3>
-              <p>Ask happy customers for reviews at the right time and make the process easy for them.</p>
-            </article>
-            <article class="info-card">
-              <i data-lucide="book-open-check" aria-hidden="true"></i>
-              <h3>Internal documents and staff questions</h3>
-              <p>Help employees find SOPs, policies, and answers without interrupting the owner or manager.</p>
-            </article>
-            <article class="info-card">
-              <i data-lucide="inbox" aria-hidden="true"></i>
-              <h3>Email and admin workflows</h3>
-              <p>Sort, route, and summarize routine admin work so fewer things fall through the cracks.</p>
+              <i data-lucide="calendar-days" aria-hidden="true"></i>
+              <h3>Blog Schedules</h3>
+              <p>Plan realistic topics, publish dates, and reminders so content keeps moving.</p>
             </article>
           </div>
         </div>
@@ -268,33 +270,38 @@
           <div class="card-grid examples-grid">
             <article class="project-card">
               <i data-lucide="reply" aria-hidden="true"></i>
-              <h3>Lead follow-up system</h3>
-              <p>Automatically text or email new leads so your business responds while interest is high.</p>
+              <h3>Missed lead rescue</h3>
+              <p>Text or email new leads quickly so your business responds while interest is high.</p>
             </article>
             <article class="project-card">
-              <i data-lucide="message-circle-question" aria-hidden="true"></i>
-              <h3>FAQ assistant</h3>
-              <p>A customer-facing assistant trained on your common questions, services, hours, and policies.</p>
+              <i data-lucide="file-clock" aria-hidden="true"></i>
+              <h3>Quote follow-up</h3>
+              <p>Track open estimates and trigger friendly follow-ups when a quote goes quiet.</p>
             </article>
             <article class="project-card">
               <i data-lucide="list-todo" aria-hidden="true"></i>
-              <h3>Form-to-task workflow</h3>
-              <p>Turn website forms into organized tasks, notifications, follow-ups, and owner summaries.</p>
+              <h3>Intake-to-task workflow</h3>
+              <p>Turn forms and emails into organized tasks, notifications, and clear next steps.</p>
             </article>
             <article class="project-card">
-              <i data-lucide="thumbs-up" aria-hidden="true"></i>
-              <h3>Review request system</h3>
-              <p>Send review requests after a job, visit, or delivery so happy customers are easier to capture.</p>
+              <i data-lucide="message-circle-question" aria-hidden="true"></i>
+              <h3>Website FAQ + lead capture</h3>
+              <p>Answer common website questions and capture details from real prospects.</p>
             </article>
             <article class="project-card">
-              <i data-lucide="bar-chart-3" aria-hidden="true"></i>
-              <h3>Weekly report generator</h3>
-              <p>Summarize sales, leads, job volume, or operational data in a clean weekly report.</p>
+              <i data-lucide="calendar-clock" aria-hidden="true"></i>
+              <h3>Appointment and review follow-up</h3>
+              <p>Send reminders, review requests, and simple customer check-ins at the right time.</p>
             </article>
             <article class="project-card">
-              <i data-lucide="clipboard-check" aria-hidden="true"></i>
-              <h3>Internal SOP assistant</h3>
-              <p>Help staff find answers from your procedures and documents without waiting on a manager.</p>
+              <i data-lucide="globe-2" aria-hidden="true"></i>
+              <h3>Website creation</h3>
+              <p>Create a clear web presence with service pages, contact paths, and lead forms.</p>
+            </article>
+            <article class="project-card">
+              <i data-lucide="calendar-days" aria-hidden="true"></i>
+              <h3>Blog schedules</h3>
+              <p>Organize topic ideas, publish dates, and reminders into a realistic content plan.</p>
             </article>
           </div>
         </div>
@@ -407,7 +414,13 @@
     <footer class="site-footer">
       <div class="section-inner footer-inner">
         <a class="brand" href="#top" aria-label="WNY Automation Co home">
-          <img class="brand-logo footer-logo" src="assets/wny-automation-logo.svg" alt="WNY Automation Co" />
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/wny-automation-icon.png" alt="" decoding="async" />
+          </span>
+          <span class="brand-copy">
+            <strong>WNY Automation Co</strong>
+            <small>Practical workflow automation for local businesses.</small>
+          </span>
         </a>
         <p>Practical automation for Buffalo, Niagara, and Western New York small businesses.</p>
       </div>

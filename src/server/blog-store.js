@@ -105,7 +105,7 @@ async function getDbBlogSummaries(limit = 20) {
         image_url, image_alt, industry, publish_date, status, created_at, updated_at
       FROM marketing_blogs
       WHERE status = 'published'
-      ORDER BY COALESCE(publish_date, created_at) DESC, created_at DESC
+      ORDER BY COALESCE(publish_date, created_at::text) DESC, created_at DESC
       LIMIT $1
     `,
     [limit],
