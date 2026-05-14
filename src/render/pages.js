@@ -560,87 +560,6 @@ function renderHtmlSitemapPage(staticRoutes, blogRoutes = []) {
   });
 }
 
-function renderClientLoginPage() {
-  const body = `
-    <main>
-      ${renderSEOPageHero({
-        eyebrow: "Client login",
-        h1: "Secure client login for WNY Automation portals.",
-        subheading:
-          "Start here and WNY Automation will route you to the right client workspace after sign-in.",
-        primaryHref: business.clientGatewaySignInUrl,
-        primaryLabel: "Continue to Client Login",
-        secondaryHref: "/",
-        secondaryLabel: "Back to WNY Automation",
-      })}
-      ${section(`
-        <div class="two-column-section">
-          <div>
-            <p class="section-kicker">How routing works</p>
-            <h2>One doorway, the right portal after sign-in.</h2>
-            <p>Client portals can live in separate apps or repos. This page keeps the login entry point on WNY Automation, then sends clients to the secure gateway that checks their account and opens the correct portal.</p>
-          </div>
-          <div class="audit-panel">
-            <h3>After you sign in:</h3>
-            ${listItems([
-              "Your email is checked against active client assignments",
-              "Assigned users are routed to their client portal",
-              "Users with multiple portals can choose a workspace",
-              "New users wait for WNY Automation to assign access",
-            ], "check-list")}
-            <a class="button button-primary client-login-continue" href="${escapeAttribute(business.clientGatewaySignInUrl)}">${icon("log-in")}Continue to Client Login</a>
-          </div>
-        </div>`)}
-    </main>`;
-
-  return page(body, {
-    title: "Client Login | WNY Automation Co",
-    description: "Secure client login gateway for WNY Automation Co portal workspaces.",
-    path: "/client-login",
-    noindex: true,
-  });
-}
-
-function renderClientPortalPage() {
-  const body = `
-    <main>
-      ${renderSEOPageHero({
-        eyebrow: "Client portal",
-        h1: "Client dashboards are coming soon.",
-        subheading:
-          "This portal will eventually give WNY Automation Co clients one place to view their custom automations, workflow status, and useful account links.",
-        primaryHref: "/#workflow-form",
-        primaryLabel: "Request Automation Ideas",
-        secondaryHref: `mailto:${business.email}`,
-        secondaryLabel: "Email WNY Automation Co",
-      })}
-      ${section(`
-        <div class="two-column-section">
-          <div>
-            <p class="section-kicker">Future client access</p>
-            <h2>A home for the automations we build with you.</h2>
-            <p>For now, this page is a placeholder. Once the dashboard is live, the Client Login button can point directly to the secure portal where clients manage their workflows.</p>
-          </div>
-          <div class="audit-panel">
-            <h3>The portal can eventually include:</h3>
-            ${listItems([
-              "Active automation status",
-              "Workflow notes and support links",
-              "Client-specific links",
-              "Simple visibility into what is running",
-            ], "check-list")}
-          </div>
-        </div>`)}
-    </main>`;
-
-  return page(body, {
-    title: "Client Portal | WNY Automation Co",
-    description: "Client portal placeholder for WNY Automation Co dashboards.",
-    path: "/client-portal",
-    noindex: true,
-  });
-}
-
 function renderNotFoundPage() {
   const body = `
     <main class="not-found-page">
@@ -707,8 +626,6 @@ module.exports = {
   renderBlogPostPage,
   renderCaseStudiesIndex,
   renderCaseStudyPage,
-  renderClientLoginPage,
-  renderClientPortalPage,
   renderHomePage,
   renderHtmlSitemapPage,
   renderIndustriesIndex,
