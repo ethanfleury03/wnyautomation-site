@@ -35,7 +35,7 @@ const business = {
   },
   googleBusinessProfileUrl: "",
   bookingLink: process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendly.com/wnyautomation/free-workflow-audit",
-  awpPortalSignInUrl: "https://awp.wnyautomation.com/sign-in?redirect_url=/app",
+  awpPortalSignInUrl: "https://app.wnyautomation.com/sign-in?redirect_url=/launch",
   clientGatewaySignInUrl: "https://awp.wnyautomation.com/sign-in?redirect_url=/app",
   clientLoginPath: "/client-login",
   clientPortalUrl: "https://awp.wnyautomation.com/sign-in?redirect_url=/app",
