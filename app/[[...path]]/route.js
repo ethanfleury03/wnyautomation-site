@@ -75,10 +75,10 @@ export async function GET(request, context) {
   if (pathname === "/blog") return html(renderBlogIndexPage(await getAllBlogPosts()));
   if (pathname === "/blogs") return NextResponse.redirect(new URL("/blog", request.url), 301);
   if (pathname === "/client-login") {
-    return NextResponse.redirect(new URL(business.clientGatewaySignInUrl, request.url), 302);
+    return NextResponse.redirect(new URL(business.awpPortalSignInUrl, request.url), 302);
   }
   if (pathname === "/client-portal") {
-    return NextResponse.redirect(new URL(business.clientGatewaySignInUrl, request.url), 302);
+    return NextResponse.redirect(new URL(business.awpPortalSignInUrl, request.url), 302);
   }
   if (pathname === "/sitemap") return html(renderHtmlSitemapPage(await getAllRoutes()));
   if (pathname === "/sitemap.xml") return text(renderSitemapXml(await getAllRoutes()), "application/xml; charset=utf-8");

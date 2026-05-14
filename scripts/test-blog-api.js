@@ -15,7 +15,6 @@ const server = spawn(process.execPath, [require.resolve("next/dist/bin/next"), "
     BLOG_API_TOKEN: TOKEN,
     ALLOW_DATA_URL_BLOG_IMAGES: "true",
     NEXT_PUBLIC_SITE_URL: BASE_URL,
-    NEXT_PUBLIC_CLIENT_GATEWAY_SIGN_IN_URL: "https://app.wnyautomation.com/sign-in?redirect_url=/launch",
     N8N_LEAD_WEBHOOK_URL: "",
     NODE_NO_WARNINGS: "1",
   },
@@ -101,7 +100,7 @@ async function expectLeadFocusedHomepage() {
   const checks = [
     'class="button header-cta button-primary" href="#workflow-form"',
     'class="button header-login button-secondary"',
-    'href="https://app.wnyautomation.com/sign-in?redirect_url=/launch"',
+    'href="https://awp.wnyautomation.com/sign-in?redirect_url=/app"',
     "Client Login",
     'href="#workflow-form"',
     'class="lead-form workflow-form lead-form-compact"',
@@ -186,13 +185,13 @@ async function main() {
   await expectPage("/case-studies", "Workflow examples for future case studies.");
   await expectPage("/privacy-policy", "Privacy Policy");
   const login = await fetch(`${BASE_URL}/client-login`, { redirect: "manual" });
-  if (login.status !== 302 || login.headers.get("location") !== "https://app.wnyautomation.com/sign-in?redirect_url=/launch") {
-    throw new Error("Expected /client-login to redirect to the gateway sign-in launch URL.");
+  if (login.status !== 302 || login.headers.get("location") !== "https://awp.wnyautomation.com/sign-in?redirect_url=/app") {
+    throw new Error("Expected /client-login to redirect to the AWP portal sign-in URL.");
   }
 
   const portal = await fetch(`${BASE_URL}/client-portal`, { redirect: "manual" });
-  if (portal.status !== 302 || portal.headers.get("location") !== "https://app.wnyautomation.com/sign-in?redirect_url=/launch") {
-    throw new Error("Expected /client-portal to redirect to the gateway sign-in launch URL.");
+  if (portal.status !== 302 || portal.headers.get("location") !== "https://awp.wnyautomation.com/sign-in?redirect_url=/app") {
+    throw new Error("Expected /client-portal to redirect to the AWP portal sign-in URL.");
   }
 
   const lead = await request("/api/leads", {

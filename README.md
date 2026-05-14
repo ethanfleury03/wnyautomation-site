@@ -30,8 +30,6 @@ R2_SECRET_ACCESS_KEY
 R2_BUCKET
 R2_PUBLIC_BASE_URL
 NEXT_PUBLIC_SITE_URL
-NEXT_PUBLIC_CLIENT_LOGIN_PATH=https://app.wnyautomation.com/sign-in?redirect_url=/launch
-NEXT_PUBLIC_CLIENT_GATEWAY_SIGN_IN_URL=https://app.wnyautomation.com/sign-in?redirect_url=/launch
 ```
 
 Blog rows are stored in Postgres table `marketing_blogs`. Blog images posted as
@@ -54,8 +52,9 @@ GET  /api/blogs/:slug
 POST /api/blogs
 ```
 
-The header Client Login button links directly to the gateway sign-in URL.
-`/client-login` and `/client-portal` redirect there for older links.
+The header Client Login button links directly to the AWP portal sign-in URL at
+`https://awp.wnyautomation.com/sign-in?redirect_url=/app`. `/client-login` and
+`/client-portal` redirect there for older links.
 
 ## Blog Publishing
 

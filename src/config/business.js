@@ -35,16 +35,10 @@ const business = {
   },
   googleBusinessProfileUrl: "",
   bookingLink: process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendly.com/wnyautomation/free-workflow-audit",
-  clientLoginPath:
-    process.env.NEXT_PUBLIC_CLIENT_LOGIN_PATH ||
-    process.env.NEXT_PUBLIC_CLIENT_GATEWAY_SIGN_IN_URL ||
-    "https://app.wnyautomation.com/sign-in?redirect_url=/launch",
-  clientGatewaySignInUrl:
-    process.env.NEXT_PUBLIC_CLIENT_GATEWAY_SIGN_IN_URL || "https://app.wnyautomation.com/sign-in?redirect_url=/launch",
-  clientPortalUrl:
-    process.env.NEXT_PUBLIC_CLIENT_PORTAL_URL ||
-    process.env.NEXT_PUBLIC_CLIENT_GATEWAY_SIGN_IN_URL ||
-    "https://app.wnyautomation.com/sign-in?redirect_url=/launch",
+  awpPortalSignInUrl: "https://awp.wnyautomation.com/sign-in?redirect_url=/app",
+  clientLoginPath: "https://awp.wnyautomation.com/sign-in?redirect_url=/app",
+  clientGatewaySignInUrl: "https://awp.wnyautomation.com/sign-in?redirect_url=/app",
+  clientPortalUrl: "https://awp.wnyautomation.com/sign-in?redirect_url=/app",
   n8nWebhookUrl: process.env.N8N_LEAD_WEBHOOK_URL || "",
   siteUrl: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   defaultSeoTitle: "WNY Automation Co | Websites and Automation for Local Businesses",
