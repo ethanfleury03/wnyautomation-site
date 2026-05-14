@@ -52,9 +52,10 @@ GET  /api/blogs/:slug
 POST /api/blogs
 ```
 
-The header Client Login button links directly to the AWP portal sign-in URL at
-`https://awp.wnyautomation.com/sign-in?redirect_url=/app`. `/client-login` and
-`/client-portal` redirect there for older links.
+The header Client Login button links to the gateway sign-in URL at
+`https://app.wnyautomation.com/sign-in?redirect_url=/launch`. The gateway routes
+client users to their portal and super admins to the admin portal. `/client-login`
+and `/client-portal` redirect there for older links.
 
 ## Blog Publishing
 

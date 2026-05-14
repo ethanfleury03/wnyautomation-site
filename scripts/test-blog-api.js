@@ -100,7 +100,7 @@ async function expectLeadFocusedHomepage() {
   const checks = [
     'class="button header-cta button-primary" href="#workflow-form"',
     'class="button header-login button-secondary"',
-    'href="https://awp.wnyautomation.com/sign-in?redirect_url=/app"',
+    'href="https://app.wnyautomation.com/sign-in?redirect_url=/launch"',
     "Client Login",
     'href="#workflow-form"',
     'class="lead-form workflow-form lead-form-compact"',
@@ -185,13 +185,13 @@ async function main() {
   await expectPage("/case-studies", "Workflow examples for future case studies.");
   await expectPage("/privacy-policy", "Privacy Policy");
   const login = await fetch(`${BASE_URL}/client-login`, { redirect: "manual" });
-  if (login.status !== 302 || login.headers.get("location") !== "https://awp.wnyautomation.com/sign-in?redirect_url=/app") {
-    throw new Error("Expected /client-login to redirect to the AWP portal sign-in URL.");
+  if (login.status !== 302 || login.headers.get("location") !== "https://app.wnyautomation.com/sign-in?redirect_url=/launch") {
+    throw new Error("Expected /client-login to redirect to the gateway sign-in URL.");
   }
 
   const portal = await fetch(`${BASE_URL}/client-portal`, { redirect: "manual" });
-  if (portal.status !== 302 || portal.headers.get("location") !== "https://awp.wnyautomation.com/sign-in?redirect_url=/app") {
-    throw new Error("Expected /client-portal to redirect to the AWP portal sign-in URL.");
+  if (portal.status !== 302 || portal.headers.get("location") !== "https://app.wnyautomation.com/sign-in?redirect_url=/launch") {
+    throw new Error("Expected /client-portal to redirect to the gateway sign-in URL.");
   }
 
   const lead = await request("/api/leads", {
