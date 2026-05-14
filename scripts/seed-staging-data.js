@@ -76,7 +76,7 @@ async function upsertLead(pool, lead) {
       lead.phone,
       lead.trade,
       lead.message,
-      process.env.NEXT_PUBLIC_SITE_URL || "https://wnyautomation-site-git-staging-ethanfleury03s-projects.vercel.app",
+      process.env.NEXT_PUBLIC_SITE_URL || "https://wnyautomation-git-staging-wny-automation.vercel.app",
     ],
   );
 }
