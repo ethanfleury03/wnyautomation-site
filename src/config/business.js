@@ -35,7 +35,12 @@ const business = {
   },
   googleBusinessProfileUrl: "",
   bookingLink: process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendly.com/wnyautomation/free-workflow-audit",
-  awpPortalSignInUrl: "https://app.wnyautomation.com/sign-in?redirect_url=/launch",
+  awpPortalSignInUrl:
+    process.env.NEXT_PUBLIC_CLIENT_LOGIN_URL ||
+    process.env.NEXT_PUBLIC_AWP_PORTAL_SIGN_IN_URL ||
+    (process.env.APP_ENV === "staging"
+      ? "https://wnyautomation-portal-gateway-git-staging-wny-automation.vercel.app/sign-in?redirect_url=/launch"
+      : "https://app.wnyautomation.com/sign-in?redirect_url=/launch"),
   clientLoginPath: "/client-login",
   n8nWebhookUrl: process.env.N8N_LEAD_WEBHOOK_URL || "",
   siteUrl: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
