@@ -1,11 +1,18 @@
 /** @type {import('next').NextConfig} */
+const isStaging = process.env.APP_ENV === "staging";
+
 const nextConfig = {
   poweredByHeader: false,
   async headers() {
+    const stagingHeaders = isStaging
+      ? [{ key: "X-Robots-Tag", value: "noindex, nofollow" }]
+      : [];
+
     return [
       {
         source: "/:path*",
         headers: [
+          ...stagingHeaders,
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "X-Frame-Options", value: "DENY" },

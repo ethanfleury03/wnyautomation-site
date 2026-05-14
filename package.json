@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start -p 3000",
     "lint": "echo \"No marketing lint configured\"",
+    "db:seed:staging": "node scripts/seed-staging-data.js",
     "test": "node scripts/test-blog-api.js"
   },
   "dependencies": {
