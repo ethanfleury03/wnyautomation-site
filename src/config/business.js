@@ -1,3 +1,36 @@
+const isStaging = process.env.APP_ENV === "staging";
+const productionPortalHosts = new Set([
+  "app.wnyautomation.com",
+  "admin.wnyautomation.com",
+  "awp.wnyautomation.com",
+]);
+
+function requireStagingUrl(name, value) {
+  const raw = String(value || "").trim();
+  if (!raw) {
+    throw new Error(`${name} is required when APP_ENV=staging.`);
+  }
+
+  const url = new URL(raw);
+  if (productionPortalHosts.has(url.hostname)) {
+    throw new Error(`${name} must not point at production when APP_ENV=staging.`);
+  }
+  return url.toString();
+}
+
+function clientLoginUrl() {
+  const configured =
+    process.env.NEXT_PUBLIC_CLIENT_LOGIN_URL ||
+    process.env.NEXT_PUBLIC_AWP_PORTAL_SIGN_IN_URL ||
+    "";
+
+  if (isStaging) {
+    return requireStagingUrl("NEXT_PUBLIC_CLIENT_LOGIN_URL", configured);
+  }
+
+  return configured || "https://app.wnyautomation.com/sign-in?redirect_url=/launch";
+}
+
 const business = {
   businessName: process.env.NEXT_PUBLIC_BUSINESS_NAME || "WNY Automation Co",
   shortName: "WNY Automation",
@@ -35,12 +68,7 @@ const business = {
   },
   googleBusinessProfileUrl: "",
   bookingLink: process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendly.com/wnyautomation/free-workflow-audit",
-  awpPortalSignInUrl:
-    process.env.NEXT_PUBLIC_CLIENT_LOGIN_URL ||
-    process.env.NEXT_PUBLIC_AWP_PORTAL_SIGN_IN_URL ||
-    (process.env.APP_ENV === "staging"
-      ? "https://wnyautomation-portal-gateway-git-staging-wny-automation.vercel.app/sign-in?redirect_url=/launch"
-      : "https://app.wnyautomation.com/sign-in?redirect_url=/launch"),
+  awpPortalSignInUrl: clientLoginUrl(),
   clientLoginPath: "/client-login",
   n8nWebhookUrl: process.env.N8N_LEAD_WEBHOOK_URL || "",
   siteUrl: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
