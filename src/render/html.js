@@ -68,6 +68,16 @@ function markdownToHtml(markdown) {
     const line = rawLine.trim();
 
     if (!line) {
+      if (listOpen) {
+        const nextLine = lines.slice(index + 1).find((candidate) => candidate.trim());
+        const nextTrimmed = nextLine ? nextLine.trim() : "";
+        const continuesCurrentList =
+          (listTag === "ol" && /^\d+\.\s+/.test(nextTrimmed)) ||
+          (listTag === "ul" && /^[-*]\s+/.test(nextTrimmed));
+        if (continuesCurrentList) {
+          continue;
+        }
+      }
       closeList();
       continue;
     }
@@ -127,10 +137,12 @@ function markdownToHtml(markdown) {
     }
 
     if (/^\d+\.\s+/.test(line)) {
+      const orderedMatch = line.match(/^(\d+)\.\s+/);
+      const start = orderedMatch ? Number(orderedMatch[1]) : 1;
       if (!listOpen || listTag !== "ol") {
         closeList();
         listTag = "ol";
-        html.push("<ol>");
+        html.push(start > 1 ? `<ol start="${start}">` : "<ol>");
         listOpen = true;
       }
       html.push(`<li>${inlineMarkdownToHtml(line.replace(/^\d+\.\s+/, ""))}</li>`);
