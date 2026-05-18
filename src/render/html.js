@@ -145,7 +145,11 @@ function markdownToHtml(markdown) {
         html.push(start > 1 ? `<ol start="${start}">` : "<ol>");
         listOpen = true;
       }
-      html.push(`<li>${inlineMarkdownToHtml(line.replace(/^\d+\.\s+/, ""))}</li>`);
+      html.push(
+        start > 1
+          ? `<li value="${start}">${inlineMarkdownToHtml(line.replace(/^\d+\.\s+/, ""))}</li>`
+          : `<li>${inlineMarkdownToHtml(line.replace(/^\d+\.\s+/, ""))}</li>`,
+      );
       continue;
     }
 
