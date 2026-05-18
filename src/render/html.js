@@ -46,11 +46,54 @@ function markdownToHtml(markdown) {
     }
   }
 
-  for (const rawLine of lines) {
+  function splitTableRow(line) {
+    return line
+      .trim()
+      .replace(/^\|/, "")
+      .replace(/\|$/, "")
+      .split("|")
+      .map((cell) => cell.trim());
+  }
+
+  function isTableSeparator(line) {
+    return /^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$/.test(line.trim());
+  }
+
+  function isTableRow(line) {
+    return /^\|.+\|$/.test(line.trim());
+  }
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const rawLine = lines[index];
     const line = rawLine.trim();
 
     if (!line) {
       closeList();
+      continue;
+    }
+
+    if (isTableRow(line) && lines[index + 1] && isTableSeparator(lines[index + 1])) {
+      closeList();
+      const headers = splitTableRow(line);
+      index += 2;
+      const rows = [];
+      while (index < lines.length && isTableRow(lines[index])) {
+        rows.push(splitTableRow(lines[index]));
+        index += 1;
+      }
+      index -= 1;
+      html.push(
+        `<div class="table-scroll"><table><thead><tr>${headers
+          .map((header) => `<th>${inlineMarkdownToHtml(header)}</th>`)
+          .join("")}</tr></thead><tbody>${rows
+          .map(
+            (row) =>
+              `<tr>${headers
+                .map((_, cellIndex) => `<td>${inlineMarkdownToHtml(row[cellIndex] || "")}</td>`)
+                .join("")}</tr>`,
+          )
+          .join("")}</tbody></table></div>`,
+      );
       continue;
     }
 
@@ -91,6 +134,14 @@ function markdownToHtml(markdown) {
         listOpen = true;
       }
       html.push(`<li>${inlineMarkdownToHtml(line.replace(/^\d+\.\s+/, ""))}</li>`);
+      continue;
+    }
+
+    if (listOpen && /^\s+/.test(rawLine) && html.length) {
+      html[html.length - 1] = html[html.length - 1].replace(
+        /<\/li>$/,
+        `<br>${inlineMarkdownToHtml(line)}</li>`,
+      );
       continue;
     }
 

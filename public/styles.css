@@ -1059,6 +1059,41 @@ textarea:focus {
   margin-top: 8px;
 }
 
+.article-body .table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(32, 48, 43, 0.06);
+}
+
+.article-body table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.article-body th,
+.article-body td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-body th {
+  color: var(--ink);
+  background: #f7faf8;
+  font-weight: 800;
+}
+
+.article-body tbody tr:last-child td {
+  border-bottom: 0;
+}
+
 .article-body a {
   color: var(--teal-dark);
   font-weight: 720;
