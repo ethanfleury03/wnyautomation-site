@@ -1,7 +1,7 @@
 const CLERK_FAPI_ORIGIN = "https://frontend-api.clerk.dev";
-const CLERK_PROXY_PATH = "/clerk-proxy";
+const CLERK_PROXY_PATH = "/clerk-prod-proxy";
 const CLERK_PROXY_URL =
-  process.env.CLERK_PROXY_URL || "https://wnyautomation.com/clerk-proxy";
+  process.env.CLERK_PROD_PROXY_URL || "https://wnyautomation.com/clerk-prod-proxy";
 
 const HOP_BY_HOP_HEADERS = new Set([
   "connection",
