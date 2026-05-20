@@ -4,6 +4,14 @@ const { formatDisplayDate } = require("../lib/slugs");
 
 function renderHeader({ currentPath = "/" } = {}) {
   const leadCaptureHref = pageHasWorkflowForm(currentPath) ? "#workflow-form" : "/free-workflow-audit#workflow-form";
+  const navLinks = [
+    ["Services", "/services"],
+    ["Industries", "/industries"],
+    ["About", "/about"],
+    ["Blog", "/blog"],
+    ["Free Audit", "/free-workflow-audit"],
+  ];
+  const navMarkup = navLinks.map(([label, href]) => `<a href="${escapeAttribute(href)}">${escapeHtml(label)}</a>`).join("");
 
   return `
     <header class="site-header" aria-label="Primary navigation">
@@ -18,11 +26,7 @@ function renderHeader({ currentPath = "/" } = {}) {
           ${renderBrandLockup()}
         </a>
         <nav class="nav-links" aria-label="Primary links">
-          <a href="/services">Services</a>
-          <a href="/industries">Industries</a>
-          <a href="/about">About</a>
-          <a href="/blog">Blog</a>
-          <a href="/free-workflow-audit">Free Audit</a>
+          ${navMarkup}
         </nav>
         <div class="header-actions">
           <a class="button header-cta button-primary" href="${escapeAttribute(leadCaptureHref)}">
@@ -35,8 +39,25 @@ function renderHeader({ currentPath = "/" } = {}) {
             <span class="client-login-label-full">Client Login</span>
             <span class="client-login-label-short">Portal</span>
           </a>
+          <button class="mobile-menu-button" type="button" aria-label="Open navigation menu" aria-controls="mobile-nav" aria-expanded="false">
+            ${icon("menu")}
+          </button>
         </div>
       </div>
+      <div class="mobile-nav-backdrop" data-mobile-nav-close hidden></div>
+      <nav class="mobile-nav-panel" id="mobile-nav" aria-label="Mobile navigation" hidden>
+        <div class="mobile-nav-panel-header">
+          <span>Menu</span>
+          <button class="mobile-nav-close" type="button" aria-label="Close navigation menu" data-mobile-nav-close>${icon("x")}</button>
+        </div>
+        <div class="mobile-nav-links">
+          ${navMarkup}
+        </div>
+        <div class="mobile-nav-actions">
+          <a class="button button-primary" href="${escapeAttribute(leadCaptureHref)}">${icon("sparkles")}Get Automation Ideas</a>
+          <a class="button button-secondary" href="${escapeAttribute(business.clientLoginPath)}">${icon("log-in")}Client Login</a>
+        </div>
+      </nav>
     </header>`;
 }
 

@@ -4,6 +4,42 @@ const CONFIG = {
   leadEndpoint: window.WNY_AUTOMATION_CONFIG?.leadEndpoint || "/api/leads",
 };
 
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {
+      // Install support should never block the marketing site.
+    });
+  });
+}
+
+const mobileMenuButton = document.querySelector(".mobile-menu-button");
+const mobileNav = document.querySelector(".mobile-nav-panel");
+const mobileNavBackdrop = document.querySelector(".mobile-nav-backdrop");
+
+function setMobileNav(open) {
+  if (!mobileMenuButton || !mobileNav || !mobileNavBackdrop) return;
+  mobileMenuButton.setAttribute("aria-expanded", open ? "true" : "false");
+  mobileNav.hidden = !open;
+  mobileNavBackdrop.hidden = !open;
+  document.body.classList.toggle("nav-open", open);
+}
+
+mobileMenuButton?.addEventListener("click", () => {
+  setMobileNav(mobileMenuButton.getAttribute("aria-expanded") !== "true");
+});
+
+document.querySelectorAll("[data-mobile-nav-close]").forEach((item) => {
+  item.addEventListener("click", () => setMobileNav(false));
+});
+
+mobileNav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setMobileNav(false));
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMobileNav(false);
+});
+
 document.querySelectorAll('[data-calendly-link], a[href*="calendly.com"]').forEach((link) => {
   if (link.matches("[data-calendly-link]")) {
     link.href = CONFIG.bookingLink;
@@ -89,6 +125,43 @@ function storeLocalBackup(payload) {
     localStorage.setItem(storageKey, JSON.stringify(existing.slice(-50)));
   } catch (error) {
     // Local backup is helpful in development, but the form should still submit.
+  }
+}
+
+function draftKey(form) {
+  return `wny_workflow_draft:${window.location.pathname}:${form.dataset.conversionPath || form.id || "form"}`;
+}
+
+function saveFormDraft(form) {
+  try {
+    const data = new FormData(form);
+    const draft = {};
+    for (const [key, value] of data.entries()) {
+      if (key !== "companyWebsite") draft[key] = value.toString();
+    }
+    localStorage.setItem(draftKey(form), JSON.stringify(draft));
+  } catch (error) {
+    // Drafts are a convenience; form submission still works without storage.
+  }
+}
+
+function restoreFormDraft(form) {
+  try {
+    const draft = JSON.parse(localStorage.getItem(draftKey(form)) || "{}");
+    Object.entries(draft).forEach(([key, value]) => {
+      const field = form.elements.namedItem(key);
+      if (field && "value" in field && !field.value) field.value = value;
+    });
+  } catch (error) {
+    // Ignore corrupt local drafts.
+  }
+}
+
+function clearFormDraft(form) {
+  try {
+    localStorage.removeItem(draftKey(form));
+  } catch (error) {
+    // Ignore storage errors.
   }
 }
 
@@ -219,6 +292,10 @@ document.addEventListener("click", (event) => {
 const workflowForms = new Set(document.querySelectorAll(".workflow-form, #workflow-form"));
 
 workflowForms.forEach((form) => {
+  restoreFormDraft(form);
+
+  form.addEventListener("input", () => saveFormDraft(form));
+
   form.addEventListener(
     "input",
     () => {
@@ -240,6 +317,16 @@ workflowForms.forEach((form) => {
 
     const submitButton = form.querySelector('button[type="submit"]');
     const payload = serializeWorkflowForm(form);
+
+    if (!navigator.onLine) {
+      storeLocalBackup(payload);
+      setFormStatus(form, "You appear to be offline. Your draft is saved on this device - reconnect and submit again.", {
+        isError: true,
+        mailto: buildMailto(payload),
+      });
+      return;
+    }
+
     submitButton.disabled = true;
     setFormStatus(form, "Sending your workflow request...");
 
@@ -247,6 +334,7 @@ workflowForms.forEach((form) => {
       storeLocalBackup(payload);
       await sendLead(payload);
       form.reset();
+      clearFormDraft(form);
       trackEvent("lead_submit_success", {
         conversion_path: payload.conversionPath,
         detail_fields_provided: payload.detailFieldsProvided,

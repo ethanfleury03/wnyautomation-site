@@ -1,0 +1,52 @@
+{
+  "name": "WNY Automation Co",
+  "short_name": "WNY Automation",
+  "description": "Practical websites and workflow automation for Western New York businesses.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f7f3",
+  "theme_color": "#147d6f",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/assets/site-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/site-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/site-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/site-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Free Workflow Audit",
+      "short_name": "Free Audit",
+      "url": "/free-workflow-audit",
+      "description": "Send one workflow and get practical automation ideas."
+    },
+    {
+      "name": "Client Login",
+      "short_name": "Portal",
+      "url": "/client-login",
+      "description": "Open the secure WNY Automation client portal."
+    }
+  ]
+}
