@@ -38,7 +38,7 @@ const business = {
   subline: "Start small. Fix one workflow. Prove value.",
   positioning: "Practical websites, blog schedules, and workflow automation for local businesses.",
   phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || "",
-  email: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "hello@wnyautomation.co",
+  email: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "ethan@wnyautomation.com",
   serviceArea: [
     "Buffalo, NY",
     "Niagara Falls, NY",

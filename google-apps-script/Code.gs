@@ -1,7 +1,7 @@
 const LEAD_SHEET_NAME = "Leads";
 const VISIT_SHEET_NAME = "Visits";
 const SPREADSHEET_ID = "";
-const NOTIFICATION_EMAIL = "hello@wnyautomation.co";
+const NOTIFICATION_EMAIL = "ethan@wnyautomation.com";
 
 const LEAD_HEADERS = [
   "Submitted At",
@@ -168,7 +168,7 @@ function ensureHeaders_(sheet, headers) {
 }
 
 function sendNotification_(payload) {
-  if (!NOTIFICATION_EMAIL || NOTIFICATION_EMAIL === "hello@wnyautomation.co") {
+  if (!NOTIFICATION_EMAIL) {
     return;
   }
 

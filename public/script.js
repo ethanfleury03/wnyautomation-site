@@ -1,6 +1,6 @@
 const CONFIG = {
   bookingLink: window.WNY_AUTOMATION_CONFIG?.bookingLink || "https://calendly.com/wnyautomation/free-workflow-audit",
-  businessEmail: window.WNY_AUTOMATION_CONFIG?.businessEmail || "hello@wnyautomation.co",
+  businessEmail: window.WNY_AUTOMATION_CONFIG?.businessEmail || "ethan@wnyautomation.com",
   leadEndpoint: window.WNY_AUTOMATION_CONFIG?.leadEndpoint || "/api/leads",
 };
 
