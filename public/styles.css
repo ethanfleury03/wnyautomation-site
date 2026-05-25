@@ -1971,9 +1971,41 @@ details p {
   text-align: left;
 }
 
+.final-inner-with-form > div:first-child {
+  max-width: 660px;
+}
+
+.final-inner-with-form > div:first-child h2 {
+  font-size: clamp(2.2rem, 4vw, 3.65rem);
+  line-height: 1.08;
+}
+
+.final-inner-with-form > div:first-child p:not(.section-kicker) {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1rem;
+}
+
 .final-inner-with-form .lead-form {
   color: var(--ink);
   text-align: left;
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(255, 255, 255, 0.82);
+}
+
+.final-inner-with-form .lead-form .form-header h2 {
+  color: var(--ink);
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+}
+
+.final-inner-with-form .lead-form .form-header .section-kicker {
+  color: var(--teal-dark);
+}
+
+.final-inner-with-form .lead-form .form-header p {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.45;
 }
 
 .final-inner-with-form .form-actions {

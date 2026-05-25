@@ -3,7 +3,7 @@ const { renderMeta, renderTrackingScripts } = require("../lib/seo");
 const { escapeScriptJson, jsonScript } = require("./html");
 const { renderFooter, renderHeader } = require("./components");
 
-const assetVersion = "service-pages-20260525";
+const assetVersion = "service-pages-20260525c";
 
 function renderPage({
   meta,
