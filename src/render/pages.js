@@ -22,14 +22,20 @@ const {
   renderAutomationExamplesGrid,
   renderBlogCard,
   renderBreadcrumbs,
+  renderChecklistSection,
+  renderConnectionList,
   renderCTASection,
+  renderExplainerSection,
   renderFAQSection,
   renderHowItWorksSection,
   renderIndexGrid,
   renderInternalLinksSection,
   renderPainPointSection,
+  renderProblemSection,
+  renderServiceHero,
   renderSEOPageHero,
   renderTrustSection,
+  renderWorkflowSteps,
   renderWorkflowAuditForm,
   section,
 } = require("./components");
@@ -44,36 +50,43 @@ const defaultExamples = [
     icon: "reply",
     title: "Missed lead rescue",
     description: "Catch forms, missed calls, and new inquiries with fast first-response alerts.",
+    href: "/services/missed-lead-rescue-system",
   },
   {
     icon: "file-clock",
     title: "Quote follow-up",
     description: "Follow up on open estimates before good opportunities go cold.",
+    href: "/services/quote-follow-up-system",
   },
   {
     icon: "list-todo",
     title: "Intake-to-task routing",
     description: "Turn forms, emails, and requests into tasks with owners and due dates.",
+    href: "/services/intake-to-task-automation",
   },
   {
     icon: "message-circle-question",
     title: "Website FAQ + lead capture",
     description: "Answer common questions and route real prospects to a person.",
+    href: "/services/website-faq-lead-capture-assistant",
   },
   {
     icon: "star",
     title: "Appointment and review follow-up",
     description: "Send reminders, review requests, and simple customer check-ins.",
+    href: "/services/appointment-review-reminder-follow-up",
   },
   {
     icon: "globe-2",
     title: "Website creation",
     description: "Build a clear local business website with strong lead capture paths.",
+    href: "/services/website-creation",
   },
   {
     icon: "calendar-days",
     title: "Blog schedules",
     description: "Plan realistic topics, publish dates, and reminders for local SEO content.",
+    href: "/services/blog-schedules",
   },
 ];
 
@@ -318,37 +331,44 @@ function renderServicePage(service) {
     { label: "Services", href: "/services" },
     { label: service.title, href: `/services/${service.slug}` },
   ];
-  const related = [...serviceLinks(service.relatedServices), ...industryLinks(service.relatedIndustries)];
+  const related = serviceLinks(service.relatedServices);
   const body = `
     <main>
       <div class="section-inner">${renderBreadcrumbs(crumbs)}</div>
-      ${renderSEOPageHero({
-        eyebrow: "Workflow automation service",
-        h1: service.h1,
-        subheading: service.shortDescription,
+      ${renderServiceHero(service)}
+      ${renderExplainerSection(service)}
+      ${renderProblemSection(service)}
+      ${renderChecklistSection({
+        eyebrow: "Who this is for",
+        title: "Good fits for this system.",
+        intro: "These pages are written for practical local-business situations, not abstract automation theory.",
+        items: service.whoThisIsFor,
+        iconName: "user-check",
       })}
-      ${renderPainPointSection({ title: "Manual work this can help reduce", items: service.painPoints })}
-      ${section(`
-        <div class="two-column-section">
-          <div>
-            <p class="section-kicker">What this automation does</p>
-            <h2>Simple workflow support without a giant software project.</h2>
-            <p>${escapeHtml(service.shortDescription)}</p>
-            <h3>Example workflow</h3>
-            <p>${escapeHtml(service.exampleWorkflow)}</p>
-          </div>
-          <div class="audit-panel">
-            <h3>Tools it can connect to</h3>
-            ${listItems(service.toolsItCanConnect, "check-list")}
-          </div>
-        </div>`)}
-      ${section(`
-        <div class="section-heading"><p class="section-kicker">Benefits</p><h2>What a cleaner workflow can improve.</h2></div>
-        <div class="check-card-grid">${service.benefits.map((item) => `<article class="check-card">${icon("check")}<p>${escapeHtml(item)}</p></article>`).join("")}</div>`)}
-      ${renderHowItWorksSection()}
-      ${renderInternalLinksSection("Related services and industries", related)}
+      ${renderWorkflowSteps(service)}
+      ${renderConnectionList(service)}
+      ${renderChecklistSection({
+        eyebrow: "Signs you might need this",
+        title: "A quick self-check for the business.",
+        items: service.signsYouNeedIt,
+        iconName: "square-check",
+      })}
+      ${renderChecklistSection({
+        eyebrow: "What we'd look at first",
+        title: "A thoughtful review before recommending a build.",
+        intro: "WNY Automation Co starts by understanding the real workflow, tools, and handoffs before suggesting a system.",
+        items: service.whatWeLookAtFirst,
+        iconName: "search-check",
+      })}
       ${renderFAQSection(service.faqs, "Questions about this service")}
-      ${renderCTASection({ withForm: true, source: service.title })}
+      ${renderInternalLinksSection("Related service pages", related)}
+      ${renderCTASection({
+        title: service.finalCtaTitle,
+        text: service.finalCtaText,
+        primaryLabel: service.ctaLabel,
+        withForm: true,
+        source: service.title,
+      })}
     </main>`;
 
   return page(

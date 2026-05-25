@@ -175,7 +175,21 @@ async function main() {
   await expectLeadFocusedHomepage();
   await expectAboutPage();
   await expectPage("/services", "Services built around real small-business work.");
-  await expectPage("/services/missed-lead-rescue-system", "Missed Lead Rescue System for Small Businesses");
+  const servicePageChecks = [
+    ["/services/missed-lead-rescue-system", "Catch missed leads before they go cold."],
+    ["/services/quote-follow-up-system", "Follow up on quotes before good opportunities disappear."],
+    ["/services/intake-to-task-automation", "Turn forms, emails, and requests into clear next steps."],
+    ["/services/website-faq-lead-capture-assistant", "Give website visitors helpful answers and a clear next step."],
+    [
+      "/services/appointment-review-reminder-follow-up",
+      "Keep appointments, reviews, and customer follow-ups from falling through the cracks.",
+    ],
+    ["/services/website-creation", "A clear small business website built around trust and next steps."],
+    ["/services/blog-schedules", "Plan useful content before your business needs it."],
+  ];
+  for (const [path, check] of servicePageChecks) {
+    await expectPage(path, check);
+  }
   await expectPage("/industries", "Workflow automation ideas for local industries.");
   await expectPage("/industries/hvac-companies", "Workflow Automation for HVAC Companies");
   await expectNotFound("/locations");

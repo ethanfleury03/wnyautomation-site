@@ -3,6 +3,8 @@ const { renderMeta, renderTrackingScripts } = require("../lib/seo");
 const { escapeScriptJson, jsonScript } = require("./html");
 const { renderFooter, renderHeader } = require("./components");
 
+const assetVersion = "service-pages-20260525";
+
 function renderPage({
   meta,
   schemas = [],
@@ -36,7 +38,7 @@ function renderPage({
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles.css?v=${assetVersion}" />
     ${schemaScripts}
     ${renderTrackingScripts()}
     <script>window.WNY_AUTOMATION_CONFIG = ${jsonScript(publicConfig)};</script>

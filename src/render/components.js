@@ -296,7 +296,15 @@ function renderAutomationExamplesGrid({ title = "Example automations", examples 
       <h2>${escapeHtml(title)}</h2>
     </div>
     <div class="card-grid examples-grid">
-      ${(examples || []).map((item) => `<article class="project-card">${icon(item.icon || "workflow")}<h3>${escapeHtml(item.title || item)}</h3><p>${escapeHtml(item.description || "")}</p></article>`).join("")}
+      ${(examples || [])
+        .map((item) => {
+          const title = item.title || item;
+          const cardBody = `${icon(item.icon || "workflow")}<h3>${escapeHtml(title)}</h3><p>${escapeHtml(item.description || "")}</p>`;
+          return item.href
+            ? `<article class="project-card">${cardBody}<a class="blog-read-link" href="${escapeAttribute(item.href)}">View page${icon("arrow-up-right")}</a></article>`
+            : `<article class="project-card">${cardBody}</article>`;
+        })
+        .join("")}
     </div>`);
 }
 
@@ -360,6 +368,136 @@ function renderInternalLinksSection(title, links = []) {
         .map((link) => `<a class="related-link-card" href="${escapeAttribute(link.href)}"><strong>${escapeHtml(link.label)}</strong><span>${escapeHtml(link.description || "Learn more")}</span>${icon("arrow-up-right")}</a>`)
         .join("")}
     </div>`);
+}
+
+function renderServiceHero(service) {
+  return `
+    <section class="page-hero service-hero">
+      <div class="section-inner page-hero-inner">
+        <div class="page-hero-copy">
+          <p class="section-kicker">${escapeHtml(service.heroEyebrow || "Workflow automation service")}</p>
+          <h1>${escapeHtml(service.h1 || service.title)}</h1>
+          <p>${escapeHtml(service.shortDescription)}</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/free-workflow-audit#workflow-form">${icon("send")}${escapeHtml(service.ctaLabel || "Get My Free Automation Ideas")}</a>
+            <a class="button button-secondary" href="${escapeAttribute(business.bookingLink)}">${icon("calendar-check")}Book a Free Workflow Audit</a>
+          </div>
+          <p class="service-hero-trust">${icon("shield-check")}<span>${escapeHtml(service.trustLine)}</span></p>
+        </div>
+      </div>
+    </section>`;
+}
+
+function renderExplainerSection(service) {
+  return section(
+    `
+      <div class="service-explainer-grid">
+        <div class="service-explainer-copy">
+          <p class="section-kicker">What this system does</p>
+          <h2>${escapeHtml(service.title)} in plain English.</h2>
+          <p>${escapeHtml(service.whatThisDoes)}</p>
+        </div>
+        <div class="service-included-grid" aria-label="What is included">
+          ${(service.includes || [])
+            .map(
+              (item) => `
+                <article class="service-included-card">
+                  ${icon("check")}
+                  <span>${escapeHtml(item)}</span>
+                </article>`,
+            )
+            .join("")}
+        </div>
+      </div>`,
+    "service-explainer-section",
+  );
+}
+
+function renderProblemSection(service) {
+  return section(
+    `
+      <div class="two-column-section service-problem-layout">
+        <div>
+          <p class="section-kicker">The problem it solves</p>
+          <h2>${escapeHtml(service.problemTitle)}</h2>
+          <p>${escapeHtml(service.problem)}</p>
+        </div>
+        <div class="service-problem-panel">
+          <h3>Where the workflow usually breaks</h3>
+          ${listItems(service.painPoints, "check-list")}
+        </div>
+      </div>`,
+    "service-problem-section",
+  );
+}
+
+function renderChecklistSection({
+  eyebrow,
+  title,
+  intro = "",
+  items = [],
+  iconName = "check",
+  className = "",
+}) {
+  if (!items.length) return "";
+
+  return section(
+    `
+      <div class="section-heading">
+        <p class="section-kicker">${escapeHtml(eyebrow)}</p>
+        <h2>${escapeHtml(title)}</h2>
+        ${intro ? `<p>${escapeHtml(intro)}</p>` : ""}
+      </div>
+      <div class="check-card-grid">
+        ${items
+          .map((item) => `<article class="check-card">${icon(iconName)}<p>${escapeHtml(item)}</p></article>`)
+          .join("")}
+      </div>`,
+    className,
+  );
+}
+
+function renderWorkflowSteps(service) {
+  const steps = service.workflowSteps || [];
+  if (!steps.length) return "";
+
+  return section(
+    `
+      <div class="section-heading">
+        <p class="section-kicker">Example workflow</p>
+        <h2>A realistic path from trigger to next step.</h2>
+      </div>
+      <ol class="service-workflow-list">
+        ${steps
+          .map(
+            (step, index) => `
+              <li>
+                <span>${index + 1}</span>
+                <p>${escapeHtml(step)}</p>
+              </li>`,
+          )
+          .join("")}
+      </ol>`,
+    "service-workflow-section",
+  );
+}
+
+function renderConnectionList(service) {
+  const tools = service.toolsItCanConnect || [];
+  if (!tools.length) return "";
+
+  return section(
+    `
+      <div class="section-heading">
+        <p class="section-kicker">What it can connect to</p>
+        <h2>Built around your current setup where possible.</h2>
+        <p>${escapeHtml(service.connectionIntro)}</p>
+      </div>
+      <ul class="connection-chip-list">
+        ${tools.map((tool) => `<li>${icon("plug")}<span>${escapeHtml(tool)}</span></li>`).join("")}
+      </ul>`,
+    "connection-section",
+  );
 }
 
 function renderTrustSection() {
@@ -442,9 +580,15 @@ module.exports = {
   renderHowItWorksSection,
   renderIndexGrid,
   renderInternalLinksSection,
+  renderChecklistSection,
+  renderConnectionList,
+  renderExplainerSection,
   renderPainPointSection,
+  renderProblemSection,
+  renderServiceHero,
   renderSEOPageHero,
   renderTrustSection,
+  renderWorkflowSteps,
   renderWorkflowAuditForm,
   section,
 };
