@@ -266,7 +266,7 @@ async function saveImageDataUrl(imageDataUrl, slug) {
     throw new Error("R2 is required for blog image uploads in production.");
   }
 
-  return putR2Object(`marketing/blogs/${slug}.${extension}`, buffer, contentType);
+  return putR2Object(`marketing/blogs/${slug}/featured.${extension}`, buffer, contentType);
 }
 
 const INTERNAL_NOTE_TITLES = [

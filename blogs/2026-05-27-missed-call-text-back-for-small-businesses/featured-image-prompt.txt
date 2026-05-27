@@ -1,0 +1,3 @@
+Clean realistic editorial featured image for a Western New York small business automation blog post about missed call text-back. Scene: a local contractor or small business owner in a tidy office/workshop, looking at a smartphone with missed call notifications, with an organized lead follow-up dashboard visible on a laptop nearby. Subtle Buffalo / Western New York feel through a brick industrial background or snowy street light outside the window, but no landmarks. Professional natural lighting, modern but practical, trustworthy small business atmosphere. No robots, no text overlays, no fake logos, no readable brand names. 16:9 landscape.
+
+Generated with Hermes image_gen provider openai-codex, model gpt-image-2-low on 2026-05-27.
