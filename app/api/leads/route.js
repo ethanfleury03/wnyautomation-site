@@ -2,6 +2,11 @@ import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
 const { insertLead } = require("../../../src/server/lead-store");
+const {
+  isConfigured: isHubSpotConfigured,
+  syncLeadToHubSpot,
+  verifyHubSpotConnection,
+} = require("../../../src/server/hubspot-lead-sync");
 const { clean } = require("../../../src/lib/slugs");
 
 export const dynamic = "force-dynamic";
@@ -37,7 +42,31 @@ function normalizeLeadPayload(body, request) {
 }
 
 function hasDurableLeadDestination() {
-  return Boolean(process.env.DATABASE_URL?.trim() || process.env.N8N_LEAD_WEBHOOK_URL?.trim());
+  return Boolean(
+    process.env.DATABASE_URL?.trim() ||
+      process.env.N8N_LEAD_WEBHOOK_URL?.trim() ||
+      isHubSpotConfigured(),
+  );
+}
+
+export async function GET() {
+  try {
+    const hubspot = await verifyHubSpotConnection();
+    return Response.json({
+      ok: true,
+      leadCaptureConfigured: hasDurableLeadDestination(),
+      hubspot,
+    });
+  } catch (error) {
+    return Response.json(
+      {
+        ok: false,
+        leadCaptureConfigured: hasDurableLeadDestination(),
+        hubspot: { configured: isHubSpotConfigured(), connected: false },
+      },
+      { status: 502 },
+    );
+  }
 }
 
 function validateLeadPayload(payload) {
@@ -83,6 +112,15 @@ export async function POST(request) {
   try {
     await insertLead(payload);
 
+    let hubspot = { configured: isHubSpotConfigured(), synced: false };
+    if (isHubSpotConfigured()) {
+      try {
+        hubspot = await syncLeadToHubSpot(payload);
+      } catch (error) {
+        console.error("HubSpot lead sync failed", error);
+      }
+    }
+
     if (process.env.N8N_LEAD_WEBHOOK_URL) {
       const response = await fetch(process.env.N8N_LEAD_WEBHOOK_URL, {
         method: "POST",
@@ -95,6 +133,7 @@ export async function POST(request) {
     return Response.json({
       ok: true,
       configured: hasDurableLeadDestination(),
+      hubspotSynced: hubspot.synced,
       message: "Thanks - WNY Automation Co will review your workflow and send back a few practical automation ideas.",
     });
   } catch (error) {
