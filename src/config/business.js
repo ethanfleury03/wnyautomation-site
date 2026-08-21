@@ -67,7 +67,6 @@ const business = {
     instagram: "",
   },
   googleBusinessProfileUrl: "",
-  bookingLink: process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendly.com/wnyautomation/free-workflow-audit",
   awpPortalSignInUrl: clientLoginUrl(),
   clientLoginPath: "/client-login",
   n8nWebhookUrl: process.env.N8N_LEAD_WEBHOOK_URL || "",

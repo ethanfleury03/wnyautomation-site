@@ -1,4 +1,4 @@
-const CACHE_NAME = "wny-site-shell-v1";
+const CACHE_NAME = "wny-site-shell-v2-no-scheduler";
 const APP_SHELL = [
   "/offline.html",
   "/styles.css",

@@ -276,4 +276,4 @@ If your Western New York business is ready to try automation but you are not sur
 
 WNY Automation can help map your current process, choose a realistic first pilot, and build a simple roadmap around leads, quotes, appointments, reviews, or admin tasks — without hype or a giant software overhaul.
 
-[Book a free workflow audit](/free-workflow-audit) and get a clearer first step.
+[Request a free automation audit](/free-workflow-audit) and get a clearer first step.

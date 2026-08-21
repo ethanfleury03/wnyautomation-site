@@ -1,4 +1,4 @@
-const { spawn } = require("node:child_process");
+const { execFileSync, spawn } = require("node:child_process");
 const fs = require("node:fs");
 const path = require("node:path");
 
@@ -6,6 +6,32 @@ const ROOT = path.resolve(__dirname, "..");
 const PORT = 3137;
 const TOKEN = "test-blog-token";
 const BASE_URL = `http://localhost:${PORT}`;
+
+const removedSchedulerBrand = ["cal", "endly"].join("");
+const removedBookingKey = ["booking", "Link"].join("");
+const removedBookingEnv = ["NEXT_PUBLIC_", "BOOKING_URL"].join("");
+const removedBookingLabel = ["Book a Free ", "Workflow Audit"].join("");
+
+function expectNoRemovedSchedulerReferences() {
+  const binaryExtensions = new Set([".gif", ".ico", ".jpeg", ".jpg", ".png", ".wav", ".webp"]);
+  const trackedFiles = execFileSync("git", ["ls-files", "-z"], { cwd: ROOT })
+    .toString("utf8")
+    .split("\0")
+    .filter(Boolean);
+  const forbidden = [removedSchedulerBrand, removedBookingKey, removedBookingEnv];
+  const offenders = [];
+
+  for (const relativePath of trackedFiles) {
+    if (binaryExtensions.has(path.extname(relativePath).toLowerCase())) continue;
+    const text = fs.readFileSync(path.join(ROOT, relativePath), "utf8");
+    const matched = forbidden.find((fragment) => text.toLowerCase().includes(fragment.toLowerCase()));
+    if (matched) offenders.push(`${relativePath} (${matched})`);
+  }
+
+  if (offenders.length) {
+    throw new Error(`Removed scheduling integration is still referenced: ${offenders.join(", ")}`);
+  }
+}
 
 const server = spawn(process.execPath, [require.resolve("next/dist/bin/next"), "dev", "-p", String(PORT)], {
   cwd: ROOT,
@@ -90,6 +116,23 @@ async function expectNotFound(pathname) {
   }
 }
 
+async function expectNoRemovedSchedulerOnPublicRoutes() {
+  const sitemap = await request("/sitemap.xml");
+  const routes = [...sitemap.text.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => new URL(match[1]).pathname);
+  const forbidden = [removedSchedulerBrand, removedBookingKey, removedBookingEnv, removedBookingLabel];
+
+  for (const pathname of routes) {
+    const { response, text } = await request(pathname);
+    if (!response.ok) {
+      throw new Error(`Expected ${pathname} to return 200 during scheduler-removal crawl, got ${response.status}`);
+    }
+    const matched = forbidden.find((fragment) => text.toLowerCase().includes(fragment.toLowerCase()));
+    if (matched) {
+      throw new Error(`Expected ${pathname} not to include removed scheduling reference: ${matched}`);
+    }
+  }
+}
+
 async function expectLeadFocusedHomepage() {
   const { response, text } = await request("/");
 
@@ -103,6 +146,8 @@ async function expectLeadFocusedHomepage() {
     'href="/client-login"',
     "Client Login",
     'href="#workflow-form"',
+    'href="mailto:ethan@wnyautomation.com"',
+    "Email WNY Automation",
     'class="lead-form workflow-form lead-form-compact"',
     'data-form-variant="short"',
     'name="manualTask"',
@@ -169,6 +214,7 @@ async function expectAboutPage() {
 }
 
 async function main() {
+  expectNoRemovedSchedulerReferences();
   await waitForServer();
 
   await expectPage("/", "Practical automation for Buffalo");
@@ -198,6 +244,7 @@ async function main() {
   await expectNotFound("/tools/missed-lead-cost-calculator");
   await expectPage("/case-studies", "Workflow examples for future case studies.");
   await expectPage("/privacy-policy", "Privacy Policy");
+  await expectNoRemovedSchedulerOnPublicRoutes();
   const login = await fetch(`${BASE_URL}/client-login`, { redirect: "manual" });
   if (login.status !== 302 || login.headers.get("location") !== "https://app.wnyautomation.com/sign-in?redirect_url=/launch") {
     throw new Error("Expected /client-login to redirect to the gateway sign-in URL.");
@@ -267,7 +314,7 @@ async function main() {
       meta_description: "A short practical test post for the WNY Automation Co blog feed.",
       blog_markdown: "## Quick Answer\nThis is a local test post.",
       blog_html:
-        '<h2>Quick Answer</h2><p>**Pick one workflow.** [Book your Free Workflow Audit](/#workflow-form)</p><h2>Entity Signals</h2><ul><li>Buffalo</li></ul>',
+        '<h2>Quick Answer</h2><p>**Pick one workflow.** [Request your Free Automation Audit](/#workflow-form)</p><h2>Entity Signals</h2><ul><li>Buffalo</li></ul>',
       faq_schema_json: faqSchema,
       image_alt: "Sample WNY Automation Co blog image",
       industry: "Local Small Business",
@@ -284,7 +331,7 @@ async function main() {
     throw new Error("Expected blog_html to convert Markdown bold to strong tags.");
   }
 
-  if (!create.body.blog.blog_html.includes('<a href="/#workflow-form">Book your Free Workflow Audit</a>')) {
+  if (!create.body.blog.blog_html.includes('<a href="/#workflow-form">Request your Free Automation Audit</a>')) {
     throw new Error("Expected blog_html to convert Markdown links to anchor tags.");
   }
 
