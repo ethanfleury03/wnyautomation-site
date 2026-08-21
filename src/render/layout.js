@@ -19,7 +19,6 @@ function renderPage({
     .join("\n");
 
   const publicConfig = {
-    bookingLink: business.bookingLink,
     businessEmail: business.email,
     leadEndpoint: "/api/leads",
   };

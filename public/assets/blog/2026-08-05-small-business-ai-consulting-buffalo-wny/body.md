@@ -206,4 +206,4 @@ Map the workflow before buying software. Define the trigger, action, human hando
 
 ## Final CTA
 
-If you are curious about AI but do not want hype, tool sprawl, or a giant software project, WNY Automation can help you find a practical starting point. Book a free workflow audit and get a few clear AI or automation ideas built around how your Buffalo or WNY business already works.
+If you are curious about AI but do not want hype, tool sprawl, or a giant software project, WNY Automation can help you find a practical starting point. Request a free automation audit and get a few clear AI or automation ideas built around how your Buffalo or WNY business already works.

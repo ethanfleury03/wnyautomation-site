@@ -85,8 +85,8 @@ CTA requirements:
 - Include a soft CTA after the main use-case or benefit section.
 - Include a stronger CTA near the end using this structure:
   - H2: Ready to find the one workflow costing you the most time?
-  - Paragraph: Book a free workflow audit with WNY Automation Co. We will review your current process, identify the highest-value automation opportunity, and tell you whether automation is worth it.
-  - Link: <a href="/#workflow-form">Book your Free Workflow Audit</a>
+  - Paragraph: Request a free automation audit with WNY Automation Co. We will review your current process, identify the highest-value automation opportunity, and tell you whether automation is worth it.
+  - Link: <a href="/#workflow-form">Request your Free Automation Audit</a>
 
 Image requirements:
 - Return the strongest image_prompt from the drafts, improved if needed.
@@ -107,7 +107,7 @@ HTML rules:
 - Do not use Markdown syntax inside blog_html.
 - Convert all bold text to <strong>text</strong>.
 - Convert all links to <a href="URL">anchor text</a>.
-- Do not output raw Markdown like **Pick one workflow.** or [Book your Free Workflow Audit](/#workflow-form) inside blog_html.
+- Do not output raw Markdown like **Pick one workflow.** or [Request your Free Automation Audit](/#workflow-form) inside blog_html.
 - Do not use markdown code fences.
 
 Return only a valid JSON object. Do not add commentary before or after it. Do not use markdown fences.

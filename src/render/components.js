@@ -128,8 +128,8 @@ function renderSEOPageHero({
   subheading,
   primaryHref = "/free-workflow-audit#workflow-form",
   primaryLabel = "Get My Free Automation Ideas",
-  secondaryHref = business.bookingLink,
-  secondaryLabel = "Book a Free Workflow Audit",
+  secondaryHref = `mailto:${business.email}`,
+  secondaryLabel = "Email WNY Automation",
   valueHighlights = [],
   miniForm = false,
 }) {
@@ -151,7 +151,7 @@ function renderSEOPageHero({
           <p>${escapeHtml(subheading)}</p>
           <div class="hero-actions">
             <a class="button button-primary" href="${escapeAttribute(primaryHref)}">${icon("sparkles")}${escapeHtml(primaryLabel)}</a>
-            <a class="button button-secondary" href="${escapeAttribute(secondaryHref)}">${icon("calendar-check")}${escapeHtml(secondaryLabel)}</a>
+            <a class="button button-secondary" href="${escapeAttribute(secondaryHref)}">${icon("mail")}${escapeHtml(secondaryLabel)}</a>
           </div>
           ${
             miniForm
@@ -227,7 +227,7 @@ function renderWorkflowAuditForm({
       ${optionalDetails}
       <div class="form-actions">
         <button class="button button-primary" type="submit">${icon("send")}${isShort ? "Get 3 Automation Ideas" : "Get My Free Automation Ideas"}</button>
-        <a class="button button-secondary" href="${escapeAttribute(business.bookingLink)}">${icon("calendar-days")}Book a Free Workflow Audit</a>
+        <a class="button button-secondary" href="mailto:${escapeAttribute(business.email)}">${icon("mail")}Email WNY Automation</a>
       </div>
       <div class="form-status" aria-live="polite"></div>
     </form>`;
@@ -333,8 +333,8 @@ function renderCTASection({
   eyebrow = "Free workflow audit",
   primaryHref = "/free-workflow-audit#workflow-form",
   primaryLabel = "Get My Free Automation Ideas",
-  secondaryHref = business.bookingLink,
-  secondaryLabel = "Book a Free Workflow Audit",
+  secondaryHref = `mailto:${business.email}`,
+  secondaryLabel = "Email WNY Automation",
   title = "Ready to find the one workflow costing you the most time?",
   text = "Tell WNY Automation Co one manual task. We will review the workflow and send back practical automation ideas.",
   withForm = false,
@@ -347,7 +347,7 @@ function renderCTASection({
           <p class="section-kicker">${escapeHtml(eyebrow)}</p>
           <h2>${escapeHtml(title)}</h2>
           <p>${escapeHtml(text)}</p>
-          ${withForm ? "" : `<div class="final-actions"><a class="button button-primary" href="${escapeAttribute(primaryHref)}">${icon("send")}${escapeHtml(primaryLabel)}</a><a class="button button-secondary" href="${escapeAttribute(secondaryHref)}">${icon("calendar-days")}${escapeHtml(secondaryLabel)}</a></div>`}
+          ${withForm ? "" : `<div class="final-actions"><a class="button button-primary" href="${escapeAttribute(primaryHref)}">${icon("send")}${escapeHtml(primaryLabel)}</a><a class="button button-secondary" href="${escapeAttribute(secondaryHref)}">${icon("mail")}${escapeHtml(secondaryLabel)}</a></div>`}
         </div>
         ${withForm ? renderWorkflowAuditForm({ compact: true, conversionPath: "page-cta", source, variant: "standard" }) : ""}
       </div>
@@ -380,7 +380,7 @@ function renderServiceHero(service) {
           <p>${escapeHtml(service.shortDescription)}</p>
           <div class="hero-actions">
             <a class="button button-primary" href="/free-workflow-audit#workflow-form">${icon("send")}${escapeHtml(service.ctaLabel || "Get My Free Automation Ideas")}</a>
-            <a class="button button-secondary" href="${escapeAttribute(business.bookingLink)}">${icon("calendar-check")}Book a Free Workflow Audit</a>
+            <a class="button button-secondary" href="mailto:${escapeAttribute(business.email)}">${icon("mail")}Email WNY Automation</a>
           </div>
           <p class="service-hero-trust">${icon("shield-check")}<span>${escapeHtml(service.trustLine)}</span></p>
         </div>

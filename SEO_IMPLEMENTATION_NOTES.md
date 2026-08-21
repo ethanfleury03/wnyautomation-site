@@ -59,7 +59,7 @@ Published SQLite posts are preferred over sample blog placeholders. Sample posts
 
 - Privacy policy and terms are placeholders and should be reviewed before launch.
 - Case study pages are sample workflow examples only. Do not mark anything as real until a client-approved story exists.
-- Phone, address, social links, Google Business Profile, and booking URL should be updated before launch.
+- Phone, address, social links, and Google Business Profile should be updated before launch.
 
 ## Recommended Next Manual Tasks
 

@@ -236,7 +236,7 @@ Map the workflow before buying software. Define the trigger, action, human hando
 
 ## Final CTA
 
-If you are curious about AI but do not want hype, tool sprawl, or a giant software project, WNY Automation can help you find a practical starting point. Book a free workflow audit and get a few clear AI or automation ideas built around how your Buffalo or WNY business already works.
+If you are curious about AI but do not want hype, tool sprawl, or a giant software project, WNY Automation can help you find a practical starting point. Request a free automation audit and get a few clear AI or automation ideas built around how your Buffalo or WNY business already works.
 
 Review Notes
 - Calendar row used: Week 12, Date 2026-08-05, Funnel Stage Consideration, Content Pillar AI Consulting / Safety.
@@ -249,7 +249,7 @@ Review Notes
 - Production cleanup before publishing: remove package metadata, review notes, image prompt notes, email summary, and sheet update recommendation.
 
 Email Summary
-Today’s WNY Automation draft is ready: “Small Business AI Consulting in Buffalo and WNY: How to Start Without Buying the Wrong Tools.” It targets “small business AI consulting” for Buffalo and WNY owners who are curious but cautious about AI, with a practical workflow-first angle, safe human handoffs, tool-selection guidance, FAQs, and CTA to book a free workflow audit.
+Today’s WNY Automation draft is ready: “Small Business AI Consulting in Buffalo and WNY: How to Start Without Buying the Wrong Tools.” It targets “small business AI consulting” for Buffalo and WNY owners who are curious but cautious about AI, with a practical workflow-first angle, safe human handoffs, tool-selection guidance, FAQs, and CTA to request a free automation audit.
 
 Sheet Update Recommendation
 - Draft URL: use Google Doc/Drive link if upload succeeds; leave blank if Drive/Docs write scopes fail.

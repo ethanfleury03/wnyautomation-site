@@ -1,5 +1,4 @@
 const CONFIG = {
-  bookingLink: window.WNY_AUTOMATION_CONFIG?.bookingLink || "https://calendly.com/wnyautomation/free-workflow-audit",
   businessEmail: window.WNY_AUTOMATION_CONFIG?.businessEmail || "ethan@wnyautomation.com",
   leadEndpoint: window.WNY_AUTOMATION_CONFIG?.leadEndpoint || "/api/leads",
 };
@@ -38,14 +37,6 @@ mobileNav?.querySelectorAll("a").forEach((link) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setMobileNav(false);
-});
-
-document.querySelectorAll('[data-calendly-link], a[href*="calendly.com"]').forEach((link) => {
-  if (link.matches("[data-calendly-link]")) {
-    link.href = CONFIG.bookingLink;
-  }
-  link.target = "_blank";
-  link.rel = "noopener";
 });
 
 if (window.lucide) {
@@ -211,7 +202,7 @@ function setFormStatus(form, message, options = {}) {
   const status = form.querySelector(".form-status");
   if (!status) return;
 
-  const { isError = false, showBooking = false, mailto = "" } = options;
+  const { isError = false, mailto = "" } = options;
   status.textContent = "";
   status.classList.toggle("active", Boolean(message));
   status.classList.toggle("error", isError);
@@ -222,13 +213,9 @@ function setFormStatus(form, message, options = {}) {
   text.textContent = message;
   status.append(text);
 
-  if (showBooking || mailto) {
+  if (mailto) {
     const actions = document.createElement("div");
     actions.className = "status-actions";
-
-    if (showBooking) {
-      actions.append(createStatusLink("Book the Audit Call", CONFIG.bookingLink, "button-primary"));
-    }
 
     if (mailto) {
       actions.append(createStatusLink("Email us directly", mailto));
@@ -267,9 +254,9 @@ document.addEventListener("click", (event) => {
     });
   }
 
-  if (link.matches("[data-calendly-link]") || href.includes("calendly.com")) {
-    trackEvent("calendly_click", {
-      conversion_path: "calendly",
+  if (href.startsWith("mailto:")) {
+    trackEvent("email_click", {
+      conversion_path: "email",
       cta_label: label,
       cta_href: href,
     });
@@ -340,9 +327,7 @@ workflowForms.forEach((form) => {
         detail_fields_provided: payload.detailFieldsProvided,
         form_variant: payload.formVariant,
       });
-      setFormStatus(form, "Thanks - WNY Automation Co will review your workflow and send back a few practical automation ideas.", {
-        showBooking: true,
-      });
+      setFormStatus(form, "Thanks - WNY Automation Co will review your workflow and send back a few practical automation ideas.");
     } catch (error) {
       trackEvent("lead_submit_error", {
         conversion_path: payload.conversionPath,
@@ -351,7 +336,6 @@ workflowForms.forEach((form) => {
       });
       setFormStatus(form, "Something went wrong. Please try again or email us directly.", {
         isError: true,
-        showBooking: true,
         mailto: buildMailto(payload),
       });
     } finally {

@@ -218,4 +218,4 @@ If your home service team is doing good work but review requests keep slipping t
 
 Start with one process: completed job, polite review request, clear human handoff. No hype, no giant software overhaul — just a practical system your team can actually use.
 
-[Book a free workflow audit](/services/review-request-automation) and ask for three practical automation ideas for your review, follow-up, or customer communication process.
+[Request a free automation audit](/services/review-request-automation) and ask for three practical automation ideas for your review, follow-up, or customer communication process.
