@@ -70,6 +70,7 @@ const {
     industry: "Contractor",
     manualTask: "We manually follow up with every website lead.",
     pageUrl: "https://wnyautomation.com/",
+    pageTitle: "WNY Automation Co | Home",
   });
 
   assert.equal(result.synced, true);
@@ -84,8 +85,15 @@ const {
   assert.equal(contactCreate.body.properties.lifecyclestage, "lead");
 
   const dealCreate = calls.find((call) => call.path === "/crm/v3/objects/deals" && call.method === "POST");
+  assert.equal(dealCreate.body.properties.dealname, "Website-Inquiry - Example Owner");
   assert.equal(dealCreate.body.properties.pipeline, "default");
   assert.equal(dealCreate.body.properties.dealstage, "prospect-stage");
+
+  const noteCreate = calls.find((call) => call.path === "/crm/v3/objects/notes" && call.method === "POST");
+  assert.match(noteCreate.body.properties.hs_note_body, /Inquiry page:<\/strong> https:\/\/wnyautomation\.com\//);
+  assert.match(noteCreate.body.properties.hs_note_body, /Page title:<\/strong> WNY Automation Co \| Home/);
+  assert.match(noteCreate.body.properties.hs_note_body, /Contact and company information/);
+  assert.match(noteCreate.body.properties.hs_note_body, /Business:<\/strong> Example WNY Business/);
 
   const associationCalls = calls.filter((call) => call.path.startsWith("/crm/v4/objects/"));
   assert.equal(associationCalls.length, 6);

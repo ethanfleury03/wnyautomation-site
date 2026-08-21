@@ -151,8 +151,8 @@ async function ensureWebsiteLeadPipeline() {
 }
 
 async function findOrCreateDeal(payload, pipeline) {
-  const leadName = payload.businessName || payload.name || payload.email;
-  const dealName = `${leadName} - Website Automation Audit`;
+  const leadName = String(payload.name || payload.email || "Unknown inquiry").trim().replace(/\s+/g, " ");
+  const dealName = `Website-Inquiry - ${leadName}`;
   const existing = await searchObject(
     "deals",
     [
@@ -191,16 +191,21 @@ function escapeHtml(value) {
 async function createLeadNote(payload) {
   const lines = [
     "<p><strong>WNYAutomation.com workflow-audit request</strong></p>",
+    "<p><strong>Inquiry details</strong></p>",
     "<ul>",
     `<li><strong>Manual task:</strong> ${escapeHtml(payload.manualTask)}</li>`,
+    `<li><strong>Inquiry page:</strong> ${escapeHtml(payload.pageUrl || payload.source || "website")}</li>`,
+    `<li><strong>Page title:</strong> ${escapeHtml(payload.pageTitle || "Not provided")}</li>`,
+    `<li><strong>Submitted:</strong> ${escapeHtml(payload.submittedAt || new Date().toISOString())}</li>`,
+    "</ul>",
+    "<p><strong>Contact and company information</strong></p>",
+    "<ul>",
     `<li><strong>Name:</strong> ${escapeHtml(payload.name || "Not provided")}</li>`,
     `<li><strong>Email:</strong> ${escapeHtml(payload.email)}</li>`,
     `<li><strong>Phone:</strong> ${escapeHtml(payload.phone || "Not provided")}</li>`,
     `<li><strong>Business:</strong> ${escapeHtml(payload.businessName || "Not provided")}</li>`,
     `<li><strong>Industry:</strong> ${escapeHtml(payload.industry || "Not provided")}</li>`,
     `<li><strong>Website:</strong> ${escapeHtml(payload.website || "Not provided")}</li>`,
-    `<li><strong>Source page:</strong> ${escapeHtml(payload.pageUrl || payload.source || "website")}</li>`,
-    `<li><strong>Submitted:</strong> ${escapeHtml(payload.submittedAt || new Date().toISOString())}</li>`,
     "</ul>",
   ];
 
