@@ -239,27 +239,41 @@ async function associate(fromType, fromId, toType, toId) {
 async function syncLeadToHubSpot(payload) {
   if (!isConfigured()) return { configured: false, synced: false };
 
-  // Verify/create the deal pipeline before writing any contact or company
-  // records. This avoids a partial sync when deal permissions are missing.
-  const pipeline = await ensureWebsiteLeadPipeline();
+  let pipeline = null;
+  let pipelineBlocked = false;
+  try {
+    pipeline = await ensureWebsiteLeadPipeline();
+  } catch (error) {
+    const message = String(error?.message || "");
+    if (message.includes("API_LIMIT") || message.includes("limit of 1 deal pipelines")) {
+      // HubSpot Free/Starter accounts can be limited to one deal pipeline.
+      // Preserve the lead as a contact/company/note without mixing WNY records
+      // into an unrelated existing pipeline.
+      pipelineBlocked = true;
+    } else {
+      throw error;
+    }
+  }
+
   const [contact, company] = await Promise.all([
     upsertContact(payload),
     upsertCompany(payload),
   ]);
-  const deal = await findOrCreateDeal(payload, pipeline);
+  const deal = pipeline ? await findOrCreateDeal(payload, pipeline) : null;
   const note = await createLeadNote(payload);
 
   const associations = [
-    ["contacts", contact.id, "deals", deal.id],
     ["notes", note.id, "contacts", contact.id],
-    ["notes", note.id, "deals", deal.id],
   ];
-  if (company) {
+  if (deal) {
     associations.push(
-      ["contacts", contact.id, "companies", company.id],
-      ["companies", company.id, "deals", deal.id],
-      ["notes", note.id, "companies", company.id],
+      ["contacts", contact.id, "deals", deal.id],
+      ["notes", note.id, "deals", deal.id],
     );
+  }
+  if (company) {
+    associations.push(["contacts", contact.id, "companies", company.id], ["notes", note.id, "companies", company.id]);
+    if (deal) associations.push(["companies", company.id, "deals", deal.id]);
   }
 
   await Promise.all(associations.map((args) => associate(...args)));
@@ -269,9 +283,10 @@ async function syncLeadToHubSpot(payload) {
     synced: true,
     contactId: contact.id,
     companyId: company?.id || null,
-    dealId: deal.id,
+    dealId: deal?.id || null,
     noteId: note.id,
-    pipelineId: pipeline.id,
+    pipelineId: pipeline?.id || null,
+    pipelineBlocked,
   };
 }
 

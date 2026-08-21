@@ -3,6 +3,7 @@ const assert = require("node:assert/strict");
 process.env.HUBSPOT_ACCESS_TOKEN = "test-token";
 
 const calls = [];
+let pipelineLimitMode = false;
 function jsonResponse(status, body) {
   return new Response(body === null ? null : JSON.stringify(body), {
     status,
@@ -27,6 +28,7 @@ global.fetch = async (url, options = {}) => {
   if (path === "/crm/v3/objects/contacts") return jsonResponse(201, { id: "contact-1", properties: body.properties });
   if (path === "/crm/v3/objects/companies") return jsonResponse(201, { id: "company-1", properties: body.properties });
   if (path === "/crm/v3/pipelines/deals?archived=false") {
+    if (pipelineLimitMode) return jsonResponse(200, { results: [] });
     return jsonResponse(200, {
       results: [
         {
@@ -35,6 +37,13 @@ global.fetch = async (url, options = {}) => {
           stages: [{ id: "stage-1", label: "New Website Lead", displayOrder: 0 }],
         },
       ],
+    });
+  }
+  if (path === "/crm/v3/pipelines/deals" && method === "POST") {
+    return jsonResponse(400, {
+      status: "error",
+      message: "You have reached your limit of 1 deal pipelines.",
+      category: "API_LIMIT",
     });
   }
   if (path === "/crm/v3/objects/deals") return jsonResponse(201, { id: "deal-1", properties: body.properties });
@@ -82,6 +91,24 @@ const {
 
   const associationCalls = calls.filter((call) => call.path.startsWith("/crm/v4/objects/"));
   assert.equal(associationCalls.length, 6);
+
+  pipelineLimitMode = true;
+  const callsBeforeFallback = calls.length;
+  const fallback = await syncLeadToHubSpot({
+    submittedAt: "2026-08-21T18:00:00.000Z",
+    name: "Second Owner",
+    email: "second@example.com",
+    manualTask: "We manually route every request.",
+    pageUrl: "https://wnyautomation.com/",
+  });
+  assert.equal(fallback.synced, true);
+  assert.equal(fallback.pipelineBlocked, true);
+  assert.equal(fallback.dealId, null);
+  assert.equal(fallback.pipelineId, null);
+  assert.equal(
+    calls.slice(callsBeforeFallback).filter((call) => call.path === "/crm/v3/objects/deals" && call.method === "POST").length,
+    0,
+  );
 
   console.log("HubSpot lead sync unit test passed.");
 })().catch((error) => {
