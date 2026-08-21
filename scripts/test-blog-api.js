@@ -1,6 +1,7 @@
 const { execFileSync, spawn } = require("node:child_process");
 const fs = require("node:fs");
 const path = require("node:path");
+const { normalizeBlogHtml } = require("../src/server/blog-store");
 
 const ROOT = path.resolve(__dirname, "..");
 const PORT = 3137;
@@ -30,6 +31,24 @@ function expectNoRemovedSchedulerReferences() {
 
   if (offenders.length) {
     throw new Error(`Removed scheduling integration is still referenced: ${offenders.join(", ")}`);
+  }
+}
+
+function expectSanitizerRejectsRawTextBypasses() {
+  const payloads = [
+    ["single xmp image", "<xmp><img src=x onerror=alert(1)></xmp>"],
+    ["unclosed xmp image", "<xmp><img src=x onerror=alert(1)>"],
+    ["nested xmp image", "<xmp><xmp><img src=x onerror=alert(1)></xmp></xmp>"],
+    ["xmp script", "<xmp><script>alert(1)</script></xmp>"],
+    ["xmp SVG script", "<xmp><svg><script>alert(1)</script></svg></xmp>"],
+  ];
+  const dangerousMarkup = /<\s*(?:img|script|svg|xmp)\b|\bon\w+\s*=|javascript\s*:/i;
+
+  for (const [name, payload] of payloads) {
+    const cleaned = normalizeBlogHtml(payload);
+    if (dangerousMarkup.test(cleaned)) {
+      throw new Error(`Expected sanitizer to reject ${name}, got ${cleaned}`);
+    }
   }
 }
 
@@ -215,6 +234,7 @@ async function expectAboutPage() {
 
 async function main() {
   expectNoRemovedSchedulerReferences();
+  expectSanitizerRejectsRawTextBypasses();
   await waitForServer();
 
   await expectPage("/", "Practical automation for Buffalo");
@@ -350,7 +370,7 @@ async function main() {
       slug: "unsafe-blog-html-test",
       excerpt: "Sanitizer regression test.",
       blog_html:
-        '<h2 onclick=alert(1)>Safe Heading</h2><p><strong>Safe bold</strong><a href="javascript:alert(1)" onclick="alert(1)">Bad link</a><a href="/#workflow-form">Safe internal</a><a href="#top">Safe anchor</a><a href="mailto:test@example.com">Safe mail</a></p><svg onload=alert(1)></svg><iframe src="https://example.com"></iframe><script>alert(1)</script><style>body{display:none}</style>',
+        '<h2 onclick=alert(1)>Safe Heading</h2><p><strong>Safe bold</strong><a href="javascript:alert(1)" onclick="alert(1)">Bad link</a><a href="/#workflow-form">Safe internal</a><a href="#top">Safe anchor</a><a href="mailto:test@example.com">Safe mail</a></p><svg onload=alert(1)></svg><iframe src="https://example.com"></iframe><script>alert(1)</script><style>body{display:none}</style><xmp><img src=x onerror=alert(1)></xmp><xmp><xmp><script>alert(2)</script></xmp></xmp>',
       publish_date: "2026-04-27",
     }),
   });
@@ -363,8 +383,11 @@ async function main() {
   const forbidden = [
     "onclick",
     "onload",
+    "onerror",
     "javascript:",
+    "<img",
     "<svg",
+    "<xmp",
     "<iframe",
     "<script",
     "<style",
