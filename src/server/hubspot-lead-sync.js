@@ -42,7 +42,12 @@ async function hubspotRequest(path, { method = "GET", body } = {}) {
 
 async function verifyHubSpotConnection() {
   if (!isConfigured()) return { configured: false, connected: false };
-  await hubspotRequest("/crm/v3/objects/contacts?limit=1&properties=email");
+  await Promise.all([
+    hubspotRequest("/crm/v3/objects/contacts?limit=1&properties=email"),
+    hubspotRequest("/crm/v3/objects/companies?limit=1&properties=name"),
+    hubspotRequest("/crm/v3/objects/notes?limit=1&properties=hs_timestamp"),
+    hubspotRequest("/crm/v3/pipelines/deals?archived=false"),
+  ]);
   return { configured: true, connected: true };
 }
 
@@ -234,10 +239,12 @@ async function associate(fromType, fromId, toType, toId) {
 async function syncLeadToHubSpot(payload) {
   if (!isConfigured()) return { configured: false, synced: false };
 
-  const [contact, company, pipeline] = await Promise.all([
+  // Verify/create the deal pipeline before writing any contact or company
+  // records. This avoids a partial sync when deal permissions are missing.
+  const pipeline = await ensureWebsiteLeadPipeline();
+  const [contact, company] = await Promise.all([
     upsertContact(payload),
     upsertCompany(payload),
-    ensureWebsiteLeadPipeline(),
   ]);
   const deal = await findOrCreateDeal(payload, pipeline);
   const note = await createLeadNote(payload);

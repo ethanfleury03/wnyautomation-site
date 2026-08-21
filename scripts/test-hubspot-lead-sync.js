@@ -19,6 +19,8 @@ global.fetch = async (url, options = {}) => {
   if (path.startsWith("/crm/v3/objects/contacts?")) {
     return jsonResponse(200, { results: [{ id: "sample" }] });
   }
+  if (path.startsWith("/crm/v3/objects/companies?")) return jsonResponse(200, { results: [] });
+  if (path.startsWith("/crm/v3/objects/notes?")) return jsonResponse(200, { results: [] });
   if (path === "/crm/v3/objects/contacts/search") return jsonResponse(200, { results: [] });
   if (path === "/crm/v3/objects/companies/search") return jsonResponse(200, { results: [] });
   if (path === "/crm/v3/objects/deals/search") return jsonResponse(200, { results: [] });
