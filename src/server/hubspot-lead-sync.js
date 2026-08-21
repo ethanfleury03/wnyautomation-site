@@ -1,13 +1,7 @@
 const HUBSPOT_BASE_URL = "https://api.hubapi.com";
-const WEBSITE_PIPELINE_LABEL = "WNY Automation Website Leads";
-const WEBSITE_PIPELINE_STAGES = [
-  { label: "New Website Lead", displayOrder: 0, metadata: { probability: "0.10" } },
-  { label: "Audit Scheduled", displayOrder: 1, metadata: { probability: "0.30" } },
-  { label: "Audit Completed", displayOrder: 2, metadata: { probability: "0.50" } },
-  { label: "Proposal Sent", displayOrder: 3, metadata: { probability: "0.70" } },
-  { label: "Won", displayOrder: 4, metadata: { probability: "1.00", isClosed: "true" } },
-  { label: "Lost / Not Fit", displayOrder: 5, metadata: { probability: "0.00", isClosed: "true" } },
-];
+const WEBSITE_PIPELINE_LABEL = "Sales Pipeline";
+const WEBSITE_PIPELINE_ID = "default";
+const WEBSITE_LEAD_STAGE_LABEL = "Prospect";
 
 function accessToken() {
   return process.env.HUBSPOT_ACCESS_TOKEN?.trim();
@@ -150,18 +144,10 @@ async function upsertCompany(payload) {
 }
 
 async function ensureWebsiteLeadPipeline() {
-  const result = await hubspotRequest("/crm/v3/pipelines/deals?archived=false");
-  const existing = result.results?.find((pipeline) => pipeline.label === WEBSITE_PIPELINE_LABEL);
-  if (existing) return existing;
-
-  return hubspotRequest("/crm/v3/pipelines/deals", {
-    method: "POST",
-    body: {
-      label: WEBSITE_PIPELINE_LABEL,
-      displayOrder: 0,
-      stages: WEBSITE_PIPELINE_STAGES,
-    },
-  });
+  const pipeline = await hubspotRequest(`/crm/v3/pipelines/deals/${WEBSITE_PIPELINE_ID}`);
+  const prospectStage = pipeline.stages?.find((stage) => stage.label === WEBSITE_LEAD_STAGE_LABEL);
+  if (!prospectStage) throw new Error(`HubSpot pipeline is missing the ${WEBSITE_LEAD_STAGE_LABEL} stage`);
+  return pipeline;
 }
 
 async function findOrCreateDeal(payload, pipeline) {
@@ -177,8 +163,8 @@ async function findOrCreateDeal(payload, pipeline) {
   );
   if (existing) return existing;
 
-  const firstStage = [...(pipeline.stages || [])].sort((a, b) => a.displayOrder - b.displayOrder)[0];
-  if (!firstStage) throw new Error("Website lead pipeline has no stages");
+  const targetStage = pipeline.stages?.find((stage) => stage.label === WEBSITE_LEAD_STAGE_LABEL);
+  if (!targetStage) throw new Error(`Website lead pipeline is missing the ${WEBSITE_LEAD_STAGE_LABEL} stage`);
 
   return hubspotRequest("/crm/v3/objects/deals", {
     method: "POST",
@@ -186,7 +172,7 @@ async function findOrCreateDeal(payload, pipeline) {
       properties: {
         dealname: dealName,
         pipeline: pipeline.id,
-        dealstage: firstStage.id,
+        dealstage: targetStage.id,
         description: payload.manualTask,
       },
     },
