@@ -7,6 +7,11 @@ const {
   syncLeadToHubSpot,
   verifyHubSpotConnection,
 } = require("../../../src/server/hubspot-lead-sync");
+const {
+  isConfigured: isEmailAlertConfigured,
+  sendLeadAlertEmail,
+  verifyEmailConnection,
+} = require("../../../src/server/lead-alert-email");
 const { clean } = require("../../../src/lib/slugs");
 
 export const dynamic = "force-dynamic";
@@ -51,11 +56,15 @@ function hasDurableLeadDestination() {
 
 export async function GET() {
   try {
-    const hubspot = await verifyHubSpotConnection();
+    const [hubspot, emailAlert] = await Promise.all([
+      verifyHubSpotConnection(),
+      verifyEmailConnection(),
+    ]);
     return Response.json({
       ok: true,
       leadCaptureConfigured: hasDurableLeadDestination(),
       hubspot,
+      emailAlert,
     });
   } catch (error) {
     return Response.json(
@@ -63,6 +72,7 @@ export async function GET() {
         ok: false,
         leadCaptureConfigured: hasDurableLeadDestination(),
         hubspot: { configured: isHubSpotConfigured(), connected: false },
+        emailAlert: { configured: isEmailAlertConfigured(), connected: false },
       },
       { status: 502 },
     );
@@ -121,6 +131,17 @@ export async function POST(request) {
       }
     }
 
+    let emailAlert = { configured: isEmailAlertConfigured(), sent: false };
+    if (isEmailAlertConfigured()) {
+      try {
+        emailAlert = await sendLeadAlertEmail(payload, hubspot);
+      } catch (error) {
+        // The database/HubSpot record is the source of truth. An alert failure
+        // should not make the visitor resubmit and create duplicate leads.
+        console.error("Website lead email alert failed", error);
+      }
+    }
+
     if (process.env.N8N_LEAD_WEBHOOK_URL) {
       const response = await fetch(process.env.N8N_LEAD_WEBHOOK_URL, {
         method: "POST",
@@ -134,6 +155,7 @@ export async function POST(request) {
       ok: true,
       configured: hasDurableLeadDestination(),
       hubspotSynced: hubspot.synced,
+      emailAlertSent: emailAlert.sent,
       message: "Thanks - WNY Automation Co will review your workflow and send back a few practical automation ideas.",
     });
   } catch (error) {
