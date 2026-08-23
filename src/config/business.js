@@ -35,7 +35,7 @@ const business = {
   businessName: process.env.NEXT_PUBLIC_BUSINESS_NAME || "WNY Business Automation",
   legalName: "WNY Business Automation LLC",
   shortName: "WNY Business Automation",
-  tagline: "Practical workflow automation for local businesses.",
+  tagline: "Practical automation for local businesses.",
   subline: "Start small. Fix one workflow. Prove value.",
   positioning: "Practical websites, blog schedules, and workflow automation for local businesses.",
   phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || "",
