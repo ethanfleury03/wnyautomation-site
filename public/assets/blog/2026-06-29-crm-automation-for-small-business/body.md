@@ -109,7 +109,7 @@ A [lead follow-up automation](/services/automated-lead-follow-up) workflow can c
 
 Not sure where CRM automation would actually help? Start by looking for the places where leads or tasks currently get lost.
 
-WNY Automation can help map your current lead, quote, or follow-up process and identify three practical automations you can start with — without turning your business into a giant software project.
+WNY Business Automation can help map your current lead, quote, or follow-up process and identify three practical automations you can start with — without turning your business into a giant software project.
 
 ## What to automate first in your CRM
 
@@ -172,9 +172,9 @@ It may not be the right fit yet if:
 - You are not ready to keep lead information in one shared place.
 - You want automation to replace relationship-building instead of supporting it.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses build practical automation around the tools and workflows they already use when possible.
+WNY Business Automation helps local businesses build practical automation around the tools and workflows they already use when possible.
 
 For CRM automation, that can include:
 
@@ -211,6 +211,6 @@ Start with new lead capture, lead assignment, quote follow-up reminders, and bas
 
 ## Final CTA
 
-If your Buffalo or Western New York business is tracking leads in too many places, WNY Automation can help you map a simple CRM workflow that keeps inquiries, quotes, tasks, and follow-ups organized.
+If your Buffalo or Western New York business is tracking leads in too many places, WNY Business Automation can help you map a simple CRM workflow that keeps inquiries, quotes, tasks, and follow-ups organized.
 
 Start with a low-pressure review of your current process and get three practical automation ideas you can use before investing in a bigger system.

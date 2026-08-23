@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "WNY Automation Co",
+  title: "WNY Business Automation",
   description: "Websites and automation for local businesses.",
 };
 

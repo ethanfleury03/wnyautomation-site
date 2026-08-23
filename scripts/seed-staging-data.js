@@ -86,10 +86,10 @@ async function seedBlogs() {
     {
       title: "Staging: Automating a Small Business Follow-Up Loop",
       slug: "staging-small-business-follow-up-loop",
-      excerpt: "A fake staging post for validating the WNY Automation blog pipeline.",
-      caption: "A fake staging post for validating the WNY Automation blog pipeline.",
+      excerpt: "A fake staging post for validating the WNY Business Automation blog pipeline.",
+      caption: "A fake staging post for validating the WNY Business Automation blog pipeline.",
       meta_title: "Staging Small Business Follow-Up Loop",
-      meta_description: "Fake staging content used to test WNY Automation blog rendering.",
+      meta_description: "Fake staging content used to test WNY Business Automation blog rendering.",
       industry: "operations",
       publish_date: "2026-05-14",
       blog_markdown:
@@ -104,7 +104,7 @@ async function seedBlogs() {
       excerpt: "A fake staging post for checking lead capture and routing copy.",
       caption: "A fake staging post for checking lead capture and routing copy.",
       meta_title: "Staging Website Lead Routing Smoke Test",
-      meta_description: "Fake staging content used to test WNY Automation lead capture routes.",
+      meta_description: "Fake staging content used to test WNY Business Automation lead capture routes.",
       industry: "lead operations",
       publish_date: "2026-05-13",
       blog_markdown:

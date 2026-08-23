@@ -132,7 +132,7 @@ That is usually better than a robotic message packed with too much information.
 
 ### Mid-page CTA
 
-Not sure which workflow is worth fixing first? WNY Automation can review your current lead, quote, appointment, or admin process and help you choose one practical pilot instead of guessing at tools.
+Not sure which workflow is worth fixing first? WNY Business Automation can review your current lead, quote, appointment, or admin process and help you choose one practical pilot instead of guessing at tools.
 
 ## Days 19-25: test the workflow before expanding it
 
@@ -234,9 +234,9 @@ This may not be the right fit yet if:
 
 A practical pilot should support your team, not create a second system they have to babysit.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps Western New York small businesses choose and build practical automation workflows around leads, quotes, appointments, reviews, CRM tasks, admin work, and website lead capture.
+WNY Business Automation helps Western New York small businesses choose and build practical automation workflows around leads, quotes, appointments, reviews, CRM tasks, admin work, and website lead capture.
 
 The goal is not to force every business into the same tool. It is to understand how your team already works, identify where opportunities are slipping through, and build a simple workflow that improves the next step.
 
@@ -266,14 +266,14 @@ A 30-day roadmap is a practical planning model, but the exact timing depends on 
 
 Do not start with processes that require heavy judgment, sensitive decisions, unclear ownership, or constantly changing steps. Pricing decisions, complex customer issues, legal or medical advice, and final approvals usually need a human involved.
 
-### Can WNY Automation help choose the first workflow?
+### Can WNY Business Automation help choose the first workflow?
 
-Yes. WNY Automation can review how leads, quotes, appointments, forms, reviews, or admin tasks currently move through your business and suggest a practical first pilot for your team.
+Yes. WNY Business Automation can review how leads, quotes, appointments, forms, reviews, or admin tasks currently move through your business and suggest a practical first pilot for your team.
 
 ## Final CTA
 
 If your Western New York business is ready to try automation but you are not sure where to start, begin with one practical workflow.
 
-WNY Automation can help map your current process, choose a realistic first pilot, and build a simple roadmap around leads, quotes, appointments, reviews, or admin tasks — without hype or a giant software overhaul.
+WNY Business Automation can help map your current process, choose a realistic first pilot, and build a simple roadmap around leads, quotes, appointments, reviews, or admin tasks — without hype or a giant software overhaul.
 
 [Request a free automation audit](/free-workflow-audit) and get a clearer first step.

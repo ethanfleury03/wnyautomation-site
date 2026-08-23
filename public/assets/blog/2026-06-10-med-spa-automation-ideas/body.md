@@ -65,7 +65,7 @@ If your team is manually sending reminder texts or making repeated reminder call
 
 ## Not sure what to automate first?
 
-WNY Automation can review how your med spa currently handles consultation requests, reminders, FAQs, and follow-ups, then suggest a few practical automations to start with. No giant software overhaul required — just a clear workflow map and a realistic first step.
+WNY Business Automation can review how your med spa currently handles consultation requests, reminders, FAQs, and follow-ups, then suggest a few practical automations to start with. No giant software overhaul required — just a clear workflow map and a realistic first step.
 
 ## 3. Treatment FAQ automation with safe handoffs
 
@@ -168,9 +168,9 @@ It may not be the right fit yet if:
 - You expect AI to handle clinical decisions or sensitive questions without human review.
 - You have not approved the messages, policies, and handoff rules the automation will use.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local small businesses build practical automation workflows around leads, appointments, follow-ups, reviews, and admin tasks. For med spas in Buffalo, Amherst, Williamsville, and surrounding Western New York communities, that might mean starting with one simple workflow:
+WNY Business Automation helps local small businesses build practical automation workflows around leads, appointments, follow-ups, reviews, and admin tasks. For med spas in Buffalo, Amherst, Williamsville, and surrounding Western New York communities, that might mean starting with one simple workflow:
 
 - Consultation request follow-up
 - Appointment reminder automation
@@ -201,12 +201,12 @@ A chatbot can answer basic approved questions, such as location, hours, consulta
 
 Businesses can generally ask clients for reviews, but the request should be honest, optional, and compliant with platform rules. Avoid incentives, pressure, or misleading review gating. When in doubt, keep the message simple and respectful.
 
-### Does WNY Automation work with local med spas?
+### Does WNY Business Automation work with local med spas?
 
-WNY Automation works with Western New York small businesses that need practical help with lead follow-up, appointment reminders, CRM workflows, websites, and admin automation. Med spas are a strong fit when the need is operational follow-up and client communication, not clinical decision-making.
+WNY Business Automation works with Western New York small businesses that need practical help with lead follow-up, appointment reminders, CRM workflows, websites, and admin automation. Med spas are a strong fit when the need is operational follow-up and client communication, not clinical decision-making.
 
 ## Final CTA
 
-Want to see where automation could help your med spa first? WNY Automation can review your consultation, reminder, FAQ, and review-request workflow and suggest a few practical improvements for your team.
+Want to see where automation could help your med spa first? WNY Business Automation can review your consultation, reminder, FAQ, and review-request workflow and suggest a few practical improvements for your team.
 
 Start with a simple workflow audit — no hype, no giant software overhaul, and no pressure to automate everything at once.

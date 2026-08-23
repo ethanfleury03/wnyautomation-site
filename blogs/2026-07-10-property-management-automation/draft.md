@@ -94,7 +94,7 @@ A practical [AI chatbot for small business](/services/ai-chatbots-small-business
 
 ## Mid-page CTA
 
-Not sure which property management workflow is worth fixing first? WNY Automation can review how tenant requests, maintenance issues, and vendor updates currently move through your business and suggest three practical automations to start with.
+Not sure which property management workflow is worth fixing first? WNY Business Automation can review how tenant requests, maintenance issues, and vendor updates currently move through your business and suggest three practical automations to start with.
 
 ## 4. Vendor follow-up and work order reminders
 
@@ -193,9 +193,9 @@ It may not be the right fit yet if:
 - Your team will not use the task system where requests are routed.
 - You need legal, compliance, or lease-policy decisions automated instead of reviewed by a person.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses build practical workflows around lead follow-up, form routing, reminders, FAQs, and admin operations.
+WNY Business Automation helps local businesses build practical workflows around lead follow-up, form routing, reminders, FAQs, and admin operations.
 
 For property managers in Buffalo, Niagara Falls, Tonawanda, and nearby Western New York areas, that might mean:
 
@@ -231,6 +231,6 @@ Maintenance request intake is often the best first workflow because it has clear
 
 ## Final CTA
 
-If tenant requests, maintenance updates, or vendor follow-up are getting scattered across too many places, WNY Automation can help map a simple first workflow.
+If tenant requests, maintenance updates, or vendor follow-up are getting scattered across too many places, WNY Business Automation can help map a simple first workflow.
 
 Start with a low-pressure review: get three practical automation ideas for your property management process — no giant software overhaul, no AI hype, just clearer follow-up for your team and tenants.

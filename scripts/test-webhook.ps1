@@ -16,8 +16,8 @@ function Write-ShortContent {
 
 $payload = @{
   eventType = "lead"
-  task = "TEST from WNY Automation Co local webhook check"
-  business = "WNY Automation Co Test Business"
+  task = "TEST from WNY Business Automation local webhook check"
+  business = "WNY Business Automation Test Business"
   industry = "Testing"
   name = "Ethan Test"
   email = "test@example.com"
@@ -58,7 +58,7 @@ $visitPayload = @{
   anonymousVisitorId = "local-test-visitor"
   source = "PowerShell webhook test"
   pageUrl = "http://localhost:8000"
-  pageTitle = "WNY Automation Co local test"
+  pageTitle = "WNY Business Automation local test"
   referrer = "Direct / none"
   userAgent = "PowerShell"
   language = "en-US"

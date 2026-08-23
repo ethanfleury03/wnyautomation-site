@@ -1,6 +1,6 @@
-# WNY Automation Website
+# WNY Business Automation Website
 
-Public website and blog publishing API for WNY Automation.
+Public website and blog publishing API for WNY Business Automation.
 
 ## Local Development
 

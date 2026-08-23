@@ -110,7 +110,7 @@ This is not flashy. That is the point. It solves a real problem without asking t
 
 ## Mid-page CTA
 
-Not sure where AI fits in your business yet? WNY Automation can help review your current lead, quote, appointment, or admin process and suggest a practical first workflow before you buy another tool.
+Not sure where AI fits in your business yet? WNY Business Automation can help review your current lead, quote, appointment, or admin process and suggest a practical first workflow before you buy another tool.
 
 ## How to choose the first AI project
 
@@ -193,9 +193,9 @@ It may not be the right fit yet if:
 - Your team will not use the place where tasks or notes are created.
 - You are looking for guaranteed leads, rankings, revenue, or a fully hands-off replacement for staff.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps Western New York businesses use AI and automation in plain-English, practical ways.
+WNY Business Automation helps Western New York businesses use AI and automation in plain-English, practical ways.
 
 That can include:
 
@@ -236,7 +236,7 @@ Map the workflow before buying software. Define the trigger, action, human hando
 
 ## Final CTA
 
-If you are curious about AI but do not want hype, tool sprawl, or a giant software project, WNY Automation can help you find a practical starting point. Request a free automation audit and get a few clear AI or automation ideas built around how your Buffalo or WNY business already works.
+If you are curious about AI but do not want hype, tool sprawl, or a giant software project, WNY Business Automation can help you find a practical starting point. Request a free automation audit and get a few clear AI or automation ideas built around how your Buffalo or WNY business already works.
 
 Review Notes
 - Calendar row used: Week 12, Date 2026-08-05, Funnel Stage Consideration, Content Pillar AI Consulting / Safety.
@@ -244,12 +244,12 @@ Review Notes
 - Internal link `/services/small-business-ai-consulting` came from the calendar row but is not in the common path list; verify before publishing.
 - Internal link `/services/workflow-automation-consultant-buffalo` came from the calendar row but differs from the common path `/services/workflow-automation-company-buffalo`; verify before publishing.
 - No customer results, prices, guarantees, timelines, or case studies were included.
-- Recommended author/reviewer note: Written by WNY Automation, a Buffalo-based automation partner helping local businesses improve lead follow-up, appointment reminders, quote follow-up, CRM workflows, and website lead handling.
+- Recommended author/reviewer note: Written by WNY Business Automation, a Buffalo-based automation partner helping local businesses improve lead follow-up, appointment reminders, quote follow-up, CRM workflows, and website lead handling.
 - Schema recommendations: add BlogPosting or Article structured data; keep accurate sitewide LocalBusiness schema; FAQ content is included for reader usefulness, but do not rely on FAQ rich results.
 - Production cleanup before publishing: remove package metadata, review notes, image prompt notes, email summary, and sheet update recommendation.
 
 Email Summary
-Today’s WNY Automation draft is ready: “Small Business AI Consulting in Buffalo and WNY: How to Start Without Buying the Wrong Tools.” It targets “small business AI consulting” for Buffalo and WNY owners who are curious but cautious about AI, with a practical workflow-first angle, safe human handoffs, tool-selection guidance, FAQs, and CTA to request a free automation audit.
+Today’s WNY Business Automation draft is ready: “Small Business AI Consulting in Buffalo and WNY: How to Start Without Buying the Wrong Tools.” It targets “small business AI consulting” for Buffalo and WNY owners who are curious but cautious about AI, with a practical workflow-first angle, safe human handoffs, tool-selection guidance, FAQs, and CTA to request a free automation audit.
 
 Sheet Update Recommendation
 - Draft URL: use Google Doc/Drive link if upload succeeds; leave blank if Drive/Docs write scopes fail.

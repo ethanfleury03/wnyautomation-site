@@ -1,4 +1,4 @@
-You are creating the image-generation prompt for a WNY Automation Co blog thumbnail and in-article hero image.
+You are creating the image-generation prompt for a WNY Business Automation blog thumbnail and in-article hero image.
 
 Input blog data:
 - Title: {{$json.generated_title}}
@@ -10,7 +10,7 @@ Input blog data:
 - Blog HTML: {{$json.blog_html}}
 
 Brand and audience:
-- Brand: WNY Automation Co
+- Brand: WNY Business Automation
 - Business: practical AI automation for local small businesses
 - Region: Buffalo, Niagara, and Western New York
 - Audience: skeptical local business owners who want practical time-saving systems, not futuristic tech hype

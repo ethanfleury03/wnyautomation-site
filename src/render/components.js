@@ -34,7 +34,7 @@ function renderHeader({ currentPath = "/" } = {}) {
             <span class="cta-label-full">Get My Free Automation Ideas</span>
             <span class="cta-label-short">Ideas</span>
           </a>
-          <a class="button header-login button-secondary" href="${escapeAttribute(business.clientLoginPath)}" aria-label="Client Login: open the secure WNY Automation client portal" title="Client Login">
+          <a class="button header-login button-secondary" href="${escapeAttribute(business.clientLoginPath)}" aria-label="Client Login: open the secure WNY Business Automation client portal" title="Client Login">
             ${icon("log-in")}
             <span class="client-login-label-full">Client Login</span>
             <span class="client-login-label-short">Portal</span>
@@ -86,6 +86,7 @@ function renderFooter({ services = [], industries = [] } = {}) {
           </a>
           <p>Practical workflow automation for Buffalo, Niagara, and Western New York businesses.</p>
           <p>Serving Buffalo, Niagara Falls, Amherst, Williamsville, Cheektowaga, Tonawanda, Lockport, Lewiston, Grand Island, and surrounding Western New York communities.</p>
+          <p>${escapeHtml(business.legalName)}</p>
           <p>${contactLinks.join(" · ")}</p>
         </div>
         ${footerColumn("Services", services.slice(0, 6).map((item) => [item.title, `/services/${item.slug}`]))}
@@ -106,7 +107,7 @@ function renderFooter({ services = [], industries = [] } = {}) {
 function renderBrandLockup() {
   return `
     <span class="brand-mark" aria-hidden="true">
-      <img src="/assets/wny-automation-icon.png" alt="" decoding="async" />
+      <img src="/assets/wny-automation-icon.png" alt="" decoding="sync" fetchpriority="high" />
     </span>
     <span class="brand-copy">
       <strong>${escapeHtml(business.businessName)}</strong>
@@ -129,7 +130,7 @@ function renderSEOPageHero({
   primaryHref = "/free-workflow-audit#workflow-form",
   primaryLabel = "Get My Free Automation Ideas",
   secondaryHref = `mailto:${business.email}`,
-  secondaryLabel = "Email WNY Automation",
+  secondaryLabel = "Email WNY Business Automation",
   valueHighlights = [],
   miniForm = false,
 }) {
@@ -155,7 +156,7 @@ function renderSEOPageHero({
           </div>
           ${
             miniForm
-              ? `<div class="hero-workflow-strip hero-proof-strip" aria-label="Why businesses start with WNY Automation Co">
+              ? `<div class="hero-workflow-strip hero-proof-strip" aria-label="Why businesses start with WNY Business Automation">
                   ${highlights.map((item) => `<span>${icon(item.icon)}${escapeHtml(item.text)}</span>`).join("")}
                 </div>`
               : ""
@@ -227,7 +228,7 @@ function renderWorkflowAuditForm({
       ${optionalDetails}
       <div class="form-actions">
         <button class="button button-primary" type="submit">${icon("send")}${isShort ? "Get 3 Automation Ideas" : "Get My Free Automation Ideas"}</button>
-        <a class="button button-secondary" href="mailto:${escapeAttribute(business.email)}">${icon("mail")}Email WNY Automation</a>
+        <a class="button button-secondary" href="mailto:${escapeAttribute(business.email)}">${icon("mail")}Email WNY Business Automation</a>
       </div>
       <div class="form-status" aria-live="polite"></div>
     </form>`;
@@ -278,7 +279,7 @@ function renderHowItWorksSection() {
       </div>
       <div class="process-grid">
         ${processStep("1", "Tell us the manual task", "Submit the workflow that wastes time, creates delays, or causes missed opportunities.")}
-        ${processStep("2", "We map the workflow", "WNY Automation Co reviews your tools, steps, handoffs, and where the process breaks down.")}
+        ${processStep("2", "We map the workflow", "WNY Business Automation reviews your tools, steps, handoffs, and where the process breaks down.")}
         ${processStep("3", "We build a small automation pilot", "If there is a fit, we start with one focused workflow before expanding anything else.")}
       </div>`,
     "process-section",
@@ -334,9 +335,9 @@ function renderCTASection({
   primaryHref = "/free-workflow-audit#workflow-form",
   primaryLabel = "Get My Free Automation Ideas",
   secondaryHref = `mailto:${business.email}`,
-  secondaryLabel = "Email WNY Automation",
+  secondaryLabel = "Email WNY Business Automation",
   title = "Ready to find the one workflow costing you the most time?",
-  text = "Tell WNY Automation Co one manual task. We will review the workflow and send back practical automation ideas.",
+  text = "Tell WNY Business Automation one manual task. We will review the workflow and send back practical automation ideas.",
   withForm = false,
   source = "CTA",
 }) {
@@ -380,7 +381,7 @@ function renderServiceHero(service) {
           <p>${escapeHtml(service.shortDescription)}</p>
           <div class="hero-actions">
             <a class="button button-primary" href="/free-workflow-audit#workflow-form">${icon("send")}${escapeHtml(service.ctaLabel || "Get My Free Automation Ideas")}</a>
-            <a class="button button-secondary" href="mailto:${escapeAttribute(business.email)}">${icon("mail")}Email WNY Automation</a>
+            <a class="button button-secondary" href="mailto:${escapeAttribute(business.email)}">${icon("mail")}Email WNY Business Automation</a>
           </div>
           <p class="service-hero-trust">${icon("shield-check")}<span>${escapeHtml(service.trustLine)}</span></p>
         </div>
@@ -512,7 +513,7 @@ function renderTrustSection() {
         <div class="section-heading">
           <p class="section-kicker">Provable trust</p>
           <h2>Local, practical, and built around one workflow at a time.</h2>
-          <p>WNY Automation Co serves Buffalo, Niagara, and Western New York businesses with a free, no-pressure workflow audit. We look at the tools you already use first, then recommend a small automation only when it makes sense.</p>
+          <p>WNY Business Automation serves Buffalo, Niagara, and Western New York businesses with a free, no-pressure workflow audit. We look at the tools you already use first, then recommend a small automation only when it makes sense.</p>
           <ul class="trust-contact-list">${contactItems.join("")}</ul>
         </div>
         <ul class="feature-list trust-proof-list">
@@ -535,7 +536,7 @@ function renderIndexGrid(items, basePath, emptyText = "No pages available yet.")
     .map(
       (item) => `
         <article class="index-card">
-          <p class="section-kicker">${escapeHtml(item.primaryKeyword || item.city || item.category || "WNY Automation")}</p>
+          <p class="section-kicker">${escapeHtml(item.primaryKeyword || item.city || item.category || "WNY Business Automation")}</p>
           <h2><a href="${escapeAttribute(`${basePath}/${item.slug}`)}">${escapeHtml(item.title || item.h1)}</a></h2>
           <p>${escapeHtml(item.shortDescription || item.intro || item.metaDescription || item.excerpt || "")}</p>
           <a class="blog-read-link" href="${escapeAttribute(`${basePath}/${item.slug}`)}">View page${icon("arrow-up-right")}</a>
@@ -545,7 +546,7 @@ function renderIndexGrid(items, basePath, emptyText = "No pages available yet.")
 }
 
 function renderBlogCard(post, basePath = "/blog") {
-  const status = post.status === "sample" ? "Sample draft" : post.industry || post.category || "WNY Automation Blog";
+  const status = post.status === "sample" ? "Sample draft" : post.industry || post.category || "WNY Business Automation Blog";
   const date = formatDisplayDate(post.publish_date || post.publishDate);
   return `
     <article class="blog-card">

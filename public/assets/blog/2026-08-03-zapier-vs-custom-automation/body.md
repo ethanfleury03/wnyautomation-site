@@ -103,7 +103,7 @@ A [workflow automation company in Buffalo](/services/intake-to-task-automation) 
 
 ## Mid-page CTA
 
-Not sure which tool fits your first workflow? WNY Automation can help map the task, identify the safest starting point, and suggest a simple automation before you commit to a bigger system.
+Not sure which tool fits your first workflow? WNY Business Automation can help map the task, identify the safest starting point, and suggest a simple automation before you commit to a bigger system.
 
 ## A simple decision framework
 
@@ -207,9 +207,9 @@ This may not be the right fit yet if:
 - You do not know what should happen after the trigger.
 - You want automation to replace judgment instead of supporting it.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses use automation and AI in practical, plain-English ways. That can include lead follow-up, missed call response, CRM workflows, quote reminders, appointment reminders, review requests, website lead capture, and admin workflow cleanup.
+WNY Business Automation helps local businesses use automation and AI in practical, plain-English ways. That can include lead follow-up, missed call response, CRM workflows, quote reminders, appointment reminders, review requests, website lead capture, and admin workflow cleanup.
 
 The goal is not to force every business into a giant software stack. The goal is to find the first few workflows that are worth cleaning up, build around your current tools when possible, and keep human handoffs clear.
 
@@ -241,6 +241,6 @@ A good first automation is usually a repetitive task tied to leads, appointments
 
 If you are comparing Zapier, n8n, or custom automation for your Western New York business, start with the workflow — not the tool.
 
-WNY Automation can review your current lead, quote, appointment, or admin process and suggest three practical automation ideas that fit how your team actually works. No hype, no giant software overhaul — just a clear first step.
+WNY Business Automation can review your current lead, quote, appointment, or admin process and suggest three practical automation ideas that fit how your team actually works. No hype, no giant software overhaul — just a clear first step.
 
 Ask for **3 Automation Ideas** and see what is worth fixing first.

@@ -126,7 +126,7 @@ If your team already uses a CRM or task system, [CRM automation for small busine
 
 ## Mid-page CTA
 
-Not sure where review requests fit into your current process? WNY Automation can review how your team closes jobs, follows up with customers, and handles missed review opportunities, then suggest a simple first workflow to test.
+Not sure where review requests fit into your current process? WNY Business Automation can review how your team closes jobs, follows up with customers, and handles missed review opportunities, then suggest a simple first workflow to test.
 
 ## Common mistakes to avoid
 
@@ -169,9 +169,9 @@ This may not be the right fit yet if:
 
 The best review workflow starts with good service and clear ownership.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses build practical systems for follow-up, reminders, reviews, lead response, and admin workflows.
+WNY Business Automation helps local businesses build practical systems for follow-up, reminders, reviews, lead response, and admin workflows.
 
 For a home service review request workflow, that might include:
 
@@ -214,7 +214,7 @@ Often, yes. A review request workflow can usually be built around the tools a bu
 
 ## Final CTA
 
-If your home service team is doing good work but review requests keep slipping through the cracks, WNY Automation can help you design a simple, respectful follow-up workflow for Buffalo and WNY customers.
+If your home service team is doing good work but review requests keep slipping through the cracks, WNY Business Automation can help you design a simple, respectful follow-up workflow for Buffalo and WNY customers.
 
 Start with one process: completed job, polite review request, clear human handoff. No hype, no giant software overhaul — just a practical system your team can actually use.
 

@@ -70,7 +70,7 @@ const {
     industry: "Contractor",
     manualTask: "We manually follow up with every website lead.",
     pageUrl: "https://wnyautomation.com/",
-    pageTitle: "WNY Automation Co | Home",
+    pageTitle: "WNY Business Automation | Home",
   });
 
   assert.equal(result.synced, true);
@@ -91,7 +91,7 @@ const {
 
   const noteCreate = calls.find((call) => call.path === "/crm/v3/objects/notes" && call.method === "POST");
   assert.match(noteCreate.body.properties.hs_note_body, /Inquiry page:<\/strong> https:\/\/wnyautomation\.com\//);
-  assert.match(noteCreate.body.properties.hs_note_body, /Page title:<\/strong> WNY Automation Co \| Home/);
+  assert.match(noteCreate.body.properties.hs_note_body, /Page title:<\/strong> WNY Business Automation \| Home/);
   assert.match(noteCreate.body.properties.hs_note_body, /Contact and company information/);
   assert.match(noteCreate.body.properties.hs_note_body, /Business:<\/strong> Example WNY Business/);
 

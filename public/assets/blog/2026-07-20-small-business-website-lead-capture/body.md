@@ -70,7 +70,7 @@ For lead capture, clarity wins.
 - Customer experience: The visitor understands what will happen after they click.
 - When not to automate: Do not force every visitor into a form if your customers usually need a phone conversation first.
 
-If your website itself needs cleanup, WNY Automation’s [website creation service](/services/website-creation) is built around practical lead capture, not just making pages look nicer.
+If your website itself needs cleanup, WNY Business Automation’s [website creation service](/services/website-creation) is built around practical lead capture, not just making pages look nicer.
 
 ## 2. Ask for enough information, but not too much
 
@@ -112,7 +112,7 @@ That is not complicated AI. It is practical lead handling.
 
 ## Mid-page CTA
 
-Not sure where your website is leaking leads? WNY Automation can review your current contact forms, calls to action, and follow-up process, then suggest three practical improvements before you spend more on ads.
+Not sure where your website is leaking leads? WNY Business Automation can review your current contact forms, calls to action, and follow-up process, then suggest three practical improvements before you spend more on ads.
 
 ## 4. Route each website lead to a real owner
 
@@ -236,9 +236,9 @@ Then ask:
 
 Those answers will usually show the first few improvements.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses build practical websites and follow-up workflows that are easier for small teams to manage.
+WNY Business Automation helps local businesses build practical websites and follow-up workflows that are easier for small teams to manage.
 
 That can include:
 
@@ -275,4 +275,4 @@ Most forms should ask for name, contact information, service needed, location, t
 
 ## Final CTA
 
-Before you put more money into ads, make sure your website can capture and route the leads you already have a chance to win. WNY Automation can review your site, forms, and follow-up process and give you three practical automation ideas for your Western New York business.
+Before you put more money into ads, make sure your website can capture and route the leads you already have a chance to win. WNY Business Automation can review your site, forms, and follow-up process and give you three practical automation ideas for your Western New York business.

@@ -45,7 +45,7 @@ A blog lets you create pages around more specific searches, such as:
 
 Each blog post can target one specific question or topic. That gives your website more surface area in search results without cluttering your main navigation.
 
-For example, WNY Automation has service pages for things like [automated lead follow-up](/services/automated-lead-follow-up), [website creation](/services/website-creation), and [workflow automation in Buffalo](/services/workflow-automation-company-buffalo). Blog posts can support those pages by explaining related problems in plain English.
+For example, WNY Business Automation has service pages for things like [automated lead follow-up](/services/automated-lead-follow-up), [website creation](/services/website-creation), and [workflow automation in Buffalo](/services/workflow-automation-company-buffalo). Blog posts can support those pages by explaining related problems in plain English.
 
 ## Blogs help Google understand your expertise
 
@@ -108,7 +108,7 @@ More traffic is not always the goal. Better traffic is.
 
 A blog should attract people who are more likely to care about your services. That means writing about problems tied to real business value.
 
-For WNY Automation, useful blog topics are not random marketing trends. They should connect to things local businesses actually deal with:
+For WNY Business Automation, useful blog topics are not random marketing trends. They should connect to things local businesses actually deal with:
 
 - Missed calls.
 - Slow website lead follow-up.
@@ -245,9 +245,9 @@ Blogging may not be the right first priority if:
 
 In many cases, the best approach is to improve the website and follow-up system while building the blog in parallel.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses build websites, landing pages, and practical automation systems that turn traffic into clearer next steps.
+WNY Business Automation helps local businesses build websites, landing pages, and practical automation systems that turn traffic into clearer next steps.
 
 That matters because SEO traffic alone is not enough. If someone reads a blog, visits a service page, fills out a form, and then waits days for a response, the opportunity can still be lost.
 
@@ -259,7 +259,7 @@ A stronger system connects the pieces:
 - Automated lead follow-up helps make sure those inquiries do not sit unanswered.
 - CRM or task workflows keep the next step organized.
 
-If your website is getting traffic but not enough action, or if you want to start building organic visibility before running ads, WNY Automation can help map the content and workflow pieces together.
+If your website is getting traffic but not enough action, or if you want to start building organic visibility before running ads, WNY Business Automation can help map the content and workflow pieces together.
 
 ## FAQ
 
@@ -287,4 +287,4 @@ Blogs can bring visitors, but the website still needs clear calls-to-action, tru
 
 Want to start building organic traffic without writing random blog posts that do not connect to your business?
 
-WNY Automation can help map blog topics around your services, improve the website paths those visitors land on, and connect inquiries to practical follow-up workflows. Start with a simple review of your website, your best services, and the customer questions your business already answers every week.
+WNY Business Automation can help map blog topics around your services, improve the website paths those visitors land on, and connect inquiries to practical follow-up workflows. Start with a simple review of your website, your best services, and the customer questions your business already answers every week.

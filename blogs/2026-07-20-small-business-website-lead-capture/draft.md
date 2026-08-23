@@ -97,7 +97,7 @@ For lead capture, clarity wins.
 - Customer experience: The visitor understands what will happen after they click.
 - When not to automate: Do not force every visitor into a form if your customers usually need a phone conversation first.
 
-If your website itself needs cleanup, WNY Automation’s [website creation service](/services/website-creation) is built around practical lead capture, not just making pages look nicer.
+If your website itself needs cleanup, WNY Business Automation’s [website creation service](/services/website-creation) is built around practical lead capture, not just making pages look nicer.
 
 ## 2. Ask for enough information, but not too much
 
@@ -139,7 +139,7 @@ That is not complicated AI. It is practical lead handling.
 
 ## Mid-page CTA
 
-Not sure where your website is leaking leads? WNY Automation can review your current contact forms, calls to action, and follow-up process, then suggest three practical improvements before you spend more on ads.
+Not sure where your website is leaking leads? WNY Business Automation can review your current contact forms, calls to action, and follow-up process, then suggest three practical improvements before you spend more on ads.
 
 ## 4. Route each website lead to a real owner
 
@@ -263,9 +263,9 @@ Then ask:
 
 Those answers will usually show the first few improvements.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses build practical websites and follow-up workflows that are easier for small teams to manage.
+WNY Business Automation helps local businesses build practical websites and follow-up workflows that are easier for small teams to manage.
 
 That can include:
 
@@ -302,7 +302,7 @@ Most forms should ask for name, contact information, service needed, location, t
 
 ## Final CTA
 
-Before you put more money into ads, make sure your website can capture and route the leads you already have a chance to win. WNY Automation can review your site, forms, and follow-up process and give you three practical automation ideas for your Western New York business.
+Before you put more money into ads, make sure your website can capture and route the leads you already have a chance to win. WNY Business Automation can review your site, forms, and follow-up process and give you three practical automation ideas for your Western New York business.
 
 Review Notes
 - Calendar row used: Week 10, Date 2026-07-20, Funnel Stage Awareness, Content Pillar Website Conversion.
@@ -311,12 +311,12 @@ Review Notes
 - Internal links embedded naturally to /services/website-creation and /services/automated-lead-follow-up.
 - Verify both internal pages before publishing.
 - No unsupported claims, fake stats, pricing, timelines, or guaranteed lead/revenue/SEO outcomes included.
-- Recommended author/reviewer note: Written by WNY Automation, a Buffalo-based automation partner helping local businesses improve lead follow-up, appointment reminders, quote follow-up, CRM workflows, and website lead handling.
+- Recommended author/reviewer note: Written by WNY Business Automation, a Buffalo-based automation partner helping local businesses improve lead follow-up, appointment reminders, quote follow-up, CRM workflows, and website lead handling.
 - Schema recommendations: add BlogPosting or Article structured data; ensure accurate sitewide LocalBusiness schema; FAQ can be marked up for reader usefulness, but do not rely on FAQ rich results.
 - Production cleanup: remove package metadata, image prompt, review notes, email summary, and sheet update recommendation before publishing.
 
 Email Summary
-Today’s WNY Automation blog draft is ready for review: “Small Business Website Lead Capture: What Every Local Site Needs Before Running Ads.” It explains what local small business websites should fix before running ads, including CTAs, forms, confirmation messages, routing, mobile usability, and follow-up reminders. Featured image generated and verified effectively 16:9.
+Today’s WNY Business Automation blog draft is ready for review: “Small Business Website Lead Capture: What Every Local Site Needs Before Running Ads.” It explains what local small business websites should fix before running ads, including CTAs, forms, confirmation messages, routing, mobile usability, and follow-up reminders. Featured image generated and verified effectively 16:9.
 
 Sheet Update Recommendation
 - Draft URL: leave blank unless Drive upload succeeds.

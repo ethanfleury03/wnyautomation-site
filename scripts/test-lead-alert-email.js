@@ -47,7 +47,7 @@ const {
       industry: "Contractor",
       manualTask: "We manually follow up with every <website> lead.",
       pageUrl: "https://wnyautomation.com/services/automated-lead-follow-up",
-      pageTitle: "Automated Lead Follow-Up | WNY Automation",
+      pageTitle: "Automated Lead Follow-Up | WNY Business Automation",
       conversionPath: "service-page-form",
       formVariant: "standard",
     },
@@ -62,7 +62,7 @@ const {
   const sendCall = calls.find((call) => call.url.endsWith("/users/me/messages/send"));
   const raw = JSON.parse(sendCall.options.body).raw;
   const decoded = Buffer.from(raw, "base64url").toString("utf8");
-  assert.match(decoded, /From: WNY Automation Website <ethan@wnyautomation\.com>/);
+  assert.match(decoded, /From: WNY Business Automation Website <ethan@wnyautomation\.com>/);
   assert.match(decoded, /To: ethan@wnyautomation\.com/);
   assert.match(decoded, /Reply-To: owner@example\.com/);
   assert.match(decoded, /New website inquiry - Example Owner/);

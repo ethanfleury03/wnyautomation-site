@@ -2,7 +2,6 @@
 const isStaging = process.env.APP_ENV === "staging";
 
 const nextConfig = {
-  agentRules: false,
   poweredByHeader: false,
   async headers() {
     const stagingHeaders = isStaging

@@ -121,7 +121,7 @@ When a customer submits a form and nothing happens, they may wonder if it worked
 
 ## Mid-page CTA
 
-Not sure whether your contractor website is capturing the right information? WNY Automation can review your current form, calls-to-action, and follow-up process, then suggest three practical improvements you can start with before rebuilding everything.
+Not sure whether your contractor website is capturing the right information? WNY Business Automation can review your current form, calls-to-action, and follow-up process, then suggest three practical improvements you can start with before rebuilding everything.
 
 ## What to automate first
 
@@ -225,9 +225,9 @@ Many homeowners and property managers search from a phone. Estimate buttons, cli
 
 Avoid automatic messages that promise exact pricing, availability, or timelines unless those details are truly confirmed. Automation should support clear communication, not create expectations your team cannot meet.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps Western New York small businesses build practical systems around leads, calls, forms, quotes, appointments, and follow-up.
+WNY Business Automation helps Western New York small businesses build practical systems around leads, calls, forms, quotes, appointments, and follow-up.
 
 For contractors, that can include:
 
@@ -241,7 +241,7 @@ For contractors, that can include:
 
 The goal is not to force a complicated software overhaul. The goal is to start with the workflow that is causing the most missed opportunities and make it easier for your team to respond.
 
-If your current site is weak, WNY Automation can also help with [website creation for local businesses](/services/website-creation) and the follow-up process behind it.
+If your current site is weak, WNY Business Automation can also help with [website creation for local businesses](/services/website-creation) and the follow-up process behind it.
 
 ## FAQ
 
@@ -271,8 +271,8 @@ Faster is usually better, but the right expectation depends on your team and ser
 
 ## Final CTA
 
-If your contractor website gets visitors but estimate requests still feel scattered, WNY Automation can help map a cleaner lead capture and follow-up workflow.
+If your contractor website gets visitors but estimate requests still feel scattered, WNY Business Automation can help map a cleaner lead capture and follow-up workflow.
 
 Start with a simple review of your current website form, call-to-action, and follow-up steps. We will look for practical improvements that help your Buffalo or WNY contracting business capture better details, route requests clearly, and follow up without adding a giant software system.
 
-**Next step:** Ask WNY Automation for **3 Automation Ideas** for your contractor website lead capture process.
+**Next step:** Ask WNY Business Automation for **3 Automation Ideas** for your contractor website lead capture process.

@@ -156,7 +156,7 @@ export async function POST(request) {
       configured: hasDurableLeadDestination(),
       hubspotSynced: hubspot.synced,
       emailAlertSent: emailAlert.sent,
-      message: "Thanks - WNY Automation Co will review your workflow and send back a few practical automation ideas.",
+      message: "Thanks - WNY Business Automation will review your workflow and send back a few practical automation ideas.",
     });
   } catch (error) {
     return Response.json(

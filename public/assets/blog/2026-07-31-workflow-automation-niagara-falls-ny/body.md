@@ -70,7 +70,7 @@ For a seasonal Niagara County business, this can be especially useful when the c
 
 ## Mid-page CTA: start with one workflow
 
-Not sure which workflow is worth fixing first? WNY Automation can review your current lead, booking, reminder, or review process and suggest three practical automations you can start with — without pushing a giant software overhaul.
+Not sure which workflow is worth fixing first? WNY Business Automation can review your current lead, booking, reminder, or review process and suggest three practical automations you can start with — without pushing a giant software overhaul.
 
 ## 3. Quote follow-up automation
 
@@ -155,15 +155,15 @@ This may not be the right fit yet if:
 - Your team will not check the CRM, task board, or inbox where work is routed.
 - You are looking for automation to replace judgment instead of support it.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps small businesses in Buffalo, Niagara County, and Western New York build practical automation around real daily work.
+WNY Business Automation helps small businesses in Buffalo, Niagara County, and Western New York build practical automation around real daily work.
 
 That can include missed call and website lead response, appointment reminders, quote follow-up, review requests, CRM cleanup, form-to-task routing, and better website lead capture.
 
 The approach is simple: map the workflow, decide what should happen automatically, keep a human handoff where it matters, and build around tools your team can actually use.
 
-If your Niagara County business is losing track of leads, bookings, reminders, or review requests, WNY Automation can help you find a practical first step.
+If your Niagara County business is losing track of leads, bookings, reminders, or review requests, WNY Business Automation can help you find a practical first step.
 
 ## FAQ
 
@@ -189,6 +189,6 @@ A missed call, website form, appointment reminder, quote follow-up, or review re
 
 ## Final CTA
 
-Want to see where automation could save time in your Niagara County business? WNY Automation can help map three practical workflow ideas for leads, bookings, reminders, reviews, or admin follow-up — without hype or a giant software overhaul.
+Want to see where automation could save time in your Niagara County business? WNY Business Automation can help map three practical workflow ideas for leads, bookings, reminders, reviews, or admin follow-up — without hype or a giant software overhaul.
 
 Start with one useful workflow and build from there.

@@ -150,7 +150,7 @@ No hype. No giant software project. Just a cleaner handoff from website visitor 
 
 ## Mid-page CTA
 
-Not sure whether your website problem is design, follow-up, or both? WNY Automation can review your current website lead flow and suggest a few practical improvements before you commit to a full rebuild.
+Not sure whether your website problem is design, follow-up, or both? WNY Business Automation can review your current website lead flow and suggest a few practical improvements before you commit to a full rebuild.
 
 ## Where automation fits into website creation
 
@@ -237,9 +237,9 @@ This may not be the right fit yet if:
 - Every inquiry needs a custom review before any confirmation message can be sent.
 - Your team will not check the place where new tasks or leads are created.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses think through both sides of the website:
+WNY Business Automation helps local businesses think through both sides of the website:
 
 - What visitors see before they contact you
 - What happens after they contact you
@@ -274,6 +274,6 @@ No. Small businesses can often benefit from simple automations such as form rout
 
 ## Final CTA
 
-Want a website that looks better and handles inquiries more cleanly? WNY Automation can help Buffalo and Western New York businesses map the design, lead capture, and follow-up workflow together.
+Want a website that looks better and handles inquiries more cleanly? WNY Business Automation can help Buffalo and Western New York businesses map the design, lead capture, and follow-up workflow together.
 
 Start with a low-pressure website concept and workflow audit so you can see where your current site may be losing calls, quote requests, or follow-up tasks.

@@ -108,7 +108,7 @@ function renderHomePage(blogItems = []) {
         eyebrow: "Practical automation for Buffalo, Niagara, and WNY businesses",
         h1: "Get 3 practical automation ideas for one manual workflow.",
         subheading:
-          "Tell WNY Automation Co the task your business keeps doing by hand. We will review it and send back practical ideas for saving time, improving follow-up, or reducing admin work.",
+          "Tell WNY Business Automation the task your business keeps doing by hand. We will review it and send back practical ideas for saving time, improving follow-up, or reducing admin work.",
         primaryHref: "#workflow-form",
         primaryLabel: "Get 3 Automation Ideas",
         valueHighlights: [
@@ -151,10 +151,10 @@ function renderAboutPage() {
     <main>
       <div class="section-inner">${renderBreadcrumbs(crumbs)}</div>
       ${renderSEOPageHero({
-        eyebrow: "About WNY Automation Co",
+        eyebrow: "About WNY Business Automation",
         h1: "Practical websites and automation for local businesses.",
         subheading:
-          "WNY Automation Co helps local businesses improve websites, follow-up, intake, reminders, and simple workflows without confusing tech jargon.",
+          "WNY Business Automation helps local businesses improve websites, follow-up, intake, reminders, and simple workflows without confusing tech jargon.",
         primaryHref: "#workflow-form",
         primaryLabel: "Share a Workflow or Website Problem",
       })}
@@ -162,7 +162,7 @@ function renderAboutPage() {
         <div class="two-column-section">
           <div>
             <p class="section-kicker">Founder note</p>
-            <h2>I'm Ethan Fleury, and I built WNY Automation Co for practical small-business problems.</h2>
+            <h2>I'm Ethan Fleury, and I built WNY Business Automation for practical small-business problems.</h2>
             <p>I work across website creation, automation, AI tools, software development, and local business operations. The goal is simple: help owners fix the repeated work that slows them down without turning the project into a giant software build.</p>
             <p>I am based in Western New York and focused on helping local businesses make their websites and workflows easier to use, easier to follow up on, and easier to maintain.</p>
           </div>
@@ -219,9 +219,9 @@ function renderAboutPage() {
   return page(
     body,
     {
-      title: "About WNY Automation Co | Websites and Automation for Local Businesses",
+      title: "About WNY Business Automation | Websites and Automation for Local Businesses",
       description:
-        "Meet Ethan Fleury, founder of WNY Automation Co. Practical website creation, automation, AI tools, and workflow support for Western New York businesses.",
+        "Meet Ethan Fleury, founder of WNY Business Automation. Practical website creation, automation, AI tools, and workflow support for Western New York businesses.",
       path: "/about",
     },
     [breadcrumbSchema(crumbs), localBusinessSchema("/about")],
@@ -231,7 +231,7 @@ function renderAboutPage() {
 function renderBlogPreview(posts) {
   return section(`
     <div class="section-heading">
-      <p class="section-kicker">WNY Automation Co Blog</p>
+      <p class="section-kicker">WNY Business Automation Blog</p>
       <h2>Practical automation ideas for local businesses.</h2>
       <p>Plain-English guides for reducing admin work, improving follow-up, and making operations smoother.</p>
     </div>
@@ -246,7 +246,7 @@ function renderWorkflowAuditPage() {
         eyebrow: "Free workflow audit",
         h1: "Free Workflow Audit for Buffalo Small Businesses",
         subheading:
-          "Submit one repetitive task and WNY Automation Co will help identify practical automation ideas that fit your current tools and team.",
+          "Submit one repetitive task and WNY Business Automation will help identify practical automation ideas that fit your current tools and team.",
         primaryHref: "#workflow-form",
       })}
       ${section(`
@@ -281,7 +281,7 @@ function renderWorkflowAuditPage() {
   return page(
     body,
     {
-      title: "Free Workflow Audit for Buffalo Small Businesses | WNY Automation Co",
+      title: "Free Workflow Audit for Buffalo Small Businesses | WNY Business Automation",
       description:
         "Submit one manual task and get practical automation ideas for your Buffalo or Western New York small business.",
       path: "/free-workflow-audit",
@@ -293,7 +293,7 @@ function renderWorkflowAuditPage() {
 function renderServicesIndex() {
   return indexPage({
     path: "/services",
-    title: "Automation and Website Services for Buffalo Small Businesses | WNY Automation Co",
+    title: "Automation and Website Services for Buffalo Small Businesses | WNY Business Automation",
     h1: "Services built around real small-business work.",
     intro:
       "Explore practical systems for missed leads, quote follow-up, intake tasks, website FAQs, customer reminders, website creation, and blog schedules.",
@@ -305,7 +305,7 @@ function renderServicesIndex() {
 function renderIndustriesIndex() {
   return indexPage({
     path: "/industries",
-    title: "Workflow Automation by Industry | WNY Automation Co",
+    title: "Workflow Automation by Industry | WNY Business Automation",
     h1: "Workflow automation ideas for local industries.",
     intro:
       "Browse practical workflow ideas for home services, professional offices, restaurants, med spas, contractors, property managers, and other local businesses.",
@@ -317,7 +317,7 @@ function renderIndustriesIndex() {
 function indexPage({ path, title, h1, intro, items, basePath }) {
   const body = `
     <main>
-      ${renderSEOPageHero({ eyebrow: "WNY Automation Co", h1, subheading: intro })}
+      ${renderSEOPageHero({ eyebrow: "WNY Business Automation", h1, subheading: intro })}
       ${section(renderIndexGrid(items, basePath))}
       ${renderCTASection({ withForm: false })}
     </main>`;
@@ -356,7 +356,7 @@ function renderServicePage(service) {
       ${renderChecklistSection({
         eyebrow: "What we'd look at first",
         title: "A thoughtful review before recommending a build.",
-        intro: "WNY Automation Co starts by understanding the real workflow, tools, and handoffs before suggesting a system.",
+        intro: "WNY Business Automation starts by understanding the real workflow, tools, and handoffs before suggesting a system.",
         items: service.whatWeLookAtFirst,
         iconName: "search-check",
       })}
@@ -437,7 +437,7 @@ function renderCaseStudiesIndex() {
       ${renderCTASection({ withForm: false })}
     </main>`;
   return page(body, {
-    title: "Sample Workflow Examples | WNY Automation Co",
+    title: "Sample Workflow Examples | WNY Business Automation",
     description: "Sample workflow examples for local business automation. These are not client case studies.",
     path: "/case-studies",
   });
@@ -465,7 +465,7 @@ function renderCaseStudyPage(caseStudy) {
       ${renderCTASection({ withForm: false })}
     </main>`;
   return page(body, {
-    title: `${caseStudy.title} | Sample Workflow | WNY Automation Co`,
+    title: `${caseStudy.title} | Sample Workflow | WNY Business Automation`,
     description: `${caseStudy.disclaimer}. ${caseStudy.problem}`,
     path: `/case-studies/${caseStudy.slug}`,
   });
@@ -475,7 +475,7 @@ function renderBlogIndexPage(posts) {
   const body = `
     <main>
       ${renderSEOPageHero({
-        eyebrow: "WNY Automation Co Blog",
+        eyebrow: "WNY Business Automation Blog",
         h1: "Practical automation ideas for local businesses.",
         subheading:
           "Plain-English guides for reducing admin work, improving follow-up, and making operations smoother.",
@@ -484,8 +484,8 @@ function renderBlogIndexPage(posts) {
       ${renderCTASection({ withForm: false })}
     </main>`;
   return page(body, {
-    title: "Blog | WNY Automation Co",
-    description: "Practical WNY Automation Co blog guides for automating repetitive work in Buffalo, Niagara, and Western New York.",
+    title: "Blog | WNY Business Automation",
+    description: "Practical WNY Business Automation blog guides for automating repetitive work in Buffalo, Niagara, and Western New York.",
     path: "/blog",
   });
 }
@@ -505,7 +505,7 @@ function renderBlogPostPage(post) {
         <div class="section-inner blog-article-inner">
           ${renderBreadcrumbs(crumbs)}
           <div class="article-shell">
-            <p class="section-kicker">${escapeHtml(isSample ? "Sample draft" : post.category || post.industry || "WNY Automation Co Blog")}</p>
+            <p class="section-kicker">${escapeHtml(isSample ? "Sample draft" : post.category || post.industry || "WNY Business Automation Blog")}</p>
             <h1>${escapeHtml(post.title)}</h1>
             <div class="article-meta">
               ${post.publish_date || post.publishDate ? `<span>${escapeHtml(formatDisplayDate(post.publish_date || post.publishDate))}</span>` : ""}
@@ -527,7 +527,7 @@ function renderBlogPostPage(post) {
   return page(
     body,
     {
-      title: `${post.meta_title || post.metaTitle || post.title} | WNY Automation Co`,
+      title: `${post.meta_title || post.metaTitle || post.title} | WNY Business Automation`,
       description: post.meta_description || post.metaDescription || post.excerpt || "",
       path: `/blog/${post.slug}`,
       type: "article",
@@ -550,7 +550,7 @@ function renderLegalPage(type) {
       ${section(`
         <div class="article-body legal-copy">
           <h2>Review before launch</h2>
-          <p>This page is placeholder copy for ${escapeHtml(business.businessName)} and should be reviewed before the site is used publicly.</p>
+          <p>This page is placeholder copy for ${escapeHtml(business.legalName)} and should be reviewed before the site is used publicly.</p>
           <h2>Information collected</h2>
           <p>Lead forms may collect contact details, business information, page source, UTM values, and the manual task submitted by the visitor.</p>
           <h2>How information is used</h2>
@@ -560,8 +560,8 @@ function renderLegalPage(type) {
         </div>`)}
     </main>`;
   return page(body, {
-    title: `${title} | WNY Automation Co`,
-    description: `${title} placeholder for WNY Automation Co. Review before launch.`,
+    title: `${title} | WNY Business Automation`,
+    description: `${title} placeholder for WNY Business Automation. Review before launch.`,
     path: isPrivacy ? "/privacy-policy" : "/terms",
   });
 }
@@ -570,12 +570,12 @@ function renderHtmlSitemapPage(staticRoutes, blogRoutes = []) {
   const all = [...staticRoutes, ...blogRoutes];
   const body = `
     <main>
-      ${renderSEOPageHero({ eyebrow: "Sitemap", h1: "HTML sitemap", subheading: "A plain list of public WNY Automation Co pages." })}
+      ${renderSEOPageHero({ eyebrow: "Sitemap", h1: "HTML sitemap", subheading: "A plain list of public WNY Business Automation pages." })}
       ${section(`<div class="sitemap-list">${all.map((route) => `<a href="${escapeAttribute(route.path)}">${escapeHtml(route.path)}</a>`).join("")}</div>`)}
     </main>`;
   return page(body, {
-    title: "Sitemap | WNY Automation Co",
-    description: "HTML sitemap for WNY Automation Co pages.",
+    title: "Sitemap | WNY Business Automation",
+    description: "HTML sitemap for WNY Business Automation pages.",
     path: "/sitemap",
   });
 }
@@ -588,10 +588,10 @@ function renderNotFoundPage() {
         h1: "That page is not here.",
         subheading: "The link may have changed, or the article has not been published yet.",
         primaryHref: "/",
-        primaryLabel: "Back to WNY Automation Co",
+        primaryLabel: "Back to WNY Business Automation",
       })}
     </main>`;
-  return page(body, { title: "Page Not Found | WNY Automation Co", description: "The requested WNY Automation Co page was not found.", path: "/", noindex: true });
+  return page(body, { title: "Page Not Found | WNY Business Automation", description: "The requested WNY Business Automation page was not found.", path: "/", noindex: true });
 }
 
 function renderSitemapXml(routes) {

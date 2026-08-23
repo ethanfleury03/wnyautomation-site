@@ -80,7 +80,7 @@ This is not flashy. That is the point. It solves a real problem without asking t
 
 ## Mid-page CTA
 
-Not sure where AI fits in your business yet? WNY Automation can help review your current lead, quote, appointment, or admin process and suggest a practical first workflow before you buy another tool.
+Not sure where AI fits in your business yet? WNY Business Automation can help review your current lead, quote, appointment, or admin process and suggest a practical first workflow before you buy another tool.
 
 ## How to choose the first AI project
 
@@ -163,9 +163,9 @@ It may not be the right fit yet if:
 - Your team will not use the place where tasks or notes are created.
 - You are looking for guaranteed leads, rankings, revenue, or a fully hands-off replacement for staff.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps Western New York businesses use AI and automation in plain-English, practical ways.
+WNY Business Automation helps Western New York businesses use AI and automation in plain-English, practical ways.
 
 That can include:
 
@@ -206,4 +206,4 @@ Map the workflow before buying software. Define the trigger, action, human hando
 
 ## Final CTA
 
-If you are curious about AI but do not want hype, tool sprawl, or a giant software project, WNY Automation can help you find a practical starting point. Request a free automation audit and get a few clear AI or automation ideas built around how your Buffalo or WNY business already works.
+If you are curious about AI but do not want hype, tool sprawl, or a giant software project, WNY Business Automation can help you find a practical starting point. Request a free automation audit and get a few clear AI or automation ideas built around how your Buffalo or WNY business already works.

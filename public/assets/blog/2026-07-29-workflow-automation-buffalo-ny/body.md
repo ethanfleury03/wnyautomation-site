@@ -113,7 +113,7 @@ That keeps the door open without pressuring the customer.
 
 ## Mid-page CTA
 
-Not sure which workflow is worth fixing first? WNY Automation can review your current lead, quote, appointment, or admin process and suggest a few practical automations that fit how your Buffalo-area business already works.
+Not sure which workflow is worth fixing first? WNY Business Automation can review your current lead, quote, appointment, or admin process and suggest a few practical automations that fit how your Buffalo-area business already works.
 
 ## 4. Appointment reminders for local appointment-based businesses
 
@@ -218,9 +218,9 @@ It may not be the right fit yet if:
 - Your current customer messages need major cleanup first.
 - You expect automation to replace human judgment in complex situations.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses in Buffalo, Amherst, Williamsville, and Western New York use automation and AI in practical ways.
+WNY Business Automation helps local businesses in Buffalo, Amherst, Williamsville, and Western New York use automation and AI in practical ways.
 
 That can include lead follow-up, missed call response, quote reminders, appointment reminders, form-to-task routing, CRM workflows, review requests, AI chatbots, AI receptionist workflows, and website lead capture.
 
@@ -250,12 +250,12 @@ Often, yes. A practical automation project usually starts by looking at your cur
 
 That should not be the goal. For small businesses, automation is usually best used to support the team by handling repeated steps, reminders, routing, and confirmations so people can focus on the work that needs judgment.
 
-### Does WNY Automation work with businesses outside Buffalo?
+### Does WNY Business Automation work with businesses outside Buffalo?
 
-WNY Automation focuses on Western New York businesses, including Buffalo, Amherst, Williamsville, Cheektowaga, West Seneca, Tonawanda, Niagara Falls, and nearby areas.
+WNY Business Automation focuses on Western New York businesses, including Buffalo, Amherst, Williamsville, Cheektowaga, West Seneca, Tonawanda, Niagara Falls, and nearby areas.
 
 ## Final CTA
 
-If missed calls, slow follow-up, open quotes, appointment reminders, or repeated admin tasks are creating friction in your Buffalo-area business, WNY Automation can help you choose a simple first workflow.
+If missed calls, slow follow-up, open quotes, appointment reminders, or repeated admin tasks are creating friction in your Buffalo-area business, WNY Business Automation can help you choose a simple first workflow.
 
 Start with a low-pressure workflow audit and get practical automation ideas built around how your team actually works.

@@ -32,8 +32,9 @@ function clientLoginUrl() {
 }
 
 const business = {
-  businessName: process.env.NEXT_PUBLIC_BUSINESS_NAME || "WNY Automation Co",
-  shortName: "WNY Automation",
+  businessName: process.env.NEXT_PUBLIC_BUSINESS_NAME || "WNY Business Automation",
+  legalName: "WNY Business Automation LLC",
+  shortName: "WNY Business Automation",
   tagline: "Practical workflow automation for local businesses.",
   subline: "Start small. Fix one workflow. Prove value.",
   positioning: "Practical websites, blog schedules, and workflow automation for local businesses.",
@@ -71,9 +72,9 @@ const business = {
   clientLoginPath: "/client-login",
   n8nWebhookUrl: process.env.N8N_LEAD_WEBHOOK_URL || "",
   siteUrl: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-  defaultSeoTitle: "WNY Automation Co | Websites and Automation for Local Businesses",
+  defaultSeoTitle: "WNY Business Automation | Websites and Automation for Local Businesses",
   defaultSeoDescription:
-    "WNY Automation Co helps Buffalo, Niagara, and Western New York businesses with website creation, blog schedules, missed lead follow-up, quote follow-up, and practical workflow automation.",
+    "WNY Business Automation helps Buffalo, Niagara, and Western New York businesses with website creation, blog schedules, missed lead follow-up, quote follow-up, and practical workflow automation.",
   analytics: {
     gaId: process.env.NEXT_PUBLIC_GA_ID || "",
     gscVerification: process.env.NEXT_PUBLIC_GSC_VERIFICATION || "",

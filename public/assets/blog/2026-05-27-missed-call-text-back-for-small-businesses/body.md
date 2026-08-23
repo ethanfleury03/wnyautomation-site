@@ -129,7 +129,7 @@ A stronger workflow might:
 
 Without that follow-up layer, the business may just move missed calls from voicemail to text messages. That is cleaner, but it is not the full fix.
 
-> **Not sure where calls or follow-ups are slipping?** WNY Automation can help map the first workflow worth cleaning up. Start with a practical review of missed leads, quote requests, and follow-up steps before adding more software.
+> **Not sure where calls or follow-ups are slipping?** WNY Business Automation can help map the first workflow worth cleaning up. Start with a practical review of missed leads, quote requests, and follow-up steps before adding more software.
 
 ## What to automate first
 
@@ -207,9 +207,9 @@ It may not be the right fit yet if:
 - The messages would need legal, medical, or highly sensitive review.
 - The business wants automation to replace customer service instead of supporting it.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps Western New York businesses build practical automation around the real places leads and tasks get missed.
+WNY Business Automation helps Western New York businesses build practical automation around the real places leads and tasks get missed.
 
 For missed calls, that might include:
 
@@ -223,7 +223,7 @@ For missed calls, that might include:
 
 The goal is not to install a giant system on day one. The goal is to identify the first few workflow leaks and clean them up in a way your team will actually use.
 
-If missed calls, website leads, or quote requests are getting scattered, WNY Automation can help review the process and suggest a simple first automation.
+If missed calls, website leads, or quote requests are getting scattered, WNY Business Automation can help review the process and suggest a simple first automation.
 
 ## FAQ
 
@@ -251,4 +251,4 @@ Phone-heavy businesses usually benefit most: contractors, home services, appoint
 
 If your Buffalo or Western New York business gets calls, quote requests, or website leads that sometimes slip through, start with a simple workflow audit.
 
-WNY Automation can help you find the first missed-lead or follow-up process worth fixing, without overcomplicating your business or replacing the human touch customers still expect.
+WNY Business Automation can help you find the first missed-lead or follow-up process worth fixing, without overcomplicating your business or replacing the human touch customers still expect.

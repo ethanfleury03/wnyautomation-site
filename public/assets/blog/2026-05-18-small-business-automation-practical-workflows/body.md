@@ -222,7 +222,7 @@
   
   For many Buffalo and WNY small businesses, the best starting point is lead follow-up, quote follow-up, appointment reminders, or form-to-task routing.
   
-  Not sure which workflow is worth fixing first? WNY Automation can review your current lead, quote, appointment, or admin process and suggest three practical automations you can start with — without pushing a giant software overhaul.
+  Not sure which workflow is worth fixing first? WNY Business Automation can review your current lead, quote, appointment, or admin process and suggest three practical automations you can start with — without pushing a giant software overhaul.
   
   ## Common mistakes to avoid
   
@@ -263,9 +263,9 @@
   - Your team will not use the place where tasks are created.
   - You are looking for automation to replace customer care instead of support it.
   
-  ## How WNY Automation can help
+  ## How WNY Business Automation can help
   
-  WNY Automation helps local businesses use practical automation and AI to clean up lead follow-up, quote reminders, missed calls, appointment reminders, review requests, website lead capture, CRM workflows, and repeated admin tasks.
+  WNY Business Automation helps local businesses use practical automation and AI to clean up lead follow-up, quote reminders, missed calls, appointment reminders, review requests, website lead capture, CRM workflows, and repeated admin tasks.
   
   The approach is simple: start with one workflow, build around the tools you already use where possible, test it, and improve it.
   
@@ -299,6 +299,6 @@
   
   ## Final CTA
   
-  If your Buffalo or Western New York business is missing follow-ups, chasing quotes manually, or juggling too many admin tasks, WNY Automation can help you find a practical first step.
+  If your Buffalo or Western New York business is missing follow-ups, chasing quotes manually, or juggling too many admin tasks, WNY Business Automation can help you find a practical first step.
   
   Start with a simple workflow review and get three automation ideas tailored to your business — no hype, no giant software overhaul, just clear next steps.

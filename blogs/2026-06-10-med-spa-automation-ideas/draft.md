@@ -82,7 +82,7 @@ If your team is manually sending reminder texts or making repeated reminder call
 
 ## Not sure what to automate first?
 
-WNY Automation can review how your med spa currently handles consultation requests, reminders, FAQs, and follow-ups, then suggest a few practical automations to start with. No giant software overhaul required — just a clear workflow map and a realistic first step.
+WNY Business Automation can review how your med spa currently handles consultation requests, reminders, FAQs, and follow-ups, then suggest a few practical automations to start with. No giant software overhaul required — just a clear workflow map and a realistic first step.
 
 ## 3. Treatment FAQ automation with safe handoffs
 
@@ -185,9 +185,9 @@ It may not be the right fit yet if:
 - You expect AI to handle clinical decisions or sensitive questions without human review.
 - You have not approved the messages, policies, and handoff rules the automation will use.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local small businesses build practical automation workflows around leads, appointments, follow-ups, reviews, and admin tasks. For med spas in Buffalo, Amherst, Williamsville, and surrounding Western New York communities, that might mean starting with one simple workflow:
+WNY Business Automation helps local small businesses build practical automation workflows around leads, appointments, follow-ups, reviews, and admin tasks. For med spas in Buffalo, Amherst, Williamsville, and surrounding Western New York communities, that might mean starting with one simple workflow:
 
 - Consultation request follow-up
 - Appointment reminder automation
@@ -218,13 +218,13 @@ A chatbot can answer basic approved questions, such as location, hours, consulta
 
 Businesses can generally ask clients for reviews, but the request should be honest, optional, and compliant with platform rules. Avoid incentives, pressure, or misleading review gating. When in doubt, keep the message simple and respectful.
 
-### Does WNY Automation work with local med spas?
+### Does WNY Business Automation work with local med spas?
 
-WNY Automation works with Western New York small businesses that need practical help with lead follow-up, appointment reminders, CRM workflows, websites, and admin automation. Med spas are a strong fit when the need is operational follow-up and client communication, not clinical decision-making.
+WNY Business Automation works with Western New York small businesses that need practical help with lead follow-up, appointment reminders, CRM workflows, websites, and admin automation. Med spas are a strong fit when the need is operational follow-up and client communication, not clinical decision-making.
 
 ## Final CTA
 
-Want to see where automation could help your med spa first? WNY Automation can review your consultation, reminder, FAQ, and review-request workflow and suggest a few practical improvements for your team.
+Want to see where automation could help your med spa first? WNY Business Automation can review your consultation, reminder, FAQ, and review-request workflow and suggest a few practical improvements for your team.
 
 Start with a simple workflow audit — no hype, no giant software overhaul, and no pressure to automate everything at once.
 
@@ -234,12 +234,12 @@ Review Notes:
 - Calendar row used: 2026-06-10, primary keyword “med spa automation,” local target “Williamsville, Amherst, Buffalo.”
 - Assumption: /industries/med-spas exists or is planned; verify before publishing. If it does not exist, either create it or remove that internal link.
 - Avoid adding treatment claims, pricing, medical advice, before/after claims, or guaranteed booking/revenue language.
-- Recommended author/reviewer note: “Written by WNY Automation, a Buffalo-based automation partner helping local businesses improve lead follow-up, appointment reminders, quote follow-up, CRM workflows, and website lead handling.”
+- Recommended author/reviewer note: “Written by WNY Business Automation, a Buffalo-based automation partner helping local businesses improve lead follow-up, appointment reminders, quote follow-up, CRM workflows, and website lead handling.”
 - Schema recommendation: use BlogPosting or Article structured data; FAQ content is useful for readers but do not rely on FAQ rich results. Ensure sitewide LocalBusiness schema is accurate before adding local claims.
 - Production cleanup: remove metadata, image prompt, internal links list, review notes, email summary, and sheet update recommendation before publishing.
 
 Email Summary:
-Today’s WNY Automation draft covers med spa automation for Williamsville, Amherst, and Buffalo clinics, focusing on consultation lead follow-up, appointment reminders, FAQ automation, intake routing, review requests, and human handoffs. It avoids medical claims and positions automation as front-desk support, not a replacement for staff or provider judgment.
+Today’s WNY Business Automation draft covers med spa automation for Williamsville, Amherst, and Buffalo clinics, focusing on consultation lead follow-up, appointment reminders, FAQ automation, intake routing, review requests, and human handoffs. It avoids medical claims and positions automation as front-desk support, not a replacement for staff or provider judgment.
 
 Sheet Update Recommendation:
 - Draft URL: use Google Drive link if upload succeeds; otherwise leave blank.

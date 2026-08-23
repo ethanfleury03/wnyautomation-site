@@ -1,7 +1,7 @@
-You are writing a publish-ready SEO and AEO optimized blog post for WNY Automation Co, a practical workflow automation company serving Buffalo, Niagara, and Western New York small businesses.
+You are writing a publish-ready SEO and AEO optimized blog post for WNY Business Automation, a practical workflow automation company serving Buffalo, Niagara, and Western New York small businesses.
 
 Business positioning:
-- Brand: WNY Automation Co
+- Brand: WNY Business Automation
 - Market: Buffalo, Niagara, and Western New York
 - Audience: local small business owners and operators who are busy, skeptical of hype, and want practical ways to save time.
 - Core offer: Free Workflow Audit
@@ -40,19 +40,19 @@ SEO requirements:
 - Include Buffalo, Niagara, Western New York, or WNY naturally where relevant.
 - Make the first 2-3 sentences directly answer the search query and naturally mention Buffalo small businesses or the relevant local market.
 - Include practical examples that a local business owner would recognize.
-- If using an example that is not a real WNY Automation Co customer story, label it "Example workflow" or "Realistic example." Do not make it sound like a case study.
+- If using an example that is not a real WNY Business Automation customer story, label it "Example workflow" or "Realistic example." Do not make it sound like a case study.
 - Do not invent statistics, case studies, client names, client results, prices, guarantees, or before/after metrics.
 - If the provided Research/source URL is useful, include one natural external link to it in the article body. Do not write vague phrases like "sources such as the SBA" unless you include an actual link.
 
 Internal linking requirements:
 - Do not create a public section called "Suggested Internal Links," "Internal Link Suggestions," or anything similar.
 - Add 2-4 actual internal links naturally inside the article body instead.
-- Prefer these existing WNY Automation Co targets when relevant:
+- Prefer these existing WNY Business Automation targets when relevant:
   - /#automate for automation service examples
-  - /#process for how WNY Automation Co starts with one workflow
+  - /#process for how WNY Business Automation starts with one workflow
   - /#examples for project ideas
   - /#workflow-form for the Free Workflow Audit
-- Link text should read naturally, such as "workflow automation examples," "how WNY Automation Co starts small," or "free workflow audit."
+- Link text should read naturally, such as "workflow automation examples," "how WNY Business Automation starts small," or "free workflow audit."
 
 AEO requirements:
 - Optimize for AI answer engines, AI overviews, and conversational search.
@@ -68,7 +68,7 @@ CTA requirements:
 - Include a soft CTA after the main use-case or benefit section.
 - Include a stronger CTA near the end using this structure:
   - H2: Ready to find the one workflow costing you the most time?
-  - Paragraph: Request a free automation audit with WNY Automation Co. We will review your current process, identify the highest-value automation opportunity, and tell you whether automation is worth it.
+  - Paragraph: Request a free automation audit with WNY Business Automation. We will review your current process, identify the highest-value automation opportunity, and tell you whether automation is worth it.
   - Link: <a href="/#workflow-form">Request your Free Automation Audit</a>
 - The CTA must feel helpful and direct, not pushy.
 

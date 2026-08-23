@@ -94,7 +94,7 @@ function buildLeadAlertMessage(payload, hubspot = {}) {
 
   const body = `
     <div style="font-family:Arial,sans-serif;line-height:1.55;color:#18212b;max-width:680px">
-      <h1 style="font-size:22px;margin:0 0 16px">New WNY Automation website inquiry</h1>
+      <h1 style="font-size:22px;margin:0 0 16px">New WNY Business Automation website inquiry</h1>
       <p>A visitor submitted one of the workflow-audit forms on WNYAutomation.com.</p>
 
       <h2 style="font-size:17px;margin:24px 0 8px">Inquiry</h2>
@@ -121,7 +121,7 @@ function buildLeadAlertMessage(payload, hubspot = {}) {
     </div>`;
 
   const headers = [
-    `From: WNY Automation Website <${safeHeader(config.fromEmail)}>`,
+    `From: WNY Business Automation Website <${safeHeader(config.fromEmail)}>`,
     `To: ${safeHeader(config.alertEmail)}`,
     `Subject: ${subject}`,
     "MIME-Version: 1.0",

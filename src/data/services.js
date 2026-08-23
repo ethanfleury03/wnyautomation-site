@@ -103,7 +103,7 @@ const services = [
     ctaLabel: "Find out where your leads are slipping through",
     finalCtaTitle: "Find out where your leads are slipping through.",
     finalCtaText:
-      "Send over the places leads come from today. WNY Automation Co can help you spot the gaps and decide whether a small rescue workflow makes sense.",
+      "Send over the places leads come from today. WNY Business Automation can help you spot the gaps and decide whether a small rescue workflow makes sense.",
     benefits: [
       "Faster response to new opportunities",
       "Cleaner lead alerts for owners and staff",
@@ -225,7 +225,7 @@ const services = [
     ctaLabel: "Clean up open quote follow-up",
     finalCtaTitle: "Turn open quotes into a cleaner follow-up process.",
     finalCtaText:
-      "Share how estimates move through your business today. WNY Automation Co can help you make the next follow-up easier to see and easier to do.",
+      "Share how estimates move through your business today. WNY Business Automation can help you make the next follow-up easier to see and easier to do.",
     benefits: [
       "More consistent follow-up on open estimates",
       "Clearer view of quotes that need attention",
@@ -349,7 +349,7 @@ const services = [
     ctaLabel: "Organize your intake",
     finalCtaTitle: "Organize your intake before more work slips through.",
     finalCtaText:
-      "Send one messy intake path, like a form or shared inbox. WNY Automation Co can help turn it into a clearer task process.",
+      "Send one messy intake path, like a form or shared inbox. WNY Business Automation can help turn it into a clearer task process.",
     benefits: [
       "Cleaner handoffs between people",
       "Less copying and pasting",
@@ -473,7 +473,7 @@ const services = [
     ctaLabel: "Review your website questions",
     finalCtaTitle: "See what your website should be answering for you.",
     finalCtaText:
-      "Send the questions customers ask before buying or booking. WNY Automation Co can help shape a practical assistant around approved answers and clear handoffs.",
+      "Send the questions customers ask before buying or booking. WNY Business Automation can help shape a practical assistant around approved answers and clear handoffs.",
     benefits: [
       "Faster answers for common questions",
       "More useful website lead capture",
@@ -597,7 +597,7 @@ const services = [
     ctaLabel: "Make follow-up consistent",
     finalCtaTitle: "Make customer follow-up feel automatic, not forgotten.",
     finalCtaText:
-      "Send the reminders or review requests your team handles manually today. WNY Automation Co can help you design a practical follow-up flow.",
+      "Send the reminders or review requests your team handles manually today. WNY Business Automation can help you design a practical follow-up flow.",
     benefits: [
       "Fewer forgotten reminders",
       "More consistent review requests",
@@ -648,7 +648,7 @@ const services = [
     metaDescription:
       "Build a practical small business website with clear services, mobile-first design, lead capture, FAQs, and local SEO basics.",
     whatThisDoes:
-      "WNY Automation Co builds practical websites for local small businesses that need a clearer online presence, stronger service pages, and better contact or quote paths.",
+      "WNY Business Automation builds practical websites for local small businesses that need a clearer online presence, stronger service pages, and better contact or quote paths.",
     includes: [
       "Homepage clarity",
       "Service pages",
@@ -723,7 +723,7 @@ const services = [
     ctaLabel: "Plan a clearer website",
     finalCtaTitle: "Build a website that gives customers a clear next step.",
     finalCtaText:
-      "Share what your current site does not explain well. WNY Automation Co can help plan a practical site around trust, clarity, and lead capture.",
+      "Share what your current site does not explain well. WNY Business Automation can help plan a practical site around trust, clarity, and lead capture.",
     benefits: [
       "Clearer first impression",
       "Better lead capture paths",
@@ -847,7 +847,7 @@ const services = [
     ctaLabel: "Build a usable content plan",
     finalCtaTitle: "Create a content plan your business can actually keep up with.",
     finalCtaText:
-      "Send the services or questions you want customers to understand. WNY Automation Co can help turn them into a practical blog schedule.",
+      "Send the services or questions you want customers to understand. WNY Business Automation can help turn them into a practical blog schedule.",
     benefits: [
       "A clearer publishing plan",
       "Better topic organization",
@@ -891,7 +891,7 @@ const services = [
 
 function service(overrides) {
   return {
-    metaTitle: overrides.metaTitle || `${overrides.title} | WNY Automation`,
+    metaTitle: overrides.metaTitle || `${overrides.title} | WNY Business Automation`,
     metaDescription:
       overrides.metaDescription ||
       `${overrides.shortDescription} Built for Buffalo, Niagara, and Western New York small businesses.`,
@@ -963,7 +963,7 @@ function defaultServiceFaqs(serviceTitle) {
     {
       question: "Do we need to replace our current tools?",
       answer:
-        "Usually not. WNY Automation Co looks at your current website, forms, email, calendars, CRM, and spreadsheets before recommending anything new.",
+        "Usually not. WNY Business Automation looks at your current website, forms, email, calendars, CRM, and spreadsheets before recommending anything new.",
     },
     {
       question: "Will AI replace our staff?",

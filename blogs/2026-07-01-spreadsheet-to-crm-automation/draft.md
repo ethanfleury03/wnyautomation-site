@@ -192,7 +192,7 @@ That keeps the project grounded. The business improves follow-up without forcing
 
 ## Mid-page CTA
 
-Not sure whether your spreadsheet needs a full CRM or just a cleaner follow-up workflow? WNY Automation can review your current lead tracking process and suggest a practical first automation before you commit to new software.
+Not sure whether your spreadsheet needs a full CRM or just a cleaner follow-up workflow? WNY Business Automation can review your current lead tracking process and suggest a practical first automation before you commit to new software.
 
 ## What to automate first
 
@@ -255,9 +255,9 @@ This may not be the right fit yet if:
 - No one on the team is willing to own follow-up tasks.
 - The spreadsheet is so inconsistent that it needs cleanup before automation.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses in Buffalo and Western New York build practical automation around leads, follow-ups, CRM workflows, and admin tasks.
+WNY Business Automation helps local businesses in Buffalo and Western New York build practical automation around leads, follow-ups, CRM workflows, and admin tasks.
 
 For spreadsheet to CRM projects, that may include:
 
@@ -288,26 +288,26 @@ Usually the first thing to automate is the handoff that gets missed most often: 
 
 A CRM can help organize leads and follow-ups, but it does not guarantee sales. The value comes from using it consistently, assigning ownership, responding professionally, and keeping next steps visible.
 
-### Can WNY Automation work with the tools we already use?
+### Can WNY Business Automation work with the tools we already use?
 
 In many cases, yes. The goal is usually to build around your current tools where possible, then recommend a simpler setup only if the current process is creating avoidable manual work or missed follow-ups.
 
 ## Final CTA
 
-If your lead spreadsheet is starting to feel like a second inbox, WNY Automation can help you map a cleaner path from spreadsheet to CRM. Start with a practical workflow review and get a few realistic automation ideas for leads, tasks, and follow-ups — no hype, no giant software overhaul.
+If your lead spreadsheet is starting to feel like a second inbox, WNY Business Automation can help you map a cleaner path from spreadsheet to CRM. Start with a practical workflow review and get a few realistic automation ideas for leads, tasks, and follow-ups — no hype, no giant software overhaul.
 
 Review Notes
 - Calendar row used: Week 7, Date 2026-07-01, Funnel Stage Consideration, Content Pillar Spreadsheet to CRM.
 - Primary keyword: spreadsheet to CRM automation.
 - Secondary keywords used naturally: spreadsheet workflow automation, lead spreadsheet automation, CRM task automation.
 - Local target: Buffalo, NY. Buffalo/WNY references are woven into the intro, examples, and service positioning without stuffing.
-- Assumption: WNY Automation can review existing tools and recommend CRM workflows; no specific CRM platform, pricing, implementation timeline, or customer result was claimed.
-- Suggested author/reviewer note: Written by WNY Automation, a Buffalo-based automation partner helping local businesses improve lead follow-up, appointment reminders, quote follow-up, CRM workflows, and website lead handling.
+- Assumption: WNY Business Automation can review existing tools and recommend CRM workflows; no specific CRM platform, pricing, implementation timeline, or customer result was claimed.
+- Suggested author/reviewer note: Written by WNY Business Automation, a Buffalo-based automation partner helping local businesses improve lead follow-up, appointment reminders, quote follow-up, CRM workflows, and website lead handling.
 - Schema recommendations: Add BlogPosting or Article structured data; maintain accurate sitewide LocalBusiness schema; FAQ content is included for reader usefulness, but do not rely on FAQ rich results.
 - Production cleanup: Remove this package metadata, image prompt, review notes, email summary, and sheet update recommendation before publishing.
 
 Email Summary
-Today’s WNY Automation blog draft is ready for review: “From Spreadsheet to CRM: When a Small Business Should Automate Lead Tracking.” It targets “spreadsheet to CRM automation” for Buffalo small businesses and explains when to keep a spreadsheet, when to add reminders, and when to move toward a simple CRM workflow.
+Today’s WNY Business Automation blog draft is ready for review: “From Spreadsheet to CRM: When a Small Business Should Automate Lead Tracking.” It targets “spreadsheet to CRM automation” for Buffalo small businesses and explains when to keep a spreadsheet, when to add reminders, and when to move toward a simple CRM workflow.
 
 Sheet Update Recommendation
 - Draft URL: Use Google Doc/Drive link if upload succeeds; leave blank if Drive upload fails due OAuth scope limitations.

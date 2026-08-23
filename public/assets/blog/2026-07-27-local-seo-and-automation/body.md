@@ -104,7 +104,7 @@ A Buffalo location page or industry page can bring in different kinds of inquiri
 
 **When not to automate:** If every inquiry needs custom review, automate the logging and notification first. Do not force every lead into a rigid category.
 
-For Buffalo-focused pages, connect the workflow back to your local presence and service area. A page like WNY Automation’s [Buffalo automation services page](/locations/buffalo-ny) is more useful when the follow-up path is clear after someone reaches out.
+For Buffalo-focused pages, connect the workflow back to your local presence and service area. A page like WNY Business Automation’s [Buffalo automation services page](/locations/buffalo-ny) is more useful when the follow-up path is clear after someone reaches out.
 
 ### 4. Quote request follow-up reminders
 
@@ -122,7 +122,7 @@ Local SEO often brings in people who are comparing options. They may fill out tw
 
 ## Mid-page CTA
 
-Not sure where your local SEO leads are slipping through? WNY Automation can review your current call, form, quote, or website lead process and suggest three practical automations to start with.
+Not sure where your local SEO leads are slipping through? WNY Business Automation can review your current call, form, quote, or website lead process and suggest three practical automations to start with.
 
 ## What to automate first
 
@@ -210,9 +210,9 @@ This may not be the right fit yet if:
 - You do not have a working website, form, phone process, or inquiry source yet.
 - You want automation to replace every customer conversation instead of supporting your team.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses connect practical automation to the places where leads, quotes, appointments, and admin tasks already happen.
+WNY Business Automation helps local businesses connect practical automation to the places where leads, quotes, appointments, and admin tasks already happen.
 
 For a Buffalo or Western New York business, that might mean:
 
@@ -251,4 +251,4 @@ Often, yes. A practical workflow can usually start with the tools you already us
 
 If your Buffalo or WNY business is investing in local SEO, website improvements, or better lead capture, make sure the follow-up process is ready too.
 
-WNY Automation can help you map the first few automations that protect new inquiries without adding a bloated software system. Start with a simple review of your calls, forms, quotes, and follow-ups, then choose one workflow worth fixing first.
+WNY Business Automation can help you map the first few automations that protect new inquiries without adding a bloated software system. Start with a simple review of your calls, forms, quotes, and follow-ups, then choose one workflow worth fixing first.

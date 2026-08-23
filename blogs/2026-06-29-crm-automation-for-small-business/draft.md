@@ -136,7 +136,7 @@ A [lead follow-up automation](/services/automated-lead-follow-up) workflow can c
 
 Not sure where CRM automation would actually help? Start by looking for the places where leads or tasks currently get lost.
 
-WNY Automation can help map your current lead, quote, or follow-up process and identify three practical automations you can start with — without turning your business into a giant software project.
+WNY Business Automation can help map your current lead, quote, or follow-up process and identify three practical automations you can start with — without turning your business into a giant software project.
 
 ## What to automate first in your CRM
 
@@ -199,9 +199,9 @@ It may not be the right fit yet if:
 - You are not ready to keep lead information in one shared place.
 - You want automation to replace relationship-building instead of supporting it.
 
-## How WNY Automation can help
+## How WNY Business Automation can help
 
-WNY Automation helps local businesses build practical automation around the tools and workflows they already use when possible.
+WNY Business Automation helps local businesses build practical automation around the tools and workflows they already use when possible.
 
 For CRM automation, that can include:
 
@@ -238,7 +238,7 @@ Start with new lead capture, lead assignment, quote follow-up reminders, and bas
 
 ## Final CTA
 
-If your Buffalo or Western New York business is tracking leads in too many places, WNY Automation can help you map a simple CRM workflow that keeps inquiries, quotes, tasks, and follow-ups organized.
+If your Buffalo or Western New York business is tracking leads in too many places, WNY Business Automation can help you map a simple CRM workflow that keeps inquiries, quotes, tasks, and follow-ups organized.
 
 Start with a low-pressure review of your current process and get three practical automation ideas you can use before investing in a bigger system.
 
@@ -246,12 +246,12 @@ Review Notes
 - Assumption: No specific CRM platform was provided, so the draft stays platform-neutral and workflow-first.
 - Assumption: `/services/crm-automation-small-business` and `/services/automated-lead-follow-up` exist or should be verified before publishing.
 - The draft avoids fake stats, guaranteed ROI, pricing, timelines, and unsupported case studies.
-- Suggested author/reviewer note: Written by WNY Automation, a Buffalo-based automation partner helping local businesses improve lead follow-up, appointment reminders, quote follow-up, CRM workflows, and website lead handling.
+- Suggested author/reviewer note: Written by WNY Business Automation, a Buffalo-based automation partner helping local businesses improve lead follow-up, appointment reminders, quote follow-up, CRM workflows, and website lead handling.
 - Schema recommendations: Add `BlogPosting` or `Article` structured data for the post; ensure accurate sitewide `LocalBusiness` schema where appropriate; FAQ content is useful for readers but should not be treated as guaranteed rich-result markup.
 - Production cleanup: Remove package metadata, review notes, image prompt, email summary, and sheet update recommendation before publishing.
 
 Email Summary
-Today’s WNY Automation blog draft is ready: “CRM Automation for Small Business: How to Keep Leads, Tasks, and Follow-Ups Organized.” It targets the primary keyword “CRM automation for small business” for Western New York owners tracking leads manually, with practical CRM workflows, implementation detail, internal links, FAQ content, and a low-pressure Get 3 Automation Ideas CTA.
+Today’s WNY Business Automation blog draft is ready: “CRM Automation for Small Business: How to Keep Leads, Tasks, and Follow-Ups Organized.” It targets the primary keyword “CRM automation for small business” for Western New York owners tracking leads manually, with practical CRM workflows, implementation detail, internal links, FAQ content, and a low-pressure Get 3 Automation Ideas CTA.
 
 Sheet Update Recommendation
 - Draft URL: Use the Google Doc/Drive link if upload succeeds. Leave blank if Drive upload fails due OAuth scopes.

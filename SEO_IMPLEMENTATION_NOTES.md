@@ -1,4 +1,4 @@
-# WNY Automation Co SEO Implementation Notes
+# WNY Business Automation SEO Implementation Notes
 
 ## Pages Created
 

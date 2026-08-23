@@ -2,7 +2,7 @@
   "name": "wnyautomation-site",
   "version": "1.0.0",
   "private": true,
-  "description": "WNY Automation public website and blog publishing API.",
+  "description": "WNY Business Automation public website and blog publishing API.",
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",

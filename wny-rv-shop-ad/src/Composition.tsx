@@ -187,7 +187,7 @@ const HookScene = ({ duration }: { duration: number }) => {
             transform: `translateY(${interpolate(subtitle, [0, 1], [32, 0])}px)`,
           }}
         >
-          WNY Automation turns missed calls, web forms, and quote follow-ups
+          WNY Business Automation turns missed calls, web forms, and quote follow-ups
           into clear next steps.
         </p>
       </div>
@@ -349,7 +349,7 @@ const DashboardScene = ({ duration }: { duration: number }) => {
         >
           <div className="dashboard-top">
             <div>
-              <small>WNY Automation Co</small>
+              <small>WNY Business Automation</small>
               <h3>Lead Rescue Dashboard</h3>
             </div>
             <span
@@ -590,7 +590,7 @@ const BrandBug = () => {
   return (
     <div className="brand-bug" style={{ opacity: show }}>
       <Img src={staticFile("assets/wny-automation-icon.png")} />
-      <span>WNY Automation Co</span>
+      <span>WNY Business Automation</span>
     </div>
   );
 };

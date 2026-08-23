@@ -1,6 +1,6 @@
 {
-  "name": "WNY Automation Co",
-  "short_name": "WNY Automation",
+  "name": "WNY Business Automation",
+  "short_name": "WNY Business Automation",
   "description": "Practical websites and workflow automation for Western New York businesses.",
   "start_url": "/",
   "scope": "/",
@@ -46,7 +46,7 @@
       "name": "Client Login",
       "short_name": "Portal",
       "url": "/client-login",
-      "description": "Open the secure WNY Automation client portal."
+      "description": "Open the secure WNY Business Automation client portal."
     }
   ]
 }

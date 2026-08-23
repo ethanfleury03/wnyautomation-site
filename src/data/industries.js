@@ -8,7 +8,7 @@ const industries = [
     h1: "Workflow Automation for HVAC Companies in Buffalo and WNY",
     primaryKeyword: "workflow automation for HVAC companies",
     intro:
-      "HVAC companies deal with seasonal spikes, urgent service calls, maintenance reminders, and quote follow-up. WNY Automation Co helps turn those repeatable steps into cleaner workflows.",
+      "HVAC companies deal with seasonal spikes, urgent service calls, maintenance reminders, and quote follow-up. WNY Business Automation helps turn those repeatable steps into cleaner workflows.",
     commonPainPoints: [
       "Missed calls during busy service windows",
       "After-hours service inquiries",
@@ -57,7 +57,7 @@ const industries = [
     h1: "Workflow Automation for Roofing Companies",
     primaryKeyword: "workflow automation for roofing companies",
     intro:
-      "Roofing companies handle estimate requests, storm damage questions, quote follow-up, and project updates. WNY Automation Co helps make those workflows easier to track.",
+      "Roofing companies handle estimate requests, storm damage questions, quote follow-up, and project updates. WNY Business Automation helps make those workflows easier to track.",
     commonPainPoints: [
       "Estimate requests come from many channels",
       "Storm damage inquiries spike quickly",
@@ -77,7 +77,7 @@ const industries = [
     h1: "Workflow Automation for Home Service Businesses",
     primaryKeyword: "workflow automation for home service businesses",
     intro:
-      "Home service businesses win when they respond quickly and keep jobs organized. WNY Automation Co focuses on practical workflows around leads, scheduling, reminders, and reviews.",
+      "Home service businesses win when they respond quickly and keep jobs organized. WNY Business Automation focuses on practical workflows around leads, scheduling, reminders, and reviews.",
     commonPainPoints: [
       "Leads arrive while crews are in the field",
       "Scheduling details live in text messages",
@@ -137,7 +137,7 @@ const industries = [
     h1: "Workflow Automation for Property Managers",
     primaryKeyword: "workflow automation for property managers",
     intro:
-      "Property managers juggle tenant questions, maintenance requests, rent reminders, vendors, inspections, and documents. WNY Automation Co helps organize the repeatable parts.",
+      "Property managers juggle tenant questions, maintenance requests, rent reminders, vendors, inspections, and documents. WNY Business Automation helps organize the repeatable parts.",
     commonPainPoints: [
       "Maintenance requests arrive in messy messages",
       "Tenant questions repeat often",
@@ -157,7 +157,7 @@ const industries = [
     h1: "Workflow Automation for Real Estate Agents",
     primaryKeyword: "workflow automation for real estate agents",
     intro:
-      "Real estate agents need fast lead response, organized showings, and consistent follow-up. WNY Automation Co helps create lightweight workflows that support the relationship.",
+      "Real estate agents need fast lead response, organized showings, and consistent follow-up. WNY Business Automation helps create lightweight workflows that support the relationship.",
     commonPainPoints: [
       "Buyer and seller leads arrive at odd hours",
       "Follow-up depends on memory",
@@ -217,7 +217,7 @@ const industries = [
     h1: "Workflow Automation for Accountants",
     primaryKeyword: "workflow automation for accountants",
     intro:
-      "Accounting teams handle recurring document requests, client questions, reminders, and internal checklists. WNY Automation Co helps reduce repeat admin around those workflows.",
+      "Accounting teams handle recurring document requests, client questions, reminders, and internal checklists. WNY Business Automation helps reduce repeat admin around those workflows.",
     commonPainPoints: [
       "Clients forget documents",
       "Repeated questions slow staff down",
@@ -237,7 +237,7 @@ const industries = [
     h1: "Workflow Automation for Insurance Agencies",
     primaryKeyword: "workflow automation for insurance agencies",
     intro:
-      "Insurance agencies need organized intake, renewals, quote follow-up, and customer communication. WNY Automation Co helps make those repeatable steps easier to manage.",
+      "Insurance agencies need organized intake, renewals, quote follow-up, and customer communication. WNY Business Automation helps make those repeatable steps easier to manage.",
     commonPainPoints: [
       "Quote requests need follow-up",
       "Renewal reminders are manual",
@@ -315,7 +315,7 @@ const industries = [
 
 function industry(overrides) {
   return {
-    metaTitle: overrides.metaTitle || `${overrides.title} | WNY Automation Co`,
+    metaTitle: overrides.metaTitle || `${overrides.title} | WNY Business Automation`,
     metaDescription:
       overrides.metaDescription ||
       `${overrides.title} for Buffalo and Western New York businesses. Start with practical workflows, not AI hype.`,
@@ -341,7 +341,7 @@ function defaultIndustryFaqs(title) {
     {
       question: "What if our team is not technical?",
       answer:
-        "That is normal. WNY Automation Co explains the workflow in plain language and focuses on practical tasks like follow-up, reminders, and intake.",
+        "That is normal. WNY Business Automation explains the workflow in plain language and focuses on practical tasks like follow-up, reminders, and intake.",
     },
     {
       question: "Do we need a CRM first?",

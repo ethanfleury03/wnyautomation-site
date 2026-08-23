@@ -166,7 +166,7 @@ async function expectLeadFocusedHomepage() {
     "Client Login",
     'href="#workflow-form"',
     'href="mailto:ethan@wnyautomation.com"',
-    "Email WNY Automation",
+    "Email WNY Business Automation",
     'class="lead-form workflow-form lead-form-compact"',
     'data-form-variant="short"',
     'name="manualTask"',
@@ -326,17 +326,17 @@ async function main() {
       Authorization: `Bearer ${TOKEN}`,
     },
     body: JSON.stringify({
-      title: "Sample WNY Automation Co Blog",
+      title: "Sample WNY Business Automation Blog",
       slug: "sample-wny-automation-blog",
-      excerpt: "A short practical test post for the WNY Automation Co blog feed.",
+      excerpt: "A short practical test post for the WNY Business Automation blog feed.",
       caption: "A quick sample article for testing the feed.",
-      meta_title: "Sample WNY Automation Co Blog",
-      meta_description: "A short practical test post for the WNY Automation Co blog feed.",
+      meta_title: "Sample WNY Business Automation Blog",
+      meta_description: "A short practical test post for the WNY Business Automation blog feed.",
       blog_markdown: "## Quick Answer\nThis is a local test post.",
       blog_html:
         '<h2>Quick Answer</h2><p>**Pick one workflow.** [Request your Free Automation Audit](/#workflow-form)</p><h2>Entity Signals</h2><ul><li>Buffalo</li></ul>',
       faq_schema_json: faqSchema,
-      image_alt: "Sample WNY Automation Co blog image",
+      image_alt: "Sample WNY Business Automation blog image",
       industry: "Local Small Business",
       publish_date: "2026-04-27",
       image_data_url: sampleImage,
@@ -417,7 +417,7 @@ async function main() {
       Authorization: `Bearer ${TOKEN}`,
     },
     body: JSON.stringify({
-      title: "Sample WNY Automation Co Blog Updated",
+      title: "Sample WNY Business Automation Blog Updated",
       slug: "sample-wny-automation-blog",
       excerpt: "Updated excerpt.",
       blog_html: "<h2>Updated</h2><p>**Updated bold.** [Read examples](/#examples)</p>",
@@ -466,7 +466,7 @@ async function main() {
     throw new Error("Expected robots.txt to allow SEO pages and include sitemap.");
   }
 
-  console.log("WNY Automation Co SEO and blog smoke test passed.");
+  console.log("WNY Business Automation SEO and blog smoke test passed.");
 }
 
 async function stopServer() {

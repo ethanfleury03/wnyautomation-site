@@ -47,13 +47,13 @@ function clean(value) {
 }
 
 function buildDraftPrompt(row, draftConfig) {
-  return `You are writing one candidate blog draft for WNY Automation Co. Another editor model will later fuse this draft with two other drafts, so focus on making this version genuinely strong from your assigned perspective.
+  return `You are writing one candidate blog draft for WNY Business Automation. Another editor model will later fuse this draft with two other drafts, so focus on making this version genuinely strong from your assigned perspective.
 
 Assigned perspective:
 ${draftConfig.perspective}
 
 Business positioning:
-- Brand: WNY Automation Co
+- Brand: WNY Business Automation
 - Market: Buffalo, Niagara, and Western New York
 - Audience: local small business owners and operators who are busy, skeptical of hype, and want practical ways to save time.
 - Core offer: Free Workflow Audit
@@ -200,7 +200,7 @@ async function callOpenRouter(source, draftConfig) {
           Authorization: `Bearer ${OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
           "HTTP-Referer": "https://wnyautomation.local",
-          "X-Title": "WNY Automation Co Blog Draft Pipeline",
+          "X-Title": "WNY Business Automation Blog Draft Pipeline",
         },
         body: {
           model: draftConfig.model,
@@ -208,7 +208,7 @@ async function callOpenRouter(source, draftConfig) {
           messages: [
             {
               role: "system",
-              content: "Write one strong candidate blog draft for WNY Automation Co. Return only valid JSON.",
+              content: "Write one strong candidate blog draft for WNY Business Automation. Return only valid JSON.",
             },
             {
               role: "user",

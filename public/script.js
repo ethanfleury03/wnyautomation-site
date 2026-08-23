@@ -178,10 +178,10 @@ async function sendLead(payload) {
 }
 
 function buildMailto(payload) {
-  const subject = encodeURIComponent(`New WNY Automation Co workflow audit request from ${payload.businessName || "website lead"}`);
+  const subject = encodeURIComponent(`New WNY Business Automation workflow audit request from ${payload.businessName || "website lead"}`);
   const body = encodeURIComponent(
     [
-      "New WNY Automation Co workflow audit request",
+      "New WNY Business Automation workflow audit request",
       "",
       `Task: ${payload.manualTask}`,
       `Business: ${payload.businessName}`,
@@ -327,7 +327,7 @@ workflowForms.forEach((form) => {
         detail_fields_provided: payload.detailFieldsProvided,
         form_variant: payload.formVariant,
       });
-      setFormStatus(form, "Thanks - WNY Automation Co will review your workflow and send back a few practical automation ideas.");
+      setFormStatus(form, "Thanks - WNY Business Automation will review your workflow and send back a few practical automation ideas.");
     } catch (error) {
       trackEvent("lead_submit_error", {
         conversion_path: payload.conversionPath,

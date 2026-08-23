@@ -1,4 +1,4 @@
-# Simple WNY Automation Co n8n Blog Pipeline
+# Simple WNY Business Automation n8n Blog Pipeline
 
 This is the stripped-down v1 workflow.
 
@@ -140,9 +140,9 @@ blogHtml
     - Code node.
     - Paste `code/prepare-blog-api-payload.js`.
     - Put this after `Merge Blog + Image`.
-    - It creates the JSON body expected by the WNY Automation Co website API.
+    - It creates the JSON body expected by the WNY Business Automation website API.
 
-12. `Publish to WNY Automation Co Blog API`
+12. `Publish to WNY Business Automation Blog API`
     - HTTP Request node.
     - Method: `POST`
     - URL:
@@ -288,8 +288,8 @@ Google Sheets - Pull Blog Schedule
 6. Temporarily test with `2026-04-27`, the first scheduled blog row.
 7. Run manually.
 8. Confirm you receive one email with blog content and image attachment.
-9. Start the WNY Automation Co website server with `BLOG_API_TOKEN` set.
-10. Confirm the `Publish to WNY Automation Co Blog API` node succeeds and the post appears at `/blogs/{slug}`.
+9. Start the WNY Business Automation website server with `BLOG_API_TOKEN` set.
+10. Confirm the `Publish to WNY Business Automation Blog API` node succeeds and the post appears at `/blogs/{slug}`.
 11. Remove the date override.
 12. Activate the schedule.
 

@@ -59,7 +59,7 @@ function doPost(event) {
 function doGet() {
   return jsonResponse_({
     ok: true,
-    service: "WNY Automation Co lead webhook",
+    service: "WNY Business Automation lead webhook",
     message: "Webhook is reachable. POST a visit or lead event to save it to Google Sheets.",
   });
 }
@@ -100,7 +100,7 @@ function logLead_(payload) {
     payload.phone || "",
     payload.website || "",
     payload.task || "",
-    payload.source || "WNY Automation Co landing page",
+    payload.source || "WNY Business Automation landing page",
     payload.pageUrl || "",
     payload.userAgent || "",
   ]);
@@ -115,7 +115,7 @@ function logVisit_(payload) {
     payload.pageUrl || "",
     payload.pageTitle || "",
     payload.referrer || "",
-    payload.source || "WNY Automation Co landing page",
+    payload.source || "WNY Business Automation landing page",
     payload.language || "",
     payload.screenSize || "",
     payload.viewportSize || "",
@@ -172,9 +172,9 @@ function sendNotification_(payload) {
     return;
   }
 
-  const subject = "New WNY Automation Co workflow audit request from " + payload.business;
+  const subject = "New WNY Business Automation workflow audit request from " + payload.business;
   const body = [
-    "New WNY Automation Co workflow audit request",
+    "New WNY Business Automation workflow audit request",
     "",
     "Manual task:",
     payload.task || "",
@@ -185,7 +185,7 @@ function sendNotification_(payload) {
     "Email: " + (payload.email || ""),
     "Phone: " + (payload.phone || "Not provided"),
     "Website: " + (payload.website || "Not provided"),
-    "Source: " + (payload.source || "WNY Automation Co landing page"),
+    "Source: " + (payload.source || "WNY Business Automation landing page"),
     "Page URL: " + (payload.pageUrl || ""),
     "Submitted: " + (payload.submittedAt || new Date().toISOString()),
   ].join("\n");

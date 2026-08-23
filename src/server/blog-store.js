@@ -70,8 +70,8 @@ function toBlogSummary(row) {
     status: row.status,
     created_at: row.created_at,
     updated_at: row.updated_at,
-    author: "WNY Automation Co",
-    category: row.industry || "WNY Automation Co Blog",
+    author: "WNY Business Automation",
+    category: row.industry || "WNY Business Automation Blog",
   };
 }
 
@@ -341,6 +341,7 @@ function sanitizeArticleHtml(html) {
     },
     allowedSchemes: ["http", "https", "mailto"],
     allowProtocolRelative: false,
+    nonTextTags: ["script", "style", "textarea", "option", "xmp", "noembed", "noframes", "plaintext"],
     transformTags: {
       a(tagName, attribs) {
         const href = String(attribs.href || "").trim();
