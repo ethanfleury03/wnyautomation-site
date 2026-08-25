@@ -1,0 +1,120 @@
+{
+  "title": "What marketing tasks can a small business automate without hiring an agency?",
+  "slug": "small-business-marketing-tasks-to-automate",
+  "metaTitle": "Small-Business Marketing Tasks to Automate",
+  "metaDescription": "See practical marketing tasks small businesses can automate without hiring an agency, including lead follow-up, reviews, content reminders, and reporting.",
+  "excerpt": "A practical no-agency checklist for small businesses that want more consistent marketing follow-up, reviews, content reminders, and reporting without losing the human touch.",
+  "eyebrow": "Marketing automation for small teams",
+  "author": "WNY Business Automation",
+  "reviewer": "Ethan Fleury",
+  "publishDate": "2026-08-25",
+  "updatedDate": "2026-08-25",
+  "categories": [
+    "Answer Pages",
+    "Marketing Automation",
+    "Small Business Automation"
+  ],
+  "primaryPrompt": "What marketing tasks can a small business automate without hiring an agency?",
+  "directAnswer": "A small business can automate marketing tasks that are repetitive, rules-based, and easy to review: lead acknowledgments, follow-up reminders, email welcome sequences, review requests, content-calendar reminders, social scheduling, contact tagging, and basic reporting. Do not automate brand strategy, final offers, sensitive customer replies, or public responses without human review. Start with the workflow where leads, reviews, or follow-up most often get forgotten.",
+  "faqs": [
+    {
+      "question": "Can marketing automation replace hiring a marketing agency?",
+      "answer": "It can replace some repetitive execution and follow-up tasks, but not strategy, positioning, creative direction, paid media judgment, or relationship-building. If the business does not know its offer, audience, or message, automation should wait or support a strategist."
+    },
+    {
+      "question": "What is the best marketing task to automate first?",
+      "answer": "Start with the task where delay costs the most: new-lead confirmation and routing, quote or appointment follow-up, or review request timing. Pick one workflow with a clear trigger and owner before automating content production."
+    },
+    {
+      "question": "Can AI write all my social posts and emails?",
+      "answer": "AI can draft and repurpose approved content, but a person should review voice, accuracy, offers, claims, and sensitive wording before publishing or sending."
+    },
+    {
+      "question": "Is review request automation allowed?",
+      "answer": "Businesses can ask for honest reviews, but Google prohibits incentives in exchange for reviews and review-related manipulation. Route unhappy replies to a person and keep requests modest."
+    },
+    {
+      "question": "What tools do I need?",
+      "answer": "Many businesses can start with existing forms, email, a spreadsheet or CRM, a review link, and a connector such as Make, Zapier, or n8n. Choose tools after mapping the workflow and expected volume."
+    }
+  ],
+  "internalLinks": [
+    {
+      "url": "/services/missed-lead-rescue-system",
+      "anchor": "lead follow-up automation for missed inquiries"
+    },
+    {
+      "url": "/services/appointment-review-reminder-follow-up",
+      "anchor": "appointment and review follow-up automation"
+    },
+    {
+      "url": "/services/blog-schedules",
+      "anchor": "practical content calendar planning"
+    },
+    {
+      "url": "/blog/first-business-workflow-to-automate",
+      "anchor": "how to choose the first workflow to automate"
+    },
+    {
+      "url": "/free-workflow-audit",
+      "anchor": "get 3 practical automation ideas"
+    }
+  ],
+  "externalSources": [
+    {
+      "url": "https://capsulecrm.com/blog/small-business-marketing-automation/",
+      "label": "Capsule CRM small-business marketing automation task examples"
+    },
+    {
+      "url": "https://rainautomation.com/blog/marketing-automation-for-small-businesses-complete-guide",
+      "label": "Rain Automation small-business marketing automation guide"
+    },
+    {
+      "url": "https://support.google.com/business/answer/3474122?hl=en",
+      "label": "Google Business Profile review request guidance"
+    },
+    {
+      "url": "https://buffer.com/pricing",
+      "label": "Buffer social scheduling pricing context"
+    },
+    {
+      "url": "https://www.hubspot.com/pricing/marketing",
+      "label": "HubSpot Marketing Hub pricing and automation context"
+    }
+  ],
+  "ctaTitle": "Find the marketing task that keeps getting forgotten.",
+  "ctaLabel": "Find My Marketing Automation",
+  "trustNote": "Keep strategy human • Automate repeatable handoffs • Use your existing tools first",
+  "decisionAid": {
+    "type": "table",
+    "eyebrow": "Marketing boundary guide",
+    "title": "Automate consistency—not your entire brand",
+    "intro": "Good marketing automation handles repeatable timing and routing while people own judgment and voice.",
+    "headers": [
+      "Good automation candidates",
+      "Keep human-owned"
+    ],
+    "rows": [
+      [
+        "Lead acknowledgments and reminders",
+        "Offer and campaign strategy"
+      ],
+      [
+        "Review-request timing",
+        "Complaint and reputation responses"
+      ],
+      [
+        "Welcome email sequences",
+        "Final public-facing copy"
+      ],
+      [
+        "Content-calendar reminders",
+        "Sensitive customer replies"
+      ],
+      [
+        "Contact tagging and reporting",
+        "Brand positioning and promises"
+      ]
+    ]
+  }
+}

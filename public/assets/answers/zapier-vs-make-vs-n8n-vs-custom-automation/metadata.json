@@ -1,0 +1,112 @@
+{
+  "author": "WNY Business Automation",
+  "reviewer": "Ethan Fleury",
+  "publishDate": "2026-08-25",
+  "updatedDate": "2026-08-25",
+  "title": "Should I use Zapier, Make, n8n, or custom automation?",
+  "slug": "zapier-vs-make-vs-n8n-vs-custom-automation",
+  "metaTitle": "Zapier vs Make vs n8n vs Custom Automation",
+  "metaDescription": "Compare Zapier, Make, n8n, and custom automation for small business workflows. Learn which option fits simple, complex, and lead-critical processes.",
+  "excerpt": "A practical decision guide for choosing the simplest automation tool that can reliably handle your first workflow without overbuilding or ignoring handoffs.",
+  "eyebrow": "Tools and costs",
+  "categories": [
+    "Tools & Costs",
+    "Workflow Automation"
+  ],
+  "primaryPrompt": "Should I use Zapier, Make, n8n, or custom automation for my small business?",
+  "directAnswer": "Use Zapier when the workflow is simple, low-risk, and connects common apps. Use Make when a visual multi-step scenario and branching are useful. Use n8n when technical control, custom logic, or self-hosting matters. Choose custom automation when important business rules, customer messages, exceptions, monitoring, or human handoffs need careful design. Map the workflow first, then select the lightest dependable tool that fits it.",
+  "faqs": [
+    {
+      "question": "Is Zapier good enough for small business automation?",
+      "answer": "Yes when the workflow is simple, supported by the apps involved, and low risk. Add monitoring and a named owner for customer-facing workflows."
+    },
+    {
+      "question": "Is Make better than Zapier?",
+      "answer": "Not universally. Make can fit visual branching scenarios and multi-step processes, while Zapier can be faster for common app-to-app connections. The workflow should decide."
+    },
+    {
+      "question": "Is n8n too technical for a small business?",
+      "answer": "It can be a fit when someone owns setup, credentials, hosting or cloud configuration, testing, and troubleshooting. Without that ownership, it may be more maintenance than the team wants."
+    },
+    {
+      "question": "When should I use custom automation?",
+      "answer": "Use custom help when important business rules, customer messages, routing, exceptions, or human handoffs need careful design and monitoring."
+    },
+    {
+      "question": "Can I start simple and upgrade later?",
+      "answer": "Yes. Document the trigger, fields, owner, fallback, status rules, and customer message first so a simple setup can later move into Make, n8n, custom code, or a CRM."
+    }
+  ],
+  "internalLinks": [
+    {
+      "anchor": "What should you automate first?",
+      "url": "/answers/what-should-small-business-automate-first"
+    },
+    {
+      "anchor": "Workflow automation costs",
+      "url": "/answers/small-business-workflow-automation-cost"
+    },
+    {
+      "anchor": "Explore automation services",
+      "url": "/services"
+    }
+  ],
+  "externalSources": [
+    {
+      "url": "https://help.zapier.com/hc/en-us/articles/34372501750285-Use-conditional-logic-to-filter-and-split-your-Zap-workflows",
+      "supports": "Official Zapier help describing Filters for linear continue/stop logic and Paths for branching workflows."
+    },
+    {
+      "url": "https://help.zapier.com/hc/en-us/articles/8496180919949-Filter-and-path-rules-in-Zap-workflows",
+      "supports": "Official Zapier help for filter and path rule types used in conditional Zap workflows."
+    },
+    {
+      "url": "https://www.make.com/en/help/scenarios",
+      "supports": "Official Make help center vocabulary for scenarios, modules, routing, and scenario operations."
+    },
+    {
+      "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.if/",
+      "supports": "Official n8n documentation for IF conditional branching, used to explain logic-heavy workflows."
+    },
+    {
+      "url": "https://docs.n8n.io/hosting/",
+      "supports": "Official n8n hosting documentation, used to explain why technical ownership matters when self-hosting."
+    }
+  ],
+  "ctaTitle": "Choose the lightest dependable tool for your workflow.",
+  "ctaLabel": "Help Me Choose the Right Tool",
+  "trustNote": "Workflow first • Tool second • Ownership and maintenance included",
+  "decisionAid": {
+    "type": "table",
+    "eyebrow": "Tool-fit matrix",
+    "title": "Match the platform to the workflow",
+    "intro": "There is no universal winner. Complexity, control, support, and maintenance should decide.",
+    "headers": [
+      "Option",
+      "Usually fits when",
+      "Watch for"
+    ],
+    "rows": [
+      [
+        "Zapier",
+        "Common apps and simpler low-risk workflows",
+        "Task volume, branching, and monitoring"
+      ],
+      [
+        "Make",
+        "Visual multi-step scenarios and branching",
+        "Scenario complexity and team ownership"
+      ],
+      [
+        "n8n",
+        "Technical control, custom logic, or self-hosting",
+        "Hosting, credentials, testing, and maintenance"
+      ],
+      [
+        "Custom",
+        "Important rules, exceptions, or customer handoffs",
+        "Build scope, documentation, and long-term support"
+      ]
+    ]
+  }
+}

@@ -272,6 +272,37 @@ async function expectAnswersHub() {
   }
 }
 
+async function expectAnswerPage(pathname, h1) {
+  const { response, text } = await request(pathname);
+  if (!response.ok) {
+    throw new Error(`Expected ${pathname} to return 200, got ${response.status}`);
+  }
+
+  for (const check of [
+    `<h1>${h1}</h1>`,
+    'class="blog-page answer-page"',
+    'class="answer-opening-grid"',
+    'class="answer-direct-card"',
+    'class="answer-next-step"',
+    'class="answer-mobile-cta"',
+    'class="answer-decision-aid"',
+    'class="article-body answer-article-body"',
+    '"@type":"Article"',
+    '"@type":"FAQPage"',
+    'href="/answers"',
+    "Reviewed by Ethan Fleury",
+  ]) {
+    if (!text.includes(check)) {
+      throw new Error(`Expected ${pathname} to include ${check}`);
+    }
+  }
+
+  const h1Count = (text.match(/<h1[\s>]/g) || []).length;
+  if (h1Count !== 1) {
+    throw new Error(`Expected ${pathname} to have one h1, got ${h1Count}`);
+  }
+}
+
 async function main() {
   expectNoRemovedSchedulerReferences();
   expectSanitizerRejectsRawTextBypasses();
@@ -281,6 +312,21 @@ async function main() {
   await expectLeadFocusedHomepage();
   await expectAboutPage();
   await expectAnswersHub();
+  const answerPageChecks = [
+    ["/answers/how-to-automate-manual-data-entry-small-business", "How can a small business automate repetitive manual data entry?"],
+    ["/answers/what-should-small-business-automate-first", "What should a small business automate first?"],
+    ["/answers/ai-for-small-business-without-replacing-employees", "Can AI help my small business without replacing employees?"],
+    ["/answers/small-business-marketing-tasks-to-automate", "What marketing tasks can a small business automate without hiring an agency?"],
+    ["/answers/small-business-workflow-automation-cost", "How much does workflow automation cost for a small business?"],
+    ["/answers/choose-ai-automation-company-buffalo-ny", "How do I choose an AI automation company in Buffalo or Western New York?"],
+    ["/answers/zapier-vs-make-vs-n8n-vs-custom-automation", "Should I use Zapier, Make, n8n, or custom automation?"],
+    ["/answers/stop-missing-leads-after-hours", "How can my business stop missing leads after hours?"],
+    ["/answers/contractor-quote-follow-up-without-sounding-pushy", "How can a contractor automate quote follow-up without sounding pushy?"],
+    ["/answers/do-small-businesses-need-crm-for-automation", "Do I need a CRM before I automate lead follow-up?"],
+  ];
+  for (const [path, h1] of answerPageChecks) {
+    await expectAnswerPage(path, h1);
+  }
   await expectPage("/services", "Services built around real small-business work.");
   const servicePageChecks = [
     ["/services/missed-lead-rescue-system", "Catch missed leads before they go cold."],

@@ -1,0 +1,116 @@
+{
+  "title": "How much does workflow automation cost for a small business?",
+  "slug": "small-business-workflow-automation-cost",
+  "metaTitle": "Small-Business Workflow Automation Cost",
+  "metaDescription": "Understand small-business workflow automation costs by separating DIY software, setup or build effort, AI usage, and ongoing maintenance drivers.",
+  "excerpt": "A transparent cost-driver guide for small businesses comparing DIY software, setup/build effort, AI/API usage, and ongoing maintenance—without invented WNY pricing.",
+  "eyebrow": "Automation cost guide",
+  "author": "WNY Business Automation",
+  "reviewer": "Ethan Fleury",
+  "publishDate": "2026-08-25",
+  "updatedDate": "2026-08-25",
+  "categories": [
+    "Answer Pages",
+    "Workflow Automation",
+    "Buyer Education"
+  ],
+  "primaryPrompt": "How much does workflow automation cost for a small business?",
+  "directAnswer": "Small-business workflow automation cost has three layers: the software subscription, the setup or build work, and ongoing maintenance. DIY tools may start with free or low monthly plans, but costs rise with task volume, app seats, AI usage, integrations, monitoring, and support. WNY Business Automation does not publish a generic project price until the workflow, tools, volume, risk, and maintenance owner are known.",
+  "faqs": [
+    {
+      "question": "Can you give a single price for workflow automation?",
+      "answer": "Not responsibly without the workflow details. The same “lead follow-up” idea can mean one form and one email, or multiple tools, AI summaries, SMS, CRM updates, reporting, and maintenance. This page separates cost drivers rather than inventing WNY pricing."
+    },
+    {
+      "question": "What is usually the cheapest way to start?",
+      "answer": "Map one repeated workflow and see whether existing tools already support it. Many first versions can start with a form, spreadsheet or CRM, email/text notification, and a simple reminder."
+    },
+    {
+      "question": "Why does maintenance matter?",
+      "answer": "Automations depend on logins, fields, APIs, messages, and business rules that can change. A workflow needs an owner, error alerts, logs, and periodic review."
+    },
+    {
+      "question": "Are Zapier, Make, n8n, and Activepieces costs comparable?",
+      "answer": "Not directly. Zapier commonly discusses tasks, Make credits/module actions, n8n executions, and Activepieces credits/open-source options. Compare by expected runs, steps, apps, support needs, and maintenance ownership."
+    },
+    {
+      "question": "How should a small business estimate ROI?",
+      "answer": "Estimate current manual hours, error/rework risk, and missed follow-up risk, then compare that against software, setup, and maintenance over a time period. Avoid treating broad industry ROI stats as a guarantee for your business."
+    }
+  ],
+  "internalLinks": [
+    {
+      "url": "/blog/zapier-vs-custom-automation",
+      "anchor": "Zapier vs. custom automation for small businesses"
+    },
+    {
+      "url": "/blog/first-business-workflow-to-automate",
+      "anchor": "choose one workflow before pricing a build"
+    },
+    {
+      "url": "/services/intake-to-task-automation",
+      "anchor": "intake-to-task automation"
+    },
+    {
+      "url": "/services/missed-lead-rescue-system",
+      "anchor": "missed lead rescue workflow"
+    },
+    {
+      "url": "/free-workflow-audit",
+      "anchor": "request a free workflow audit"
+    }
+  ],
+  "externalSources": [
+    {
+      "url": "https://zapier.com/blog/zapier-pricing",
+      "label": "Zapier pricing context"
+    },
+    {
+      "url": "https://www.make.com/en/pricing",
+      "label": "Make pricing and credit model"
+    },
+    {
+      "url": "https://n8n.io/pricing/",
+      "label": "n8n pricing and execution model"
+    },
+    {
+      "url": "https://activepieces.com/pricing",
+      "label": "Activepieces pricing and credit model"
+    },
+    {
+      "url": "https://www.hubspot.com/pricing/marketing",
+      "label": "HubSpot Marketing Hub pricing context"
+    },
+    {
+      "url": "https://www.sba.gov/counseling/manage-your-business",
+      "label": "SBA cost-benefit analysis framing"
+    }
+  ],
+  "ctaTitle": "Scope one workflow before comparing prices.",
+  "ctaLabel": "Estimate My Automation Scope",
+  "trustNote": "No generic price promises • Clear ownership and maintenance • Start with the smallest useful version",
+  "decisionAid": {
+    "type": "cards",
+    "eyebrow": "Cost model",
+    "title": "Automation cost has four separate layers",
+    "intro": "A useful estimate should identify each layer instead of quoting software alone.",
+    "items": [
+      {
+        "title": "Software",
+        "text": "Subscriptions, seats, task volume, and connected apps."
+      },
+      {
+        "title": "Setup",
+        "text": "Workflow mapping, configuration, custom logic, testing, and documentation."
+      },
+      {
+        "title": "Usage",
+        "text": "Automation runs, messages, storage, API calls, and AI processing."
+      },
+      {
+        "title": "Maintenance",
+        "text": "Monitoring, fixes, vendor changes, access reviews, and support ownership."
+      }
+    ]
+  }
+}

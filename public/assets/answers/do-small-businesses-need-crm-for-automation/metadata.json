@@ -1,0 +1,117 @@
+{
+  "title": "Do I need a CRM before I automate lead follow-up?",
+  "slug": "do-small-businesses-need-crm-for-automation",
+  "metaTitle": "Do You Need a CRM Before Lead Follow-Up Automation?",
+  "metaDescription": "You may not need a CRM before automating lead follow-up. Learn when a sheet or task list is enough and when a CRM becomes worth it.",
+  "excerpt": "A practical answer for small businesses deciding whether to start with a spreadsheet, task list, simple CRM, or managed follow-up workflow.",
+  "eyebrow": "CRM and lead follow-up",
+  "author": "WNY Business Automation",
+  "reviewer": "Ethan Fleury",
+  "publishDate": "2026-08-25",
+  "updatedDate": "2026-08-25",
+  "categories": [
+    "leads-follow-up",
+    "tools-costs"
+  ],
+  "primaryPrompt": "Do I need a CRM before I automate lead follow-up?",
+  "directAnswer": "No, you do not always need a CRM before automating lead follow-up. You need a clear process first: where leads come from, who owns the next step, what the first reply should say, and where follow-up is tracked. A spreadsheet or task list can work at first; a CRM becomes useful when volume, team handoffs, history, reminders, or reporting outgrow that tracker.",
+  "faqs": [
+    {
+      "question": "Can I automate follow-up without a CRM?",
+      "answer": "Yes. Many first workflows can use a form, email, spreadsheet, task list, and reminder"
+    },
+    {
+      "question": "What should my lead tracker include?",
+      "answer": "Name, contact info, source, request type, owner, status, last contact, next action, next action date, and notes"
+    },
+    {
+      "question": "When should I move from a spreadsheet to a CRM?",
+      "answer": "Move when leads come from several places, more than one person needs visibility, follow-ups slip, or you need contact history and automated tasks"
+    },
+    {
+      "question": "Will a CRM fix missed follow-up by itself?",
+      "answer": "No. If the process is unclear, a CRM just moves the confusion into software"
+    },
+    {
+      "question": "Can WNY Business Automation set up HubSpot later?",
+      "answer": "WNY can review current tools and help choose a simple setup, but any specific CRM implementation scope should be confirmed before work begins"
+    }
+  ],
+  "internalLinks": [
+    {
+      "url": "/blog/crm-automation-for-small-business",
+      "anchor": "CRM automation for small business",
+      "purpose": "Deeper CRM guide"
+    },
+    {
+      "url": "/blog/spreadsheet-to-crm-automation",
+      "anchor": "spreadsheet to CRM automation",
+      "purpose": "Bridge guide"
+    },
+    {
+      "url": "/services/missed-lead-rescue-system",
+      "anchor": "missed lead rescue system",
+      "purpose": "Lead follow-up service"
+    },
+    {
+      "url": "/services/intake-to-task-automation",
+      "anchor": "intake-to-task automation",
+      "purpose": "Task handoff service"
+    },
+    {
+      "url": "/blog/after-hours-lead-response",
+      "anchor": "after-hours lead response",
+      "purpose": "Related first workflow"
+    },
+    {
+      "url": "/free-workflow-audit",
+      "anchor": "free workflow audit",
+      "purpose": "Conversion"
+    }
+  ],
+  "externalSources": [
+    {
+      "url": "https://connxess.co.uk/do-you-need-a-crm-or-better-follow-up",
+      "supports": "CRM as tool and follow-up as process framing"
+    },
+    {
+      "url": "https://smesoftwarehelp.co.uk/blog/crm-for-microbusiness",
+      "supports": "Spreadsheet-to-CRM tipping points for microbusinesses"
+    },
+    {
+      "url": "https://knowledge.hubspot.com/workflows/create-workflows",
+      "supports": "HubSpot workflow triggers and actions, with feature caveats"
+    }
+  ],
+  "ctaTitle": "Choose the simplest lead tracker your team will actually use.",
+  "ctaLabel": "Review My Lead Tracking Setup",
+  "trustNote": "Process before platform • Shared ownership • Upgrade only when the workflow requires it",
+  "decisionAid": {
+    "type": "table",
+    "eyebrow": "Tracker decision",
+    "title": "A spreadsheet can be enough—until the handoffs outgrow it",
+    "intro": "Start with the simplest system that makes ownership and next actions visible.",
+    "headers": [
+      "A sheet or task list may work",
+      "A CRM becomes useful when"
+    ],
+    "rows": [
+      [
+        "One person owns most follow-up",
+        "Several people share leads"
+      ],
+      [
+        "Lead volume is manageable",
+        "History and handoffs get lost"
+      ],
+      [
+        "Statuses are simple",
+        "Automated reminders and stages matter"
+      ],
+      [
+        "Basic visibility is enough",
+        "Reporting, permissions, and integrations are needed"
+      ]
+    ]
+  }
+}

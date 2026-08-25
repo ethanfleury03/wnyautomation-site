@@ -4,10 +4,12 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 
 const {
+  answerPageBySlug,
   caseStudyBySlug,
   getStaticRoutes,
   industryBySlug,
   renderAboutPage,
+  renderAnswerPage,
   renderAnswersHubPage,
   renderBlogIndexPage,
   renderBlogPostPage,
@@ -102,6 +104,11 @@ export async function GET(request, context) {
   if (segments.length === 2 && section === "case-studies") {
     const caseStudy = caseStudyBySlug.get(slug);
     return caseStudy ? html(renderCaseStudyPage(caseStudy)) : html(renderNotFoundPage(), 404);
+  }
+
+  if (segments.length === 2 && section === "answers") {
+    const answer = answerPageBySlug.get(slug);
+    return answer ? html(renderAnswerPage(answer)) : html(renderNotFoundPage(), 404);
   }
 
   if (segments.length === 2 && section === "blog") {

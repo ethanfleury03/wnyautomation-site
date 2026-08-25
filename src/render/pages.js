@@ -3,10 +3,11 @@ const services = require("../data/services");
 const industries = require("../data/industries");
 const caseStudies = require("../data/caseStudies");
 const blogPosts = require("../data/blogPosts");
-const { answerCategories, answers } = require("../data/answers");
+const { answerCategories, answerPages, answers } = require("../data/answers");
 const { homepageFaqs, workflowAuditFaqs } = require("../data/faqs");
 const { absoluteUrl, buildStaticRoutes } = require("../lib/seo");
 const {
+  answerPageSchema,
   articleSchema,
   breadcrumbSchema,
   collectionPageSchema,
@@ -46,6 +47,7 @@ const serviceBySlug = new Map(services.map((item) => [item.slug, item]));
 const industryBySlug = new Map(industries.map((item) => [item.slug, item]));
 const caseStudyBySlug = new Map(caseStudies.map((item) => [item.slug, item]));
 const sampleBlogBySlug = new Map(blogPosts.map((item) => [item.slug, item]));
+const answerPageBySlug = new Map(answerPages.map((item) => [item.slug, item]));
 
 const defaultExamples = [
   {
@@ -589,6 +591,115 @@ function renderBlogIndexPage(posts) {
   });
 }
 
+function stripLeadingAnswerSummary(markdown = "") {
+  let content = String(markdown).trim();
+  content = content.replace(
+    /^##\s+(?:Direct answer|Quick answer[^\n]*)\s*\n+[\s\S]*?(?=\n##\s+)/i,
+    "",
+  );
+  content = content.replace(/^\*\*Direct answer:\*\*\s*[\s\S]*?(?=\n##\s+)/i, "");
+  return content.trim();
+}
+
+function renderAnswerDecisionAid(aid) {
+  if (!aid || !aid.title) return "";
+  const heading = `
+    <div class="answer-decision-heading">
+      <p class="section-kicker">${escapeHtml(aid.eyebrow || "Decision guide")}</p>
+      <h2>${escapeHtml(aid.title)}</h2>
+      ${aid.intro ? `<p>${escapeHtml(aid.intro)}</p>` : ""}
+    </div>`;
+
+  if (aid.type === "table") {
+    const headers = (aid.headers || []).map((item) => `<th scope="col">${escapeHtml(item)}</th>`).join("");
+    const rows = (aid.rows || [])
+      .map((row) => `<tr>${row.map((item) => `<td>${escapeHtml(item)}</td>`).join("")}</tr>`)
+      .join("");
+    return `<section class="answer-decision-aid">${heading}<div class="answer-decision-table-wrap"><table class="answer-decision-table"><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div></section>`;
+  }
+
+  const items = (aid.items || [])
+    .map(
+      (item, index) => `
+        <article class="answer-decision-item">
+          ${aid.type === "steps" ? `<span class="answer-decision-number">${index + 1}</span>` : ""}
+          <div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.text)}</p></div>
+        </article>`,
+    )
+    .join("");
+  return `<section class="answer-decision-aid">${heading}<div class="answer-decision-grid ${aid.type === "steps" ? "is-steps" : ""}">${items}</div></section>`;
+}
+
+function renderAnswerPage(answer) {
+  const faqs = Array.isArray(answer.faqs) ? answer.faqs : [];
+  const related = (answer.internalLinks || []).slice(0, 6).map((link) => ({
+    label: link.anchor || link.label || link.url,
+    href: link.url || link.href,
+    description: link.purpose || "Related WNY Business Automation resource",
+  }));
+  const crumbs = [
+    { label: "Home", href: "/" },
+    { label: "Answers", href: "/answers" },
+    { label: answer.title, href: `/answers/${answer.slug}` },
+  ];
+  const articleBody = stripLeadingAnswerSummary(answer.body || "");
+  const primaryCtaHref = answer.primaryCtaHref || "/free-workflow-audit#workflow-form";
+  const primaryCtaLabel = answer.ctaLabel || "Get 3 Automation Ideas";
+  const body = `
+    <main>
+      <article class="blog-page answer-page">
+        <div class="section-inner blog-article-inner">
+          ${renderBreadcrumbs(crumbs)}
+          <div class="article-shell answer-article-shell">
+            <p class="section-kicker">${escapeHtml(answer.eyebrow || "Automation Answers")}</p>
+            <h1>${escapeHtml(answer.title)}</h1>
+            <p class="answer-page-excerpt">${escapeHtml(answer.excerpt || "")}</p>
+            <div class="article-meta">
+              ${answer.updatedDate || answer.publishDate ? `<span>Updated ${escapeHtml(formatDisplayDate(answer.updatedDate || answer.publishDate))}</span>` : ""}
+              <span>Written by ${escapeHtml(answer.author || business.businessName)}</span>
+              ${answer.reviewer ? `<span>Reviewed by ${escapeHtml(answer.reviewer)}</span>` : ""}
+            </div>
+            <div class="answer-opening-grid">
+              <section class="answer-direct-card" aria-labelledby="direct-answer-heading">
+                <p class="answer-card-label" id="direct-answer-heading">Direct answer</p>
+                <p>${escapeHtml(answer.directAnswer || answer.excerpt || "")}</p>
+              </section>
+              <aside class="answer-next-step" aria-label="Practical next step">
+                <p class="answer-card-label">Practical next step</p>
+                <h2>${escapeHtml(answer.ctaTitle || "See where this workflow fits in your business.")}</h2>
+                <a class="button button-primary" href="${escapeAttribute(primaryCtaHref)}">${escapeHtml(primaryCtaLabel)}</a>
+                <a class="answer-secondary-link" href="/answers">Browse all Answers <span aria-hidden="true">→</span></a>
+              </aside>
+            </div>
+            ${answer.trustNote ? `<p class="answer-trust-note">${escapeHtml(answer.trustNote)}</p>` : ""}
+            ${renderAnswerDecisionAid(answer.decisionAid)}
+            <div class="article-body answer-article-body">${markdownToHtml(articleBody)}</div>
+          </div>
+        </div>
+      </article>
+      ${renderInternalLinksSection("Related answers, guides, and services", related)}
+      ${renderCTASection({
+        primaryHref: primaryCtaHref,
+        primaryLabel: primaryCtaLabel,
+        text: answer.ctaTitle || "Send one workflow your team keeps doing by hand. We will review it and suggest a practical next step without pushing a giant software overhaul.",
+        withForm: false,
+      })}
+      <a class="answer-mobile-cta" href="${escapeAttribute(primaryCtaHref)}">${escapeHtml(primaryCtaLabel)}</a>
+    </main>`;
+
+  return page(
+    body,
+    {
+      title: answer.metaTitle || answer.title,
+      description: answer.metaDescription || answer.excerpt || "",
+      path: `/answers/${answer.slug}`,
+      type: "article",
+    },
+    [breadcrumbSchema(crumbs), answerPageSchema(answer), faqPageSchema(faqs)],
+    "answer-detail-page",
+  );
+}
+
 function renderBlogPostPage(post) {
   const isSample = post.status === "sample";
   const articleHtml = post.blog_html || markdownToHtml(post.body || post.blog_markdown || "");
@@ -719,7 +830,7 @@ Sitemap: ${absoluteUrl("/sitemap.xml")}
 }
 
 function getStaticRoutes() {
-  return buildStaticRoutes({ services, industries, caseStudies, blogPosts });
+  return buildStaticRoutes({ services, industries, caseStudies, blogPosts, answerPages });
 }
 
 function serviceLinks(slugs = []) {
@@ -737,10 +848,12 @@ function industryLinks(slugs = []) {
 }
 
 module.exports = {
+  answerPageBySlug,
   caseStudyBySlug,
   getStaticRoutes,
   industryBySlug,
   renderAboutPage,
+  renderAnswerPage,
   renderAnswersHubPage,
   renderBlogIndexPage,
   renderBlogPostPage,

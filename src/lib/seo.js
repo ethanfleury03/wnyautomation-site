@@ -85,7 +85,7 @@ function routeEntry(path, priority = "0.7", changefreq = "weekly") {
   return { path, priority, changefreq };
 }
 
-function buildStaticRoutes({ services, industries, caseStudies, blogPosts }) {
+function buildStaticRoutes({ services, industries, caseStudies, blogPosts, answerPages = [] }) {
   return [
     routeEntry("/", "1.0", "weekly"),
     routeEntry("/free-workflow-audit", "0.95", "monthly"),
@@ -98,6 +98,7 @@ function buildStaticRoutes({ services, industries, caseStudies, blogPosts }) {
     ...caseStudies.map((item) => routeEntry(`/case-studies/${item.slug}`, "0.58", "monthly")),
     routeEntry("/blog", "0.8", "weekly"),
     routeEntry("/answers", "0.84", "weekly"),
+    ...answerPages.map((item) => routeEntry(`/answers/${item.slug}`, "0.72", "monthly")),
     ...blogPosts.map((item) => routeEntry(`/blog/${item.slug}`, "0.55", "monthly")),
     routeEntry("/privacy-policy", "0.25", "yearly"),
     routeEntry("/terms", "0.25", "yearly"),

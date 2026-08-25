@@ -1,0 +1,95 @@
+{
+  "author": "WNY Business Automation",
+  "reviewer": "Ethan Fleury",
+  "publishDate": "2026-08-25",
+  "updatedDate": "2026-08-25",
+  "title": "How can my business stop missing leads after hours?",
+  "slug": "stop-missing-leads-after-hours",
+  "metaTitle": "How to Stop Missing Leads After Hours",
+  "metaDescription": "Learn how after-hours lead response automation can acknowledge calls and forms, collect details, route urgent requests, and create follow-up tasks.",
+  "excerpt": "A practical after-hours lead response workflow for calls, forms, website messages, and next-day follow-up without pretending your team is always online.",
+  "eyebrow": "Leads and follow-up",
+  "categories": [
+    "Leads & Follow-Up",
+    "Workflow Automation"
+  ],
+  "primaryPrompt": "How can my business stop missing leads after hours?",
+  "directAnswer": "Set up a workflow that detects calls, forms, chats, or messages when your team is unavailable, sends an honest confirmation, collects only the details needed for the next step, logs the inquiry, and creates a follow-up task for the right person. Urgent, sensitive, emergency, pricing, medical, legal, or safety-related requests should follow a human-defined escalation path rather than receive unsupported automated advice.",
+  "faqs": [
+    {
+      "question": "Is after-hours lead response the same as 24/7 customer service?",
+      "answer": "No. It acknowledges and routes inquiries but does not mean a person is available all night. The message should set honest expectations."
+    },
+    {
+      "question": "What should an after-hours auto-reply say?",
+      "answer": "Confirm receipt, say when the team will follow up, ask only useful questions, and avoid claiming a human is reviewing it if no one is."
+    },
+    {
+      "question": "Can this handle both calls and website forms?",
+      "answer": "Yes, if each channel has a clear trigger and the inquiry lands in the same follow-up destination or with the right owner."
+    },
+    {
+      "question": "Should urgent requests be automated?",
+      "answer": "Automation can flag urgency and notify the right person, but escalation rules should be owner-approved and avoid unsafe advice or unsupported service promises."
+    },
+    {
+      "question": "Do I need a CRM for after-hours lead response?",
+      "answer": "Not always. A sheet, task list, or inbox workflow can work if someone checks it consistently and the handoff is clear."
+    }
+  ],
+  "internalLinks": [
+    {
+      "anchor": "Missed lead rescue system",
+      "url": "/services/missed-lead-rescue-system"
+    },
+    {
+      "anchor": "Do you need a CRM first?",
+      "url": "/answers/do-small-businesses-need-crm-for-automation"
+    },
+    {
+      "anchor": "Get a free workflow audit",
+      "url": "/free-workflow-audit"
+    }
+  ],
+  "externalSources": [
+    {
+      "url": "https://hbr.org/2011/03/the-short-life-of-online-sales-leads",
+      "supports": "General principle that fast response matters for online sales leads; avoid using exact conversion multipliers without refreshed primary detail."
+    },
+    {
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "supports": "Technical AEO context: visible, indexable Search content can be eligible for AI search features."
+    }
+  ],
+  "ctaTitle": "Design an honest response path for nights and weekends.",
+  "ctaLabel": "Plan My After-Hours Response",
+  "trustNote": "No fake 24/7 staffing • Clear escalation rules • Every lead gets an owner",
+  "decisionAid": {
+    "type": "steps",
+    "eyebrow": "After-hours response path",
+    "title": "Acknowledge, collect, route, and hand off",
+    "intro": "Automation should clarify the next step without pretending someone is available when they are not.",
+    "items": [
+      {
+        "title": "Detect",
+        "text": "Recognize an unanswered call, form, chat, or message outside staffed hours."
+      },
+      {
+        "title": "Acknowledge",
+        "text": "Confirm receipt and set an honest expectation for human follow-up."
+      },
+      {
+        "title": "Collect",
+        "text": "Ask only for details the team needs to take the next step."
+      },
+      {
+        "title": "Route",
+        "text": "Log the inquiry and notify the correct owner or escalation path."
+      },
+      {
+        "title": "Hand off",
+        "text": "Create a visible task and stop automation when a person replies."
+      }
+    ]
+  }
+}

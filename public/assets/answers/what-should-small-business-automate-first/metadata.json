@@ -1,0 +1,95 @@
+{
+  "author": "WNY Business Automation",
+  "reviewer": "Ethan Fleury",
+  "publishDate": "2026-08-25",
+  "updatedDate": "2026-08-25",
+  "title": "What should a small business automate first?",
+  "slug": "what-should-small-business-automate-first",
+  "metaTitle": "What Should a Small Business Automate First?",
+  "metaDescription": "Use a practical scorecard to choose the first workflow your small business should automate: leads, quotes, appointments, forms, or admin tasks.",
+  "excerpt": "A practical WNY scorecard and 30-day pilot roadmap for choosing a first automation without overbuying software or overwhelming the team.",
+  "eyebrow": "Getting started",
+  "categories": [
+    "Getting Started",
+    "Workflow Automation"
+  ],
+  "primaryPrompt": "What should a small business automate first?",
+  "directAnswer": "A small business should usually automate one frequent, repeatable, low-to-medium-risk workflow first—especially one where delays or missed steps cost time, customer trust, or follow-up. Good first choices include lead acknowledgment, quote reminders, appointment reminders, form-to-task routing, invoice reminders, and recurring reports. Avoid starting with work that is unclear, rare, sensitive, emergency-related, or dependent on heavy judgment.",
+  "faqs": [
+    {
+      "question": "What is the easiest task to automate first?",
+      "answer": "Choose a clear repeated task with a simple trigger and a safe human handoff. Lead acknowledgment, quote reminders, appointment reminders, and form routing are common starter workflows."
+    },
+    {
+      "question": "Should I automate lead follow-up first?",
+      "answer": "Often yes, if leads sit unanswered or ownership is unclear. Confirm the lead sources, message rules, routing owner, and stop conditions before automating customer-facing follow-up."
+    },
+    {
+      "question": "Should my first automation use AI?",
+      "answer": "Not necessarily. Many first pilots only need a trigger, notification, task, or reminder. AI may help with summaries, classification, FAQ answers, or drafts when there is a human review path."
+    },
+    {
+      "question": "What should not be automated first?",
+      "answer": "Avoid rare, unclear, sensitive, emergency, relationship-heavy, or judgment-heavy processes. Clean up the process first, or automate preparation while the final decision stays human-owned."
+    },
+    {
+      "question": "How do I know if the pilot worked?",
+      "answer": "Review whether handoffs were completed, fewer items sat unanswered, exceptions were caught, customers received honest expectations, and the team trusted the workflow enough to keep using it."
+    }
+  ],
+  "internalLinks": [
+    {
+      "anchor": "Automate manual data entry",
+      "url": "/answers/how-to-automate-manual-data-entry-small-business"
+    },
+    {
+      "anchor": "Do you need a CRM first?",
+      "url": "/answers/do-small-businesses-need-crm-for-automation"
+    },
+    {
+      "anchor": "Get a free workflow audit",
+      "url": "/free-workflow-audit"
+    }
+  ],
+  "externalSources": [
+    {
+      "url": "https://www.godaddy.com/resources/skills/things-small-business-should-automate",
+      "supports": "Broad examples of repetitive small-business tasks such as scheduling, invoicing, lead capture, and follow-up that are common automation candidates."
+    },
+    {
+      "url": "https://www.sba.gov/sba-learning-platform/ai-small-business",
+      "supports": "Small-business AI learning resource; verify exact URL before publishing if cited inline."
+    }
+  ],
+  "ctaTitle": "Choose one useful first pilot—not a giant software project.",
+  "ctaLabel": "Help Me Choose My First Workflow",
+  "trustNote": "Free workflow review • Built for small teams • No software overhaul required",
+  "decisionAid": {
+    "type": "cards",
+    "eyebrow": "First Workflow Scorecard",
+    "title": "A strong first automation scores well on these signals",
+    "intro": "The best starting point is frequent, predictable, visible, and safe to test.",
+    "items": [
+      {
+        "title": "Frequent",
+        "text": "It happens every day or week—not once a quarter."
+      },
+      {
+        "title": "Repeatable",
+        "text": "The trigger, fields, and next step can be explained clearly."
+      },
+      {
+        "title": "Costly when missed",
+        "text": "Delays create lost follow-up, rework, or customer confusion."
+      },
+      {
+        "title": "Low-to-medium risk",
+        "text": "Exceptions can pause for human review without creating harm."
+      },
+      {
+        "title": "Easy to measure",
+        "text": "You can track completion, response time, errors, or overdue work."
+      }
+    ]
+  }
+}

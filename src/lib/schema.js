@@ -128,6 +128,40 @@ function collectionPageSchema({ name, description, path, items = [] }) {
   };
 }
 
+function answerPageSchema(answer) {
+  const url = absoluteUrl(`/answers/${answer.slug}`);
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: answer.title,
+    description: answer.metaDescription || answer.excerpt,
+    author: {
+      "@type": "Person",
+      name: answer.reviewer || "Ethan Fleury",
+      worksFor: {
+        "@type": "Organization",
+        name: business.businessName,
+        url: business.siteUrl,
+      },
+    },
+    publisher: {
+      "@type": "Organization",
+      name: business.businessName,
+      url: business.siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/assets/site-icon-512.png"),
+      },
+    },
+    mainEntityOfPage: url,
+    url,
+  };
+
+  if (answer.publishDate) schema.datePublished = answer.publishDate;
+  if (answer.updatedDate || answer.publishDate) schema.dateModified = answer.updatedDate || answer.publishDate;
+  return schema;
+}
+
 function articleSchema(post) {
   return {
     "@context": "https://schema.org",
@@ -158,6 +192,7 @@ function compactSchemas(items) {
 }
 
 module.exports = {
+  answerPageSchema,
   articleSchema,
   breadcrumbSchema,
   collectionPageSchema,
