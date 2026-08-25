@@ -8,6 +8,7 @@ const {
   getStaticRoutes,
   industryBySlug,
   renderAboutPage,
+  renderAnswersHubPage,
   renderBlogIndexPage,
   renderBlogPostPage,
   renderCaseStudiesIndex,
@@ -69,6 +70,7 @@ export async function GET(request, context) {
   if (pathname === "/services") return html(renderServicesIndex());
   if (pathname === "/industries") return html(renderIndustriesIndex());
   if (pathname === "/about") return html(renderAboutPage());
+  if (pathname === "/answers") return html(renderAnswersHubPage());
   if (pathname === "/case-studies") return html(renderCaseStudiesIndex());
   if (pathname === "/privacy-policy") return html(renderLegalPage("privacy"));
   if (pathname === "/terms") return html(renderLegalPage("terms"));

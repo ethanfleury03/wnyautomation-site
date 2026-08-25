@@ -8,6 +8,7 @@ function renderHeader({ currentPath = "/" } = {}) {
     ["Services", "/services"],
     ["Industries", "/industries"],
     ["About", "/about"],
+    ["Answers", "/answers"],
     ["Blog", "/blog"],
     ["Free Audit", "/free-workflow-audit"],
   ];
@@ -95,6 +96,7 @@ function renderFooter({ services = [], industries = [] } = {}) {
           ["About", "/about"],
           ["Free Workflow Audit", "/free-workflow-audit"],
           ["Blog", "/blog"],
+          ["Answers", "/answers"],
           ["Case Studies", "/case-studies"],
           ["Sitemap", "/sitemap"],
           ["Privacy Policy", "/privacy-policy"],

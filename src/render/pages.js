@@ -3,11 +3,13 @@ const services = require("../data/services");
 const industries = require("../data/industries");
 const caseStudies = require("../data/caseStudies");
 const blogPosts = require("../data/blogPosts");
+const { answerCategories, answers } = require("../data/answers");
 const { homepageFaqs, workflowAuditFaqs } = require("../data/faqs");
 const { absoluteUrl, buildStaticRoutes } = require("../lib/seo");
 const {
   articleSchema,
   breadcrumbSchema,
+  collectionPageSchema,
   compactSchemas,
   faqPageSchema,
   localBusinessSchema,
@@ -139,6 +141,103 @@ function renderHomePage(blogItems = []) {
       path: "/",
     },
     [localBusinessSchema("/"), faqPageSchema(homepageFaqs)],
+  );
+}
+
+function renderAnswersHubPage() {
+  const categoryBySlug = new Map(answerCategories.map((item) => [item.slug, item]));
+  const filterButtons = [
+    { slug: "all", label: "All Answers", icon: "layout-grid" },
+    ...answerCategories,
+  ]
+    .map(
+      (category, index) => `
+        <button class="answer-filter${index === 0 ? " is-active" : ""}" type="button" data-answer-filter="${escapeAttribute(category.slug)}" aria-pressed="${index === 0 ? "true" : "false"}">
+          ${icon(category.icon)}<span>${escapeHtml(category.label)}</span>
+        </button>`,
+    )
+    .join("");
+
+  const answerCards = answers
+    .map((answer) => {
+      const category = categoryBySlug.get(answer.category);
+      const searchText = [answer.title, answer.description, ...(answer.keywords || [])].join(" ").toLowerCase();
+      return `
+        <a class="answer-card" href="${escapeAttribute(answer.href)}" data-answer-category="${escapeAttribute(answer.category)}" data-answer-search="${escapeAttribute(searchText)}">
+          <span class="answer-card-category">${escapeHtml(category?.label || answer.category)}</span>
+          <h2>${escapeHtml(answer.title)}</h2>
+          <p>${escapeHtml(answer.description)}</p>
+          <span class="answer-card-arrow" aria-hidden="true">${icon("arrow-right")}</span>
+        </a>`;
+    })
+    .join("");
+
+  const description =
+    "Plain-English automation answers for Buffalo and Western New York business owners who want fewer missed follow-ups, cleaner admin work, and systems that fit the tools they already use.";
+
+  const body = `
+    <main class="answers-hub">
+      <section class="answers-hero">
+        <div class="section-inner answers-hero-inner">
+          <p class="section-kicker">Automation Answers</p>
+          <h1>Practical answers for repetitive business problems</h1>
+          <p>${escapeHtml(description)}</p>
+          <label class="answers-search" for="answers-search">
+            ${icon("search")}
+            <span class="visually-hidden">Search automation questions</span>
+            <input id="answers-search" type="search" placeholder="Search automation questions" autocomplete="off" data-answers-search />
+          </label>
+          <div class="answer-filters" aria-label="Filter answers by category">
+            ${filterButtons}
+          </div>
+        </div>
+      </section>
+      <section class="answers-library" aria-labelledby="answers-library-title">
+        <div class="section-inner">
+          <div class="answers-library-heading">
+            <h2 id="answers-library-title">Browse practical answers</h2>
+            <p>Start with the questions local business owners ask most often.</p>
+          </div>
+          <p class="answers-results-status" data-answers-status aria-live="polite"></p>
+          <div class="answers-grid" data-answers-grid>${answerCards}</div>
+          <div class="answers-empty" data-answers-empty hidden>
+            <h2>No matching answers yet.</h2>
+            <p>Try a broader search, choose another category, or send us the workflow question you want answered.</p>
+          </div>
+        </div>
+      </section>
+      <section class="answers-cta-wrap">
+        <div class="section-inner">
+          <div class="answers-cta">
+            <div>
+              <h2>Not sure where to start?</h2>
+              <p>We can look at one repetitive process and suggest a practical next step.</p>
+            </div>
+            <div class="answers-cta-actions">
+              <a class="button button-light" href="/free-workflow-audit#workflow-form">Request a free workflow audit</a>
+              <a class="answers-cta-link" href="/services">Or browse services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>`;
+
+  return page(
+    body,
+    {
+      title: "Automation Answers for Small Businesses | WNY Business Automation",
+      description,
+      path: "/answers",
+    },
+    [
+      collectionPageSchema({
+        name: "WNY Business Automation Answers",
+        description,
+        path: "/answers",
+        items: answers,
+      }),
+    ],
+    "answers-page",
   );
 }
 
@@ -642,6 +741,7 @@ module.exports = {
   getStaticRoutes,
   industryBySlug,
   renderAboutPage,
+  renderAnswersHubPage,
   renderBlogIndexPage,
   renderBlogPostPage,
   renderCaseStudiesIndex,

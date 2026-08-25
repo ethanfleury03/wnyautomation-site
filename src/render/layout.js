@@ -3,7 +3,7 @@ const { renderMeta, renderTrackingScripts } = require("../lib/seo");
 const { escapeScriptJson, jsonScript } = require("./html");
 const { renderFooter, renderHeader } = require("./components");
 
-const assetVersion = "service-pages-20260525c";
+const assetVersion = "answers-hub-20260825a";
 
 function renderPage({
   meta,
@@ -42,7 +42,7 @@ function renderPage({
     ${renderTrackingScripts()}
     <script>window.WNY_AUTOMATION_CONFIG = ${jsonScript(publicConfig)};</script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
-    <script src="/script.js" defer></script>
+    <script src="/script.js?v=${assetVersion}" defer></script>
   </head>
   <body${bodyClass ? ` class="${bodyClass}"` : ""}>
     ${renderHeader({ currentPath: meta?.path })}

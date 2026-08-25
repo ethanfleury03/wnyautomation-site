@@ -109,6 +109,25 @@ function breadcrumbSchema(items = []) {
   };
 }
 
+function collectionPageSchema({ name, description, path, items = [] }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    description,
+    url: absoluteUrl(path),
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.title,
+        url: absoluteUrl(item.href),
+      })),
+    },
+  };
+}
+
 function articleSchema(post) {
   return {
     "@context": "https://schema.org",
@@ -141,6 +160,7 @@ function compactSchemas(items) {
 module.exports = {
   articleSchema,
   breadcrumbSchema,
+  collectionPageSchema,
   compactSchemas,
   faqPageSchema,
   localBusinessSchema,

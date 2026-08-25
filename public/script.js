@@ -343,3 +343,50 @@ workflowForms.forEach((form) => {
     }
   });
 });
+
+const answersSearch = document.querySelector("[data-answers-search]");
+const answerFilterButtons = [...document.querySelectorAll("[data-answer-filter]")];
+const answerCards = [...document.querySelectorAll(".answer-card")];
+const answersStatus = document.querySelector("[data-answers-status]");
+const answersEmpty = document.querySelector("[data-answers-empty]");
+let activeAnswerCategory = "all";
+
+function normalizeAnswerQuery(value) {
+  return value.toLowerCase().trim().replace(/\s+/g, " ");
+}
+
+function updateAnswerResults() {
+  if (!answerCards.length) return;
+
+  const query = normalizeAnswerQuery(answersSearch?.value || "");
+  let visibleCount = 0;
+
+  answerCards.forEach((card) => {
+    const matchesCategory = activeAnswerCategory === "all" || card.dataset.answerCategory === activeAnswerCategory;
+    const matchesQuery = !query || normalizeAnswerQuery(card.dataset.answerSearch || card.textContent).includes(query);
+    const isVisible = matchesCategory && matchesQuery;
+    card.hidden = !isVisible;
+    if (isVisible) visibleCount += 1;
+  });
+
+  if (answersStatus) {
+    answersStatus.textContent = query || activeAnswerCategory !== "all"
+      ? `${visibleCount} answer${visibleCount === 1 ? "" : "s"} found`
+      : "";
+  }
+  if (answersEmpty) answersEmpty.hidden = visibleCount !== 0;
+}
+
+answerFilterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    activeAnswerCategory = button.dataset.answerFilter || "all";
+    answerFilterButtons.forEach((item) => {
+      const active = item === button;
+      item.classList.toggle("is-active", active);
+      item.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+    updateAnswerResults();
+  });
+});
+
+answersSearch?.addEventListener("input", updateAnswerResults);

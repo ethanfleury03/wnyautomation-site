@@ -97,6 +97,7 @@ function buildStaticRoutes({ services, industries, caseStudies, blogPosts }) {
     routeEntry("/case-studies", "0.65", "monthly"),
     ...caseStudies.map((item) => routeEntry(`/case-studies/${item.slug}`, "0.58", "monthly")),
     routeEntry("/blog", "0.8", "weekly"),
+    routeEntry("/answers", "0.84", "weekly"),
     ...blogPosts.map((item) => routeEntry(`/blog/${item.slug}`, "0.55", "monthly")),
     routeEntry("/privacy-policy", "0.25", "yearly"),
     routeEntry("/terms", "0.25", "yearly"),

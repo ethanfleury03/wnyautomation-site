@@ -232,6 +232,46 @@ async function expectAboutPage() {
   }
 }
 
+async function expectAnswersHub() {
+  const { response, text } = await request("/answers");
+
+  if (!response.ok) {
+    throw new Error(`Expected /answers to return 200, got ${response.status}`);
+  }
+
+  for (const check of [
+    "Practical answers for repetitive business problems",
+    'id="answers-search"',
+    'data-answer-filter="all"',
+    'data-answer-category="getting-started"',
+    'data-answer-category="leads-follow-up"',
+    'data-answer-category="admin-work"',
+    'data-answer-category="marketing"',
+    'data-answer-category="tools-costs"',
+    "Browse practical answers",
+    "Not sure where to start?",
+    'href="/answers"',
+  ]) {
+    if (!text.includes(check)) {
+      throw new Error(`Expected /answers to include ${check}`);
+    }
+  }
+
+  const h1Count = (text.match(/<h1[\s>]/g) || []).length;
+  if (h1Count !== 1) {
+    throw new Error(`Expected /answers to have one h1, got ${h1Count}`);
+  }
+
+  const answerCardCount = (text.match(/class="answer-card"/g) || []).length;
+  if (answerCardCount < 6) {
+    throw new Error(`Expected /answers to include at least 6 answer cards, got ${answerCardCount}`);
+  }
+
+  if (!text.includes('"@type":"CollectionPage"')) {
+    throw new Error("Expected /answers to include CollectionPage schema.");
+  }
+}
+
 async function main() {
   expectNoRemovedSchedulerReferences();
   expectSanitizerRejectsRawTextBypasses();
@@ -240,6 +280,7 @@ async function main() {
   await expectPage("/", "Practical automation for Buffalo");
   await expectLeadFocusedHomepage();
   await expectAboutPage();
+  await expectAnswersHub();
   await expectPage("/services", "Services built around real small-business work.");
   const servicePageChecks = [
     ["/services/missed-lead-rescue-system", "Catch missed leads before they go cold."],
