@@ -242,4 +242,6 @@ Yes, if the workflow matches the service area, hours, and follow-up process. Loc
 
 If plumbing leads are coming from calls, forms, voicemails, and after-hours messages, WNY Business Automation can help you map a cleaner first-response workflow. Start with a simple review of your current intake process and get three practical automation ideas for routing urgent requests, routine jobs, and appointment follow-up.
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

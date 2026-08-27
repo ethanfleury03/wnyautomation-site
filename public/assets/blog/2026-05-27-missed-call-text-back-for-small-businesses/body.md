@@ -252,3 +252,5 @@ Phone-heavy businesses usually benefit most: contractors, home services, appoint
 If your Buffalo or Western New York business gets calls, quote requests, or website leads that sometimes slip through, start with a simple workflow audit.
 
 WNY Business Automation can help you find the first missed-lead or follow-up process worth fixing, without overcomplicating your business or replacing the human touch customers still expect.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

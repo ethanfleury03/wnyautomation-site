@@ -240,4 +240,6 @@ For Buffalo and WNY businesses, the goal is not more software for its own sake. 
 
 Ask WNY Business Automation for a free workflow audit and we will help identify the first form worth fixing.
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

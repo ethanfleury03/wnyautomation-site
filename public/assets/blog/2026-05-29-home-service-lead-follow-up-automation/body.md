@@ -210,4 +210,6 @@ Ask WNY Business Automation for 3 automation ideas for your home service lead fo
 
 ---
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

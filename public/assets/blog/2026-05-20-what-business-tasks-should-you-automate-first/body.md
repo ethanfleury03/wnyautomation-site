@@ -188,4 +188,6 @@ Before spending more on traffic, make sure new inquiries are being captured, ack
 
 If your Buffalo or Western New York business is buried in follow-ups, quote reminders, appointment tasks, or missed messages, WNY Business Automation can help you choose the first workflow to automate. Start with a simple workflow audit and get a few practical automation ideas before buying new software or rebuilding your whole process.
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

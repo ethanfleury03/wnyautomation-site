@@ -188,4 +188,6 @@ A useful quote system does not bombard customers. It gives each estimate a statu
 
 WNY Business Automation helps Buffalo and Western New York businesses design practical workflows around existing tools. To clean up open estimates without bloated software or customer communication on autopilot, start with the checklist and one repeatable quote path.
 
-[Get 3 Automation Ideas](/free-workflow-audit#workflow-form) for your quote follow-up process, including where an internal reminder, customer message, or human handoff could make the workflow clearer.
+Get 3 Automation Ideas for your quote follow-up process, including where an internal reminder, customer message, or human handoff could make the workflow clearer.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

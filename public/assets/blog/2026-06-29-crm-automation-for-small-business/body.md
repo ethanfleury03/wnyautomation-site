@@ -212,3 +212,5 @@ Start with new lead capture, lead assignment, quote follow-up reminders, and bas
 If your Buffalo or Western New York business is tracking leads in too many places, WNY Business Automation can help you map a simple CRM workflow that keeps inquiries, quotes, tasks, and follow-ups organized.
 
 Start with a low-pressure review of your current process and get three practical automation ideas you can use before investing in a bigger system.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

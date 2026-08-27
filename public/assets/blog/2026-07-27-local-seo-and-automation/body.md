@@ -246,3 +246,5 @@ Often, yes. A practical workflow can usually start with the tools you already us
 If your Buffalo or WNY business is investing in local SEO, website improvements, or better lead capture, make sure the follow-up process is ready too.
 
 WNY Business Automation can help you map the first few automations that protect new inquiries without adding a bloated software system. Start with a simple review of your calls, forms, quotes, and follow-ups, then choose one workflow worth fixing first.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

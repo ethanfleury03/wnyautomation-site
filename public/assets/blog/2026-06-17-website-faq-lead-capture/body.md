@@ -258,4 +258,6 @@ If your website gets questions but your team still has to chase down the basic d
 
 Start with a simple review of your current website questions, forms, and follow-up process. You will get practical ideas for turning repeated questions into clearer inquiries without adding hype, spam, or a giant software overhaul.
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

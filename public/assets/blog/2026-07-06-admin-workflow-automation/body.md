@@ -311,4 +311,6 @@ Want to see which repetitive admin tasks are worth cleaning up first? WNY Busine
 
 Start with one workflow. Keep the handoff human. Make the next step easier to manage.
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

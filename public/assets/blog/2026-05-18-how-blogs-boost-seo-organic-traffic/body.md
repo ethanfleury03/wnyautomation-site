@@ -288,3 +288,5 @@ Blogs can bring visitors, but the website still needs clear calls-to-action, tru
 Want to start building organic traffic without writing random blog posts that do not connect to your business?
 
 WNY Business Automation can help map blog topics around your services, improve the website paths those visitors land on, and connect inquiries to practical follow-up workflows. Start with a simple review of your website, your best services, and the customer questions your business already answers every week.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

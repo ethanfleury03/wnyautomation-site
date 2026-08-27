@@ -1,6 +1,8 @@
 const { execFileSync, spawn } = require("node:child_process");
 const fs = require("node:fs");
 const path = require("node:path");
+const blogPosts = require("../src/data/blogPosts");
+const { markdownToHtml } = require("../src/render/html");
 const { normalizeBlogHtml } = require("../src/server/blog-store");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -48,6 +50,25 @@ function expectSanitizerRejectsRawTextBypasses() {
     const cleaned = normalizeBlogHtml(payload);
     if (dangerousMarkup.test(cleaned)) {
       throw new Error(`Expected sanitizer to reject ${name}, got ${cleaned}`);
+    }
+  }
+}
+
+function expectPublishedBlogsHaveVisibleTrackedCtas() {
+  const marker = "[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)";
+  const expectedButton =
+    '<div id="article-cta" class="article-cta-actions"><a class="button button-primary article-cta-button" href="/free-workflow-audit#workflow-form">';
+
+  for (const post of blogPosts) {
+    const markerCount = (post.body.match(/^\[CTA: Get 3 Automation Ideas\]\(\/free-workflow-audit#workflow-form\)$/gm) || [])
+      .length;
+    if (markerCount !== 1) {
+      throw new Error(`Expected ${post.slug} to contain one tracked article CTA marker, got ${markerCount}.`);
+    }
+
+    const rendered = markdownToHtml(post.body);
+    if (!rendered.includes(expectedButton) || rendered.includes(marker)) {
+      throw new Error(`Expected ${post.slug} CTA marker to render as a primary button.`);
     }
   }
 }
@@ -306,6 +327,7 @@ async function expectAnswerPage(pathname, h1) {
 async function main() {
   expectNoRemovedSchedulerReferences();
   expectSanitizerRejectsRawTextBypasses();
+  expectPublishedBlogsHaveVisibleTrackedCtas();
   await waitForServer();
 
   await expectPage("/", "Practical automation for Buffalo");

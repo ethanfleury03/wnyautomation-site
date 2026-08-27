@@ -190,3 +190,5 @@ A missed call, website form, appointment reminder, quote follow-up, or review re
 Want to see where automation could save time in your Niagara County business? WNY Business Automation can help map three practical workflow ideas for leads, bookings, reminders, reviews, or admin follow-up — without hype or a giant software overhaul.
 
 Start with one useful workflow and build from there.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

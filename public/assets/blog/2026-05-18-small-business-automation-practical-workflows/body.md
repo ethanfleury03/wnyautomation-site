@@ -302,3 +302,5 @@
   If your Buffalo or Western New York business is missing follow-ups, chasing quotes manually, or juggling too many admin tasks, WNY Business Automation can help you find a practical first step.
   
   Start with a simple workflow review and get three automation ideas tailored to your business — no hype, no giant software overhaul, just clear next steps.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

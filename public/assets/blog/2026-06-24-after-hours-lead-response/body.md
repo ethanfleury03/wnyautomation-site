@@ -203,4 +203,6 @@ If missed calls, website forms, or after-hours inquiries are slipping through, W
 Start with one workflow, test it, and improve it from there. Ask WNY Business Automation for a free workflow audit or “Get 3 Automation Ideas” for your current lead response process.
 ```
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

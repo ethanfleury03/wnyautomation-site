@@ -270,3 +270,5 @@ If your contractor website gets visitors but estimate requests still feel scatte
 Start with a simple review of your current website form, call-to-action, and follow-up steps. We will look for practical improvements that help your Buffalo or WNY contracting business capture better details, route requests clearly, and follow up without adding a giant software system.
 
 **Next step:** Ask WNY Business Automation for **3 Automation Ideas** for your contractor website lead capture process.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

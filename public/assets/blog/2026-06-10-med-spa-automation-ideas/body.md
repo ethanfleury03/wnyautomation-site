@@ -208,3 +208,5 @@ WNY Business Automation works with Western New York small businesses that need p
 Want to see where automation could help your med spa first? WNY Business Automation can review your consultation, reminder, FAQ, and review-request workflow and suggest a few practical improvements for your team.
 
 Start with a simple workflow audit — no hype, no giant software overhaul, and no pressure to automate everything at once.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

@@ -210,4 +210,6 @@ If your dental office in Amherst, Williamsville, West Seneca, Buffalo, or nearby
 
 Ask for **3 Automation Ideas** for your front desk process — no hype, no giant software overhaul, just a clear look at where automation can help your team stay organized.
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

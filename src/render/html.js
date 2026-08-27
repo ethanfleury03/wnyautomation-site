@@ -125,6 +125,15 @@ function markdownToHtml(markdown) {
       continue;
     }
 
+    const ctaMatch = line.match(/^\[CTA:\s*([^\]]+)\]\((\/[^)\s]+)\)$/i);
+    if (ctaMatch) {
+      closeList();
+      html.push(
+        `<div id="article-cta" class="article-cta-actions"><a class="button button-primary article-cta-button" href="${escapeAttribute(ctaMatch[2])}">${icon("send")}${escapeHtml(ctaMatch[1])}</a></div>`,
+      );
+      continue;
+    }
+
     if (/^[-*]\s+/.test(line)) {
       if (!listOpen || listTag !== "ul") {
         closeList();

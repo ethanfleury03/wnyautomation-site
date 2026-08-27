@@ -271,3 +271,5 @@ No. Small businesses can often benefit from simple automations such as form rout
 Want a website that looks better and handles inquiries more cleanly? WNY Business Automation can help Buffalo and Western New York businesses map the design, lead capture, and follow-up workflow together.
 
 Start with a low-pressure website concept and workflow audit so you can see where your current site may be losing calls, quote requests, or follow-up tasks.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

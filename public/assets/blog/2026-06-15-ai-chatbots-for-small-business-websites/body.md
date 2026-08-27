@@ -251,4 +251,6 @@ Want to see where a chatbot or FAQ assistant could help your website without mak
 
 Start with one helpful workflow, keep the answers controlled, and give customers a clear path to a real person when they need it.
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

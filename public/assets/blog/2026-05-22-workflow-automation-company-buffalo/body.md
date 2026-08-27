@@ -181,4 +181,6 @@ A local company may make operating conversations easier and understand the Weste
 
 You do not need to choose a platform or redesign your operation. Bring one frustrating lead, intake, follow-up, scheduling, or admin process to WNY Business Automation. We will identify practical places where automation could help while keeping the right people in control.
 
-[Request your free workflow audit and get 3 Automation Ideas](/free-workflow-audit)—a straightforward next step for Buffalo business owners who want a local partner without the hype.
+Request your free workflow audit and get 3 Automation Ideas—a straightforward next step for Buffalo business owners who want a local partner without the hype.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

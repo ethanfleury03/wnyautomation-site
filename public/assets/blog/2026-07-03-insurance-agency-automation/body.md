@@ -188,4 +188,6 @@ WNY Business Automation can review your current quote, renewal, and client quest
 
 Start with one workflow that makes follow-up easier to see.
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

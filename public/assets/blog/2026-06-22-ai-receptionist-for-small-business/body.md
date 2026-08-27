@@ -240,4 +240,6 @@ Avoid automating pricing promises, medical or legal advice, emergency decisions,
 
 If calls, voicemails, website leads, or after-hours inquiries are slipping through the cracks, WNY Business Automation can help you map a practical first workflow. Start with one useful system — not a giant software overhaul — and get three automation ideas tailored to your Buffalo or Western New York business.
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

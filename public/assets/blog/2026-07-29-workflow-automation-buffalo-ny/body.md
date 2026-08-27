@@ -253,3 +253,5 @@ WNY Business Automation focuses on Western New York businesses, including Buffal
 If missed calls, slow follow-up, open quotes, appointment reminders, or repeated admin tasks are creating friction in your Buffalo-area business, WNY Business Automation can help you choose a simple first workflow.
 
 Start with a low-pressure workflow audit and get practical automation ideas built around how your team actually works.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

@@ -221,3 +221,5 @@ Maintenance request intake is often the best first workflow because it has clear
 If tenant requests, maintenance updates, or vendor follow-up are getting scattered across too many places, WNY Business Automation can help map a simple first workflow.
 
 Start with a low-pressure review: get three practical automation ideas for your property management process — no giant software overhaul, no AI hype, just clearer follow-up for your team and tenants.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

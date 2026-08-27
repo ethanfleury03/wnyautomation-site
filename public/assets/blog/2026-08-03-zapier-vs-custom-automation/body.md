@@ -238,3 +238,5 @@ If you are comparing Zapier, n8n, or custom automation for your Western New York
 WNY Business Automation can review your current lead, quote, appointment, or admin process and suggest three practical automation ideas that fit how your team actually works. No hype, no giant software overhaul — just a clear first step.
 
 Ask for **3 Automation Ideas** and see what is worth fixing first.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

@@ -261,3 +261,5 @@ In many cases, yes. The goal is usually to build around your current tools where
 ## Take the next step
 
 If your lead spreadsheet is starting to feel like a second inbox, WNY Business Automation can help you map a cleaner path from spreadsheet to CRM. Start with a practical workflow review and get a few realistic automation ideas for leads, tasks, and follow-ups — no hype, no giant software overhaul.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

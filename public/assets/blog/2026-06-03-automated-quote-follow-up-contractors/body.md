@@ -180,4 +180,6 @@ No. Teams can begin with an estimating tool, shared spreadsheet, email, or task 
 
 You do not need to automate every sales conversation. Start with one estimate type, a clean intake record, a short sequence, and a clear owner. Keep the messages helpful, pause for real replies, and track whether your team completes the handoff.
 
-WNY Business Automation helps Buffalo and Western New York contractors build practical follow-up around the tools they already use where possible. If estimates are going quiet or the next step lives in someone’s head, [start a free workflow audit](/free-workflow-audit). Bring your current process, and we will help map a sensible first workflow without a giant software overhaul.
+WNY Business Automation helps Buffalo and Western New York contractors build practical follow-up around the tools they already use where possible. If estimates are going quiet or the next step lives in someone’s head, start a free workflow audit. Bring your current process, and we will help map a sensible first workflow without a giant software overhaul.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

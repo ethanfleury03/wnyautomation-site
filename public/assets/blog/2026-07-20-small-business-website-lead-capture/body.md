@@ -270,3 +270,5 @@ Most forms should ask for name, contact information, service needed, location, t
 ## Take the next step
 
 Before you put more money into ads, make sure your website can capture and route the leads you already have a chance to win. WNY Business Automation can review your site, forms, and follow-up process and give you three practical automation ideas for your Western New York business.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

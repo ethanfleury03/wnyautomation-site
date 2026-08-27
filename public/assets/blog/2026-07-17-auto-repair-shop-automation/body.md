@@ -195,4 +195,6 @@ Not always. Many workflows can start with your current website forms, email, cal
 
 Want to see where automation could help your repair shop first? WNY Business Automation can map three practical workflows for appointments, estimates, reviews, or follow-up — built for a local Buffalo/WNY business, not a bloated enterprise system.
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)

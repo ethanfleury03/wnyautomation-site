@@ -215,4 +215,6 @@ If your WNY business gets good feedback but reviews are inconsistent, WNY Busine
 
 Want to see where automation could save time in your business? Ask WNY Business Automation for 3 practical automation ideas.
 
-[Request a Free Automation Audit](/free-workflow-audit#workflow-form) to get a few practical ideas for the first workflow worth improving.
+Request a Free Automation Audit to get a few practical ideas for the first workflow worth improving.
+
+[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)
