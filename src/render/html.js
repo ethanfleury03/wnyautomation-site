@@ -129,7 +129,7 @@ function markdownToHtml(markdown) {
     if (ctaMatch) {
       closeList();
       html.push(
-        `<div id="article-cta" class="article-cta-actions"><a class="button button-primary article-cta-button" href="${escapeAttribute(ctaMatch[2])}">${icon("send")}${escapeHtml(ctaMatch[1])}</a></div>`,
+        `<div id="article-cta" class="article-cta-actions"><a class="button button-primary article-cta-button" href="${escapeAttribute(ctaMatch[2])}" style="color:#fff;text-decoration:none">${icon("send")}${escapeHtml(ctaMatch[1])}</a></div>`,
       );
       continue;
     }

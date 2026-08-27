@@ -1214,9 +1214,12 @@ textarea:focus {
   margin-top: 4px;
 }
 
-.article-body .article-cta-button {
+.article-body .article-cta-button,
+.article-body .article-cta-button:visited,
+.article-body .article-cta-button:hover,
+.article-body .article-cta-button:focus-visible {
   width: fit-content;
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
 }
 

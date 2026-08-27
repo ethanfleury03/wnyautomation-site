@@ -3,7 +3,7 @@ const { renderMeta, renderTrackingScripts } = require("../lib/seo");
 const { escapeScriptJson, jsonScript } = require("./html");
 const { renderFooter, renderHeader } = require("./components");
 
-const assetVersion = "answer-conversion-20260825c";
+const assetVersion = "blog-cta-20260826a";
 
 function renderPage({
   meta,

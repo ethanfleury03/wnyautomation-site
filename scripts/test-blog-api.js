@@ -57,7 +57,7 @@ function expectSanitizerRejectsRawTextBypasses() {
 function expectPublishedBlogsHaveVisibleTrackedCtas() {
   const marker = "[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)";
   const expectedButton =
-    '<div id="article-cta" class="article-cta-actions"><a class="button button-primary article-cta-button" href="/free-workflow-audit#workflow-form">';
+    '<div id="article-cta" class="article-cta-actions"><a class="button button-primary article-cta-button" href="/free-workflow-audit#workflow-form" style="color:#fff;text-decoration:none">';
 
   for (const post of blogPosts) {
     const markerCount = (post.body.match(/^\[CTA: Get 3 Automation Ideas\]\(\/free-workflow-audit#workflow-form\)$/gm) || [])
