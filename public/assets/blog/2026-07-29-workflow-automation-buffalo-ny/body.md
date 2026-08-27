@@ -1,12 +1,8 @@
-# Workflow Automation in Buffalo and Amherst: Practical Ideas for Local Service Businesses
-
 ## Quick answer: what is workflow automation for Buffalo NY businesses?
 
 Workflow automation Buffalo NY businesses can actually use is usually not a giant software rebuild. It is a set of simple systems that help calls, website leads, quote requests, appointments, tasks, and review requests move to the right next step automatically.
 
 For local service businesses in Buffalo, Amherst, Williamsville, and nearby Western New York suburbs, the best first automations are usually the ones that prevent slow follow-up, missed messages, and forgotten admin work.
-
-## Introduction
 
 If you run a local service business around Buffalo or Amherst, your day probably does not fall apart because of one huge problem.
 
@@ -110,8 +106,6 @@ The key is tone. The message should be helpful, not aggressive.
 A good follow-up might say: “Just checking that you received the estimate. If you have questions or want to adjust the scope, reply here and we can help.”
 
 That keeps the door open without pressuring the customer.
-
-## Mid-page CTA
 
 Not sure which workflow is worth fixing first? WNY Business Automation can review your current lead, quote, appointment, or admin process and suggest a few practical automations that fit how your Buffalo-area business already works.
 
@@ -254,7 +248,7 @@ That should not be the goal. For small businesses, automation is usually best us
 
 WNY Business Automation focuses on Western New York businesses, including Buffalo, Amherst, Williamsville, Cheektowaga, West Seneca, Tonawanda, Niagara Falls, and nearby areas.
 
-## Final CTA
+## Take the next step
 
 If missed calls, slow follow-up, open quotes, appointment reminders, or repeated admin tasks are creating friction in your Buffalo-area business, WNY Business Automation can help you choose a simple first workflow.
 

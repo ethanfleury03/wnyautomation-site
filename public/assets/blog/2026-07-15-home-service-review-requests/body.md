@@ -1,5 +1,3 @@
-# Home Service Review Requests: A Simple Follow-Up Workflow After Completed Jobs
-
 ## Quick answer: home service review request automation
 
 Home service review request automation helps contractors, HVAC companies, plumbers, roofers, cleaners, landscapers, and other local service teams ask for reviews at the right time without relying on memory. The basic workflow is simple: when a job is marked complete, the customer receives a polite thank-you message with a review link, and the office gets a reminder to follow up personally when needed.
@@ -124,8 +122,6 @@ A simple alert can go to the owner, office manager, or service manager. Positive
 
 If your team already uses a CRM or task system, [CRM automation for small business](/services/crm-automation-small-business) can keep these follow-ups organized instead of buried in email.
 
-## Mid-page CTA
-
 Not sure where review requests fit into your current process? WNY Business Automation can review how your team closes jobs, follows up with customers, and handles missed review opportunities, then suggest a simple first workflow to test.
 
 ## Common mistakes to avoid
@@ -198,7 +194,7 @@ Not always. If a job has unresolved issues, a complaint, a return visit, or a bi
 
 ### Can I ask customers for Google reviews?
 
-Yes, businesses can generally ask customers to leave reviews, but the request should be honest and not misleading. Avoid incentives, pressure, or asking only certain customers for positive reviews. Review platform rules can change, so verify current policies before publishing final language.
+Yes, businesses can generally ask customers to leave reviews, but the request should be honest and not misleading. Avoid incentives, pressure, or asking only certain customers for positive reviews, and check the platform's current policies before launching the workflow.
 
 ### Is text or email better for review requests?
 
@@ -212,7 +208,7 @@ Start with one request and one gentle reminder. If the customer does not respond
 
 Often, yes. A review request workflow can usually be built around the tools a business already uses, such as scheduling software, a CRM, email, forms, spreadsheets, or task management tools. The first step is mapping the current process.
 
-## Final CTA
+## Take the next step
 
 If your home service team is doing good work but review requests keep slipping through the cracks, WNY Business Automation can help you design a simple, respectful follow-up workflow for Buffalo and WNY customers.
 

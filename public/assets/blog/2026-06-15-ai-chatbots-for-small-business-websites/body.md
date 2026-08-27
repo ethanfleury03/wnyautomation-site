@@ -4,8 +4,6 @@ An **AI chatbot for a small business website** can be useful when it answers com
 
 The safest place to start is with FAQs, lead capture, appointment or quote routing, and simple next steps. Avoid using a chatbot for final pricing, legal or medical advice, complicated complaints, or anything that needs human judgment.
 
-## Introduction
-
 If you own a small business in Buffalo or Western New York, your website probably gets the same questions over and over:
 
 - “Do you service my area?”
@@ -99,10 +97,6 @@ This can be useful for:
 - Professional service firms explaining what documents to gather
 
 The chatbot can link customers to forms, booking pages, or preparation pages. If connected to a reminder workflow, it can also support [customer FAQ automation](/services/website-faq-lead-capture-assistant) around common pre-appointment questions.
-
-Verify the final FAQ automation service URL before publishing if that page is still being finalized.
-
-## Mid-page CTA
 
 Not sure which questions your website should automate first? WNY Business Automation can review your current website, contact forms, and lead flow, then suggest three practical chatbot or FAQ workflows that fit your business without a giant software overhaul.
 
@@ -251,7 +245,7 @@ Avoid final pricing, guaranteed availability, medical or legal advice, complex c
 
 For Western New York businesses, local context helps. The chatbot can reference service areas like Buffalo, Amherst, Williamsville, West Seneca, Cheektowaga, Tonawanda, or Niagara Falls when those areas are accurate for the business.
 
-## Final CTA
+## Take the next step
 
 Want to see where a chatbot or FAQ assistant could help your website without making your business sound robotic? WNY Business Automation can review your current website questions, lead forms, and follow-up process, then suggest three practical automation ideas for your Buffalo or Western New York business.
 

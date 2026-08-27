@@ -1,10 +1,6 @@
-# Small Business Website Lead Capture: What Every Local Site Needs Before Running Ads
-
 ## Quick answer: what does a small business website need to capture leads?
 
 A small business website lead capture system needs more than a contact page. It should make the next step obvious, ask for the right amount of information, confirm the inquiry was received, and route the lead to someone who can follow up. For Western New York businesses, this matters before running ads because paid traffic can get expensive quickly if website visitors do not know how to call, book, ask for a quote, or request help.
-
-## Introduction
 
 A lot of Buffalo and Western New York small businesses think about ads before they think about follow-up.
 
@@ -109,8 +105,6 @@ For many Buffalo-area service businesses, this small step improves the customer 
 A homeowner submits a request at 8:45 p.m. Instead of waiting until morning with no response, the website sends a confirmation, asks whether the issue is urgent, and creates a follow-up task for the next business day. If the customer marks it urgent, the system can notify the right person according to the business’s rules.
 
 That is not complicated AI. It is practical lead handling.
-
-## Mid-page CTA
 
 Not sure where your website is leaking leads? WNY Business Automation can review your current contact forms, calls to action, and follow-up process, then suggest three practical improvements before you spend more on ads.
 
@@ -273,6 +267,6 @@ Yes, automation can send a confirmation, collect basic details, and notify your 
 
 Most forms should ask for name, contact information, service needed, location, timing, and a short message. The right fields depend on the business and what the team needs to respond well.
 
-## Final CTA
+## Take the next step
 
 Before you put more money into ads, make sure your website can capture and route the leads you already have a chance to win. WNY Business Automation can review your site, forms, and follow-up process and give you three practical automation ideas for your Western New York business.

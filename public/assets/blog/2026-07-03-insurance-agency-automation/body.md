@@ -66,7 +66,7 @@ Example: A renewal is 45 days away. The system creates an internal review task, 
 
 That keeps the workflow human-led while reducing the chance that renewal work piles up unexpectedly.
 
-## Mid-page CTA: not sure where to start?
+## Not sure where to start?
 
 If your agency has quotes, renewals, voicemails, and client questions spread across inboxes, spreadsheets, and sticky notes, WNY Business Automation can help identify three practical workflows worth cleaning up first.
 
@@ -107,7 +107,7 @@ Useful fields might include:
 - current status;
 - next action.
 
-If your agency is still working from spreadsheets, a [small business CRM automation](/services/intake-to-task-automation) workflow can help bridge the gap between “we track it somewhere” and “the next step is obvious.” Verify this specific page exists before publishing if it is not already live.
+If your agency is still working from spreadsheets, a [small business CRM automation](/services/intake-to-task-automation) workflow can help bridge the gap between “we track it somewhere” and “the next step is obvious.”
 
 ## Common mistakes to avoid
 
@@ -180,7 +180,7 @@ Not always. Some agencies can start by improving how their current CRM, spreadsh
 
 No. WNY Business Automation works with the broader Western New York market, and this kind of workflow can fit agencies in Buffalo, Amherst, Lockport, Williamsville, Cheektowaga, and nearby communities.
 
-## Final CTA
+## Take the next step
 
 Want to see where insurance agency automation could actually help your team?
 

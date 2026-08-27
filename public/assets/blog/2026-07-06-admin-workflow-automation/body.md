@@ -117,7 +117,7 @@ Many admin delays happen because the team is waiting on a photo, signed form, in
 
 **When not to automate:** Do not send repeated reminders if the situation requires a personal conversation.
 
-## Mid-page CTA: not sure what to automate first?
+## Not sure what to automate first?
 
 If your team is buried in follow-ups, forms, reminders, or repeated admin work, WNY Business Automation can help map a few practical workflows worth fixing first. Start small: one process, one clear handoff, and one measurable improvement in how the work gets handled.
 
@@ -305,7 +305,7 @@ Often, yes. Many workflows can be built around existing forms, calendars, email 
 
 Start with one workflow. Test it, make sure the handoff works, and improve it before adding more. Small, useful automations usually beat a big system nobody wants to use.
 
-## Final CTA
+## Take the next step
 
 Want to see which repetitive admin tasks are worth cleaning up first? WNY Business Automation can review your current lead, form, reminder, or follow-up process and suggest three practical automation ideas for your business in Western New York.
 

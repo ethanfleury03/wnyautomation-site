@@ -123,7 +123,7 @@ Your workflow should allow for exceptions, such as:
 
 This is where human review matters. Automation should surface the request clearly, not force the wrong answer.
 
-## Mid-page CTA: want your forms to stop sitting in the inbox?
+## Want your forms to stop sitting in the inbox?
 
 If website forms, quote requests, or intake emails are getting missed or manually forwarded around, WNY Business Automation can help map a simple workflow from submission to assigned task.
 
@@ -232,7 +232,7 @@ No. Some forms may be spam, vendor outreach, or low-priority messages. A good wo
 
 Usually, a short confirmation message that says the request was received and explains the next realistic step. Avoid promising response times your team cannot consistently meet.
 
-## Final CTA
+## Take the next step
 
 If website submissions are landing in an inbox but not turning into clear follow-up, WNY Business Automation can help you map a simple form-to-task workflow.
 

@@ -1,12 +1,8 @@
-# Small Business AI Consulting in Buffalo and WNY: How to Start Without Buying the Wrong Tools
-
 ## Quick answer: what does small business AI consulting actually help with?
 
 Small business AI consulting helps owners decide where AI is actually useful before they spend money on tools, subscriptions, or complicated software. For Buffalo and Western New York businesses, the best starting point is usually not a giant AI system. It is one practical workflow: responding to leads faster, organizing repeated customer questions, summarizing intake forms, routing tasks, or making follow-up easier for a small team.
 
 The goal is not to replace your judgment. The goal is to reduce repetitive work and make sure important messages, quote requests, and customer follow-ups do not disappear when the day gets busy.
-
-## Introduction
 
 A lot of local business owners are curious about AI, but cautious for good reason.
 
@@ -77,8 +73,6 @@ A practical AI-assisted workflow could look like this:
 6. **When not to automate:** If the request sounds unusual, sensitive, or high-risk, the system should route it to a human instead of trying to answer fully.
 
 This is not flashy. That is the point. It solves a real problem without asking the owner to rebuild the whole business around AI.
-
-## Mid-page CTA
 
 Not sure where AI fits in your business yet? WNY Business Automation can help review your current lead, quote, appointment, or admin process and suggest a practical first workflow before you buy another tool.
 
@@ -204,6 +198,6 @@ Start with a repeated task that causes delays or missed follow-up. Common first 
 
 Map the workflow before buying software. Define the trigger, action, human handoff, customer experience, and review process first. Then choose the simplest tool that supports that workflow.
 
-## Final CTA
+## Take the next step
 
 If you are curious about AI but do not want hype, tool sprawl, or a giant software project, WNY Business Automation can help you find a practical starting point. Request a free automation audit and get a few clear AI or automation ideas built around how your Buffalo or WNY business already works.

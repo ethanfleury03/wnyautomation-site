@@ -1,5 +1,3 @@
-# Property Management Automation: Maintenance Requests, Tenant FAQs, and Vendor Follow-Up
-
 ## Quick answer: what is property management automation?
 
 Property management automation uses simple workflows to capture tenant requests, route maintenance issues, answer common questions, and remind vendors or staff about next steps. For property managers in Niagara Falls, Tonawanda, Buffalo, and nearby Western New York communities, it can help reduce missed messages and make day-to-day follow-up more consistent.
@@ -82,8 +80,6 @@ A tenant FAQ assistant or chatbot can help with these routine questions, as long
 For property management, the handoff is especially important. Automation should not make up policy answers, discuss legal issues, or promise exceptions. It should answer basic questions, collect details, and route anything sensitive to the right person.
 
 A practical [AI chatbot for small business](/services/ai-chatbots-small-business) setup can be limited to your approved policies, application steps, maintenance instructions, and contact paths.
-
-## Mid-page CTA
 
 Not sure which property management workflow is worth fixing first? WNY Business Automation can review how tenant requests, maintenance issues, and vendor updates currently move through your business and suggest three practical automations to start with.
 
@@ -220,7 +216,7 @@ Often, yes. Many workflows can be built around existing forms, email, spreadshee
 
 Maintenance request intake is often the best first workflow because it has clear steps and affects tenants, staff, vendors, and owners. After that, tenant FAQs, vendor follow-up, and rental inquiry response are common next steps.
 
-## Final CTA
+## Take the next step
 
 If tenant requests, maintenance updates, or vendor follow-up are getting scattered across too many places, WNY Business Automation can help map a simple first workflow.
 

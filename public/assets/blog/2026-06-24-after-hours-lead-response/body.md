@@ -73,7 +73,7 @@ The key is to keep the receptionist within clear boundaries. It should not make 
 
 A good setup keeps the experience simple: answer basic questions, collect details, and hand off anything important.
 
-## Mid-page CTA: start with one after-hours gap
+## Start with one after-hours gap
 
 Not sure where leads are slipping through after business hours? WNY Business Automation can help review your calls, forms, and website inquiries, then suggest a simple first workflow to test before you commit to a bigger system.
 
@@ -196,7 +196,7 @@ Automation can help identify and flag urgent requests, but the response plan sho
 
 It depends on your current setup. Some businesses can start with their phone system, website forms, email, CRM, or scheduling tool. WNY Business Automation usually looks at what you already use before recommending anything new.
 
-## Final CTA
+## Take the next step
 
 If missed calls, website forms, or after-hours inquiries are slipping through, WNY Business Automation can help you map a practical first response system for your Buffalo or Western New York business.
 

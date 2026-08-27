@@ -119,7 +119,7 @@ With a simple automation:
 
 No automation has to “solve” the plumbing problem. It just has to organize the first response so the team can act faster and with less confusion.
 
-## Mid-page CTA: start with one workflow
+## Start with one workflow
 
 Not sure which plumbing workflow is worth fixing first? WNY Business Automation can review how your calls, forms, missed calls, and service requests come in today, then suggest three practical automation ideas you can start with — no giant software overhaul required.
 
@@ -238,7 +238,7 @@ No. The better goal is to reduce repetitive admin work and make follow-up easier
 
 Yes, if the workflow matches the service area, hours, and follow-up process. Local plumbing companies often benefit from clearer routing because urgent calls, routine repairs, and estimate requests can all arrive at the same time.
 
-## Final CTA
+## Take the next step
 
 If plumbing leads are coming from calls, forms, voicemails, and after-hours messages, WNY Business Automation can help you map a cleaner first-response workflow. Start with a simple review of your current intake process and get three practical automation ideas for routing urgent requests, routine jobs, and appointment follow-up.
 

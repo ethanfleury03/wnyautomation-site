@@ -1,12 +1,8 @@
-# From Spreadsheet to CRM: When a Small Business Should Automate Lead Tracking
-
 ## Quick answer: when should you use spreadsheet to CRM automation?
 
 Spreadsheet to CRM automation is helpful when your lead spreadsheet is still useful, but follow-up is starting to slip. If new inquiries come from calls, website forms, Facebook messages, referrals, or email, a simple automation can move the important details into a cleaner CRM or task system so the right person knows what to do next.
 
 For many Buffalo small businesses, the goal is not to replace every spreadsheet overnight. The better first step is to automate the handoff from “new lead came in” to “someone owns the next follow-up.”
-
-## Introduction
 
 A spreadsheet is often where lead tracking starts.
 
@@ -162,8 +158,6 @@ It could look like this:
 
 That keeps the project grounded. The business improves follow-up without forcing the team to change everything at once.
 
-## Mid-page CTA
-
 Not sure whether your spreadsheet needs a full CRM or just a cleaner follow-up workflow? WNY Business Automation can review your current lead tracking process and suggest a practical first automation before you commit to new software.
 
 ## What to automate first
@@ -264,6 +258,6 @@ A CRM can help organize leads and follow-ups, but it does not guarantee sales. T
 
 In many cases, yes. The goal is usually to build around your current tools where possible, then recommend a simpler setup only if the current process is creating avoidable manual work or missed follow-ups.
 
-## Final CTA
+## Take the next step
 
 If your lead spreadsheet is starting to feel like a second inbox, WNY Business Automation can help you map a cleaner path from spreadsheet to CRM. Start with a practical workflow review and get a few realistic automation ideas for leads, tasks, and follow-ups — no hype, no giant software overhaul.

@@ -102,7 +102,7 @@ In this case, website form follow-up is probably the best first project. It happ
 
 Custom project pricing matters, but it requires more judgment. That does not mean it should never be improved. It just may need process cleanup before automation.
 
-## Mid-page CTA: want help choosing the first workflow?
+## Want help choosing the first workflow?
 
 Not sure which workflow is worth fixing first? WNY Business Automation can review your current lead, quote, appointment, or admin process and suggest a few practical automations to start with. The goal is not a giant software overhaul. It is a clear first step that fits how your team already works.
 
@@ -184,7 +184,7 @@ Often, yes. Many small-business workflows can start with the tools already in pl
 
 Before spending more on traffic, make sure new inquiries are being captured, acknowledged, assigned, and followed up. Website lead response, missed call handling, and quote follow-up are often better first fixes than adding more leads to a messy process.
 
-## Final CTA
+## Take the next step
 
 If your Buffalo or Western New York business is buried in follow-ups, quote reminders, appointment tasks, or missed messages, WNY Business Automation can help you choose the first workflow to automate. Start with a simple workflow audit and get a few practical automation ideas before buying new software or rebuilding your whole process.
 

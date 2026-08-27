@@ -77,8 +77,6 @@ Here is one example:
 
 For shops in places like Cheektowaga or Lockport where customers may be comparing options or working around busy schedules, a simple reminder can keep the conversation open without forcing the advisor to manually track every estimate in their head.
 
-## Mid-page CTA
-
 Not sure which repair shop workflow is worth fixing first? WNY Business Automation can review your appointment, estimate, or follow-up process and suggest three practical automations to start with — no giant software overhaul required.
 
 ## 4. Vehicle status updates
@@ -193,7 +191,7 @@ Yes, if the messages are simple, honest, and compliant with review platform rule
 
 Not always. Many workflows can start with your current website forms, email, calendar, CRM, or shop process. If a better tool is needed, it should be chosen around the workflow instead of buying software first.
 
-## Final CTA
+## Take the next step
 
 Want to see where automation could help your repair shop first? WNY Business Automation can map three practical workflows for appointments, estimates, reviews, or follow-up — built for a local Buffalo/WNY business, not a bloated enterprise system.
 

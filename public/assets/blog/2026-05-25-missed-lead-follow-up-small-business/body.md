@@ -1,19 +1,8 @@
-<!-- Internal Draft Notes - remove before publishing -->
-- Primary keyword: missed lead follow up
-- Search intent: Understand why lead speed matters
-- Local target: Western New York
-- Suggested slug: missed-lead-follow-up-small-business
-- Suggested meta title: Missed Lead Follow-Up for WNY Small Businesses
-- Suggested meta description: Learn how missed lead follow-up workflows help Western New York small businesses respond faster to calls, forms, and inquiries.
-- Suggested excerpt: Missed leads are often caused by busy days, after-hours inquiries, and scattered inboxes. Here is a practical follow-up workflow small businesses can use to respond faster without living in their inbox.
-
 ## Quick answer: what is missed lead follow-up?
 
 Missed lead follow-up is the process of quickly responding when a potential customer calls, submits a form, sends a message, or asks for a quote but does not get an immediate human reply. For small businesses in Western New York, a simple automation can acknowledge the inquiry, collect the right details, and create a clear task for the team so the lead does not sit unnoticed in an inbox.
 
 The goal is not to replace real service. The goal is to make sure new opportunities are noticed, routed, and followed up on while your team is busy serving customers.
-
-## Introduction
 
 A lot of missed leads do not look dramatic at first.
 
@@ -116,8 +105,6 @@ Keep the message simple and honest. Do not pretend a person has reviewed the req
 
 Do not automate sensitive conversations, complex estimates, upset customers, or anything requiring judgment. Use automation to capture and route the request, then let a person handle the important part.
 
-## Mid-page CTA
-
 Not sure where leads are slipping through? WNY Business Automation can review your calls, forms, inboxes, and follow-up process, then suggest three practical automation ideas you can start with before buying a complicated system.
 
 ## Common mistakes with missed lead follow-up
@@ -196,7 +183,7 @@ Faster is generally better, but the right expectation depends on the business. T
 
 Yes. Quote follow-up is one of the strongest use cases because open estimates are easy to forget during busy weeks. The workflow should remind your team and send helpful, non-pushy follow-up messages when appropriate.
 
-## Final CTA
+## Take the next step
 
 If missed calls, form submissions, quote requests, or website leads are slipping through the cracks, WNY Business Automation can help map a simple first-response workflow for your business.
 

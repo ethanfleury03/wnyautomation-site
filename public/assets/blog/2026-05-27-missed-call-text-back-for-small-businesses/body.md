@@ -247,7 +247,7 @@ Not always. A simple spreadsheet or task list can work at first. A CRM becomes m
 
 Phone-heavy businesses usually benefit most: contractors, home services, appointment-based offices, auto shops, med spas, salons, hospitality businesses, and any local company where calls turn into bookings or quotes.
 
-## Final CTA
+## Take the next step
 
 If your Buffalo or Western New York business gets calls, quote requests, or website leads that sometimes slip through, start with a simple workflow audit.
 

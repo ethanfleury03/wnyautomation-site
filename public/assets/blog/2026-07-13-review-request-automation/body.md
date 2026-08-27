@@ -66,8 +66,6 @@ Do not automate blindly when:
 
 Also, businesses should be careful with platform rules. In general, ask customers honestly for feedback, do not offer incentives for positive reviews, and do not pressure people to leave only favorable comments. If you use Google review links or other review platforms, make sure your process follows their current guidelines.
 
-## Mid-page CTA
-
 Not sure when your business should ask for reviews? WNY Business Automation can help map a simple review request workflow around your current appointments, jobs, forms, or CRM so your team knows what gets sent, when it gets sent, and when a person should step in.
 
 ## Review request automation ideas by business type
@@ -193,7 +191,7 @@ The point is not to bury your business in software. The point is to create a sim
 
 ### Is review request automation allowed?
 
-Businesses can generally ask customers for honest reviews, but they should follow the rules of the platforms they use. Avoid offering incentives for positive reviews, pressuring customers, or filtering people in a way that violates platform guidelines. Ethan should verify the final wording against current review platform policies before publishing.
+Businesses can generally ask customers for honest reviews, but they should follow the current rules of the platforms they use. Avoid offering incentives for positive reviews, pressuring customers, or filtering people in ways that violate platform guidelines.
 
 ### Should review requests be sent by text or email?
 
@@ -211,7 +209,7 @@ Often, yes. A review request workflow can usually start from an appointment, job
 
 The automation should stop and notify a person. A negative reply is not a failure of the system; it is a signal that the customer needs human attention.
 
-## Final CTA
+## Take the next step
 
 If your WNY business gets good feedback but reviews are inconsistent, WNY Business Automation can help you build a simple review request workflow around your current tools. Start with one process, keep the message human, and make sure your team knows exactly when to step in.
 

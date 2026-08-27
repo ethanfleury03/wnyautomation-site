@@ -102,7 +102,7 @@ A private event workflow can help separate normal guest questions from higher-va
 
 If private events are an important part of your revenue mix, this kind of workflow is often more useful than a generic contact form.
 
-## Mid-page CTA: start with the inquiry that gets missed most
+## Start with the inquiry that gets missed most
 
 Not sure which restaurant workflow is worth fixing first? WNY Business Automation can review how your restaurant currently handles FAQs, catering requests, reviews, and manager handoffs, then suggest three practical automations to start with — without a giant software overhaul.
 
@@ -270,7 +270,7 @@ Yes. A catering inquiry workflow can collect event date, guest count, location, 
 
 No. Small restaurants, cafes, bars, and hospitality teams can often start with one simple workflow. The key is to keep it focused and build around tools the team will actually use.
 
-## Final CTA
+## Take the next step
 
 If your Buffalo, Lewiston, Niagara Falls, or WNY restaurant is losing track of FAQs, catering inquiries, review requests, or manager follow-ups, WNY Business Automation can help map a simple first workflow.
 

@@ -1,5 +1,3 @@
-# Med Spa Automation Ideas: Consultation Leads, Appointment Reminders, and Review Requests
-
 ## Quick answer: what is med spa automation?
 
 Med spa automation is the use of simple systems to handle repeated client communication and admin steps, such as responding to consultation requests, sending appointment reminders, answering common treatment questions, and asking for reviews after visits. For med spas in Williamsville, Amherst, Buffalo, and nearby Western New York communities, the goal is not to replace the front desk or provider relationship. The goal is to make sure interested clients get a timely response and your team has a clear next step.
@@ -205,7 +203,7 @@ Businesses can generally ask clients for reviews, but the request should be hone
 
 WNY Business Automation works with Western New York small businesses that need practical help with lead follow-up, appointment reminders, CRM workflows, websites, and admin automation. Med spas are a strong fit when the need is operational follow-up and client communication, not clinical decision-making.
 
-## Final CTA
+## Take the next step
 
 Want to see where automation could help your med spa first? WNY Business Automation can review your consultation, reminder, FAQ, and review-request workflow and suggest a few practical improvements for your team.
 

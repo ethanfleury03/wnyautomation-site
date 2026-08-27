@@ -83,7 +83,7 @@ A safe workflow includes:
 
 A [missed call and website lead automation](/services/missed-lead-rescue-system) workflow is often one of the easiest first automations to test because it focuses on acknowledgement and routing.
 
-## Mid-page CTA: not sure what to automate first?
+## Not sure what to automate first?
 
 If your front desk is juggling calls, forms, reminders, and repeated questions, WNY Business Automation can help map the first few workflows worth cleaning up. Start small: one intake process, one reminder sequence, or one missed-call handoff.
 
@@ -204,7 +204,7 @@ It can be safe when it is designed with limits. Automated messages should avoid 
 
 Yes, automation can acknowledge after-hours inquiries, collect basic non-clinical details, and create a task for the next business day. Urgent or clinical situations should follow the practice's established emergency communication process.
 
-## Final CTA
+## Take the next step
 
 If your dental office in Amherst, Williamsville, West Seneca, Buffalo, or nearby Western New York communities is dealing with too many calls, forms, reminders, and repeated questions, WNY Business Automation can help you choose a practical first workflow.
 

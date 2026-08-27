@@ -1,12 +1,8 @@
-# Zapier vs Custom Automation: What Should a Small Business Use?
-
 ## Quick answer: Zapier vs custom automation
 
 For many small businesses, **Zapier vs custom automation** is not an either-or decision. Zapier can be a good fit for simple, low-risk workflows between common tools. Custom automation, or a more flexible platform like n8n, can make more sense when the workflow has important business rules, sensitive customer handoffs, or multiple steps that need to be watched closely.
 
 The practical answer for Western New York businesses is to start with the simplest tool that can reliably handle the job. If a workflow protects leads, quotes, appointments, or customer communication, it is worth slowing down and designing it carefully before connecting a bunch of apps.
-
-## Introduction
 
 A lot of small-business owners in Buffalo and Western New York eventually hit the same question:
 
@@ -100,8 +96,6 @@ Custom does not have to mean huge or expensive enterprise software. For a small 
 For example, a local home service company might need after-hours website requests to be acknowledged immediately, routed differently if urgent, logged in the CRM, and assigned for next-business-day follow-up. A basic Zap may handle part of that. A custom workflow can define the whole handoff so the customer is not left guessing.
 
 A [workflow automation company in Buffalo](/services/intake-to-task-automation) can help decide whether the workflow should stay simple or needs a more tailored setup.
-
-## Mid-page CTA
 
 Not sure which tool fits your first workflow? WNY Business Automation can help map the task, identify the safest starting point, and suggest a simple automation before you commit to a bigger system.
 
@@ -237,7 +231,7 @@ No. Many small-business workflows do not need AI. Simple triggers, tasks, remind
 
 A good first automation is usually a repetitive task tied to leads, appointments, quotes, or customer communication. Website form routing, missed call response, and quote follow-up reminders are common starting points.
 
-## Final CTA
+## Take the next step
 
 If you are comparing Zapier, n8n, or custom automation for your Western New York business, start with the workflow — not the tool.
 

@@ -4,8 +4,6 @@ An **AI receptionist for small business** can answer common phone questions, col
 
 The best setup is not “replace the front desk.” It is “handle the repeatable first step, then bring in a person when judgment matters.”
 
-## Introduction
-
 If you run a small business in Buffalo, Amherst, Williamsville, Cheektowaga, West Seneca, Niagara Falls, or anywhere around Western New York, missed calls can pile up fast.
 
 A customer calls while your team is on a job. Someone asks a question your staff answers five times a day. A potential appointment comes in after hours. A caller needs basic information, but the person who knows the answer is busy with another customer.
@@ -99,8 +97,6 @@ An AI receptionist can provide a simple first response:
 A [missed call and website lead automation](/services/missed-lead-rescue-system) workflow can also connect phone, form, and website inquiries so they do not sit in separate inboxes.
 
 This is especially useful for home service businesses, appointment-based companies, and local offices that get calls outside normal hours.
-
-### Mid-page CTA
 
 Not sure if an AI receptionist is the right first automation for your business? WNY Business Automation can review your current call, voicemail, website lead, or appointment process and suggest three practical places to start.
 
@@ -240,7 +236,7 @@ AI receptionist workflows can fit contractors, home service businesses, med spas
 
 Avoid automating pricing promises, medical or legal advice, emergency decisions, sensitive customer issues, or anything that requires human judgment. Use human handoffs for those situations.
 
-## Final CTA
+## Take the next step
 
 If calls, voicemails, website leads, or after-hours inquiries are slipping through the cracks, WNY Business Automation can help you map a practical first workflow. Start with one useful system — not a giant software overhaul — and get three automation ideas tailored to your Buffalo or Western New York business.
 

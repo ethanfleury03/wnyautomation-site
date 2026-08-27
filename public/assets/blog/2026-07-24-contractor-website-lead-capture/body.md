@@ -1,12 +1,8 @@
-# Contractor Website Lead Capture: How to Turn Visitors Into Better Estimate Requests
-
 ## Quick answer: what is contractor website lead capture?
 
 Contractor website lead capture is the way your website turns visitors into clear estimate requests, phone calls, and follow-up tasks. For contractors in Buffalo and Western New York, that usually means more than a basic contact form. A good setup helps the customer explain what they need, confirms the request was received, and gives your team enough information to follow up without digging through emails.
 
 The goal is not to automate every conversation. The goal is to make sure good project opportunities do not sit unanswered because your crew is on a job, driving between estimates, or checking messages at the end of the day.
-
-## Introduction
 
 A contractor website can look good and still lose leads.
 
@@ -118,8 +114,6 @@ A simple reminder can help the team circle back when a request has not been cont
 ### The customer gets no confirmation
 
 When a customer submits a form and nothing happens, they may wonder if it worked. An automated confirmation can reassure them and set expectations without promising a specific timeline.
-
-## Mid-page CTA
 
 Not sure whether your contractor website is capturing the right information? WNY Business Automation can review your current form, calls-to-action, and follow-up process, then suggest three practical improvements you can start with before rebuilding everything.
 
@@ -269,7 +263,7 @@ No. Website lead capture can feed a CRM, spreadsheet, email inbox, or task list.
 
 Faster is usually better, but the right expectation depends on your team and service type. Automation can help acknowledge the request quickly and remind your team to respond without promising a guaranteed response time.
 
-## Final CTA
+## Take the next step
 
 If your contractor website gets visitors but estimate requests still feel scattered, WNY Business Automation can help map a cleaner lead capture and follow-up workflow.
 

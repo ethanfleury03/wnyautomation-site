@@ -4,8 +4,6 @@ Website FAQ lead capture is a simple way to turn common customer questions into 
 
 For Buffalo and Western New York service businesses, this can help when people are browsing after hours, comparing options, or trying to figure out whether your company is the right fit before they call.
 
-## Introduction
-
 Most small business websites have two types of visitors.
 
 Some visitors are ready to call or request a quote right away. Others are close, but they still have questions:
@@ -254,7 +252,7 @@ Yes, if the current form is too generic. FAQ lead capture can ask better questio
 
 Yes. The same idea can work across Western New York, including Amherst, Williamsville, Cheektowaga, West Seneca, Tonawanda, Hamburg, Lancaster, and nearby areas. The key is tailoring the questions to your actual services and service area.
 
-## Final CTA
+## Take the next step
 
 If your website gets questions but your team still has to chase down the basic details, WNY Business Automation can help map a better FAQ lead capture workflow.
 

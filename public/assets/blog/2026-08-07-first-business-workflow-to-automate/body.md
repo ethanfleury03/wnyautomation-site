@@ -1,12 +1,8 @@
-# Your First Automation Pilot: A 30-Day Roadmap for Local Businesses
-
 ## Quick answer: what is the first business workflow to automate?
 
 The first business workflow to automate should usually be a simple, repeated process where delays cost you time, leads, appointments, or customer trust. For many Western New York small businesses, that means missed calls, website lead follow-up, quote reminders, appointment reminders, or form-to-task routing.
 
 Start with one workflow that already happens manually. Do not try to automate your whole business at once. A good first pilot should be easy to explain, easy to test, and still include a clear human handoff.
-
-## Introduction
 
 If you run a local business in Buffalo, Amherst, Williamsville, Cheektowaga, West Seneca, Niagara Falls, or anywhere in Western New York, you probably have a few processes that work fine when things are slow — and fall apart when the day gets busy.
 
@@ -120,8 +116,6 @@ The message should sound human and simple. For example:
 > Thanks for reaching out — we received your request and someone from our team will review it. If this is urgent, please call us directly.
 
 That is usually better than a robotic message packed with too much information.
-
-### Mid-page CTA
 
 Not sure which workflow is worth fixing first? WNY Business Automation can review your current lead, quote, appointment, or admin process and help you choose one practical pilot instead of guessing at tools.
 
@@ -261,7 +255,7 @@ Do not start with processes that require heavy judgment, sensitive decisions, un
 
 Yes. WNY Business Automation can review how leads, quotes, appointments, forms, reviews, or admin tasks currently move through your business and suggest a practical first pilot for your team.
 
-## Final CTA
+## Take the next step
 
 If your Western New York business is ready to try automation but you are not sure where to start, begin with one practical workflow.
 

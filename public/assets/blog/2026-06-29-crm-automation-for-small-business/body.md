@@ -1,5 +1,3 @@
-# CRM Automation for Small Business: How to Keep Leads, Tasks, and Follow-Ups Organized
-
 ## Quick answer: what is CRM automation for small business?
 
 CRM automation for small business is a practical way to keep leads, customer details, tasks, and follow-ups organized without relying on memory, sticky notes, or scattered spreadsheets. For Western New York businesses, it can help make sure a website form, phone inquiry, quote request, or referral gets logged, assigned, and followed up on at the right time.
@@ -105,7 +103,7 @@ A [lead follow-up automation](/services/automated-lead-follow-up) workflow can c
 
 **When not to automate:** If every project is custom and changes constantly, keep the stages simple at first. Overbuilt pipelines are hard for small teams to maintain.
 
-## Mid-page CTA: start with the follow-up gaps
+## Start with the follow-up gaps
 
 Not sure where CRM automation would actually help? Start by looking for the places where leads or tasks currently get lost.
 
@@ -209,7 +207,7 @@ They do not have to. Good automation uses short, helpful, human-friendly message
 
 Start with new lead capture, lead assignment, quote follow-up reminders, and basic status tracking. Those workflows are simple, practical, and usually easier for a small team to maintain.
 
-## Final CTA
+## Take the next step
 
 If your Buffalo or Western New York business is tracking leads in too many places, WNY Business Automation can help you map a simple CRM workflow that keeps inquiries, quotes, tasks, and follow-ups organized.
 

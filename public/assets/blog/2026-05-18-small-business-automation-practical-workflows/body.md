@@ -64,7 +64,7 @@
   **Customer experience:** The customer feels acknowledged instead of ignored.  
   **When not to automate:** Be careful with emergencies, sensitive issues, or situations where a live call is required.
   
-  This pairs well with [missed call and website lead automation](/services/missed-lead-rescue-system) when the page is live.
+  This pairs well with [missed call and website lead automation](/services/missed-lead-rescue-system).
   
   ## 3. Quote follow-up reminders
   
@@ -297,7 +297,7 @@
   
   Start with one workflow. Pick a process that happens often and has a clear handoff. Once that works, add the next workflow.
   
-  ## Final CTA
+## Take the next step
   
   If your Buffalo or Western New York business is missing follow-ups, chasing quotes manually, or juggling too many admin tasks, WNY Business Automation can help you find a practical first step.
   

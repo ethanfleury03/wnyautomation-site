@@ -78,7 +78,7 @@ The system immediately replies, asks whether there is active leaking, requests p
 
 That does not mean the system is “handling” the emergency. It means your team gets clearer information faster.
 
-## Mid-page CTA: not sure where leads are getting stuck?
+## Not sure where leads are getting stuck?
 
 If storm leads, open estimates, or website requests are getting hard to track, WNY Business Automation can help map the first workflow worth fixing. Start with a simple review of how roofing leads come in, where quotes go quiet, and what follow-up your team already does manually.
 
@@ -184,7 +184,7 @@ Often, yes. The best approach depends on the tools you already use. In many case
 
 No automation should be sold as a guarantee. A cleaner follow-up workflow can help reduce missed opportunities, improve response consistency, and keep open quotes organized, but results depend on the quality of the leads, pricing, service, communication, and sales process.
 
-## Final CTA
+## Take the next step
 
 Roofing leads can move fast in Buffalo and Western New York, especially after rough weather. If your team is juggling storm calls, website forms, estimate appointments, and open quotes, WNY Business Automation can help you build a simple follow-up workflow without turning your business into a software project.
 
