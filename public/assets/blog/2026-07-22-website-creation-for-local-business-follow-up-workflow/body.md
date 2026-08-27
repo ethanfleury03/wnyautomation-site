@@ -111,7 +111,7 @@ If leads only live in email, they are easy to lose.
 
 A basic tracking step could add the inquiry to a CRM, spreadsheet, or lead pipeline. It should include the source, request type, date, contact info, and current status.
 
-This is where [automated lead follow-up](/services/automated-lead-follow-up) can help. The system does not need to replace the team. It simply gives the team a cleaner list of who needs attention.
+This is where [automated lead follow-up](/services/missed-lead-rescue-system) can help. The system does not need to replace the team. It simply gives the team a cleaner list of who needs attention.
 
 ### 5. Human handoff: decide who follows up and when
 

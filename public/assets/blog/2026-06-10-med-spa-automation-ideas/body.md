@@ -59,7 +59,7 @@ A starter workflow:
 - **Customer experience:** The client gets a helpful reminder without feeling spammed.
 - **When not to automate:** Avoid sending sensitive information through channels that are not appropriate for your policies. Keep private treatment details limited.
 
-If your team is manually sending reminder texts or making repeated reminder calls, [appointment reminder automation](/services/appointment-reminder-automation) may be a practical first workflow to clean up.
+If your team is manually sending reminder texts or making repeated reminder calls, [appointment reminder automation](/services/appointment-review-reminder-follow-up) may be a practical first workflow to clean up.
 
 ## Not sure what to automate first?
 
@@ -79,7 +79,7 @@ A useful FAQ workflow:
 - **Customer experience:** The visitor gets quick guidance without being misled.
 - **When not to automate:** Do not automate diagnosis, treatment recommendations, clinical claims, or anything your providers should review.
 
-For many clinics, [AI chatbots for small business websites](/services/ai-chatbots-small-business) work best when they are narrow, controlled, and designed around real client questions — not open-ended AI guessing.
+For many clinics, [AI chatbots for small business websites](/services/website-faq-lead-capture-assistant) work best when they are narrow, controlled, and designed around real client questions — not open-ended AI guessing.
 
 ## 4. Intake form and task routing
 
@@ -111,7 +111,7 @@ A responsible review request workflow:
 - **Customer experience:** The request feels personal and optional.
 - **When not to automate:** Do not pressure clients, gate negative feedback in a misleading way, or offer incentives for reviews. Follow platform rules and keep the message respectful.
 
-A [review request automation](/services/review-request-automation) workflow should be designed around trust, not shortcuts.
+A [review request automation](/services/appointment-review-reminder-follow-up) workflow should be designed around trust, not shortcuts.
 
 ## 6. Rebooking and follow-up reminders
 
@@ -179,7 +179,7 @@ WNY Business Automation helps local small businesses build practical automation 
 
 The goal is not to bury your clinic in complicated software. It is to map the process, build around your current tools where possible, and make sure your staff and clients both understand what happens next.
 
-If your med spa is missing inquiries, manually chasing reminders, or answering the same questions every day, [automated lead follow-up](/services/automated-lead-follow-up) and appointment workflows can be a practical place to begin.
+If your med spa is missing inquiries, manually chasing reminders, or answering the same questions every day, [automated lead follow-up](/services/missed-lead-rescue-system) and appointment workflows can be a practical place to begin.
 
 ## FAQ
 

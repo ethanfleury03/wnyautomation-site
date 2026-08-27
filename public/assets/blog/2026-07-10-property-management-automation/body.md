@@ -41,7 +41,7 @@ A practical automation starts with one clear intake path. That might be a websit
 
 **When not to automate:** If the issue may involve danger, legal sensitivity, or a judgment call, automation should route the request quickly to a human instead of trying to solve it.
 
-A [form-to-task automation](/services/form-to-task-automation) workflow is often a good starting point because it turns a tenant submission into a specific task instead of another loose message.
+A [form-to-task automation](/services/intake-to-task-automation) workflow is often a good starting point because it turns a tenant submission into a specific task instead of another loose message.
 
 ## 2. Urgency triage for repairs
 
@@ -79,7 +79,7 @@ A tenant FAQ assistant or chatbot can help with these routine questions, as long
 
 For property management, the handoff is especially important. Automation should not make up policy answers, discuss legal issues, or promise exceptions. It should answer basic questions, collect details, and route anything sensitive to the right person.
 
-A practical [AI chatbot for small business](/services/ai-chatbots-small-business) setup can be limited to your approved policies, application steps, maintenance instructions, and contact paths.
+A practical [AI chatbot for small business](/services/website-faq-lead-capture-assistant) setup can be limited to your approved policies, application steps, maintenance instructions, and contact paths.
 
 Not sure which property management workflow is worth fixing first? WNY Business Automation can review how tenant requests, maintenance issues, and vendor updates currently move through your business and suggest three practical automations to start with.
 
@@ -121,7 +121,7 @@ For example:
 
 This should feel helpful, not robotic. The goal is to collect enough detail so a real person can follow up with context.
 
-If your rental inquiries are slipping through calls or website forms, [automated lead follow-up](/services/automated-lead-follow-up) can help create a more consistent first response.
+If your rental inquiries are slipping through calls or website forms, [automated lead follow-up](/services/missed-lead-rescue-system) can help create a more consistent first response.
 
 ## What to automate first
 

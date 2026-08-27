@@ -25,7 +25,7 @@ You may have leads coming from:
 
 If each one gets handled differently, follow-up becomes hard to trust.
 
-That is where a simple [CRM automation for small business](/services/crm-automation-small-business) workflow can help.
+That is where a simple [CRM automation for small business](/services/intake-to-task-automation) workflow can help.
 
 ## CRM automation does not have to mean complicated software
 
@@ -89,7 +89,7 @@ This works well for contractors, roofers, plumbers, med spas, insurance agencies
 
 **When not to automate:** For emergencies, urgent service calls, or sensitive situations, the workflow should escalate quickly instead of sending a generic message.
 
-A [lead follow-up automation](/services/automated-lead-follow-up) workflow can connect this missed-call process to your CRM so calls do not disappear into voicemail.
+A [lead follow-up automation](/services/missed-lead-rescue-system) workflow can connect this missed-call process to your CRM so calls do not disappear into voicemail.
 
 ### 4. Lead stage changes to internal reminders
 

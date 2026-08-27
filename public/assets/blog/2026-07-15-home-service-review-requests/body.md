@@ -21,7 +21,7 @@ That means review requests often happen randomly:
 - A happy customer says “I’ll leave you a review,” but never receives the link.
 - The business waits weeks, when the experience is no longer fresh.
 
-A simple [review request automation](/services/review-request-automation) workflow can help make the process more consistent while still keeping it human.
+A simple [review request automation](/services/appointment-review-reminder-follow-up) workflow can help make the process more consistent while still keeping it human.
 
 ## A simple post-job review workflow
 
@@ -120,7 +120,7 @@ When a review comes in, someone should know.
 
 A simple alert can go to the owner, office manager, or service manager. Positive reviews may deserve a quick thank-you. Critical reviews or private negative feedback should get a fast human response.
 
-If your team already uses a CRM or task system, [CRM automation for small business](/services/crm-automation-small-business) can keep these follow-ups organized instead of buried in email.
+If your team already uses a CRM or task system, [CRM automation for small business](/services/intake-to-task-automation) can keep these follow-ups organized instead of buried in email.
 
 Not sure where review requests fit into your current process? WNY Business Automation can review how your team closes jobs, follows up with customers, and handles missed review opportunities, then suggest a simple first workflow to test.
 
@@ -180,7 +180,7 @@ For a home service review request workflow, that might include:
 
 The goal is not to bury your team in complicated software. It is to make a useful follow-up habit easier to repeat.
 
-If your business also struggles with missed calls, website forms, or estimate follow-up, a [missed call and website lead automation](/services/missed-call-website-lead-automation) or [automated lead follow-up](/services/automated-lead-follow-up) workflow may pair naturally with review requests.
+If your business also struggles with missed calls, website forms, or estimate follow-up, a [missed-call and lead-follow-up workflow](/services/missed-lead-rescue-system) may pair naturally with review requests.
 
 ## FAQ
 
@@ -214,4 +214,4 @@ If your home service team is doing good work but review requests keep slipping t
 
 Start with one process: completed job, polite review request, clear human handoff. No hype, no giant software overhaul — just a practical system your team can actually use.
 
-[Request a free automation audit](/services/review-request-automation) and ask for three practical automation ideas for your review, follow-up, or customer communication process.
+[Request a free automation audit](/free-workflow-audit#workflow-form) and ask for three practical automation ideas for your review, follow-up, or customer communication process.

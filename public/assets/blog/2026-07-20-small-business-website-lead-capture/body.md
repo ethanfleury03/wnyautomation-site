@@ -124,7 +124,7 @@ For example:
 - A follow-up task is created.
 - If no one marks it handled, a reminder appears.
 
-A simple [automated lead follow-up workflow](/services/automated-lead-follow-up) can help prevent website inquiries from sitting unanswered when the day gets busy.
+A simple [automated lead follow-up workflow](/services/missed-lead-rescue-system) can help prevent website inquiries from sitting unanswered when the day gets busy.
 
 ## 5. Match forms and CTAs to the page intent
 

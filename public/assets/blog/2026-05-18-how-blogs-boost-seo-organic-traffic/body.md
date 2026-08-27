@@ -45,7 +45,7 @@ A blog lets you create pages around more specific searches, such as:
 
 Each blog post can target one specific question or topic. That gives your website more surface area in search results without cluttering your main navigation.
 
-For example, WNY Business Automation has service pages for things like [automated lead follow-up](/services/automated-lead-follow-up), [website creation](/services/website-creation), and [workflow automation in Buffalo](/services/workflow-automation-company-buffalo). Blog posts can support those pages by explaining related problems in plain English.
+For example, WNY Business Automation has service pages for things like [automated lead follow-up](/services/missed-lead-rescue-system), [website creation](/services/website-creation), and [workflow automation in Buffalo](/services/intake-to-task-automation). Blog posts can support those pages by explaining related problems in plain English.
 
 ## Blogs help Google understand your expertise
 
@@ -77,9 +77,9 @@ Internal links are links from one page on your site to another page on your site
 For example, a blog post about why blogs boost SEO can naturally link to:
 
 - [website creation for local businesses](/services/website-creation)
-- [workflow automation for Buffalo businesses](/services/workflow-automation-company-buffalo)
-- [automated lead follow-up](/services/automated-lead-follow-up)
-- [review request automation](/services/review-request-automation)
+- [workflow automation for Buffalo businesses](/services/intake-to-task-automation)
+- [automated lead follow-up](/services/missed-lead-rescue-system)
+- [review request automation](/services/appointment-review-reminder-follow-up)
 
 This matters because a blog post may attract someone early in the research process. If the article is helpful, the internal links give them a next step without forcing a hard sales pitch.
 

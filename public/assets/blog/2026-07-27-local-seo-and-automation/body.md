@@ -68,7 +68,7 @@ This is one of the best first automations for a local business website.
 
 **When not to automate:** Do not use a fully automated response for sensitive or complicated requests where a human should review the details first. Keep the first message simple and honest.
 
-A [lead follow-up automation workflow](/services/automated-lead-follow-up) can help turn website interest into a clear next step instead of another email to remember.
+A [lead follow-up automation workflow](/services/missed-lead-rescue-system) can help turn website interest into a clear next step instead of another email to remember.
 
 ### 2. Missed call text-back after local search traffic
 
@@ -100,7 +100,7 @@ A Buffalo location page or industry page can bring in different kinds of inquiri
 
 **When not to automate:** If every inquiry needs custom review, automate the logging and notification first. Do not force every lead into a rigid category.
 
-For Buffalo-focused pages, connect the workflow back to your local presence and service area. A page like WNY Business Automation’s [Buffalo automation services page](/locations/buffalo-ny) is more useful when the follow-up path is clear after someone reaches out.
+For Buffalo-focused pages, connect the workflow back to your local presence and service area. A page like WNY Business Automation’s [services overview](/services) is more useful when the follow-up path is clear after someone reaches out.
 
 ### 4. Quote request follow-up reminders
 

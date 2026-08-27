@@ -155,7 +155,7 @@ If your contractor website is currently basic, do not start with a huge system. 
 
 ### 5. Quote follow-up after the estimate
 
-Lead capture does not end when the estimate is sent. A [quote follow-up automation](/services/quote-follow-up-automation) workflow can help remind your team to check in on open estimates without manually tracking every quote in a notebook or spreadsheet.
+Lead capture does not end when the estimate is sent. A [quote follow-up automation](/services/quote-follow-up-system) workflow can help remind your team to check in on open estimates without manually tracking every quote in a notebook or spreadsheet.
 
 ## How website design and automation work together
 

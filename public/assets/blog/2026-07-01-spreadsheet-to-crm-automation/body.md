@@ -128,7 +128,7 @@ This is a good bridge for businesses that are not ready to leave spreadsheets co
 
 **When not to automate:** Urgent or sensitive situations should be routed carefully, with clear escalation rules and human review.
 
-This pairs well with [CRM automation for small business](/services/crm-automation-small-business) when leads currently live across phone notes, inboxes, and spreadsheets.
+This pairs well with [CRM automation for small business](/services/intake-to-task-automation) when leads currently live across phone notes, inboxes, and spreadsheets.
 
 ### Workflow 4: Quote sent to follow-up sequence
 
@@ -180,7 +180,7 @@ If the biggest issue is remembering to follow up, automate due dates and reminde
 
 If every row is formatted differently, fix the fields before adding automation. Bad data creates bad automation.
 
-For many teams, [admin workflow automation](/services/admin-workflow-automation) starts by simplifying one repeated handoff rather than building a complicated system.
+For many teams, [admin workflow automation](/services/intake-to-task-automation) starts by simplifying one repeated handoff rather than building a complicated system.
 
 ## Common mistakes to avoid
 
