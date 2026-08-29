@@ -51,7 +51,7 @@ function renderMeta(meta) {
     <meta name="twitter:image" content="${escapeAttribute(m.image)}" />`;
 }
 
-function renderTrackingScripts() {
+function renderTrackingScripts(pathname = "/") {
   const scripts = [];
 
   if (business.analytics.gaId) {
@@ -66,6 +66,9 @@ function renderTrackingScripts() {
   }
 
   if (business.analytics.metaPixelId) {
+    const viewContent = pathname === "/free-workflow-audit"
+      ? "\n        fbq('track', 'ViewContent', { content_name: 'Free Workflow Audit' });"
+      : "";
     scripts.push(`
       <script>
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -74,8 +77,11 @@ function renderTrackingScripts() {
         t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
         (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '${escapeAttribute(business.analytics.metaPixelId)}');
-        fbq('track', 'PageView');
-      </script>`);
+        fbq('track', 'PageView');${viewContent}
+      </script>
+      <noscript><img height="1" width="1" style="display:none" alt=""
+        src="https://www.facebook.com/tr?id=${escapeAttribute(business.analytics.metaPixelId)}&amp;ev=PageView&amp;noscript=1"
+      /></noscript>`);
   }
 
   return scripts.join("\n");

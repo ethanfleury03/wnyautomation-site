@@ -1,0 +1,37 @@
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const path = require("node:path");
+
+process.env.NEXT_PUBLIC_SITE_URL = "https://wnyautomation.com";
+process.env.NEXT_PUBLIC_META_PIXEL_ID = "123456789012345";
+
+const {
+  renderLegalPage,
+  renderServicesIndex,
+  renderWorkflowAuditPage,
+} = require("../src/render/pages");
+
+const privacy = renderLegalPage("privacy");
+assert.match(privacy, /Effective date:<\/strong> August 29, 2026/);
+assert.match(privacy, /HubSpot CRM/);
+assert.match(privacy, /Google Analytics/);
+assert.match(privacy, /Meta Pixel/);
+assert.match(privacy, /expire after 24 hours/);
+assert.doesNotMatch(privacy, /placeholder|Review before launch/i);
+
+const services = renderServicesIndex();
+assert.match(services, /<title>Automation and Website Services for Buffalo Small Businesses \| WNY Business Automation<\/title>/);
+assert.doesNotMatch(services, /WNY Automation Co/);
+
+const audit = renderWorkflowAuditPage();
+assert.match(audit, /connect\.facebook\.net\/en_US\/fbevents\.js/);
+assert.match(audit, /fbq\('track', 'PageView'\)/);
+assert.match(audit, /fbq\('track', 'ViewContent'/);
+assert.match(audit, /facebook\.com\/tr\?id=123456789012345&amp;ev=PageView/);
+
+const browserScript = fs.readFileSync(path.join(__dirname, "..", "public", "script.js"), "utf8");
+assert.doesNotMatch(browserScript, /wny_automation_leads/);
+assert.match(browserScript, /expiresAt: Date\.now\(\) \+ 24 \* 60 \* 60 \* 1000/);
+assert.match(browserScript, /window\.fbq\("track", "Lead"/);
+
+console.log("Marketing readiness checks passed.");

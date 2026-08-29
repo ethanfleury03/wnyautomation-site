@@ -750,28 +750,78 @@ function renderBlogPostPage(post) {
 function renderLegalPage(type) {
   const isPrivacy = type === "privacy";
   const title = isPrivacy ? "Privacy Policy" : "Terms";
+  const effectiveDate = "August 29, 2026";
+  const privacyCopy = `
+    <p><strong>Effective date:</strong> ${effectiveDate}</p>
+    <p>This Privacy Policy explains how ${escapeHtml(business.legalName)} ("WNY Business Automation," "we," "us," or "our") handles information when you visit ${escapeHtml(business.siteUrl)} or contact us through the website.</p>
+
+    <h2>Information we collect</h2>
+    <p>When you submit a form, we may collect your name, email address, phone number, business name, website, industry, and the workflow or business task you describe. We also collect form and page context such as the page URL and title, submission time, campaign parameters (including UTM source, medium, and campaign), browser user-agent information, and the form version or conversion path.</p>
+    <p>Our hosting and analytics providers may also receive technical information such as your IP address, device and browser details, referring page, pages viewed, and interaction events.</p>
+
+    <h2>How we use information</h2>
+    <ul>
+      <li>Respond to workflow-audit requests and other inquiries.</li>
+      <li>Evaluate potential projects and communicate about services.</li>
+      <li>Create and maintain contact, company, deal, and inquiry records.</li>
+      <li>Measure website and campaign performance and improve the site.</li>
+      <li>Protect the website, prevent abuse, troubleshoot problems, and comply with legal obligations.</li>
+    </ul>
+
+    <h2>Where information is processed</h2>
+    <p>Website inquiries may be stored in our hosted database, synchronized to HubSpot CRM, and included in an email notification sent through Google/Gmail. The site is hosted by Vercel and uses infrastructure providers that process information to operate the website. If enabled, Google Analytics and the Meta Pixel process website usage and campaign data under their own privacy terms.</p>
+    <p>We may also use service providers for workflow automation or communications when needed to handle your request. We share only the information reasonably needed for those services, legal compliance, security, or a business transfer. We do not sell personal information.</p>
+
+    <h2>Analytics, advertising, and browser storage</h2>
+    <p>We use Google Analytics and may use Meta advertising tools to understand visits, measure conversions, build audiences, and evaluate advertising. These services may use cookies or similar technologies and may associate activity across websites or devices according to their policies and your account settings.</p>
+    <p>The website may temporarily save an unfinished form draft in your browser's local storage so you do not lose what you typed. Drafts expire after 24 hours and are removed after a successful submission. You can remove them sooner by clearing this site's browser data. Browser privacy controls, content blockers, and provider opt-out settings may limit analytics or advertising collection.</p>
+
+    <h2>Retention and security</h2>
+    <p>We keep inquiry and business-contact information for as long as reasonably needed to respond, maintain business records, measure performance, resolve disputes, enforce agreements, and meet legal obligations. Retention can vary by record and system. We use reasonable administrative and technical safeguards, but no internet transmission or storage system can be guaranteed completely secure.</p>
+
+    <h2>Your choices</h2>
+    <p>You may ask to access, correct, or delete personal information we control, or ask us to stop non-required marketing communications. Some records may be retained when required for legal, security, accounting, or legitimate business purposes. You can also control cookies and similar technologies through your browser and the settings offered by Google and Meta.</p>
+
+    <h2>Children's privacy</h2>
+    <p>This business website is not directed to children under 13, and we do not knowingly collect personal information from children under 13.</p>
+
+    <h2>Policy updates</h2>
+    <p>We may update this policy as our website, vendors, or practices change. The effective date above identifies the current version.</p>
+
+    <h2>Contact us</h2>
+    <p>For privacy questions or requests, email <a href="mailto:${escapeAttribute(business.email)}">${escapeHtml(business.email)}</a>.</p>`;
+  const termsCopy = `
+    <p><strong>Effective date:</strong> ${effectiveDate}</p>
+    <p>These terms govern use of this website. Website content is general information, not a promise that a particular automation, marketing, or business result will be available or suitable.</p>
+    <h2>No automatic service agreement</h2>
+    <p>Submitting a form or receiving an initial workflow review does not create a client relationship. Services, pricing, deliverables, responsibilities, and timelines are established only in a separate written agreement accepted by the parties.</p>
+    <h2>Acceptable use</h2>
+    <p>Do not misuse the website, attempt unauthorized access, interfere with its operation, submit unlawful material, or use automated means to abuse forms or systems.</p>
+    <h2>Intellectual property</h2>
+    <p>Unless otherwise stated, the website's original text, design, branding, and materials belong to ${escapeHtml(business.legalName)}. Third-party names and marks belong to their respective owners.</p>
+    <h2>Disclaimers and liability</h2>
+    <p>The website is provided on an "as is" and "as available" basis. To the fullest extent permitted by law, we disclaim warranties arising solely from website use and are not liable for indirect, incidental, special, or consequential damages caused by use of or inability to use the website.</p>
+    <h2>Changes and contact</h2>
+    <p>We may update these terms by posting a revised version and effective date. Questions may be sent to <a href="mailto:${escapeAttribute(business.email)}">${escapeHtml(business.email)}</a>.</p>`;
   const body = `
     <main>
       ${renderSEOPageHero({
-        eyebrow: "Legal placeholder",
+        eyebrow: "Legal",
         h1: title,
-        subheading: "Placeholder legal copy. Review with a qualified professional before launch.",
+        subheading: isPrivacy
+          ? "How WNY Business Automation collects, uses, and protects website information."
+          : "Terms for using the WNY Business Automation website.",
       })}
       ${section(`
         <div class="article-body legal-copy">
-          <h2>Review before launch</h2>
-          <p>This page is placeholder copy for ${escapeHtml(business.legalName)} and should be reviewed before the site is used publicly.</p>
-          <h2>Information collected</h2>
-          <p>Lead forms may collect contact details, business information, page source, UTM values, and the manual task submitted by the visitor.</p>
-          <h2>How information is used</h2>
-          <p>Information is used to respond to workflow audit requests and improve communication with interested businesses.</p>
-          <h2>Contact</h2>
-          <p>Email ${escapeHtml(business.email)} with questions.</p>
+          ${isPrivacy ? privacyCopy : termsCopy}
         </div>`)}
     </main>`;
   return page(body, {
     title: `${title} | WNY Business Automation`,
-    description: `${title} placeholder for WNY Business Automation. Review before launch.`,
+    description: isPrivacy
+      ? "Privacy Policy for WNY Business Automation website visitors and workflow-audit inquiries."
+      : "Terms for using the WNY Business Automation website.",
     path: isPrivacy ? "/privacy-policy" : "/terms",
   });
 }

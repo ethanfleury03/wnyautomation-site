@@ -108,17 +108,6 @@ function getProvidedDetailFields(data) {
   return ["name", "businessName", "business", "industry", "phone", "website"].filter((key) => value(data, key));
 }
 
-function storeLocalBackup(payload) {
-  try {
-    const storageKey = "wny_automation_leads";
-    const existing = JSON.parse(localStorage.getItem(storageKey) || "[]");
-    existing.push(payload);
-    localStorage.setItem(storageKey, JSON.stringify(existing.slice(-50)));
-  } catch (error) {
-    // Local backup is helpful in development, but the form should still submit.
-  }
-}
-
 function draftKey(form) {
   return `wny_workflow_draft:${window.location.pathname}:${form.dataset.conversionPath || form.id || "form"}`;
 }
@@ -130,7 +119,10 @@ function saveFormDraft(form) {
     for (const [key, value] of data.entries()) {
       if (key !== "companyWebsite") draft[key] = value.toString();
     }
-    localStorage.setItem(draftKey(form), JSON.stringify(draft));
+    localStorage.setItem(draftKey(form), JSON.stringify({
+      fields: draft,
+      expiresAt: Date.now() + 24 * 60 * 60 * 1000,
+    }));
   } catch (error) {
     // Drafts are a convenience; form submission still works without storage.
   }
@@ -138,8 +130,12 @@ function saveFormDraft(form) {
 
 function restoreFormDraft(form) {
   try {
-    const draft = JSON.parse(localStorage.getItem(draftKey(form)) || "{}");
-    Object.entries(draft).forEach(([key, value]) => {
+    const stored = JSON.parse(localStorage.getItem(draftKey(form)) || "{}");
+    if (!stored.expiresAt || stored.expiresAt <= Date.now()) {
+      localStorage.removeItem(draftKey(form));
+      return;
+    }
+    Object.entries(stored.fields || {}).forEach(([key, value]) => {
       const field = form.elements.namedItem(key);
       if (field && "value" in field && !field.value) field.value = value;
     });
@@ -306,7 +302,6 @@ workflowForms.forEach((form) => {
     const payload = serializeWorkflowForm(form);
 
     if (!navigator.onLine) {
-      storeLocalBackup(payload);
       setFormStatus(form, "You appear to be offline. Your draft is saved on this device - reconnect and submit again.", {
         isError: true,
         mailto: buildMailto(payload),
@@ -318,7 +313,6 @@ workflowForms.forEach((form) => {
     setFormStatus(form, "Sending your workflow request...");
 
     try {
-      storeLocalBackup(payload);
       await sendLead(payload);
       form.reset();
       clearFormDraft(form);
@@ -327,6 +321,12 @@ workflowForms.forEach((form) => {
         detail_fields_provided: payload.detailFieldsProvided,
         form_variant: payload.formVariant,
       });
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "Lead", {
+          content_name: "Free Workflow Audit",
+          conversion_path: payload.conversionPath,
+        });
+      }
       setFormStatus(form, "Thanks - WNY Business Automation will review your workflow and send back a few practical automation ideas.");
     } catch (error) {
       trackEvent("lead_submit_error", {

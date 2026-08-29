@@ -39,7 +39,7 @@ function renderPage({
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="stylesheet" href="/styles.css?v=${assetVersion}" />
     ${schemaScripts}
-    ${renderTrackingScripts()}
+    ${renderTrackingScripts(meta?.path || "/")}
     <script>window.WNY_AUTOMATION_CONFIG = ${jsonScript(publicConfig)};</script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <script src="/script.js?v=${assetVersion}" defer></script>
