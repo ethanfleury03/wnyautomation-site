@@ -1,5 +1,6 @@
 const fs = require("node:fs");
 const path = require("node:path");
+const { markdownToHtml } = require("../src/render/html");
 
 const ROOT = path.resolve(__dirname, "..");
 const ANSWERS_ROOT = path.join(ROOT, "public", "assets", "answers");
@@ -18,6 +19,7 @@ const EXPECTED = new Set([
   "contractor-reduce-office-work-without-hiring",
   "ai-improve-small-business-employee-productivity",
   "automate-customer-intake-calls-emails-forms",
+  "automate-contractor-field-to-office-job-updates",
 ]);
 const FORBIDDEN = [
   /(?:we|wny business automation) (?:will )?guarantee(?:s|d)? (?:revenue|roi|rankings?|results?|savings?)/i,
@@ -61,6 +63,7 @@ for (const folder of folders) {
 
   const metadata = JSON.parse(fs.readFileSync(metadataPath, "utf8"));
   const body = fs.readFileSync(bodyPath, "utf8").trim();
+  const renderedBody = markdownToHtml(body);
   const required = ["title", "slug", "metaTitle", "metaDescription", "excerpt", "eyebrow", "author", "reviewer", "primaryPrompt", "directAnswer", "ctaTitle", "ctaLabel", "trustNote"];
   for (const key of required) {
     if (!String(metadata[key] || "").trim()) fail(`${folder.name}: missing ${key}`);
@@ -86,6 +89,12 @@ for (const folder of folders) {
   if (!/^##\s+/m.test(body)) fail(`${folder.name}: body.md must include H2 sections`);
   if (!body.toLowerCase().includes(metadata.directAnswer.slice(0, 60).toLowerCase())) {
     fail(`${folder.name}: direct answer from metadata must appear visibly near the page body`);
+  }
+  if (/&amp;#(?:39|34|96);|&amp;amp;|&amp;apos;/.test(renderedBody)) {
+    fail(`${folder.name}: rendered body contains a double-escaped HTML entity`);
+  }
+  if (/\[[^\]]+\]\((?:https?:\/\/|\/|#)[^)]+\)/.test(renderedBody)) {
+    fail(`${folder.name}: rendered body exposes unparsed Markdown link syntax`);
   }
   for (const pattern of FORBIDDEN) {
     if (pattern.test(`${JSON.stringify(metadata)}\n${body}`)) fail(`${folder.name}: forbidden unsupported-claim pattern ${pattern}`);

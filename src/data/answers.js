@@ -50,6 +50,13 @@ const answers = [
     keywords: ["contractor office automation", "back-office", "admin work", "trades", "employee capacity", "Buffalo contractors"],
   },
   {
+    category: "admin-work",
+    title: "How can contractors automate job updates between the field and office?",
+    description: "Turn crew status, photos, materials, problems, and next steps into organized job records with clear approval boundaries.",
+    href: "/answers/automate-contractor-field-to-office-job-updates",
+    keywords: ["contractor field-to-office automation", "job updates", "field crews", "construction reports", "mobile field notes", "trades"],
+  },
+  {
     category: "getting-started",
     title: "What should a small business automate first?",
     description: "Use a practical scorecard to choose one clear, repeated, low-risk workflow before buying more tools.",
