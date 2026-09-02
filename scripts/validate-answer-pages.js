@@ -14,6 +14,7 @@ const EXPECTED = new Set([
   "stop-missing-leads-after-hours",
   "contractor-quote-follow-up-without-sounding-pushy",
   "do-small-businesses-need-crm-for-automation",
+  "contractor-reduce-office-work-without-hiring",
 ]);
 const FORBIDDEN = [
   /(?:we|wny business automation) (?:will )?guarantee(?:s|d)? (?:revenue|roi|rankings?|results?|savings?)/i,

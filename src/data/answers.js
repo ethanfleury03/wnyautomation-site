@@ -43,6 +43,13 @@ const answers = [
     keywords: ["manual data entry", "copy and paste", "forms", "CRM", "spreadsheets"],
   },
   {
+    category: "admin-work",
+    title: "How can a contractor reduce office work without hiring another employee?",
+    description: "Remove repeated office handoffs while keeping pricing, safety, scope, customer relationships, and staffing decisions human-owned.",
+    href: "/answers/contractor-reduce-office-work-without-hiring",
+    keywords: ["contractor office automation", "back-office", "admin work", "trades", "employee capacity", "Buffalo contractors"],
+  },
+  {
     category: "getting-started",
     title: "What should a small business automate first?",
     description: "Use a practical scorecard to choose one clear, repeated, low-risk workflow before buying more tools.",

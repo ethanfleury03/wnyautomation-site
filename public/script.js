@@ -390,3 +390,17 @@ answerFilterButtons.forEach((button) => {
 });
 
 answersSearch?.addEventListener("input", updateAnswerResults);
+
+const answerMobileCta = document.querySelector(".answer-mobile-cta");
+
+function updateAnswerMobileCta() {
+  if (!answerMobileCta) return;
+  const shouldShow = window.innerWidth <= 760 && window.scrollY > 520;
+  answerMobileCta.classList.toggle("is-visible", shouldShow);
+}
+
+if (answerMobileCta) {
+  updateAnswerMobileCta();
+  window.addEventListener("scroll", updateAnswerMobileCta, { passive: true });
+  window.addEventListener("resize", updateAnswerMobileCta);
+}

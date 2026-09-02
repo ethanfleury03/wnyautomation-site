@@ -2442,6 +2442,18 @@ details p {
     line-height: 1.2;
     text-align: center;
     text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(18px);
+    transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+    pointer-events: none;
+  }
+
+  .answer-mobile-cta.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .answer-mobile-cta:focus-visible {
