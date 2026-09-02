@@ -3,6 +3,7 @@ const path = require("node:path");
 
 const ROOT = path.resolve(__dirname, "..");
 const ANSWERS_ROOT = path.join(ROOT, "public", "assets", "answers");
+const STYLES_PATH = path.join(ROOT, "public", "styles.css");
 const EXPECTED = new Set([
   "how-to-automate-manual-data-entry-small-business",
   "what-should-small-business-automate-first",
@@ -15,6 +16,7 @@ const EXPECTED = new Set([
   "contractor-quote-follow-up-without-sounding-pushy",
   "do-small-businesses-need-crm-for-automation",
   "contractor-reduce-office-work-without-hiring",
+  "ai-improve-small-business-employee-productivity",
 ]);
 const FORBIDDEN = [
   /(?:we|wny business automation) (?:will )?guarantee(?:s|d)? (?:revenue|roi|rankings?|results?|savings?)/i,
@@ -34,6 +36,11 @@ function words(value) {
 
 if (!fs.existsSync(ANSWERS_ROOT)) {
   fail(`Answer pages directory does not exist: ${ANSWERS_ROOT}`);
+}
+
+const styles = fs.readFileSync(STYLES_PATH, "utf8");
+if (!/\.answer-card\[hidden\]\s*\{[^}]*display:\s*none\s*;/s.test(styles)) {
+  fail("Answer search requires .answer-card[hidden] { display: none; } so filtered cards are removed from the grid");
 }
 
 const folders = fs.readdirSync(ANSWERS_ROOT, { withFileTypes: true }).filter((entry) => entry.isDirectory());

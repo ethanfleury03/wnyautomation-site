@@ -2676,6 +2676,10 @@ details p {
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
+.answer-card[hidden] {
+  display: none;
+}
+
 .answer-card:hover {
   transform: translateY(-3px);
   border-color: var(--teal);

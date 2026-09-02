@@ -64,6 +64,13 @@ const answers = [
     keywords: ["AI employees", "human review", "employee trust", "small business AI"],
   },
   {
+    category: "getting-started",
+    title: "How can a small business use AI to make employees more productive?",
+    description: "Help employees prepare, find, route, and remember routine work while people verify outputs and own important decisions.",
+    href: "/answers/ai-improve-small-business-employee-productivity",
+    keywords: ["AI employee productivity", "workplace AI", "small business efficiency", "employee AI training", "Buffalo AI consulting"],
+  },
+  {
     category: "marketing",
     title: "What marketing tasks can a small business automate without an agency?",
     description: "Automate repeatable handoffs and reminders without handing brand strategy or sensitive replies to a machine.",
