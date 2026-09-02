@@ -1,0 +1,122 @@
+{
+  "author": "WNY Business Automation",
+  "reviewer": "Ethan Fleury",
+  "publishDate": "2026-09-02",
+  "updatedDate": "2026-09-02",
+  "title": "How can a small business automate customer intake from calls, emails, and forms?",
+  "slug": "automate-customer-intake-calls-emails-forms",
+  "metaTitle": "Automate Customer Intake From Calls, Emails, and Forms",
+  "metaDescription": "Learn how to capture customer requests from phone, email, and forms, collect missing details, route the work, and keep a human in control of exceptions.",
+  "excerpt": "A practical workflow for turning scattered calls, emails, texts, and forms into one reviewed customer record with a clear owner and next step.",
+  "eyebrow": "Customer intake and routing",
+  "categories": [
+    "Leads & Follow-Up",
+    "Admin Work"
+  ],
+  "primaryPrompt": "How can a small business automate customer intake from calls, emails, and forms?",
+  "directAnswer": "A small business can automate customer intake by sending calls, emails, texts, and forms into one structured workflow. The system can acknowledge the request, collect or extract required details, check for duplicates, flag stated urgency, create or update the correct record, and assign a next step. A person should review sensitive, unclear, high-value, technical, or unusual requests before commitments are made.",
+  "faqs": [
+    {
+      "question": "Can calls, emails, texts, and website forms all enter one intake workflow?",
+      "answer": "Yes, when each channel can pass approved information into a common record or review queue. The workflow should preserve the original source and avoid creating duplicate customer records."
+    },
+    {
+      "question": "What customer information should intake automation collect?",
+      "answer": "Collect only the details needed to identify the customer, understand the request, route it safely, and create the next step. Required fields should match the business and risk level."
+    },
+    {
+      "question": "What happens when customer information is missing?",
+      "answer": "The workflow can request safe missing details or flag the record for a person. It should not invent information, infer consent, or make a commitment from an incomplete request."
+    },
+    {
+      "question": "Does a small business need a CRM for customer intake automation?",
+      "answer": "Not always. A shared inbox, spreadsheet, task board, or field-service system may work at lower volume. A CRM helps when several channels, employees, histories, and follow-up stages need one shared view."
+    },
+    {
+      "question": "Should intake automation decide whether a customer is urgent or qualified?",
+      "answer": "It can flag customer-stated words and apply approved rules, but technical urgency, service fit, pricing, eligibility, and sensitive judgment should remain with a named person."
+    }
+  ],
+  "internalLinks": [
+    {
+      "anchor": "Intake-to-task automation",
+      "url": "/services/intake-to-task-automation",
+      "purpose": "Turn incoming requests into owned tasks"
+    },
+    {
+      "anchor": "Missed-lead response workflow",
+      "url": "/services/missed-lead-rescue-system",
+      "purpose": "Connect missed calls and after-hours inquiries"
+    },
+    {
+      "anchor": "Stop missing leads after hours",
+      "url": "/answers/stop-missing-leads-after-hours",
+      "purpose": "Response-timing guidance"
+    },
+    {
+      "anchor": "Reduce repetitive manual data entry",
+      "url": "/answers/how-to-automate-manual-data-entry-small-business",
+      "purpose": "Information-transfer guidance"
+    },
+    {
+      "anchor": "Automation for home-service businesses",
+      "url": "/industries/home-service-businesses",
+      "purpose": "Trade and local-service context"
+    },
+    {
+      "anchor": "Get a free customer-intake workflow audit",
+      "url": "/free-workflow-audit",
+      "purpose": "Map one disconnected intake path"
+    }
+  ],
+  "externalSources": [
+    {
+      "anchor": "Salesforce case-routing automation guidance",
+      "url": "https://salesforce.com/blog/small-business/case-routing-automation"
+    },
+    {
+      "anchor": "Jobber request and intake-form documentation",
+      "url": "https://help.getjobber.com/en/articles/request-basics"
+    },
+    {
+      "anchor": "Clustdoc client-intake workflow guide",
+      "url": "https://clustdoc.com/blog/set-up-client-intake-automation-in-5-steps"
+    }
+  ],
+  "primaryCtaHref": "/free-workflow-audit?source=aeo-013-multichannel-customer-intake#workflow-form",
+  "ctaTitle": "Turn scattered customer requests into one clear next step.",
+  "ctaLabel": "Map My Intake Workflow",
+  "trustNote": "Calls, email, texts, and forms • Existing-tools-first • Technical and sensitive decisions stay human",
+  "decisionAid": {
+    "type": "steps",
+    "eyebrow": "One Request Record",
+    "title": "A dependable intake path from first contact to clear ownership",
+    "intro": "Every channel can be different at the edge while still feeding one reviewed process inside the business.",
+    "items": [
+      {
+        "title": "Capture",
+        "text": "Preserve the original channel, message, contact details, time, and attachments."
+      },
+      {
+        "title": "Confirm",
+        "text": "Use modest approved language to acknowledge receipt without promising service or timing."
+      },
+      {
+        "title": "Structure",
+        "text": "Extract or request only the approved details needed to understand and route the request."
+      },
+      {
+        "title": "Check",
+        "text": "Look for possible duplicates, missing information, consent boundaries, and stated urgency."
+      },
+      {
+        "title": "Route",
+        "text": "Create or update one record, assign a named owner, and make the next action visible."
+      },
+      {
+        "title": "Escalate",
+        "text": "Send sensitive, technical, urgent, unclear, or unusual requests to a person before commitments are made."
+      }
+    ]
+  }
+}

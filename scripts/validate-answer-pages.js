@@ -17,6 +17,7 @@ const EXPECTED = new Set([
   "do-small-businesses-need-crm-for-automation",
   "contractor-reduce-office-work-without-hiring",
   "ai-improve-small-business-employee-productivity",
+  "automate-customer-intake-calls-emails-forms",
 ]);
 const FORBIDDEN = [
   /(?:we|wny business automation) (?:will )?guarantee(?:s|d)? (?:revenue|roi|rankings?|results?|savings?)/i,

@@ -107,6 +107,13 @@ const answers = [
   },
   {
     category: "leads-follow-up",
+    title: "How can a small business automate customer intake from calls, emails, and forms?",
+    description: "Turn scattered customer requests into one reviewed record with the required details, a clear owner, and a safe next step.",
+    href: "/answers/automate-customer-intake-calls-emails-forms",
+    keywords: ["customer intake automation", "lead intake", "calls", "email", "forms", "request routing", "Buffalo small business"],
+  },
+  {
+    category: "leads-follow-up",
     title: "How can contractors automate quote follow-up without sounding pushy?",
     description: "Use polite reminders, stop when customers reply, and keep personal judgment in the sales conversation.",
     href: "/answers/contractor-quote-follow-up-without-sounding-pushy",
