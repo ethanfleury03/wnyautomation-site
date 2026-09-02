@@ -10,6 +10,7 @@ const {
   renderServicesIndex,
   renderWorkflowAuditPage,
 } = require("../src/render/pages");
+const { inlineMarkdownToHtml } = require("../src/render/html");
 
 const privacy = renderLegalPage("privacy");
 assert.match(privacy, /Effective date:<\/strong> August 29, 2026/);
@@ -33,5 +34,14 @@ const browserScript = fs.readFileSync(path.join(__dirname, "..", "public", "scri
 assert.doesNotMatch(browserScript, /wny_automation_leads/);
 assert.match(browserScript, /expiresAt: Date\.now\(\) \+ 24 \* 60 \* 60 \* 1000/);
 assert.match(browserScript, /window\.fbq\("track", "Lead"/);
+
+const apostropheLink = inlineMarkdownToHtml(
+  "[Knowify's field-to-office guide](https://example.com/report?source=field&view=office)",
+);
+assert.equal(
+  apostropheLink,
+  '<a href="https://example.com/report?source=field&amp;view=office">Knowify&#39;s field-to-office guide</a>',
+);
+assert.doesNotMatch(apostropheLink, /&amp;#39;|&amp;amp;/);
 
 console.log("Marketing readiness checks passed.");

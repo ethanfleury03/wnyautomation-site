@@ -179,11 +179,20 @@ function markdownToHtml(markdown) {
 }
 
 function inlineMarkdownToHtml(value) {
-  return escapeHtml(value)
-    .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]+|#[^)\s]+)\)/g, (_match, label, href) => {
-      return `<a href="${escapeAttribute(href)}">${escapeHtml(label)}</a>`;
-    })
-    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  const source = String(value || "");
+  const linkPattern = /\[([^\]]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]+|#[^)\s]+)\)/g;
+  const output = [];
+  let cursor = 0;
+  let match;
+
+  while ((match = linkPattern.exec(source))) {
+    output.push(escapeHtml(source.slice(cursor, match.index)));
+    output.push(`<a href="${escapeAttribute(match[2])}">${escapeHtml(match[1])}</a>`);
+    cursor = match.index + match[0].length;
+  }
+
+  output.push(escapeHtml(source.slice(cursor)));
+  return output.join("").replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
 }
 
 module.exports = {
