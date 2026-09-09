@@ -1,4 +1,4 @@
-const CACHE_NAME = "wny-site-shell-v5-answer-conversion";
+const CACHE_NAME = "wny-site-shell-v6-hash-anchor";
 const APP_SHELL = [
   "/offline.html",
   "/styles.css",
