@@ -31,9 +31,16 @@ assert.match(audit, /fbq\('track', 'ViewContent'/);
 assert.match(audit, /facebook\.com\/tr\?id=123456789012345&amp;ev=PageView/);
 
 const browserScript = fs.readFileSync(path.join(__dirname, "..", "public", "script.js"), "utf8");
+const layoutSource = fs.readFileSync(path.join(__dirname, "..", "src", "render", "layout.js"), "utf8");
+const serviceWorker = fs.readFileSync(path.join(__dirname, "..", "public", "sw.js"), "utf8");
 assert.doesNotMatch(browserScript, /wny_automation_leads/);
 assert.match(browserScript, /expiresAt: Date\.now\(\) \+ 24 \* 60 \* 60 \* 1000/);
 assert.match(browserScript, /window\.fbq\("track", "Lead"/);
+assert.match(browserScript, /function scrollToCurrentHashTarget\(\)/);
+assert.match(browserScript, /window\.addEventListener\("hashchange", scrollToCurrentHashTarget\)/);
+assert.match(browserScript, /target\.scrollIntoView\(\{ block: "start" \}\)/);
+assert.match(layoutSource, /const assetVersion = "hash-anchor-20260908b"/);
+assert.match(serviceWorker, /const CACHE_NAME = "wny-site-shell-v6-hash-anchor"/);
 
 const apostropheLink = inlineMarkdownToHtml(
   "[Knowify's field-to-office guide](https://example.com/report?source=field&view=office)",

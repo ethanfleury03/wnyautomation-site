@@ -3,7 +3,7 @@ const { renderMeta, renderTrackingScripts } = require("../lib/seo");
 const { escapeScriptJson, jsonScript } = require("./html");
 const { renderFooter, renderHeader } = require("./components");
 
-const assetVersion = "answers-search-20260902a";
+const assetVersion = "hash-anchor-20260908b";
 
 function renderPage({
   meta,

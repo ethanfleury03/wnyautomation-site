@@ -11,6 +11,35 @@ if ("serviceWorker" in navigator) {
   });
 }
 
+function scrollToCurrentHashTarget() {
+  const rawTarget = window.location.hash.slice(1);
+  if (!rawTarget) return;
+
+  let targetId;
+  try {
+    targetId = decodeURIComponent(rawTarget);
+  } catch (error) {
+    return;
+  }
+
+  const target = document.getElementById(targetId);
+  if (!target) return;
+
+  const root = document.documentElement;
+  const previousScrollBehavior = root.style.scrollBehavior;
+  root.style.scrollBehavior = "auto";
+  target.scrollIntoView({ block: "start" });
+  root.style.scrollBehavior = previousScrollBehavior;
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", scrollToCurrentHashTarget);
+} else {
+  scrollToCurrentHashTarget();
+}
+window.addEventListener("load", scrollToCurrentHashTarget);
+window.addEventListener("hashchange", scrollToCurrentHashTarget);
+
 const mobileMenuButton = document.querySelector(".mobile-menu-button");
 const mobileNav = document.querySelector(".mobile-nav-panel");
 const mobileNavBackdrop = document.querySelector(".mobile-nav-backdrop");
