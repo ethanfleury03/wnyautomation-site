@@ -1,4 +1,5 @@
 const assert = require("node:assert/strict");
+const { execFileSync } = require("node:child_process");
 const fs = require("node:fs");
 const path = require("node:path");
 
@@ -33,6 +34,15 @@ assert.match(audit, /facebook\.com\/tr\?id=123456789012345&amp;ev=PageView/);
 const browserScript = fs.readFileSync(path.join(__dirname, "..", "public", "script.js"), "utf8");
 const layoutSource = fs.readFileSync(path.join(__dirname, "..", "src", "render", "layout.js"), "utf8");
 const serviceWorker = fs.readFileSync(path.join(__dirname, "..", "public", "sw.js"), "utf8");
+const productionFallbackSiteUrl = execFileSync(
+  process.execPath,
+  ["-e", "process.stdout.write(require('./src/config/business').siteUrl)"],
+  {
+    cwd: path.join(__dirname, ".."),
+    env: { ...process.env, NODE_ENV: "production", NEXT_PUBLIC_SITE_URL: "" },
+    encoding: "utf8",
+  },
+);
 assert.doesNotMatch(browserScript, /wny_automation_leads/);
 assert.match(browserScript, /expiresAt: Date\.now\(\) \+ 24 \* 60 \* 60 \* 1000/);
 assert.match(browserScript, /window\.fbq\("track", "Lead"/);
@@ -41,6 +51,7 @@ assert.match(browserScript, /window\.addEventListener\("hashchange", scrollToCur
 assert.match(browserScript, /target\.scrollIntoView\(\{ block: "start" \}\)/);
 assert.match(layoutSource, /const assetVersion = "hash-anchor-20260908b"/);
 assert.match(serviceWorker, /const CACHE_NAME = "wny-site-shell-v6-hash-anchor"/);
+assert.equal(productionFallbackSiteUrl, "https://wnyautomation.com");
 
 const apostropheLink = inlineMarkdownToHtml(
   "[Knowify's field-to-office guide](https://example.com/report?source=field&view=office)",

@@ -5,6 +5,12 @@ const productionPortalHosts = new Set([
   "awp.wnyautomation.com",
 ]);
 
+function defaultSiteUrl() {
+  return process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : "https://wnyautomation.com";
+}
+
 function requireStagingUrl(name, value) {
   const raw = String(value || "").trim();
   if (!raw) {
@@ -71,7 +77,7 @@ const business = {
   awpPortalSignInUrl: clientLoginUrl(),
   clientLoginPath: "/client-login",
   n8nWebhookUrl: process.env.N8N_LEAD_WEBHOOK_URL || "",
-  siteUrl: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  siteUrl: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || defaultSiteUrl()),
   defaultSeoTitle: "WNY Business Automation | Websites and Automation for Local Businesses",
   defaultSeoDescription:
     "WNY Business Automation helps Buffalo, Niagara, and Western New York businesses with website creation, blog schedules, missed lead follow-up, quote follow-up, and practical workflow automation.",
@@ -83,7 +89,7 @@ const business = {
 };
 
 function normalizeSiteUrl(value) {
-  return String(value || "http://localhost:3000").replace(/\/+$/, "");
+  return String(value || defaultSiteUrl()).replace(/\/+$/, "");
 }
 
 module.exports = business;
