@@ -57,7 +57,7 @@ function expectSanitizerRejectsRawTextBypasses() {
 function expectPublishedBlogsHaveVisibleTrackedCtas() {
   const marker = "[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)";
   const expectedButton =
-    '<div id="article-cta" class="article-cta-actions"><a class="button button-primary article-cta-button" href="/free-workflow-audit#workflow-form" style="color:#fff;text-decoration:none">';
+    '<div id="article-cta" class="article-cta-actions"><a class="button button-primary article-cta-button" href="/free-workflow-audit#workflow-form" style="color:#10251e;text-decoration:none">';
 
   for (const post of blogPosts) {
     const markerCount = (post.body.match(/^\[CTA: Get 3 Automation Ideas\]\(\/free-workflow-audit#workflow-form\)$/gm) || [])
@@ -170,6 +170,9 @@ async function expectNoRemovedSchedulerOnPublicRoutes() {
     if (matched) {
       throw new Error(`Expected ${pathname} not to include removed scheduling reference: ${matched}`);
     }
+    if (/Ethan Fleury|ethan@wnyautomation\.com|mailto:/i.test(text)) {
+      throw new Error(`Expected ${pathname} not to expose a founder name, named email, or mailto contact path.`);
+    }
   }
 }
 
@@ -186,8 +189,8 @@ async function expectLeadFocusedHomepage() {
     'href="/client-login"',
     "Client Login",
     'href="#workflow-form"',
-    'href="mailto:ethan@wnyautomation.com"',
-    "Email WNY Business Automation",
+    'href="/free-workflow-audit#workflow-form"',
+    "Contact WNY Business Automation",
     'class="lead-form workflow-form lead-form-compact"',
     'data-form-variant="short"',
     'name="manualTask"',
@@ -224,7 +227,7 @@ async function expectAboutPage() {
 
   for (const check of [
     "Practical websites and automation for local businesses.",
-    "Ethan Fleury",
+    "WNY Business Automation was built for practical small-business problems.",
     "Founder photo coming soon",
     'href="#workflow-form"',
     'data-source="About Page"',
@@ -311,7 +314,7 @@ async function expectAnswerPage(pathname, h1) {
     '"@type":"Article"',
     '"@type":"FAQPage"',
     'href="/answers"',
-    "Reviewed by Ethan Fleury",
+    "Reviewed by WNY Business Automation",
   ]) {
     if (!text.includes(check)) {
       throw new Error(`Expected ${pathname} to include ${check}`);

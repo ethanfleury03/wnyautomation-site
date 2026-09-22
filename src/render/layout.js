@@ -3,7 +3,7 @@ const { renderMeta, renderTrackingScripts } = require("../lib/seo");
 const { escapeScriptJson, jsonScript } = require("./html");
 const { renderFooter, renderHeader } = require("./components");
 
-const assetVersion = "hash-anchor-20260908b";
+const assetVersion = "brand-pine-lime-v1";
 
 function renderPage({
   meta,
@@ -19,7 +19,6 @@ function renderPage({
     .join("\n");
 
   const publicConfig = {
-    businessEmail: business.email,
     leadEndpoint: "/api/leads",
   };
 
@@ -29,7 +28,7 @@ function renderPage({
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     ${renderMeta(meta)}
-    <meta name="theme-color" content="#147d6f" />
+    <meta name="theme-color" content="#10251e" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="${business.shortName}" />

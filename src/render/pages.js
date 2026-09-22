@@ -263,13 +263,13 @@ function renderAboutPage() {
         <div class="two-column-section">
           <div>
             <p class="section-kicker">Founder note</p>
-            <h2>I'm Ethan Fleury, and I built WNY Business Automation for practical small-business problems.</h2>
+            <h2>WNY Business Automation was built for practical small-business problems.</h2>
             <p>I work across website creation, automation, AI tools, software development, and local business operations. The goal is simple: help owners fix the repeated work that slows them down without turning the project into a giant software build.</p>
             <p>I am based in Western New York and focused on helping local businesses make their websites and workflows easier to use, easier to follow up on, and easier to maintain.</p>
           </div>
           <div class="audit-panel founder-photo-panel">
             <div class="founder-photo-placeholder" aria-label="Founder photo placeholder">
-              <img src="/assets/wny-automation-icon.png" alt="" decoding="async" />
+              <img src="/assets/ribbon-w.svg" alt="" decoding="async" />
             </div>
             <h3>Founder photo coming soon</h3>
             <p>No stock headshot here. This spot is reserved for a real photo when it is ready.</p>
@@ -322,7 +322,7 @@ function renderAboutPage() {
     {
       title: "About WNY Business Automation | Websites and Automation for Local Businesses",
       description:
-        "Meet Ethan Fleury, founder of WNY Business Automation. Practical website creation, automation, AI tools, and workflow support for Western New York businesses.",
+        "Meet WNY Business Automation. Practical website creation, automation, AI tools, and workflow support for Western New York businesses.",
       path: "/about",
     },
     [breadcrumbSchema(crumbs), localBusinessSchema("/about")],
@@ -789,7 +789,7 @@ function renderLegalPage(type) {
     <p>We may update this policy as our website, vendors, or practices change. The effective date above identifies the current version.</p>
 
     <h2>Contact us</h2>
-    <p>For privacy questions or requests, email <a href="mailto:${escapeAttribute(business.email)}">${escapeHtml(business.email)}</a>.</p>`;
+    <p>For privacy questions or requests, use the <a href="${escapeAttribute(business.contactPath)}">WNY Business Automation contact form</a>.</p>`;
   const termsCopy = `
     <p><strong>Effective date:</strong> ${effectiveDate}</p>
     <p>These terms govern use of this website. Website content is general information, not a promise that a particular automation, marketing, or business result will be available or suitable.</p>
@@ -802,7 +802,7 @@ function renderLegalPage(type) {
     <h2>Disclaimers and liability</h2>
     <p>The website is provided on an "as is" and "as available" basis. To the fullest extent permitted by law, we disclaim warranties arising solely from website use and are not liable for indirect, incidental, special, or consequential damages caused by use of or inability to use the website.</p>
     <h2>Changes and contact</h2>
-    <p>We may update these terms by posting a revised version and effective date. Questions may be sent to <a href="mailto:${escapeAttribute(business.email)}">${escapeHtml(business.email)}</a>.</p>`;
+    <p>We may update these terms by posting a revised version and effective date. Questions may be sent through the <a href="${escapeAttribute(business.contactPath)}">WNY Business Automation contact form</a>.</p>`;
   const body = `
     <main>
       ${renderSEOPageHero({

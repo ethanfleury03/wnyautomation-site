@@ -181,7 +181,7 @@ You can reuse it for:
 - Internal scripts for discovery calls.
 - Short videos or carousel posts.
 
-For example, a blog about website lead capture can become a checklist Ethan sends to a local business owner after reviewing their site. A blog about missed lead follow-up can become a simple audit question: “What happens when someone fills out your form after 6 p.m.?”
+For example, a blog about website lead capture can become a checklist WNY Business Automation sends to a local business owner after reviewing their site. A blog about missed lead follow-up can become a simple audit question: “What happens when someone fills out your form after 6 p.m.?”
 
 That makes blogging useful even before SEO compounds.
 

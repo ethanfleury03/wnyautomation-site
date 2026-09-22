@@ -1,4 +1,4 @@
-const CACHE_NAME = "wny-site-shell-v6-hash-anchor";
+const CACHE_NAME = "wny-site-shell-v7-brand-pine-lime";
 const APP_SHELL = [
   "/offline.html",
   "/styles.css",
@@ -6,7 +6,8 @@ const APP_SHELL = [
   "/assets/favicon-32.png",
   "/assets/apple-touch-icon.png",
   "/assets/site-icon-192.png",
-  "/assets/site-icon-512.png"
+  "/assets/site-icon-512.png",
+  "/assets/ribbon-w.svg"
 ];
 
 self.addEventListener("install", (event) => {

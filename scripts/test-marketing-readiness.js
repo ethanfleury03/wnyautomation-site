@@ -49,8 +49,8 @@ assert.match(browserScript, /window\.fbq\("track", "Lead"/);
 assert.match(browserScript, /function scrollToCurrentHashTarget\(\)/);
 assert.match(browserScript, /window\.addEventListener\("hashchange", scrollToCurrentHashTarget\)/);
 assert.match(browserScript, /target\.scrollIntoView\(\{ block: "start" \}\)/);
-assert.match(layoutSource, /const assetVersion = "hash-anchor-20260908b"/);
-assert.match(serviceWorker, /const CACHE_NAME = "wny-site-shell-v6-hash-anchor"/);
+assert.match(layoutSource, /const assetVersion = "brand-pine-lime-v1"/);
+assert.match(serviceWorker, /const CACHE_NAME = "wny-site-shell-v7-brand-pine-lime"/);
 assert.equal(productionFallbackSiteUrl, "https://wnyautomation.com");
 
 const apostropheLink = inlineMarkdownToHtml(
