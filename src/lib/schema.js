@@ -31,7 +31,6 @@ function localBusinessSchema(path = "/") {
     description: "Practical workflow automation for local businesses in Buffalo, Niagara, and Western New York.",
     url: absoluteUrl(path),
     image: absoluteUrl("/assets/site-icon-512.png"),
-    email: business.email,
     areaServed: business.serviceArea.map((name) => ({
       "@type": name === "Western New York" ? "AdministrativeArea" : "City",
       name,
@@ -136,13 +135,9 @@ function answerPageSchema(answer) {
     headline: answer.title,
     description: answer.metaDescription || answer.excerpt,
     author: {
-      "@type": "Person",
-      name: answer.reviewer || "Ethan Fleury",
-      worksFor: {
-        "@type": "Organization",
-        name: business.businessName,
-        url: business.siteUrl,
-      },
+      "@type": "Organization",
+      name: business.businessName,
+      url: business.siteUrl,
     },
     publisher: {
       "@type": "Organization",

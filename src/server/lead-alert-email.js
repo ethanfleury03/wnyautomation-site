@@ -8,8 +8,8 @@ function emailConfig() {
     clientId: process.env.GMAIL_OAUTH_CLIENT_ID?.trim(),
     clientSecret: process.env.GMAIL_OAUTH_CLIENT_SECRET?.trim(),
     refreshToken: process.env.GMAIL_OAUTH_REFRESH_TOKEN?.trim(),
-    fromEmail: process.env.GMAIL_FROM_EMAIL?.trim() || business.email,
-    alertEmail: process.env.LEAD_ALERT_EMAIL?.trim() || business.email,
+    fromEmail: process.env.GMAIL_FROM_EMAIL?.trim(),
+    alertEmail: process.env.LEAD_ALERT_EMAIL?.trim(),
   };
 }
 
@@ -117,7 +117,7 @@ function buildLeadAlertMessage(payload, hubspot = {}) {
 
       <h2 style="font-size:17px;margin:24px 0 8px">Tracking</h2>
       <p>CTA/form: ${escapeHtml(display(payload.conversionPath))} · Variant: ${escapeHtml(display(payload.formVariant))}</p>
-      ${dealUrl ? `<p><a href="${dealUrl}" style="display:inline-block;padding:10px 16px;background:#147d6f;color:white;text-decoration:none;border-radius:6px">Open deal in HubSpot</a></p>` : ""}
+      ${dealUrl ? `<p><a href="${dealUrl}" style="display:inline-block;padding:10px 16px;background:#10251e;color:white;text-decoration:none;border-radius:6px">Open deal in HubSpot</a></p>` : ""}
     </div>`;
 
   const headers = [

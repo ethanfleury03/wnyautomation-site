@@ -1,5 +1,4 @@
 const CONFIG = {
-  businessEmail: window.WNY_AUTOMATION_CONFIG?.businessEmail || "ethan@wnyautomation.com",
   leadEndpoint: window.WNY_AUTOMATION_CONFIG?.leadEndpoint || "/api/leads",
 };
 
@@ -202,32 +201,11 @@ async function sendLead(payload) {
   return body;
 }
 
-function buildMailto(payload) {
-  const subject = encodeURIComponent(`New WNY Business Automation workflow audit request from ${payload.businessName || "website lead"}`);
-  const body = encodeURIComponent(
-    [
-      "New WNY Business Automation workflow audit request",
-      "",
-      `Task: ${payload.manualTask}`,
-      `Business: ${payload.businessName}`,
-      `Industry: ${payload.industry}`,
-      `Name: ${payload.name}`,
-      `Email: ${payload.email}`,
-      `Phone: ${payload.phone || "Not provided"}`,
-      `Website: ${payload.website || "Not provided"}`,
-      `Page: ${payload.pageUrl}`,
-      `Submitted: ${payload.submittedAt}`,
-    ].join("\n"),
-  );
-
-  return `mailto:${CONFIG.businessEmail}?subject=${subject}&body=${body}`;
-}
-
 function setFormStatus(form, message, options = {}) {
   const status = form.querySelector(".form-status");
   if (!status) return;
 
-  const { isError = false, mailto = "" } = options;
+  const { isError = false } = options;
   status.textContent = "";
   status.classList.toggle("active", Boolean(message));
   status.classList.toggle("error", isError);
@@ -237,31 +215,6 @@ function setFormStatus(form, message, options = {}) {
   const text = document.createElement("span");
   text.textContent = message;
   status.append(text);
-
-  if (mailto) {
-    const actions = document.createElement("div");
-    actions.className = "status-actions";
-
-    if (mailto) {
-      actions.append(createStatusLink("Email us directly", mailto));
-    }
-
-    status.append(actions);
-  }
-}
-
-function createStatusLink(label, href, variant = "button-secondary") {
-  const link = document.createElement("a");
-  link.className = `button ${variant}`;
-  link.href = href;
-  link.textContent = label;
-
-  if (href.startsWith("http")) {
-    link.target = "_blank";
-    link.rel = "noopener";
-  }
-
-  return link;
 }
 
 document.addEventListener("click", (event) => {
@@ -279,13 +232,6 @@ document.addEventListener("click", (event) => {
     });
   }
 
-  if (href.startsWith("mailto:")) {
-    trackEvent("email_click", {
-      conversion_path: "email",
-      cta_label: label,
-      cta_href: href,
-    });
-  }
 
   if (
     link.classList.contains("header-login") ||
@@ -333,7 +279,6 @@ workflowForms.forEach((form) => {
     if (!navigator.onLine) {
       setFormStatus(form, "You appear to be offline. Your draft is saved on this device - reconnect and submit again.", {
         isError: true,
-        mailto: buildMailto(payload),
       });
       return;
     }
@@ -363,9 +308,8 @@ workflowForms.forEach((form) => {
         detail_fields_provided: payload.detailFieldsProvided,
         form_variant: payload.formVariant,
       });
-      setFormStatus(form, "Something went wrong. Please try again or email us directly.", {
+      setFormStatus(form, "Something went wrong. Your draft is saved - please try again shortly.", {
         isError: true,
-        mailto: buildMailto(payload),
       });
     } finally {
       submitButton.disabled = false;

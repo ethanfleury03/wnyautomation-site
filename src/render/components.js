@@ -74,7 +74,7 @@ function pageHasWorkflowForm(path) {
 
 function renderFooter({ services = [], industries = [] } = {}) {
   const contactLinks = [
-    `<a href="mailto:${escapeAttribute(business.email)}">${escapeHtml(business.email)}</a>`,
+    `<a href="${escapeAttribute(business.contactPath)}">Contact WNY Business Automation</a>`,
     business.phone ? `<a href="tel:${escapeAttribute(business.phone)}">${escapeHtml(business.phone)}</a>` : "",
   ].filter(Boolean);
 
@@ -109,7 +109,7 @@ function renderFooter({ services = [], industries = [] } = {}) {
 function renderBrandLockup() {
   return `
     <span class="brand-mark" aria-hidden="true">
-      <img src="/assets/wny-automation-icon.png" alt="" decoding="sync" fetchpriority="high" />
+      <img src="/assets/ribbon-w.svg" alt="" decoding="sync" fetchpriority="high" />
     </span>
     <span class="brand-copy">
       <strong>${escapeHtml(business.businessName)}</strong>
@@ -131,8 +131,8 @@ function renderSEOPageHero({
   subheading,
   primaryHref = "/free-workflow-audit#workflow-form",
   primaryLabel = "Get My Free Automation Ideas",
-  secondaryHref = `mailto:${business.email}`,
-  secondaryLabel = "Email WNY Business Automation",
+  secondaryHref = business.contactPath,
+  secondaryLabel = "Contact WNY Business Automation",
   valueHighlights = [],
   miniForm = false,
 }) {
@@ -230,7 +230,7 @@ function renderWorkflowAuditForm({
       ${optionalDetails}
       <div class="form-actions">
         <button class="button button-primary" type="submit">${icon("send")}${isShort ? "Get 3 Automation Ideas" : "Get My Free Automation Ideas"}</button>
-        <a class="button button-secondary" href="mailto:${escapeAttribute(business.email)}">${icon("mail")}Email WNY Business Automation</a>
+        <a class="button button-secondary" href="${escapeAttribute(business.contactPath)}">${icon("mail")}Contact WNY Business Automation</a>
       </div>
       <div class="form-status" aria-live="polite"></div>
     </form>`;
@@ -336,8 +336,8 @@ function renderCTASection({
   eyebrow = "Free workflow audit",
   primaryHref = "/free-workflow-audit#workflow-form",
   primaryLabel = "Get My Free Automation Ideas",
-  secondaryHref = `mailto:${business.email}`,
-  secondaryLabel = "Email WNY Business Automation",
+  secondaryHref = business.contactPath,
+  secondaryLabel = "Contact WNY Business Automation",
   title = "Ready to find the one workflow costing you the most time?",
   text = "Tell WNY Business Automation one manual task. We will review the workflow and send back practical automation ideas.",
   withForm = false,
@@ -383,7 +383,7 @@ function renderServiceHero(service) {
           <p>${escapeHtml(service.shortDescription)}</p>
           <div class="hero-actions">
             <a class="button button-primary" href="/free-workflow-audit#workflow-form">${icon("send")}${escapeHtml(service.ctaLabel || "Get My Free Automation Ideas")}</a>
-            <a class="button button-secondary" href="mailto:${escapeAttribute(business.email)}">${icon("mail")}Email WNY Business Automation</a>
+            <a class="button button-secondary" href="${escapeAttribute(business.contactPath)}">${icon("mail")}Contact WNY Business Automation</a>
           </div>
           <p class="service-hero-trust">${icon("shield-check")}<span>${escapeHtml(service.trustLine)}</span></p>
         </div>
@@ -505,7 +505,7 @@ function renderConnectionList(service) {
 
 function renderTrustSection() {
   const contactItems = [
-    `<li>${icon("mail")}<a href="mailto:${escapeAttribute(business.email)}">${escapeHtml(business.email)}</a></li>`,
+    `<li>${icon("mail")}<a href="${escapeAttribute(business.contactPath)}">Contact WNY Business Automation</a></li>`,
     business.phone ? `<li>${icon("phone")}<a href="tel:${escapeAttribute(business.phone)}">${escapeHtml(business.phone)}</a></li>` : "",
   ].filter(Boolean);
 
