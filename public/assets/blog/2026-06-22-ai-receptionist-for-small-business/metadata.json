@@ -2,7 +2,7 @@
   "title": "AI Receptionist for Small Business: Calls, FAQs, Booking, and Human Handoffs",
   "slug": "ai-receptionist-for-small-business",
   "publishDate": "2026-06-22",
-  "updatedDate": "2026-06-22",
+  "updatedDate": "2026-10-12",
   "author": "WNY Business Automation",
   "category": "AI Receptionist",
   "tags": [
@@ -26,5 +26,6 @@
   "relatedIndustries": [],
   "featuredImage": "/assets/blog/2026-06-22-ai-receptionist-for-small-business/featured.webp",
   "image_alt": "Small business reception desk with phone, laptop dashboard, and appointment calendar representing AI receptionist automation for Western New York businesses.",
-  "status": "published"
+  "status": "redirected",
+  "redirectTo": "/answers/ai-receptionist-book-appointments-small-business"
 }

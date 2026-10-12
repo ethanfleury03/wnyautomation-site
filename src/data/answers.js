@@ -114,6 +114,13 @@ const answers = [
   },
   {
     category: "leads-follow-up",
+    title: "Can an AI receptionist answer calls and book appointments for a small business?",
+    description: "Handle approved phone questions and booking requests while keeping uncertain, sensitive, and high-impact calls with a person.",
+    href: "/answers/ai-receptionist-book-appointments-small-business",
+    keywords: ["AI receptionist", "AI phone answering", "small business phone automation", "appointment booking", "call routing", "human handoff", "Buffalo small business"],
+  },
+  {
+    category: "leads-follow-up",
     title: "How can a small business automate customer intake from calls, emails, and forms?",
     description: "Turn scattered customer requests into one reviewed record with the required details, a clear owner, and a safe next step.",
     href: "/answers/automate-customer-intake-calls-emails-forms",

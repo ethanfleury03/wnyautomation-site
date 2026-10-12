@@ -38,6 +38,17 @@ const {
 
 export const dynamic = "force-dynamic";
 
+const PERMANENT_REDIRECTS = new Map([
+  [
+    "/blog/ai-receptionist-for-small-business",
+    "/answers/ai-receptionist-book-appointments-small-business",
+  ],
+  [
+    "/blogs/ai-receptionist-for-small-business",
+    "/answers/ai-receptionist-book-appointments-small-business",
+  ],
+]);
+
 function html(body, status = 200) {
   return new Response(body, {
     status,
@@ -58,16 +69,29 @@ async function routePath(context) {
 }
 
 async function getAllRoutes() {
-  const staticRoutes = getStaticRoutes();
+  const staticRoutes = getStaticRoutes().filter((route) => !PERMANENT_REDIRECTS.has(route.path));
   const staticPaths = new Set(staticRoutes.map((route) => route.path));
-  const dbRoutes = (await getDbBlogRoutes()).filter((route) => !staticPaths.has(route.path));
+  const dbRoutes = (await getDbBlogRoutes()).filter(
+    (route) => !staticPaths.has(route.path) && !PERMANENT_REDIRECTS.has(route.path),
+  );
   return [...staticRoutes, ...dbRoutes];
+}
+
+async function getVisibleBlogPosts() {
+  return (await getAllBlogPosts()).filter(
+    (post) => !PERMANENT_REDIRECTS.has(`/blog/${post.slug}`),
+  );
 }
 
 export async function GET(request, context) {
   const pathname = await routePath(context);
+  const redirectTarget = PERMANENT_REDIRECTS.get(pathname);
 
-  if (pathname === "/") return html(renderHomePage(await getAllBlogPosts()));
+  if (redirectTarget) {
+    return NextResponse.redirect(new URL(redirectTarget, request.url), 301);
+  }
+
+  if (pathname === "/") return html(renderHomePage(await getVisibleBlogPosts()));
   if (pathname === "/free-workflow-audit") return html(renderWorkflowAuditPage());
   if (pathname === "/services") return html(renderServicesIndex());
   if (pathname === "/industries") return html(renderIndustriesIndex());
@@ -76,7 +100,7 @@ export async function GET(request, context) {
   if (pathname === "/case-studies") return html(renderCaseStudiesIndex());
   if (pathname === "/privacy-policy") return html(renderLegalPage("privacy"));
   if (pathname === "/terms") return html(renderLegalPage("terms"));
-  if (pathname === "/blog") return html(renderBlogIndexPage(await getAllBlogPosts()));
+  if (pathname === "/blog") return html(renderBlogIndexPage(await getVisibleBlogPosts()));
   if (pathname === "/blogs") return NextResponse.redirect(new URL("/blog", request.url), 301);
   if (pathname === "/client-login") {
     return NextResponse.redirect(new URL(business.awpPortalSignInUrl, request.url), 302);

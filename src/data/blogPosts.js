@@ -31,7 +31,7 @@ function loadBlogPosts() {
         body: fs.readFileSync(bodyPath, "utf8").trim(),
       };
     })
-    .filter(Boolean)
+    .filter((post) => post?.status === "published")
     .sort((left, right) => {
       const leftDate = left.publishDate || left.publish_date || "";
       const rightDate = right.publishDate || right.publish_date || "";

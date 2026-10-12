@@ -14,6 +14,7 @@ const EXPECTED = new Set([
   "choose-ai-automation-company-buffalo-ny",
   "zapier-vs-make-vs-n8n-vs-custom-automation",
   "stop-missing-leads-after-hours",
+  "ai-receptionist-book-appointments-small-business",
   "contractor-quote-follow-up-without-sounding-pushy",
   "do-small-businesses-need-crm-for-automation",
   "contractor-reduce-office-work-without-hiring",

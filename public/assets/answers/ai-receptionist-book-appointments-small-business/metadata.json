@@ -1,0 +1,155 @@
+{
+  "author": "WNY Business Automation",
+  "reviewer": "WNY Business Automation — internal editorial review",
+  "publishDate": "2026-10-12",
+  "updatedDate": "2026-10-12",
+  "title": "Can an AI receptionist answer calls and book appointments for a small business?",
+  "slug": "ai-receptionist-book-appointments-small-business",
+  "metaTitle": "Can an AI Receptionist Answer Calls and Book Appointments?",
+  "metaDescription": "Learn how a small-business AI receptionist can answer approved questions, collect caller details, support booking, and hand complex calls to a person.",
+  "excerpt": "A practical guide to using an AI receptionist for approved phone questions, caller intake, calendar-aware booking, call summaries, and clear human handoffs.",
+  "eyebrow": "AI phone intake and booking",
+  "categories": [
+    "Leads & Follow-Up",
+    "AI Workflows"
+  ],
+  "primaryPrompt": "Can an AI receptionist answer calls and book appointments for a small business?",
+  "directAnswer": "Yes. An AI receptionist can answer inbound calls, respond to approved common questions, collect caller details, check an authorized calendar, and create an appointment or booking request. Safe automation depends on the connected phone and calendar systems, business rules, permissions, and fallback design. Pricing, emergencies, sensitive issues, unusual requests, and uncertain speech should move to a person before the business makes a commitment.",
+  "faqs": [
+    {
+      "question": "What questions can an AI receptionist answer?",
+      "answer": "It can answer approved, current questions such as business hours, location, service area, basic service descriptions, and the normal next step. Anything uncertain or outside the approved information should be handed to a person."
+    },
+    {
+      "question": "Can an AI receptionist book appointments automatically?",
+      "answer": "Yes, when it has authorized calendar access and clear rules for appointment type, duration, availability, required details, and confirmation. Otherwise, it should collect preferred times and create a request for a person to confirm."
+    },
+    {
+      "question": "Is an AI receptionist the same as voicemail?",
+      "answer": "No. Voicemail mainly records a message. An AI receptionist may ask approved follow-up questions, provide limited answers, check connected systems, prepare a summary, and route the caller to a person or next step."
+    },
+    {
+      "question": "Which calls should always go to a person?",
+      "answer": "Transfer or escalate emergencies, safety concerns, complaints, disputes, sensitive information, unusual requests, uncertain identities, unclear speech, and decisions involving diagnosis, price, eligibility, or binding commitments."
+    },
+    {
+      "question": "Does an AI receptionist need a CRM?",
+      "answer": "Not always. A shared inbox, task list, spreadsheet, calendar, or field-service system may be enough for a narrow pilot. A CRM becomes more useful when several employees need shared history, ownership, and follow-up stages."
+    },
+    {
+      "question": "Should callers know the receptionist is automated?",
+      "answer": "Yes. Tell callers they are speaking with an automated assistant rather than a person. Before recording or transcribing calls, confirm with a qualified adviser what notice, consent, privacy, accessibility, and industry rules apply to your business."
+    }
+  ],
+  "internalLinks": [
+    {
+      "anchor": "Missed lead rescue system",
+      "url": "/services/missed-lead-rescue-system",
+      "purpose": "Connect unanswered calls to a visible follow-up path"
+    },
+    {
+      "anchor": "Appointment and reminder follow-up",
+      "url": "/services/appointment-review-reminder-follow-up",
+      "purpose": "Coordinate appointment confirmations and follow-up"
+    },
+    {
+      "anchor": "Website FAQ and lead capture assistant",
+      "url": "/services/website-faq-lead-capture-assistant",
+      "purpose": "Use approved answers for website visitors"
+    },
+    {
+      "anchor": "Stop missing leads after hours",
+      "url": "/answers/stop-missing-leads-after-hours",
+      "purpose": "Plan honest after-hours acknowledgment and routing"
+    },
+    {
+      "anchor": "Automate customer intake from calls, emails, and forms",
+      "url": "/answers/automate-customer-intake-calls-emails-forms",
+      "purpose": "Turn conversations into reviewed records and next steps"
+    },
+    {
+      "anchor": "Automation for home-service businesses",
+      "url": "/industries/home-service-businesses",
+      "purpose": "Apply call intake and booking to local service workflows"
+    }
+  ],
+  "externalSources": [
+    {
+      "anchor": "OpenAI voice-agent design and evaluation guidance",
+      "url": "https://developers.openai.com/api/docs/guides/voice-agents",
+      "supports": "Voice agents can connect speech to tools and handoffs; completed actions should be verified in the destination system."
+    },
+    {
+      "anchor": "Twilio Voice webhook documentation",
+      "url": "https://www.twilio.com/docs/usage/webhooks/voice-webhooks",
+      "supports": "Incoming-call events can trigger a web application, while call status and recording events can be handled separately."
+    },
+    {
+      "anchor": "Twilio speech and keypad input documentation",
+      "url": "https://www.twilio.com/docs/voice/twiml/gather",
+      "supports": "Phone workflows can collect speech or keypad input, but recognition confidence and results require careful handling."
+    },
+    {
+      "anchor": "Google Calendar event-creation documentation",
+      "url": "https://developers.google.com/workspace/calendar/api/guides/create-events",
+      "supports": "Authorized applications with appropriate access can create calendar events."
+    },
+    {
+      "anchor": "Google Calendar free-busy documentation",
+      "url": "https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query",
+      "supports": "Authorized applications can query free and busy periods for calendars they are permitted to access."
+    },
+    {
+      "anchor": "NIST human-AI interaction guidance",
+      "url": "https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/",
+      "supports": "Human roles, responsibilities, and oversight should be clearly defined for operational AI systems."
+    },
+    {
+      "anchor": "NIST Privacy Framework",
+      "url": "https://www.nist.gov/privacy-framework",
+      "supports": "Organizations can use a structured, voluntary framework to identify and manage privacy risks while protecting individuals' privacy."
+    }
+  ],
+  "primaryCtaHref": "/free-workflow-audit?source=answer-ai-receptionist#workflow-form",
+  "ctaTitle": "See whether an AI receptionist fits one part of your call process.",
+  "ctaLabel": "Review My Call Workflow",
+  "trustNote": "Approved answers • Calendar permissions • Clear human handoff",
+  "decisionAid": {
+    "type": "table",
+    "eyebrow": "Answer, prepare, or hand off",
+    "title": "Give each type of call a clear automation boundary",
+    "intro": "A cautious design does not try to automate every call. It defines what the system may complete, what it may prepare, and what a person must own.",
+    "headers": [
+      "Call type",
+      "Useful system role",
+      "Human boundary"
+    ],
+    "rows": [
+      [
+        "Approved common question",
+        "Answer from current business information",
+        "Transfer when the answer is missing, uncertain, or unusual"
+      ],
+      [
+        "New-customer intake",
+        "Collect and repeat back basic contact and request details",
+        "A person confirms service fit, urgency, scope, and promises"
+      ],
+      [
+        "Appointment request",
+        "Check authorized availability and prepare or create the approved event",
+        "A person handles exceptions, unclear details, and restricted slots"
+      ],
+      [
+        "Existing-customer change",
+        "Identify the request and prepare a summary",
+        "Verify identity and apply the business's change or cancellation rules"
+      ],
+      [
+        "Sensitive or high-impact call",
+        "Preserve context and use the approved escalation path",
+        "A qualified person owns advice, price, diagnosis, disputes, and commitments"
+      ]
+    ]
+  }
+}
