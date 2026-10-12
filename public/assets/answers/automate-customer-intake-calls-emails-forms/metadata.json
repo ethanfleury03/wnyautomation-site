@@ -49,6 +49,11 @@
       "purpose": "Connect missed calls and after-hours inquiries"
     },
     {
+      "anchor": "AI receptionist calls and appointment booking",
+      "url": "/answers/ai-receptionist-book-appointments-small-business",
+      "purpose": "Apply approved intake and booking rules to phone calls"
+    },
+    {
       "anchor": "Stop missing leads after hours",
       "url": "/answers/stop-missing-leads-after-hours",
       "purpose": "Response-timing guidance"

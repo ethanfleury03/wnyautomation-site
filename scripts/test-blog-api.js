@@ -273,6 +273,8 @@ async function expectAnswersHub() {
     'data-answer-category="marketing"',
     'data-answer-category="tools-costs"',
     "Browse practical answers",
+    "Can an AI receptionist answer calls and book appointments for a small business?",
+    'href="/answers/ai-receptionist-book-appointments-small-business"',
     "Not sure where to start?",
     'href="/answers"',
   ]) {
@@ -346,11 +348,57 @@ async function main() {
     ["/answers/choose-ai-automation-company-buffalo-ny", "How do I choose an AI automation company in Buffalo or Western New York?"],
     ["/answers/zapier-vs-make-vs-n8n-vs-custom-automation", "Should I use Zapier, Make, n8n, or custom automation?"],
     ["/answers/stop-missing-leads-after-hours", "How can my business stop missing leads after hours?"],
+    ["/answers/ai-receptionist-book-appointments-small-business", "Can an AI receptionist answer calls and book appointments for a small business?"],
     ["/answers/contractor-quote-follow-up-without-sounding-pushy", "How can a contractor automate quote follow-up without sounding pushy?"],
     ["/answers/do-small-businesses-need-crm-for-automation", "Do I need a CRM before I automate lead follow-up?"],
   ];
   for (const [path, h1] of answerPageChecks) {
     await expectAnswerPage(path, h1);
+  }
+  const retiredAiReceptionistBlog = await fetch(`${BASE_URL}/blog/ai-receptionist-for-small-business`, {
+    redirect: "manual",
+  });
+  if (
+    retiredAiReceptionistBlog.status !== 301 ||
+    retiredAiReceptionistBlog.headers.get("location") !==
+      `${BASE_URL}/answers/ai-receptionist-book-appointments-small-business`
+  ) {
+    throw new Error("Expected the retired AI receptionist blog to redirect permanently to the Answer page.");
+  }
+  const retiredAiReceptionistBlogsAlias = await fetch(
+    `${BASE_URL}/blogs/ai-receptionist-for-small-business`,
+    { redirect: "manual" },
+  );
+  if (
+    retiredAiReceptionistBlogsAlias.status !== 301 ||
+    retiredAiReceptionistBlogsAlias.headers.get("location") !==
+      `${BASE_URL}/answers/ai-receptionist-book-appointments-small-business`
+  ) {
+    throw new Error("Expected the retired plural blog alias to redirect directly to the Answer page.");
+  }
+  const blogIndexAfterRedirect = await request("/blog");
+  if (blogIndexAfterRedirect.text.includes('href="/blog/ai-receptionist-for-small-business"')) {
+    throw new Error("Expected the retired AI receptionist blog to be absent from the blog index.");
+  }
+  const homeAfterRedirect = await request("/");
+  if (homeAfterRedirect.text.includes('href="/blog/ai-receptionist-for-small-business"')) {
+    throw new Error("Expected the retired AI receptionist blog to be absent from homepage blog cards.");
+  }
+  const sitemapAfterRedirect = await request("/sitemap.xml");
+  if (
+    sitemapAfterRedirect.text.includes("/blog/ai-receptionist-for-small-business") ||
+    !sitemapAfterRedirect.text.includes("/answers/ai-receptionist-book-appointments-small-business")
+  ) {
+    throw new Error("Expected the XML sitemap to contain only the consolidated AI receptionist Answer URL.");
+  }
+  const htmlSitemapAfterRedirect = await request("/sitemap");
+  if (
+    htmlSitemapAfterRedirect.text.includes('href="/blog/ai-receptionist-for-small-business"') ||
+    !htmlSitemapAfterRedirect.text.includes(
+      'href="/answers/ai-receptionist-book-appointments-small-business"',
+    )
+  ) {
+    throw new Error("Expected the HTML sitemap to contain only the consolidated AI receptionist Answer URL.");
   }
   await expectPage("/services", "Services built around real small-business work.");
   const servicePageChecks = [
