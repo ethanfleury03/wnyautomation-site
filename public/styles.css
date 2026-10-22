@@ -1366,6 +1366,30 @@ details p {
   }
 }
 
+@media (max-width: 900px) {
+  .header-cta {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .header-login {
+    min-height: 40px;
+    padding: 0 11px;
+    font-size: 0.88rem;
+  }
+
+  .client-login-label-full {
+    display: none;
+  }
+
+  .client-login-label-short {
+    display: inline;
+  }
+}
+
 @media (max-width: 720px) {
   html {
     scroll-padding-top: 106px;
@@ -1409,28 +1433,6 @@ details p {
 
   .brand-copy small {
     display: none;
-  }
-
-  .header-cta {
-    display: none;
-  }
-
-  .header-actions {
-    gap: 8px;
-  }
-
-  .header-login {
-    min-height: 40px;
-    padding: 0 11px;
-    font-size: 0.88rem;
-  }
-
-  .client-login-label-full {
-    display: none;
-  }
-
-  .client-login-label-short {
-    display: inline;
   }
 
   .button-small {
