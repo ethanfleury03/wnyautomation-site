@@ -51,6 +51,11 @@ assert.match(styles, /--gold:\s*#d6ff3f/);
 assert.match(styles, /\.button-primary\s*\{[^}]*background:\s*var\(--gold\)/s);
 assert.match(styles, /\.section\.process-section\s*\{[^}]*background:\s*#e9efcf/s);
 assert.match(styles, /\.answer-card\s*\{[^}]*linear-gradient\(var\(--gold\)/s);
+assert.match(
+  styles,
+  /@media \(max-width: 900px\) \{\s*\.header-cta \{\s*display: none;\s*\}\s*\.header-actions \{\s*gap: 8px;\s*\}\s*\.header-login \{\s*min-height: 40px;\s*padding: 0 11px;\s*font-size: 0\.88rem;\s*\}\s*\.client-login-label-full \{\s*display: none;\s*\}\s*\.client-login-label-short \{\s*display: inline;\s*\}\s*\}/s,
+  "Tablet header must compact before its controls overflow the viewport",
+);
 assert.doesNotMatch(styles, /Approved WNY rebrand|data-preview-logo|preview-badge|preview-portal|preview-form-warning/);
 
 assert.equal(manifest.background_color, "#f6f7ef");
