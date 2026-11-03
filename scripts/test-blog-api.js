@@ -55,19 +55,18 @@ function expectSanitizerRejectsRawTextBypasses() {
 }
 
 function expectPublishedBlogsHaveVisibleTrackedCtas() {
-  const marker = "[CTA: Get 3 Automation Ideas](/free-workflow-audit#workflow-form)";
+  const markerPattern = /^\[CTA: (?:Get 3 Automation Ideas|Request a Free Workflow Audit)\]\(\/free-workflow-audit#workflow-form\)$/gm;
   const expectedButton =
     '<div id="article-cta" class="article-cta-actions"><a class="button button-primary article-cta-button" href="/free-workflow-audit#workflow-form" style="color:#10251e;text-decoration:none">';
 
   for (const post of blogPosts) {
-    const markerCount = (post.body.match(/^\[CTA: Get 3 Automation Ideas\]\(\/free-workflow-audit#workflow-form\)$/gm) || [])
-      .length;
-    if (markerCount !== 1) {
-      throw new Error(`Expected ${post.slug} to contain one tracked article CTA marker, got ${markerCount}.`);
+    const markers = post.body.match(markerPattern) || [];
+    if (markers.length !== 1) {
+      throw new Error(`Expected ${post.slug} to contain one tracked article CTA marker, got ${markers.length}.`);
     }
 
     const rendered = markdownToHtml(post.body);
-    if (!rendered.includes(expectedButton) || rendered.includes(marker)) {
+    if (!rendered.includes(expectedButton) || rendered.includes(markers[0])) {
       throw new Error(`Expected ${post.slug} CTA marker to render as a primary button.`);
     }
   }
