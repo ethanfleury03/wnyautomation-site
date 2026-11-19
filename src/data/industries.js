@@ -34,10 +34,12 @@ const industries = [
   industry({
     slug: "plumbing-companies",
     title: "Workflow Automation for Plumbers",
-    h1: "Workflow Automation for Plumbing Companies",
+    h1: "AI and Workflow Automation for Plumbing Companies in Buffalo and WNY",
+    metaTitle: "AI Automation for Plumbers in Buffalo | WNY Business Automation",
+    metaDescription: "Explore practical AI and workflow automation for plumbing companies in Buffalo and Western New York, from service requests to field-to-office handoffs.",
     primaryKeyword: "workflow automation for plumbers",
     intro:
-      "Plumbing teams need fast lead response, clean job details, and fewer manual reminders. Automation can help organize requests without making the business feel robotic.",
+      "WNY Business Automation helps plumbing companies in Buffalo and Western New York identify and implement practical AI and workflow automations. Depending on your tools and priorities, a first project could organize service requests, prepare job details for your team, support quote follow-up, or improve field-to-office handoffs. People remain in control of urgent calls, technical decisions, and customer commitments.",
     commonPainPoints: [
       "Emergency calls happen while crews are working",
       "Website forms lack key job details",
@@ -47,8 +49,14 @@ const industries = [
       "Office staff retype request details",
     ],
     automationIdeas: ["Emergency inquiry routing", "Appointment reminders", "Quote follow-up", "Review request automation"],
+    workflowExamples: [
+      { title: "Service request routing", description: "Organize incoming requests and send job details to a named team member. Urgent calls follow an agreed human escalation path rather than relying on an automated reply." },
+      { title: "Field-to-office handoff", description: "Use technician notes to prepare a draft job summary. Office staff review the source, confirm the work and materials, and approve details before invoicing." },
+      { title: "Quote follow-up", description: "Track open estimates and prepare reminders or approved follow-ups. Stop messages when a customer responds, declines, or the quote is no longer active." },
+      { title: "Appointment reminders", description: "Send reminders based on confirmed appointment details, with a clear way for customers to reach the team when plans change." },
+    ],
     exampleWorkflow:
-      "A plumbing request is categorized as urgent or routine, then routed to the right person with a summary and customer contact details.",
+      "A plumbing request is organized with contact details and job notes, then sent to a named person for review. Urgent situations follow the company's agreed human escalation process. We review current tools and access before recommending an integration.",
     recommendedServices: ["missed-lead-rescue-system", "intake-to-task-automation", "appointment-review-reminder-follow-up"],
   }),
   industry({

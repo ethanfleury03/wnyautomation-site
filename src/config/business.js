@@ -78,9 +78,9 @@ const business = {
   clientLoginPath: "/client-login",
   n8nWebhookUrl: process.env.N8N_LEAD_WEBHOOK_URL || "",
   siteUrl: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL || defaultSiteUrl()),
-  defaultSeoTitle: "WNY Business Automation | Websites and Automation for Local Businesses",
+  defaultSeoTitle: "AI and Workflow Automation in Buffalo | WNY Business Automation",
   defaultSeoDescription:
-    "WNY Business Automation helps Buffalo, Niagara, and Western New York businesses with website creation, blog schedules, missed lead follow-up, quote follow-up, and practical workflow automation.",
+    "WNY Business Automation helps trades and small to midsize businesses in Buffalo, Niagara, and Western New York improve operations with practical AI and workflow automation.",
   analytics: {
     gaId: process.env.NEXT_PUBLIC_GA_ID || "",
     gscVerification: process.env.NEXT_PUBLIC_GSC_VERIFICATION || "",

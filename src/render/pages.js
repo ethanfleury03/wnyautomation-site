@@ -110,9 +110,9 @@ function renderHomePage(blogItems = []) {
     <main id="top">
       ${renderSEOPageHero({
         eyebrow: "Practical automation for Buffalo, Niagara, and WNY businesses",
-        h1: "Get 3 practical automation ideas for one manual workflow.",
+        h1: "AI and workflow automation for Western New York businesses.",
         subheading:
-          "Tell WNY Business Automation the task your business keeps doing by hand. We will review it and send back practical ideas for saving time, improving follow-up, or reducing admin work.",
+          "WNY Business Automation helps trades and other small to midsize businesses connect their tools, reduce repetitive work, and build practical AI-assisted workflows. We work alongside your team from the first idea through implementation and ongoing improvements.",
         primaryHref: "#workflow-form",
         primaryLabel: "Get 3 Automation Ideas",
         valueHighlights: [
@@ -496,7 +496,7 @@ function renderIndustryPage(industry) {
       ${renderPainPointSection({ title: "Common manual tasks in this industry", items: industry.commonPainPoints })}
       ${renderAutomationExamplesGrid({
         title: "How workflow automation can help",
-        examples: industry.automationIdeas.map((item) => ({ title: item, description: "A focused workflow that can be reviewed by a human before expanding." })),
+        examples: industry.workflowExamples || industry.automationIdeas.map((item) => ({ title: item, description: "A focused workflow that can be reviewed by a human before expanding." })),
       })}
       ${section(`
         <div class="two-column-section">
