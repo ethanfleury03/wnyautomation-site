@@ -560,7 +560,7 @@ function renderBlogCard(post, basePath = "/blog") {
         }
       </a>
       <div class="blog-card-body">
-        <div class="blog-meta">${date ? `<span>${escapeHtml(date)}</span>` : ""}<span>${escapeHtml(status)}</span></div>
+        <div class="blog-meta">${date ? `<span>${Object.prototype.hasOwnProperty.call(post, "firstLiveAt") ? "Editorial date: " : ""}${escapeHtml(date)}</span>` : ""}<span>${escapeHtml(status)}</span></div>
         <h3><a href="${escapeAttribute(`${basePath}/${post.slug}`)}">${escapeHtml(post.title)}</a></h3>
         <p>${escapeHtml(post.caption || post.excerpt || "")}</p>
         <a class="blog-read-link" href="${escapeAttribute(`${basePath}/${post.slug}`)}">Read article${icon("arrow-up-right")}</a>

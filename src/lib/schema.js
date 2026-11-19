@@ -157,14 +157,22 @@ function answerPageSchema(answer) {
   return schema;
 }
 
+function isIsoCalendarDate(value) {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const date = new Date(`${value}T00:00:00.000Z`);
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
+}
+
 function articleSchema(post) {
-  return {
+  const hasFirstLiveAt = Object.prototype.hasOwnProperty.call(post, "firstLiveAt");
+  if (hasFirstLiveAt && post.firstLiveAt !== null && !isIsoCalendarDate(post.firstLiveAt)) {
+    throw new Error("firstLiveAt must be null or a valid YYYY-MM-DD calendar date.");
+  }
+  const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.meta_description || post.metaDescription || post.excerpt,
-    datePublished: post.publish_date || post.publishDate,
-    dateModified: post.updated_at || post.updatedDate || post.publish_date || post.publishDate,
     author: {
       "@type": "Organization",
       name: post.author || business.businessName,
@@ -180,6 +188,16 @@ function articleSchema(post) {
     image: absoluteUrl(post.image_url || post.featuredImage || "/assets/site-icon-512.png"),
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
   };
+  if (!hasFirstLiveAt) {
+    // Keep the original date behavior for existing static and API posts.
+    schema.datePublished = post.publish_date || post.publishDate;
+    schema.dateModified = post.updated_at || post.updatedDate || post.publish_date || post.publishDate;
+  } else if (post.firstLiveAt !== null) {
+    schema.datePublished = post.firstLiveAt;
+    const modified = post.updated_at || post.updatedDate;
+    if (isIsoCalendarDate(modified) && modified >= post.firstLiveAt) schema.dateModified = modified;
+  }
+  return schema;
 }
 
 function compactSchemas(items) {

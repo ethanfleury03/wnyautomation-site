@@ -718,7 +718,7 @@ function renderBlogPostPage(post) {
             <p class="section-kicker">${escapeHtml(isSample ? "Sample draft" : post.category || post.industry || "WNY Business Automation Blog")}</p>
             <h1>${escapeHtml(post.title)}</h1>
             <div class="article-meta">
-              ${post.publish_date || post.publishDate ? `<span>${escapeHtml(formatDisplayDate(post.publish_date || post.publishDate))}</span>` : ""}
+              ${post.publish_date || post.publishDate ? `<span>${Object.prototype.hasOwnProperty.call(post, "firstLiveAt") ? "Editorial date: " : ""}${escapeHtml(formatDisplayDate(post.publish_date || post.publishDate))}</span>` : ""}
               <span>${escapeHtml(post.author || business.businessName)}</span>
             </div>
             ${isSample ? `<p class="sample-notice">Sample draft placeholder. Replace this with a real n8n-generated article before launch.</p>` : ""}

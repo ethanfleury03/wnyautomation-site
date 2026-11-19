@@ -1,0 +1,21 @@
+Featured Image Generation Record
+
+Provider: openai-codex
+Configured model tier: gpt-image-2-low
+Backend-reported quality: medium
+Generation type: text-to-image
+Requested aspect ratio: landscape 16:9
+Requested API size: 1536x1024
+Reported source size: 1672x941
+Selected cache source: /Users/ethanfleury/.hermes/profiles/wny-automation/cache/generated/images/openai_codex_gpt-image-2-low_20261027_121239_c9f59ac3.png
+Package source copy: featured.png
+Optimized review image: featured.webp (1600x900, WebP quality 84)
+Image request ID: 93ea3bde-1cce-4e81-a92e-259183ea7287
+
+Exact generation prompt:
+
+Create a realistic professional editorial hero photograph for an article about HVAC maintenance agreement automation in Buffalo and Western New York. Landscape 16:9 composition. Show exactly two adult HVAC office professionals—a service manager and a service-plan coordinator—at a clean, credible local HVAC shop office reviewing the lifecycle of recurring maintenance agreements. They are naturally seated or standing at one desk, comparing an abstract seasonal visit calendar on a large monitor with a small set of organized agreement cards and one payment-exception alert on a tablet. The monitor, tablet, papers, and cards must contain only simple character-free blocks, calendar shapes, status dots, and neutral icons—absolutely no readable words, letters, numbers, pseudo-text, customer data, prices, logos, or brand marks. Through an interior window or open doorway, show a neat service bay with an unbranded HVAC service van and safely staged furnace or heat-pump equipment; no active repair and no additional people. Subtle late-autumn Western New York context through an exterior window, with natural overcast daylight and muted foliage, but no landmarks. Clean modern editorial photography, calm operational focus, practical and trustworthy local-business feeling, realistic skin, faces, eyes, hands, fingers, limbs, clothing, device grips, furniture, equipment, lighting, and perspective. Use restrained near-black pine green and muted chartreuse accents only on folders, status dots, or clothing trim. Leave calm negative space for website cropping. No text overlay. Avoid robots, AI brains, glowing technology, holograms, floating interfaces, stock-photo handshakes, dramatic sales poses, unsafe scenes, tools in use, exposed electrical hazards, refrigerant handling, ladders, watermarks, duplicate people, extra fingers, malformed anatomy, impossible reflections, clutter, fake UI text, or recognizable third-party products.
+
+Visual QA summary:
+
+Pass after full-frame inspection, three original-resolution detail inspections, and post-optimization WebP inspection. Exactly two adults are present in a credible HVAC service-office workflow. The large monitor, tablet, clipboard, and agreement cards use abstract house/season/status icons, neutral bars, dots, and one alert symbol without readable words, customer data, prices, logos, brand marks, or watermarks. The service bay contains a coherent unbranded van and safely staged HVAC equipment; no active work or unsafe scene is shown. Faces, eyes, visible hands and fingers, pointing gesture, tablet grip, limbs, clothing, furniture, equipment, windows, lighting, and perspective are coherent. No extra people, robots, AI clichés, malformed anatomy, impossible reflections, or obvious generation artifacts were found. The 1600x900 WebP preserves the composition without crop damage, stretching, color shift, blur, banding, or visible compression defects. No edit or regeneration was required.
